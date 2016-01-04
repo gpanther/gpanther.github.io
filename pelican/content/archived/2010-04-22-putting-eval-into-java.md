@@ -1,0 +1,102 @@
+Title: Putting the eval into Java
+Date: 2010-04-22 17:42
+Author: Attila-Mihaly Balazs
+Tags: programming, java
+Slug: putting-eval-into-java
+Status: published
+
+![2254800793\_185ccbdfa1\_b](http://lh6.ggpht.com/_hrvCBhtWhJ4/S9BgS0EaV4I/AAAAAAAACP4/XNLXHNTtS9U/2254800793_185ccbdfa1_b%5B2%5D.jpg?imgmax=800 "2254800793_185ccbdfa1_b")
+“eval” (short for evaluate) is usually the name given to the method in
+dynamic languages which makes it possible for the programmer to access
+the compiler / runtime. Here are a few links to the documentation for
+the function in different languages:
+
+-   [Javascript](https://developer.mozilla.org/En/Core_JavaScript_1.5_Reference/Global_Functions/Eval)
+-   [Perl](http://perldoc.perl.org/functions/eval.html)
+-   [PHP](http://php.net/manual/en/function.eval.php)
+-   [Python](http://docs.python.org/library/functions.html#eval)
+-   [Ruby](http://ruby-doc.org/core/classes/Kernel.html#M005922)
+-   [LUA](http://www.lua.org/manual/5.1/manual.html#pdf-loadstring)
+
+They are usually used to quickly evaluate a DSL (Domain Specific
+Language) expression. What I mean by this is the following: lets say
+that the user supplies an expression which can be easily (ie. with a few
+string replacements or regular expressions at most) converted into a
+valid expression in the current language. Then you don’t have to write
+your own lexer / parser / runtime to support this function.
+
+To make this example even more concrete, lets say that you are
+implementing a simple graphing calculator where the user can supply the
+right part of the f(x)=... expression and you draw the function for a
+given interval of x. If the user supplies something like 1 + 2\*x +
+3\*x\*x, this is pretty much a valid expression in all programming
+languages (there are minor syntactic differences to be precise - like
+Perl/PHP requiring you to prefix variable names by the “\$” sign), so
+you could simply use “eval” on it.
+
+**<u>Warning! Running eval on unverified, user supplied code is a
+really, really bad idea! (yes, I know that red and bold underline is a
+little over the top, but this is just that bad! Never, never, ever do
+this! It is equivalent to letting everybody connected to the Internet
+(assuming that we are talking about an webapp) running arbitrary code on
+your server. Implement very strict filtering (based on whitelisting if
+at all possible) for such features!</u>**
+
+Surely, you would say, such a dynamic feature isn’t easily accessible
+for a statically typed compiled language as Java... And you would be
+wrong! As of Java 6 each JVM install (including the JREs) includes the
+Java compiler, and it also includes [a public API to access
+it](http://java.sun.com/javase/6/docs/api/javax/tools/JavaCompiler.html).
+Using this feature you can implement the Java equivalent of “eval”:
+giving a string to the compiler and getting a class instance back, on
+which you can call methods. You can find the source [in my SVN
+repo](http://code.google.com/p/hype-free/source/browse/trunk/java-dyncompile/src/com/hypefree/blogspot/dyncompile/DynCompile.java).
+It is (almost entirely) based on the following article from 2007 (just
+to give you an idea how long this option has been around): [Create
+dynamic applications with
+javax.tools](http://www.ibm.com/developerworks/java/library/j-jcomp/index.html).
+An other (pleasant) surprise was the fact that this process doesn’t
+require any security privileges and works perfectly in restricted
+environments such as browser.
+
+An additional advantage of using the JVM rather than your own runtime is
+speed: many man-hours have gone into optimizing both the source –\>
+bytecode and the bytecode –\> machine code transformations. Which brings
+me to an other possible use for this kind of solution: generating
+particularized instances of generic classes to give more hints to the
+JVM about possible implementations.
+
+For example, the StrinkTokenizer class does the following when looking
+for separator characters:
+
+    char c = str.charAt(position);
+    if ((c > maxDelimCodePoint) || (delimiters.indexOf(c) < 0))
+        break;
+
+</code>
+
+Now imagine how much more efficient (in the sense of: easier for the JVM
+to translate into an efficient machinecode) this code would be if we
+knew that we have exactly one possible delimiter (as it is the case most
+of the time). Replacing `delimiters.indexOf(c)` with `delimiter == c`
+can give you an order of magnitude speedup for this particular code.
+
+The takeaway should be:
+
+-   This is a very powerful technique, but it should be used with care!
+    Only use this method if you’ve proven (by using a profiler for
+    example) that the given class is the dominant factor in the
+    performance picture.
+-   Be particularly aware of potential security risks which could
+    appear!
+-   Also, be aware that you give up many things when going this route:
+    -   Automated refactoring
+    -   Reports generated by bytecode analysis tools (like coverage or
+        bug detection)
+    -   Debugger support
+-   In conclusion: use it with great care, but if used properly, it can
+    result in considerable performance improvements!
+
+*Picture taken from* [*Hexadecimal Time's
+photostream*](http://www.flickr.com/photos/hexadecimal_time/) *with
+permission.*

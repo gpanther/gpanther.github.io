@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Booting the Linux Kernel from Grub2 - Grey Panther's Place</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://gpanther.github.io/2011/04/booting-linux-kernel-from-grub2.html">
+
+        <meta name="author" content="Attila-Mihaly Balazs" />
+        <meta name="keywords" content="grub,linux,troubleshooting,grub2" />
+        <meta name="description" content="Recently a good friend of mine managed to uninstall all the kernels from his Ubuntu machine (what can I say - Monday morning and no coffee is a deadly combination). Luckily he had the install CD on hand so we did the following: Boot from the CD (we had Internet connection ..." />
+
+        <meta property="og:site_name" content="Grey Panther's Place" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Booting the Linux Kernel from Grub2"/>
+        <meta property="og:url" content="https://gpanther.github.io/2011/04/booting-linux-kernel-from-grub2.html"/>
+        <meta property="og:description" content="Recently a good friend of mine managed to uninstall all the kernels from his Ubuntu machine (what can I say - Monday morning and no coffee is a deadly combination). Luckily he had the install CD on hand so we did the following: Boot from the CD (we had Internet connection ..."/>
+        <meta property="article:published_time" content="2011-04-12" />
+            <meta property="article:section" content="archived" />
+            <meta property="article:tag" content="grub" />
+            <meta property="article:tag" content="linux" />
+            <meta property="article:tag" content="troubleshooting" />
+            <meta property="article:tag" content="grub2" />
+            <meta property="article:author" content="Attila-Mihaly Balazs" />
+
+    <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@cdman83">
+        <meta name="twitter:creator" content="@cdman83">
+    <meta name="twitter:domain" content="https://gpanther.github.io">
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://gpanther.github.io/theme/css/bootstrap.superhero.min.css" type="text/css"/>
+    <link href="https://gpanther.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://gpanther.github.io/theme/css/pygments/solarizeddark.css" rel="stylesheet">
+        <link href="https://gpanther.github.io/theme/css/typogrify.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://gpanther.github.io/theme/css/style.css" type="text/css"/>
+
+        <link href="https://gpanther.github.io/feeds/posts/default" type="application/atom+xml" rel="alternate"
+              title="Grey Panther's Place ATOM Feed"/>
+
+        <link href="https://gpanther.github.io/feeds/rss" type="application/rss+xml" rel="alternate"
+              title="Grey Panther's Place RSS Feed"/>
+
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://gpanther.github.io/" class="navbar-brand">
+Grey Panther's Place            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="https://gpanther.github.io/">
+                             About
+                          </a></li>
+                         <li><a href="https://gpanther.github.io/pages/resume-curriculum-vitae.html">
+                             Resume / Curriculum&nbsp;Vitae
+                          </a></li>
+                        <li class="active">
+                            <a href="https://gpanther.github.io/category/archived.html">Archived</a>
+                        </li>
+                        <li >
+                            <a href="https://gpanther.github.io/category/blog.html">Blog</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://gpanther.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://gpanther.github.io/2011/04/booting-linux-kernel-from-grub2.html"
+                       rel="bookmark"
+                       title="Permalink to Booting the Linux Kernel from Grub2">
+                        Booting the Linux Kernel from&nbsp;Grub2
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2011-04-12T18:59:00+03:00"> Ma 12 aprilie 2011</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://gpanther.github.io/tag/grub.html">grub</a>
+        /
+	<a href="https://gpanther.github.io/tag/linux.html">linux</a>
+        /
+	<a href="https://gpanther.github.io/tag/troubleshooting.html">troubleshooting</a>
+        /
+	<a href="https://gpanther.github.io/tag/grub2.html">grub2</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>Recently a good friend of mine managed to uninstall all the kernels from
+his Ubuntu machine (what can I say - Monday morning and no coffee is a
+deadly combination). Luckily he had the install <span class="caps">CD</span> on hand so we did the&nbsp;following:</p>
+<ol>
+<li>Boot from the <span class="caps">CD</span> (we had Internet&nbsp;connection)</li>
+<li>Mount the Linux partition and chroot into&nbsp;it</li>
+<li>Reinstall the kernel with&nbsp;aptitude</li>
+<li>Reboot and go into Grub2 command&nbsp;mode</li>
+<li>Now do the following (commands need to be adjusted to match your
+    partition - also, tab completion works, so you don&#8217;t have to guess)<div class="highlight"><pre>insmod part_msdos
+insmod ext2
+set root=(hd0,3)
+linux /boot/vmlinuz-2.6.32.38-generic root=/dev/sda3 ro
+initrd /boot/initrd.img-2.6.38-6-686
+boot
+</pre></div>
+
+
+</li>
+</ol>
+<p>It seems that most of the examples on the &#8216;net are for Grub 1 and little
+is out there for Grub 2. I found the following three: <a href="http://www.justlinux.com/forum/showthread.php?threadid=152790">How to use Grub2
+to boot Linux
+manually</a>,
+<a href="http://ubuntuforums.org/showthread.php?t=1195275">The Grub 2 Guide</a>,
+<a href="http://www.dedoimedo.com/computers/grub-2.html#mozTocId584691"><span class="caps">GRUB</span> 2 bootloader - Full
+tutorial</a>.
+Also, I didn&#8217;t perform steps 4-5 because he just reinstalled Ubuntu (it
+was a fresh install anyway), but I tried it out separately on my laptop
+and it&nbsp;works.</p>
+<p><span class="caps">HTH</span></p>
+            </div>
+            <!-- /.entry-content -->
+<section class="well" id="related-posts">
+    <h4>Related Posts:</h4>
+    <ul>
+        <li><a href="https://gpanther.github.io/2011/04/recovering-encrypted-home-directory.html">Recovering encrypted home directory under&nbsp;Ubuntu</a></li>
+        <li><a href="https://gpanther.github.io/2011/09/using-less-with-syntax-highlight.html">Using less with syntax&nbsp;highlight</a></li>
+        <li><a href="https://gpanther.github.io/2011/09/quickm.html">Quick&#8217;n&#8217;dirty Mediawiki file&nbsp;crawler</a></li>
+        <li><a href="https://gpanther.github.io/2011/03/setting-maximum-number-of-opened-files.html">Setting the maximum number of opened files under Ubuntu (for&nbsp;JProfiler)</a></li>
+        <li><a href="https://gpanther.github.io/2009/12/how-to-saverestore-iptables-rules-on.html">How to save/restore iptables rules on&nbsp;Ubuntu?</a></li>
+    </ul>
+</section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<div id="aboutme">
+        <p>
+            <img width="60%" class="img" src="/images/profile.png"/>
+        </p>
+    <p>
+        <strong>About Grey Panther</strong><br/>
+        <a href="/">father, husband, software craftsman</a>
+    </p>
+</div>
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="https://ro.linkedin.com/in/gpanther"><i class="fa fa-linkedin-square fa-lg"></i> linkedin</a></li>
+                <li class="list-group-item"><a href="http://stackoverflow.com/users/1265/grey-panther"><i class="fa fa-stack-overflow fa-lg"></i> stackoverflow</a></li>
+                <li class="list-group-item"><a href="https://github.com/gpanther/"><i class="fa fa-github-square fa-lg"></i> github</a></li>
+              </ul>
+            </li>
+
+
+
+
+
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container-fluid">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2016 Grey Panther
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by/4.0/80x15.png" /></a>
+    Content
+  licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>, except where indicated otherwise.
+</small></p>
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://gpanther.github.io/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://gpanther.github.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://gpanther.github.io/theme/js/respond.min.js"></script>
+
+
+</body>
+</html>

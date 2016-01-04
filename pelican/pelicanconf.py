@@ -1,35 +1,42 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
-from datetime import date
 
-AUTHOR = u'Attila-Mih\xe1ly Bal\xe1zs (Grey Panther)'
-SITENAME = u'Grey Panther'
-SITEURL = ''
-THEME = 'backdrop'
+AUTHOR = u'Grey Panther'
+SITENAME = u"Grey Panther's Place"
+SITEURL = 'https://gpanther.github.io'
+THEME = '../pelican-bootstrap3'
+BOOTSTRAP_THEME = 'superhero'
+PYGMENTS_STYLE = 'solarizeddark'
 PATH = 'content'
-YEAR = date.today().year
-
 TIMEZONE = 'Europe/Bucharest'
-
+ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{slug}.html'
+ARTICLE_URL = '{date:%Y}/{date:%m}/{slug}.html'
+TYPOGRIFY = True
+CC_LICENSE = 'CC-BY'
+BOOTSTRAP_FLUID = True
 DEFAULT_LANG = u'en'
+ABOUT_ME = '<a href="/">father, husband, software craftsman</a>'
+AVATAR = '/images/profile.png'
+TWITTER_CARDS = True
+TWITTER_USERNAME = 'cdman83'
 
-# Feed generation is usually not desired when developing
-FEED_ALL_ATOM = None
+FEED_ALL_ATOM = 'feeds/posts/default'
+FEED_ALL_RSS = 'feeds/rss'
 CATEGORY_FEED_ATOM = None
-TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-# Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
+PLUGIN_PATHS = ['../pelican-plugins']
+PLUGINS = ['related_posts', 'sitemap']
 
-# Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+LINKS = None
+
+SOCIAL = (
+	('linkedin', 'https://ro.linkedin.com/in/gpanther'),
+	('stackoverflow', 'http://stackoverflow.com/users/1265/grey-panther', 'stack-overflow'),
+	('github', 'https://github.com/gpanther/'),
+)
 
 DEFAULT_PAGINATION = 10
 

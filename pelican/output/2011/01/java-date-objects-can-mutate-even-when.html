@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Java Date objects can mutate, even when read - Grey Panther's Place</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://gpanther.github.io/2011/01/java-date-objects-can-mutate-even-when.html">
+
+        <meta name="author" content="Attila-Mihaly Balazs" />
+        <meta name="keywords" content="programming,multithreading,java" />
+        <meta name="description" content="Ran into this problem a couple of months ago, when we saw some strange dates in production. So I dug into the Java library sources (thank you Sun for providing those!) and found that Date objects aren’t always “normalized”. Rather, sometimes a “denormalized” value is stored which is later ..." />
+
+        <meta property="og:site_name" content="Grey Panther's Place" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Java Date objects can mutate, even when read"/>
+        <meta property="og:url" content="https://gpanther.github.io/2011/01/java-date-objects-can-mutate-even-when.html"/>
+        <meta property="og:description" content="Ran into this problem a couple of months ago, when we saw some strange dates in production. So I dug into the Java library sources (thank you Sun for providing those!) and found that Date objects aren’t always “normalized”. Rather, sometimes a “denormalized” value is stored which is later ..."/>
+        <meta property="article:published_time" content="2011-01-02" />
+            <meta property="article:section" content="archived" />
+            <meta property="article:tag" content="programming" />
+            <meta property="article:tag" content="multithreading" />
+            <meta property="article:tag" content="java" />
+            <meta property="article:author" content="Attila-Mihaly Balazs" />
+
+    <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@cdman83">
+        <meta name="twitter:creator" content="@cdman83">
+    <meta name="twitter:domain" content="https://gpanther.github.io">
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://gpanther.github.io/theme/css/bootstrap.superhero.min.css" type="text/css"/>
+    <link href="https://gpanther.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://gpanther.github.io/theme/css/pygments/solarizeddark.css" rel="stylesheet">
+        <link href="https://gpanther.github.io/theme/css/typogrify.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://gpanther.github.io/theme/css/style.css" type="text/css"/>
+
+        <link href="https://gpanther.github.io/feeds/posts/default" type="application/atom+xml" rel="alternate"
+              title="Grey Panther's Place ATOM Feed"/>
+
+        <link href="https://gpanther.github.io/feeds/rss" type="application/rss+xml" rel="alternate"
+              title="Grey Panther's Place RSS Feed"/>
+
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://gpanther.github.io/" class="navbar-brand">
+Grey Panther's Place            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="https://gpanther.github.io/">
+                             About
+                          </a></li>
+                         <li><a href="https://gpanther.github.io/pages/resume-curriculum-vitae.html">
+                             Resume / Curriculum&nbsp;Vitae
+                          </a></li>
+                        <li class="active">
+                            <a href="https://gpanther.github.io/category/archived.html">Archived</a>
+                        </li>
+                        <li >
+                            <a href="https://gpanther.github.io/category/blog.html">Blog</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://gpanther.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://gpanther.github.io/2011/01/java-date-objects-can-mutate-even-when.html"
+                       rel="bookmark"
+                       title="Permalink to Java Date objects can mutate, even when read">
+                        Java Date objects can mutate, even when&nbsp;read
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2011-01-02T10:43:00+02:00"> Du 02 ianuarie 2011</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://gpanther.github.io/tag/programming.html">programming</a>
+        /
+	<a href="https://gpanther.github.io/tag/multithreading.html">multithreading</a>
+        /
+	<a href="https://gpanther.github.io/tag/java.html">java</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>Ran into this problem a couple of months ago, when we saw some strange
+dates in production. So I dug into the Java library sources (thank you
+Sun for providing those!) and found that Date objects aren&#8217;t always
+&#8220;normalized&#8221;. Rather, sometimes a &#8220;denormalized&#8221; value is stored which
+is later (lazily) normalized. The normalized value isn&#8217;t properly
+synchronized with regards to the Java memory model however, which means
+that sometimes you can get weir (and incorrect!)&nbsp;results.</p>
+<p>To illustrate the problem, I&#8217;ve created <a href="http://code.google.com/p/hype-free/source/browse/trunk/java-data-mutation/DataMutation.java">a small
+program</a>.
+It does the&nbsp;following:</p>
+<ol>
+<li>It creates a Date object and sets it to certain&nbsp;values</li>
+<li>Schedules multiple Runnable&#8217;s which examine the value of the object
+    on a&nbsp;threadpool</li>
+</ol>
+<p>Everything looks fine and dandy, right? The object isn&#8217;t changed
+(apparently) after being handed of to the threadpool, yet sometimes
+wrong answers still appear (it takes around \~30 min on my laptop for
+such an event). So what are the lessons&nbsp;here?</p>
+<ul>
+<li>Get your <span class="caps">API</span> right! If the user doesn&#8217;t <em>seem</em> to be doing writing,
+    don&#8217;t do&nbsp;writing!</li>
+<li>You can still do lazy initialization (if you really want to), but be
+    sure to make it thread-correct (volatile, synchronized, etc) or at
+    least document it (even though nobody reads the&nbsp;documentation)</li>
+<li>Source code <span class="caps">FTW</span>! I couldn&#8217;t have debugged this without source code.
+    Ok, maybe I could (decompiling class files is not that hard), but
+    probably I wouldn&#8217;t have&nbsp;bothered.</li>
+<li>Finally, the solution (hack) in this particular situation is to call
+    <code>getTime()</code> after setting the values, which preemptively normalizes
+    the internal representation. Of course the proper solution would be
+    to pass around truly immutable objects (like timestamps or value
+    objects from <a href="http://joda-time.sourceforge.net/">Joda Time</a>).</li>
+</ul>
+            </div>
+            <!-- /.entry-content -->
+<section class="well" id="related-posts">
+    <h4>Related Posts:</h4>
+    <ul>
+        <li><a href="https://gpanther.github.io/2010/01/don-yield-to-pressure.html">Don&#8217;t Yield to&nbsp;pressure?</a></li>
+        <li><a href="https://gpanther.github.io/2011/02/is-hand-writing-assembly-still.html">Is hand-writing assembly still necessary these&nbsp;days?</a></li>
+        <li><a href="https://gpanther.github.io/2012/10/helper-for-testing-multi-threaded.html">Helper for testing multi-threaded programs in&nbsp;Java</a></li>
+        <li><a href="https://gpanther.github.io/2010/03/performance-optimization-techniques-for.html">Performance optimization techniques for Java&nbsp;code</a></li>
+        <li><a href="https://gpanther.github.io/2009/08/spot-error.html">Spot the&nbsp;error</a></li>
+    </ul>
+</section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<div id="aboutme">
+        <p>
+            <img width="60%" class="img" src="/images/profile.png"/>
+        </p>
+    <p>
+        <strong>About Grey Panther</strong><br/>
+        <a href="/">father, husband, software craftsman</a>
+    </p>
+</div>
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="https://ro.linkedin.com/in/gpanther"><i class="fa fa-linkedin-square fa-lg"></i> linkedin</a></li>
+                <li class="list-group-item"><a href="http://stackoverflow.com/users/1265/grey-panther"><i class="fa fa-stack-overflow fa-lg"></i> stackoverflow</a></li>
+                <li class="list-group-item"><a href="https://github.com/gpanther/"><i class="fa fa-github-square fa-lg"></i> github</a></li>
+              </ul>
+            </li>
+
+
+
+
+
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container-fluid">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2016 Grey Panther
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by/4.0/80x15.png" /></a>
+    Content
+  licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>, except where indicated otherwise.
+</small></p>
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://gpanther.github.io/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://gpanther.github.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://gpanther.github.io/theme/js/respond.min.js"></script>
+
+
+</body>
+</html>

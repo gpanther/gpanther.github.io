@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Nested fluent builders - Grey Panther's Place</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://gpanther.github.io/2013/06/nested-fluent-builders.html">
+
+        <meta name="author" content="Attila-Mihaly Balazs" />
+        <meta name="description" content="Crossposted from the Transylvania JUG website. Builders have become commonplace in current Java code. They have the effect of transforming the following code: “` {lang=”java” escaped=”true”} new Foo(1, 5, “abc”, false); &lt;/code&gt; Into something like ``` {lang=&#34;java&#34; escaped=&#34;true&#34; line=&#34;1&#34;} Foo.builder() .count(1) .priority(5) .name ..." />
+
+        <meta property="og:site_name" content="Grey Panther's Place" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Nested fluent builders"/>
+        <meta property="og:url" content="https://gpanther.github.io/2013/06/nested-fluent-builders.html"/>
+        <meta property="og:description" content="Crossposted from the Transylvania JUG website. Builders have become commonplace in current Java code. They have the effect of transforming the following code: “` {lang=”java” escaped=”true”} new Foo(1, 5, “abc”, false); &lt;/code&gt; Into something like ``` {lang=&#34;java&#34; escaped=&#34;true&#34; line=&#34;1&#34;} Foo.builder() .count(1) .priority(5) .name ..."/>
+        <meta property="article:published_time" content="2013-06-23" />
+            <meta property="article:section" content="archived" />
+            <meta property="article:author" content="Attila-Mihaly Balazs" />
+
+    <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@cdman83">
+        <meta name="twitter:creator" content="@cdman83">
+    <meta name="twitter:domain" content="https://gpanther.github.io">
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://gpanther.github.io/theme/css/bootstrap.superhero.min.css" type="text/css"/>
+    <link href="https://gpanther.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://gpanther.github.io/theme/css/pygments/solarizeddark.css" rel="stylesheet">
+        <link href="https://gpanther.github.io/theme/css/typogrify.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://gpanther.github.io/theme/css/style.css" type="text/css"/>
+
+        <link href="https://gpanther.github.io/feeds/posts/default" type="application/atom+xml" rel="alternate"
+              title="Grey Panther's Place ATOM Feed"/>
+
+        <link href="https://gpanther.github.io/feeds/rss" type="application/rss+xml" rel="alternate"
+              title="Grey Panther's Place RSS Feed"/>
+
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://gpanther.github.io/" class="navbar-brand">
+Grey Panther's Place            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="https://gpanther.github.io/">
+                             About
+                          </a></li>
+                         <li><a href="https://gpanther.github.io/pages/resume-curriculum-vitae.html">
+                             Resume / Curriculum&nbsp;Vitae
+                          </a></li>
+                        <li class="active">
+                            <a href="https://gpanther.github.io/category/archived.html">Archived</a>
+                        </li>
+                        <li >
+                            <a href="https://gpanther.github.io/category/blog.html">Blog</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://gpanther.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://gpanther.github.io/2013/06/nested-fluent-builders.html"
+                       rel="bookmark"
+                       title="Permalink to Nested fluent builders">
+                        Nested fluent&nbsp;builders
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2013-06-23T15:26:00+03:00"> Du 23 iunie 2013</time>
+    </span>
+
+
+
+
+
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p><em>Crossposted from <a href="http://www.transylvania-jug.org/archives/5692">the Transylvania <span class="caps">JUG</span>
+website</a>.</em></p>
+<p>Builders have become commonplace in current Java code. They have the
+effect of transforming the following&nbsp;code:</p>
+<p><span class="dquo">&#8220;</span>` {lang=&#8221;java&#8221; escaped=&#8221;true&#8221;}
+new Foo(1, 5, &#8220;abc&#8221;,&nbsp;false);</p>
+<div class="highlight"><pre>&lt;/code&gt;
+
+Into something like
+
+``` {lang=&quot;java&quot; escaped=&quot;true&quot; line=&quot;1&quot;}
+Foo.builder()
+  .count(1)
+  .priority(5)
+  .name(&quot;abc&quot;)
+  .canonical(true)
+  .build();
+</pre></div>
+
+
+<p></code></p>
+<p>This has the advantage of being much easier to understand (as a downside
+we can mention the fact that - depending on the implementation - it can
+result in the creation of an additional object). The implementation of
+such builders is very simple - they a list of &#8220;setters&#8221; which return the
+current&nbsp;object:</p>
+<p><span class="dquo">&#8220;</span>` {lang=&#8221;java&#8221; escaped=&#8221;true&#8221; line=&#8221;1&#8221;}
+public final class FooBuilder {
+  private int count = 1;
+  //&nbsp;&#8230;</p>
+<p>public FooBuilder count(int count) {
+    this.count = count;
+    return this;&nbsp;}</p>
+<p>public Foo build() {
+    return new Foo(count, //&#8230;
+  }&nbsp;}</p>
+<div class="highlight"><pre>&lt;/code&gt;
+
+Of course writing even this code can become repetitive and annoying, in
+which case we can use
+[Lombok](http://projectlombok.org/features/experimental/Builder.html) or
+other code generation tools. An other possible improvement - which makes
+builder more useful for testing - is to add methods like random as
+suggested in [this Java Advent
+Calendar](http://www.javaadvent.com/2012/12/using-builder-pattern-in-junit-tests.html)
+article. We can subclass the builder (into FooTestBuilder for example)
+and only use the &quot;extended&quot; version in testing.
+
+What can do however if our objects are more complex (they have
+non-primitive fields)? One approach may look like this:
+
+``` {lang=&quot;java&quot; escaped=&quot;true&quot; line=&quot;1&quot;}
+Foo.builder()
+  .a(1)
+  .b(2)
+  .bar(Bar.builder().c(1).build())
+  .buzz(Buzz.builder().build())
+  .build();
+</pre></div>
+
+
+<p></code></p>
+<p>We can make this a little nicer by overloading the bar / buzz methods to
+accept instances of BarBuilder / BuzzBuilder, in which case we can omit
+two build calls. Still, I longed for something like the&nbsp;following:</p>
+<p><span class="dquo">&#8220;</span>` {lang=&#8221;java&#8221; escaped=&#8221;true&#8221; line=&#8221;1&#8221;}
+Foo.builder()
+  .a(1)
+  .b(2)
+  .bar()
+     .c(1).build()
+  .buzz()
+     .build()&nbsp;.build();</p>
+<div class="highlight"><pre>&lt;/code&gt;
+
+The idea is that the bar / buzz calls call start a new &quot;context&quot; where
+we initialize the Bar/Buzz classes. &quot;build&quot; calls end the innermost
+context, with the last build returning the initialized Foo object
+itself. How can this be written in a typesafe / compiler verifiable way?
+
+My solution is the following:
+
+-   Each builder is parameterized to return an arbitrary type T from its
+    build method
+-   The actual return value is generated from a Sink of T
+-   When using the builder at the top level, we use an IdentitySink with
+    just returns the passed in value.
+-   When using the builder in a nested context, we use a Sink which
+    stores the value and returns the builder from &quot;one level up&quot;.
+
+Some example code to clarify the explanation from above can be found
+below. Note that this code has been written as an example and could be
+optimized (like making using a single instance of the IdentitySink,
+having FooBuilder itself implementing the sink methods, etc).
+
+Implementation of a leaf-level builder:
+
+``` {lang=&quot;java&quot; line=&quot;1&quot;}
+interface Sink {
+  T setBar(Bar bar);
+}
+
+final class Bar {
+  // ...
+  public static BarBuilder builder() {
+    return new BarBuilder(new Sink() {
+      @Override
+      public Bar setBar(Bar bar) { return bar; }
+    });
+  }
+}
+
+class BarBuilder {
+  // ...
+
+  protected BarBuilder(Sink sink) {
+    this.sink = sink;
+  }
+
+  // ...
+
+  public T build() {
+    return sink.setBar(new Bar(c, d, fizz));
+  }
+}
+</pre></div>
+
+
+<p>Implementation of the root level&nbsp;builder:</p>
+<p><span class="dquo">&#8220;</span>` {lang=&#8221;java&#8221; line=&#8221;1&#8221;}
+class FooBuilder {
+  // &#8230;
+  public BarBuilder setBar() {
+    return new BarBuilder(new Sink() {
+      @Override
+      public Bar setBar(Bar bar) { 
+        FooBuilder.this.bar = bar;
+        return FooBuilder.this;
+      }
+    });&nbsp;}</p>
+<p>// &#8230;
+}&nbsp;&#8220;`</p>
+<p></code></p>
+<p>Conclusion: Java has some missing features (liked named parameters or
+the ease of reuse provided by duck-typing). We can work around them
+however nicely with some carefully crafted code (and we can put
+repeating code into code generators to avoid having to write it over and
+over again). In exchange we get a very versatile and good performing
+cross-platform&nbsp;runtime.</p>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<div id="aboutme">
+        <p>
+            <img width="60%" class="img" src="/images/profile.png"/>
+        </p>
+    <p>
+        <strong>About Grey Panther</strong><br/>
+        <a href="/">father, husband, software craftsman</a>
+    </p>
+</div>
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="https://ro.linkedin.com/in/gpanther"><i class="fa fa-linkedin-square fa-lg"></i> linkedin</a></li>
+                <li class="list-group-item"><a href="http://stackoverflow.com/users/1265/grey-panther"><i class="fa fa-stack-overflow fa-lg"></i> stackoverflow</a></li>
+                <li class="list-group-item"><a href="https://github.com/gpanther/"><i class="fa fa-github-square fa-lg"></i> github</a></li>
+              </ul>
+            </li>
+
+
+
+
+
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container-fluid">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2016 Grey Panther
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by/4.0/80x15.png" /></a>
+    Content
+  licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>, except where indicated otherwise.
+</small></p>
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://gpanther.github.io/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://gpanther.github.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://gpanther.github.io/theme/js/respond.min.js"></script>
+
+
+</body>
+</html>

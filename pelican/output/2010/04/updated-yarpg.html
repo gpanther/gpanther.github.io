@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Updated YARPG - Grey Panther's Place</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://gpanther.github.io/2010/04/updated-yarpg.html">
+
+        <meta name="author" content="Attila-Mihaly Balazs" />
+        <meta name="keywords" content="security,programming,passwords,javascript" />
+        <meta name="description" content="This has been sitting in my queue for some time: almost four years ago (it’s incredible how time flies!) – amongst the first posts I’ve published on the blog – I’ve written a random password generator in Javascript which I’ve named YARPG (for “Yet Another Random Password Generator ..." />
+
+        <meta property="og:site_name" content="Grey Panther's Place" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Updated YARPG"/>
+        <meta property="og:url" content="https://gpanther.github.io/2010/04/updated-yarpg.html"/>
+        <meta property="og:description" content="This has been sitting in my queue for some time: almost four years ago (it’s incredible how time flies!) – amongst the first posts I’ve published on the blog – I’ve written a random password generator in Javascript which I’ve named YARPG (for “Yet Another Random Password Generator ..."/>
+        <meta property="article:published_time" content="2010-04-09" />
+            <meta property="article:section" content="archived" />
+            <meta property="article:tag" content="security" />
+            <meta property="article:tag" content="programming" />
+            <meta property="article:tag" content="passwords" />
+            <meta property="article:tag" content="javascript" />
+            <meta property="article:author" content="Attila-Mihaly Balazs" />
+
+    <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@cdman83">
+        <meta name="twitter:creator" content="@cdman83">
+    <meta name="twitter:domain" content="https://gpanther.github.io">
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://gpanther.github.io/theme/css/bootstrap.superhero.min.css" type="text/css"/>
+    <link href="https://gpanther.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://gpanther.github.io/theme/css/pygments/solarizeddark.css" rel="stylesheet">
+        <link href="https://gpanther.github.io/theme/css/typogrify.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://gpanther.github.io/theme/css/style.css" type="text/css"/>
+
+        <link href="https://gpanther.github.io/feeds/posts/default" type="application/atom+xml" rel="alternate"
+              title="Grey Panther's Place ATOM Feed"/>
+
+        <link href="https://gpanther.github.io/feeds/rss" type="application/rss+xml" rel="alternate"
+              title="Grey Panther's Place RSS Feed"/>
+
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://gpanther.github.io/" class="navbar-brand">
+Grey Panther's Place            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="https://gpanther.github.io/">
+                             About
+                          </a></li>
+                         <li><a href="https://gpanther.github.io/pages/resume-curriculum-vitae.html">
+                             Resume / Curriculum&nbsp;Vitae
+                          </a></li>
+                        <li class="active">
+                            <a href="https://gpanther.github.io/category/archived.html">Archived</a>
+                        </li>
+                        <li >
+                            <a href="https://gpanther.github.io/category/blog.html">Blog</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://gpanther.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://gpanther.github.io/2010/04/updated-yarpg.html"
+                       rel="bookmark"
+                       title="Permalink to Updated YARPG">
+                        Updated <span class="caps">YARPG</span>
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2010-04-09T15:10:00+03:00"> Vi 09 aprilie 2010</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://gpanther.github.io/tag/security.html">security</a>
+        /
+	<a href="https://gpanther.github.io/tag/programming.html">programming</a>
+        /
+	<a href="https://gpanther.github.io/tag/passwords.html">passwords</a>
+        /
+	<a href="https://gpanther.github.io/tag/javascript.html">javascript</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p><img alt="3273756192_6008cde373_b" src="http://lh6.ggpht.com/_hrvCBhtWhJ4/S78ZSy3nSpI/AAAAAAAACPQ/bqrf4VZA3h4/3273756192_6008cde373_b5.jpg?imgmax=800" title="3273756192_6008cde373_b" />
+This has been sitting in my queue for some time: almost four years ago
+(it’s incredible how time flies!) – amongst the first posts I’ve
+published on the blog – I’ve written <a href="http://hype-free.blogspot.com/2006/10/javascript-password-generator.html">a random password generator in
+Javascript</a>
+which I’ve named <span class="caps">YARPG</span> (for “Yet Another Random Password Generator”).
+The advantages to using it are the same as they were back&nbsp;then:</p>
+<ul>
+<li>Customizable (password length, types of characters included,&nbsp;etc)</li>
+<li>Secure (it doesn’t communicate over the network, hence no need for
+    <span class="caps">SSL</span>)</li>
+<li>Fully reviewable (as opposed to server-based solutions, where you
+    have to trust the&nbsp;server)</li>
+</ul>
+<p>The only flaw it had (as pointed out by a commenter) was the fact that
+passwords didn’t always include all the characters you’ve selected (ie.
+the checkboxes represented “possible” not “mandatory” characters, which
+was a little&nbsp;counter-intuitive).</p>
+<p>I’ve thought about how to create passwords which included at least one
+character from each set. My first ideas were around generating a
+password, then checking that it contained at least one character from
+each set and if not, replacing some of the characters with ones from the
+missing set. However this train of thought quickly ran into problems
+when I had to decide which character to replace. Choosing something
+fixed (like the first one, last one, etc) is too predictable. If I
+choose a random one, I run the risk of overwriting previous change. So
+finally I realized that there is a simple solution: just re-generate the
+password until it satisfies all of the constraints. Although this might
+seem like a brute-force solution, in practice its speed is
+indistinguishable from a constant-time&nbsp;solution.</p>
+<p>Below you have the new and improved <span class="caps">YARPG</span>:</p>
+<style type="text/css">
+<!--<br />
+div.password_generator_noscript {<br />
+ background-color: #ff7997;<br />
+ border: thin dashed;<br />&nbsp;}</p>
+<p>div#generated_password {<br />
+ font-family: monospace;<br />
+ font-weight: bold;<br />&nbsp;}</p>
+<p>div#password_generator_div input {<br />&nbsp;}</p>
+<p>div#password_generator_div label {<br />
+ width: 10em;<br />
+}<br />
+--></style>
+
+<noscript>
+</noscript>
+
+<table id="password_generator_div" summary="random password generator with javascript">
+<tbody>
+<tr>
+<td>
+<label for="password_length">Password length:</label>
+
+</td>
+<td>
+<input id="password_length" size="size" name="password_length"></input>
+
+</td>
+</tr>
+<tr>
+<td>
+<label for="password_include_letters">Include letters</label>
+
+</td>
+<td>
+<input id="password_include_letters" checked="checked" type="checkbox" name="password_include_letters"></input>
+
+</td>
+</tr>
+<tr>
+<td>
+<label for="password_include_mixed_case">Include mixed case</label>
+
+</td>
+<td>
+<input id="password_include_mixed_case" checked="checked" type="checkbox" name="password_include_mixed_case"></input>
+
+</td>
+</tr>
+<tr>
+<td>
+<label for="password_include_numbers">Include numbers</label>
+
+</td>
+<td>
+<input id="password_include_numbers" checked="checked" type="checkbox" name="password_include_numbers"></input>
+
+</td>
+</tr>
+<tr>
+<td>
+<label for="password_include_punctuation">Include punctuation</label>
+
+</td>
+<td>
+<input id="password_include_punctuation" type="checkbox" name="password_include_punctuation"></input>
+
+</td>
+</tr>
+<tr>
+<td>
+<label for="password_include_all_printable">Include all printable
+characters</label>
+
+</td>
+<td>
+<input id="password_include_all_printable" type="checkbox" name="password_include_all_printable"></input>
+
+</td>
+</tr>
+<tr>
+<td>
+<label for="password_quantity">Quantity</label>
+
+</td>
+<td>
+<select id="password_quantity" name="password_quantity">
+<option value="1">1</option> <option value="2">2</option>
+<option value="3">3</option> <option value="4">4</option>
+<option value="5">5</option> <option value="6">6</option>
+<option value="7">7</option> <option value="8">8</option>
+<option value="9">9</option> <option value="10">10</option>
+<option value="11">11</option> <option value="12">12</option>
+<option value="13">13</option> <option value="14">14</option>
+<option value="15">15</option> <option value="16">16</option>
+<option value="17">17</option> <option value="18">18</option>
+<option value="19">19</option> <option value="20">20</option>
+<option value="21">21</option> <option value="22">22</option>
+<option value="23">23</option> <option value="24">24</option>
+<option value="25">25</option> <option value="26">26</option>
+<option value="27">27</option> <option value="28">28</option>
+<option value="29">29</option> <option value="30">30</option>
+<option value="31">31</option> <option value="32">32</option>
+<option value="33">33</option> <option value="34">34</option>
+<option value="35">35</option> <option value="36">36</option>
+<option value="37">37</option> <option value="38">38</option>
+<option value="39">39</option> <option value="40">40</option>
+<option value="41">41</option> <option value="42">42</option>
+<option value="43">43</option> <option value="44">44</option>
+<option value="45">45</option> <option value="46">46</option>
+<option value="47">47</option> <option value="48">48</option>
+<option value="49">49</option> <option value="50">50</option>
+<option value="51">51</option> <option value="52">52</option>
+<option value="53">53</option> <option value="54">54</option>
+<option value="55">55</option> <option value="56">56</option>
+<option value="57">57</option> <option value="58">58</option>
+<option value="59">59</option> <option value="60">60</option>
+<option value="61">61</option> <option value="62">62</option>
+<option value="63">63</option> <option value="64">64</option> </select>
+
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<button id="generate_password_button">
+Generate
+
+</button>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<div id="generated_password">
+
+</div>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<script language="JavaScript" type="text/javascript"><!--<br />
+var yajrpg = {<br />
+    //puts each character from the string str in arr and returns a new array<br />
+    PushArray : function (arr, str) {<br />
+        var a = [];<br />
+        for (var i = 0; i < str.length; i++)<br />
+            a[a.length] = str.charAt(i);<br />
+        arr[arr.length] = a;<br />
+        return arr;<br />&nbsp;},</p>
+
+<p>addEvent : function (obj, evType, fn) {<br />
+        //taken from: http://www.scottandrew.com/weblog/articles/cbs-events<br />
+        if (obj.addEventListener){<br />
+            obj.addEventListener(evType, fn, false);<br />
+            return true;<br />
+        } else if (obj.attachEvent){<br />
+            var r = obj.attachEvent("on"+evType, fn);<br />
+            return r;<br />
+        } else {<br />
+            return false;<br />
+        }<br />&nbsp;},</p>
+
+<p>CheckAllPrintable : function () {<br />
+        if (!yajrpg.inited)&nbsp;return;</p>
+
+<p>yajrpg.pass_letters.disabled = yajrpg.pass_printable.checked;<br />
+        yajrpg.pass_uppercase.disabled = yajrpg.pass_printable.checked;<br />
+        yajrpg.pass_numbers.disabled = yajrpg.pass_printable.checked;<br />
+        yajrpg.pass_punctuation.disabled = yajrpg.pass_printable.checked;<br />&nbsp;},</p>
+
+<p>GenerateRandomPasswords : function () {<br />
+        if (!yajrpg.inited)&nbsp;return;</p>
+
+<p>var pass_length = parseInt(yajrpg.pass_length.value);<br />
+        if (pass_length < 1 || pass_length > 256) return&nbsp;false;</p>
+
+<p>var needed_charsets = [];<br />
+        if (yajrpg.pass_printable.checked) {<br />
+            var print_chars = [];<br />
+            for (var i = 32; i < 127; i++)<br />
+                print_chars[print_chars.length] = String.fromCharCode(i);<br />
+            needed_charsets[0] = print_chars;<br />
+        } else {<br />
+            if (yajrpg.pass_letters.checked) yajrpg.PushArray(needed_charsets, "qwertyuiopasdfghjklzxcvbnm");<br />
+            if (yajrpg.pass_uppercase.checked) yajrpg.PushArray(needed_charsets, "QWERTYUIOPASDFGHJKLZXCVBNM");<br />
+            if (yajrpg.pass_numbers.checked) yajrpg.PushArray(needed_charsets, "0123456789");<br />
+            if (yajrpg.pass_punctuation.checked) yajrpg.PushArray(needed_charsets, ":;,.?!");<br />&nbsp;}</p>
+
+<p>if (0 == needed_charsets.length) return&nbsp;false;</p>
+
+<p>var pass_quantity =&nbsp;parseInt(yajrpg.pass_quantity.options[yajrpg.pass_quantity.selectedIndex].value);</p>
+
+<p>if (pass_length < needed_charsets.length) pass_length =&nbsp;needed_charsets.length;</p>
+
+<p>var result = "";<br />
+        for (var i = 0; i < pass_quantity; i++) {<br />
+            var p;<br />
+            while (true) {<br />
+                p = [];<br />
+                var used_charsets = [];<br />
+                for (var j = 0; j < needed_charsets.length; ++j) used_charsets[j] =&nbsp;false;</p>
+
+<p>for (var j = 0; j < pass_length; ++j) {<br />
+                    var k = Math.floor(Math.random()*needed_charsets.length);<br />
+                    var available_chars = needed_charsets[k];<br />
+                    p[j] = available_chars[Math.floor(Math.random()*available_chars.length)];<br />
+                    used_charsets[k] = true;<br />&nbsp;}</p>
+
+<p>var all_charsets_used = true;<br />
+                for (var j = 0; j < needed_charsets.length; ++j) all_charsets_used = all_charsets_used && used_charsets[j];<br />
+                if (all_charsets_used) break;<br />&nbsp;}</p>
+
+<p>for (var j = 0; j < pass_length; j++) {<br />
+                var ch = p[j];<br />
+                if ("<" == ch) ch = "<";<br />
+                if (">" == ch) ch = ">";<br />
+                result += ch;<br />
+            }<br />
+            result += '<br  />';<br />
+        }<br />
+        yajrpg.gen_pass_div.innerHTML =&nbsp;result;</p>
+
+<p>return false;<br />&nbsp;},</p>
+
+<p>CheckPasswordLength : function () {<br />
+        if (!yajrpg.inited)&nbsp;return;</p>
+
+<p>var pass_length = parseInt(yajrpg.pass_length.value);<br />
+        if ((pass_length < 1) || (pass_length > 256))<br />
+            yajrpg.pass_length.style.backgroundColor = 'red';<br />
+        else<br />
+            yajrpg.pass_length.style.backgroundColor = '';<br />&nbsp;},</p>
+
+<p>initAfterLoad : function () {<br />
+        //get the elements from the document<br />
+        yajrpg.pass_letters = document.getElementById('password_include_letters');<br />
+        yajrpg.pass_uppercase = document.getElementById('password_include_mixed_case');<br />
+        yajrpg.pass_numbers = document.getElementById('password_include_numbers');<br />
+        yajrpg.pass_punctuation = document.getElementById('password_include_punctuation');<br />
+        yajrpg.pass_printable = document.getElementById('password_include_all_printable');<br />
+        yajrpg.pass_length = document.getElementById('password_length');<br />
+        yajrpg.gen_pass_div = document.getElementById('generated_password');<br />
+        yajrpg.pass_quantity = document.getElementById('password_quantity');<br />
+        yajrpg.gen_pass_button =&nbsp;document.getElementById('generate_password_button');</p>
+
+<p>//check that we have all the elements<br />
+        if (null == yajrpg.pass_letters || null == yajrpg.pass_uppercase || null == yajrpg.pass_numbers ||<br />
+            null == yajrpg.pass_punctuation || null == yajrpg.pass_printable || null == yajrpg.pass_length ||<br />
+            null == yajrpg.gen_pass_div || null == yajrpg.pass_quantity || null == yajrpg.gen_pass_button)&nbsp;return;</p>
+
+<p>//fill up the select<br />
+        for (var i = 1; i <= 64; i++)<br />
+            yajrpg.pass_quantity.options[yajrpg.pass_quantity.options.length] = new Option(i,&nbsp;i);</p>
+
+<p>//attach event handlers<br />
+        if (!yajrpg.addEvent(yajrpg.gen_pass_button, 'click', yajrpg.GenerateRandomPasswords)) return;<br />
+        if (!yajrpg.addEvent(yajrpg.pass_length, 'change', yajrpg.CheckPasswordLength)) return;<br />
+        if (!yajrpg.addEvent(yajrpg.pass_printable, 'click', yajrpg.CheckAllPrintable))&nbsp;return;</p>
+
+<p>//display the form<br />
+        var pass_generator = document.getElementById('password_generator_div');<br />
+        if (null != pass_generator) pass_generator.style.display = ''; else&nbsp;return;</p>
+
+<p>//everything has been initialized<br />
+        yajrpg.inited = true;<br />&nbsp;},</p>
+
+<p>//this initializes the object.<br />
+    init : function () {<br />
+        //postpone the final initialization after until the whole document has loaded<br />
+        this.addEvent(window, 'load', this.initAfterLoad);<br />
+        return this;<br />
+    }<br />
+}.init();<br />
+//--></script>
+I&#8217;ve also updated the [original
+posting](http://hype-free.blogspot.com/2006/10/javascript-password-generator.html).
+You can get the source code for it by looking at the source of this
+webpage, or from my <span class="caps">SVN</span> repository:
+[js\_password\_generator.html](http://code.google.com/p/hype-free/source/browse/trunk/js_password_generator.html).
+Hopefully you find it useful!
+
+*Picture taken from [cjc4454&#8217;s
+photostream](http://www.flickr.com/photos/cjc4454/) with&nbsp;permission.*
+            </div>
+            <!-- /.entry-content -->
+<section class="well" id="related-posts">
+    <h4>Related Posts:</h4>
+    <ul>
+        <li><a href="https://gpanther.github.io/2011/02/is-hand-writing-assembly-still.html">Is hand-writing assembly still necessary these&nbsp;days?</a></li>
+        <li><a href="https://gpanther.github.io/2009/12/congratulation-to-av-comparatives.html">Congratulation to <span class="caps">AV</span>-Comparatives!</a></li>
+        <li><a href="https://gpanther.github.io/2009/12/game-of-chinese-whispers.html">A game of Chinese&nbsp;whispers</a></li>
+        <li><a href="https://gpanther.github.io/2010/01/missed-opportunity.html">A missed&nbsp;opportunity</a></li>
+        <li><a href="https://gpanther.github.io/2011/02/sorry-for-malware-warning.html">Sorry for the malware&nbsp;warning!</a></li>
+    </ul>
+</section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<div id="aboutme">
+        <p>
+            <img width="60%" class="img" src="/images/profile.png"/>
+        </p>
+    <p>
+        <strong>About Grey Panther</strong><br/>
+        <a href="/">father, husband, software craftsman</a>
+    </p>
+</div>
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="https://ro.linkedin.com/in/gpanther"><i class="fa fa-linkedin-square fa-lg"></i> linkedin</a></li>
+                <li class="list-group-item"><a href="http://stackoverflow.com/users/1265/grey-panther"><i class="fa fa-stack-overflow fa-lg"></i> stackoverflow</a></li>
+                <li class="list-group-item"><a href="https://github.com/gpanther/"><i class="fa fa-github-square fa-lg"></i> github</a></li>
+              </ul>
+            </li>
+
+
+
+
+
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container-fluid">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2016 Grey Panther
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by/4.0/80x15.png" /></a>
+    Content
+  licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>, except where indicated otherwise.
+</small></p>
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://gpanther.github.io/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://gpanther.github.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://gpanther.github.io/theme/js/respond.min.js"></script>
+
+
+</body>
+</html>

@@ -3,10 +3,8 @@ Grey Panther's static site
 
 Setup:
 
-* `virtualenv venv`
-* `pip install -r requirements.txt`
-* `svn export https://github.com/getpelican/pelican-themes/trunk/backdrop`
-* `pelican-themes -i backdrop`
-* `rm -r backdrop`
+* `virtualenv --system-site-packages venv`
+  * Needed for lxml (which is needed to import existing content)
+* `pip install -U -r requirements.txt`
 
-License: CC-BY Unported 3.0 (see LICENSE). 
+License: CC-BY Unported 3.0 (see LICENSE).
