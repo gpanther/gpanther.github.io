@@ -30,6 +30,15 @@ AUTHOR_FEED_RSS = None
 PLUGIN_PATHS = ['../pelican-plugins']
 PLUGINS = ['related_posts', 'sitemap']
 
+DISPLAY_PAGES_ON_MENU = False
+DISPLAY_CATEGORIES_ON_MENU = False
+MENUITEMS = (
+	('About', '/'),
+	('Blog', '/category/blog.html'),
+	('Resume / Curriculum Vitae', '/pages/resume-curriculum-vitae.html'),
+	('Archived blog articles', '/category/archived.html'),
+)
+
 LINKS = None
 
 SOCIAL = (
