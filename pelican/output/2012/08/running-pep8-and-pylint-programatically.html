@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Running pep8 and pylint programatically - Grey Panther's Place</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://gpanther.github.io/2012/08/running-pep8-and-pylint-programatically.html">
+
+        <meta name="author" content="Attila-Mihaly Balazs" />
+        <meta name="keywords" content="pylint,lint,python,pep8,static analysers" />
+        <meta name="description" content="Having tools like pep8 and pylint are great, especially given the huge amount of dynamism involved in Python - which results in many opportunities to shooting yourself in the foot. Sometimes however you want to invoke these tools in more specialized ways, for example only on the files which changed since ..." />
+
+        <meta property="og:site_name" content="Grey Panther's Place" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Running pep8 and pylint programatically"/>
+        <meta property="og:url" content="https://gpanther.github.io/2012/08/running-pep8-and-pylint-programatically.html"/>
+        <meta property="og:description" content="Having tools like pep8 and pylint are great, especially given the huge amount of dynamism involved in Python - which results in many opportunities to shooting yourself in the foot. Sometimes however you want to invoke these tools in more specialized ways, for example only on the files which changed since ..."/>
+        <meta property="article:published_time" content="2012-08-19" />
+            <meta property="article:section" content="archived" />
+            <meta property="article:tag" content="pylint" />
+            <meta property="article:tag" content="lint" />
+            <meta property="article:tag" content="python" />
+            <meta property="article:tag" content="pep8" />
+            <meta property="article:tag" content="static analysers" />
+            <meta property="article:author" content="Attila-Mihaly Balazs" />
+
+    <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@cdman83">
+        <meta name="twitter:creator" content="@cdman83">
+    <meta name="twitter:domain" content="https://gpanther.github.io">
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://gpanther.github.io/theme/css/bootstrap.superhero.min.css" type="text/css"/>
+    <link href="https://gpanther.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://gpanther.github.io/theme/css/pygments/solarizeddark.css" rel="stylesheet">
+        <link href="https://gpanther.github.io/theme/css/typogrify.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://gpanther.github.io/theme/css/style.css" type="text/css"/>
+
+        <link href="https://gpanther.github.io/feeds/posts/default" type="application/atom+xml" rel="alternate"
+              title="Grey Panther's Place ATOM Feed"/>
+
+        <link href="https://gpanther.github.io/feeds/rss" type="application/rss+xml" rel="alternate"
+              title="Grey Panther's Place RSS Feed"/>
+
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://gpanther.github.io/" class="navbar-brand">
+Grey Panther's Place            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="https://gpanther.github.io/">
+                             About
+                          </a></li>
+                         <li><a href="https://gpanther.github.io/pages/resume-curriculum-vitae.html">
+                             Resume / Curriculum&nbsp;Vitae
+                          </a></li>
+                        <li class="active">
+                            <a href="https://gpanther.github.io/category/archived.html">Archived</a>
+                        </li>
+                        <li >
+                            <a href="https://gpanther.github.io/category/blog.html">Blog</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://gpanther.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://gpanther.github.io/2012/08/running-pep8-and-pylint-programatically.html"
+                       rel="bookmark"
+                       title="Permalink to Running pep8 and pylint programatically">
+                        Running pep8 and pylint&nbsp;programatically
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2012-08-19T15:12:00+03:00"> Du 19 august 2012</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://gpanther.github.io/tag/pylint.html">pylint</a>
+        /
+	<a href="https://gpanther.github.io/tag/lint.html">lint</a>
+        /
+	<a href="https://gpanther.github.io/tag/python.html">python</a>
+        /
+	<a href="https://gpanther.github.io/tag/pep8.html">pep8</a>
+        /
+	<a href="https://gpanther.github.io/tag/static-analysers.html">static analysers</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>Having tools like <a href="http://pypi.python.org/pypi/pep8/">pep8</a> and
+<a href="http://pypi.python.org/pypi/pylint/">pylint</a> are great, especially
+given the huge amount of dynamism involved in Python - which results in
+many opportunities to shooting yourself in the foot. Sometimes however
+you want to invoke these tools in more specialized ways, for example
+only on the files which changed since the last commit. Here is how you
+can do this from a python script and capture their output for later
+post-processing (maybe you want merge the output from both tools, or
+maybe you want to show only the lines which changed since the last
+commit,&nbsp;etc):</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">pep8</span>
+<span class="k">try</span><span class="p">:</span>
+  <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="o">=</span> <span class="n">StringIO</span><span class="p">()</span>
+  <span class="n">pep8_checker</span> <span class="o">=</span> <span class="n">pep8</span><span class="o">.</span><span class="n">StyleGuide</span><span class="p">(</span><span class="n">config_file</span><span class="o">=</span><span class="n">config</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s">&#39;pylint&#39;</span><span class="p">)</span>
+  <span class="n">pep8_checker</span><span class="o">.</span><span class="n">check_files</span><span class="p">(</span><span class="n">paths</span><span class="o">=</span><span class="p">[</span> <span class="o">...</span><span class="n">path</span> <span class="n">to</span> <span class="n">files</span><span class="o">/</span><span class="n">dirs</span> <span class="n">to</span> <span class="n">check</span><span class="o">...</span> <span class="p">])</span>
+  <span class="n">output</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
+<span class="k">finally</span><span class="p">:</span>
+  <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">__stdout__</span>
+
+<span class="kn">from</span> <span class="nn">pylint.lint</span> <span class="kn">import</span> <span class="n">Run</span>
+<span class="kn">from</span> <span class="nn">pylint.reporters.text</span> <span class="kn">import</span> <span class="n">ParseableTextReporter</span>
+
+<span class="n">reporter</span> <span class="o">=</span> <span class="n">ParseableTextReporter</span><span class="p">()</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">StringIO</span><span class="p">()</span>
+<span class="n">reporter</span><span class="o">.</span><span class="n">set_output</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="n">Run</span><span class="p">([</span><span class="s">&#39;--rcfile=pylint.config&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span> <span class="o">...</span><span class="n">files</span><span class="o">..</span><span class="p">,</span> <span class="p">],</span> <span class="n">reporter</span><span class="o">=</span><span class="n">reporter</span><span class="p">,</span> <span class="nb">exit</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="n">output</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
+</pre></div>
+
+
+<p></code></p>
+<p>It is recommended that you use pylint/pep8 installed trough
+pip/easy_install rather than the Linux distribution repositories, since
+they are known to contain outdated software. You can check for this via
+code like the&nbsp;following:</p>
+<div class="highlight"><pre>if pkg_resources.get_distribution(&#39;pep8&#39;).parsed_version &lt; parse_version(&#39;1.3.3&#39;):
+    logging.error(&#39;pep8 too old. At least version 1.3.3 is required&#39;)
+    sys.exit(1)
+if pkg_resources.get_distribution(&#39;pylint&#39;).parsed_version &lt; parse_version(&#39;0.25.1&#39;):
+    logging.error(&#39;pylint too old. At least version 0.25.1 is required&#39;)
+    sys.exit(1)
+</pre></div>
+
+
+<p></code></p>
+<p>Finally, if you <em>have</em> to use an old version of pep8, the code needs to
+be modified to the following (however, this older version probably won&#8217;t
+be of much use and will most likely annoy you - you should really try to
+use an up-to-date version - for example you could isolate this version
+using&nbsp;virtualenv):</p>
+<div class="highlight"><pre><span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="kn">import</span> <span class="nn">pep8</span>
+<span class="n">pep8</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">msg</span><span class="p">:</span> <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="n">pep8</span><span class="o">.</span><span class="n">process_options</span><span class="p">(</span><span class="n">own_code</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">code_dir</span> <span class="ow">in</span> <span class="p">[</span> <span class="o">...</span><span class="n">files</span> <span class="ow">or</span> <span class="n">dirs</span><span class="o">...</span> <span class="p">]:</span>
+    <span class="n">pep8</span><span class="o">.</span><span class="n">input_dir</span><span class="p">(</span><span class="n">code_dir</span><span class="p">)</span>
+</pre></div>
+
+
+<p></code></p>
+            </div>
+            <!-- /.entry-content -->
+<section class="well" id="related-posts">
+    <h4>Related Posts:</h4>
+    <ul>
+        <li><a href="https://gpanther.github.io/2013/05/passing-utf-8-trough-http.html">Passing <span class="caps">UTF</span>-8 trough <span class="caps">HTTP</span></a></li>
+        <li><a href="https://gpanther.github.io/2014/02/proxying-pypi-npm-etc-for-fun-and-profit.html">Proxying pypi / npm / etc for fun and&nbsp;profit!</a></li>
+        <li><a href="https://gpanther.github.io/2013/02/converting-datetime-to-utc-in-python.html">Converting datetime to <span class="caps">UTC</span> in&nbsp;python</a></li>
+        <li><a href="https://gpanther.github.io/2011/10/using-jython-from-maven.html">Using Jython from&nbsp;Maven</a></li>
+        <li><a href="https://gpanther.github.io/2012/08/clearing-your-google-app-engine.html">Clearing your Google App Engine&nbsp;datastore</a></li>
+    </ul>
+</section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<div id="aboutme">
+        <p>
+            <img width="60%" class="img" src="/images/profile.png"/>
+        </p>
+    <p>
+        <strong>About Grey Panther</strong><br/>
+        <a href="/">father, husband, software craftsman</a>
+    </p>
+</div>
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="https://ro.linkedin.com/in/gpanther"><i class="fa fa-linkedin-square fa-lg"></i> linkedin</a></li>
+                <li class="list-group-item"><a href="http://stackoverflow.com/users/1265/grey-panther"><i class="fa fa-stack-overflow fa-lg"></i> stackoverflow</a></li>
+                <li class="list-group-item"><a href="https://github.com/gpanther/"><i class="fa fa-github-square fa-lg"></i> github</a></li>
+              </ul>
+            </li>
+
+
+
+
+
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container-fluid">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2016 Grey Panther
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by/4.0/80x15.png" /></a>
+    Content
+  licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>, except where indicated otherwise.
+</small></p>
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://gpanther.github.io/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://gpanther.github.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://gpanther.github.io/theme/js/respond.min.js"></script>
+
+
+</body>
+</html>

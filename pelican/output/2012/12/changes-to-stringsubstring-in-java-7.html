@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Changes to String.substring in Java 7 - Grey Panther's Place</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://gpanther.github.io/2012/12/changes-to-stringsubstring-in-java-7.html">
+
+        <meta name="author" content="Attila-Mihaly Balazs" />
+        <meta name="keywords" content="java7,string,java advent,java" />
+        <meta name="description" content="This post was originally published as part of the Java Advent series. If you like it, please spread the word by sharing, tweeting, FB, G+ and so on! Want to write for the Java Advent blog? We are looking for contributors to fill all 24 slot and would love to ..." />
+
+        <meta property="og:site_name" content="Grey Panther's Place" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Changes to String.substring in Java 7"/>
+        <meta property="og:url" content="https://gpanther.github.io/2012/12/changes-to-stringsubstring-in-java-7.html"/>
+        <meta property="og:description" content="This post was originally published as part of the Java Advent series. If you like it, please spread the word by sharing, tweeting, FB, G+ and so on! Want to write for the Java Advent blog? We are looking for contributors to fill all 24 slot and would love to ..."/>
+        <meta property="article:published_time" content="2012-12-12" />
+            <meta property="article:section" content="archived" />
+            <meta property="article:tag" content="java7" />
+            <meta property="article:tag" content="string" />
+            <meta property="article:tag" content="java advent" />
+            <meta property="article:tag" content="java" />
+            <meta property="article:author" content="Attila-Mihaly Balazs" />
+
+    <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@cdman83">
+        <meta name="twitter:creator" content="@cdman83">
+    <meta name="twitter:domain" content="https://gpanther.github.io">
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://gpanther.github.io/theme/css/bootstrap.superhero.min.css" type="text/css"/>
+    <link href="https://gpanther.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://gpanther.github.io/theme/css/pygments/solarizeddark.css" rel="stylesheet">
+        <link href="https://gpanther.github.io/theme/css/typogrify.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://gpanther.github.io/theme/css/style.css" type="text/css"/>
+
+        <link href="https://gpanther.github.io/feeds/posts/default" type="application/atom+xml" rel="alternate"
+              title="Grey Panther's Place ATOM Feed"/>
+
+        <link href="https://gpanther.github.io/feeds/rss" type="application/rss+xml" rel="alternate"
+              title="Grey Panther's Place RSS Feed"/>
+
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://gpanther.github.io/" class="navbar-brand">
+Grey Panther's Place            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="https://gpanther.github.io/">
+                             About
+                          </a></li>
+                         <li><a href="https://gpanther.github.io/pages/resume-curriculum-vitae.html">
+                             Resume / Curriculum&nbsp;Vitae
+                          </a></li>
+                        <li class="active">
+                            <a href="https://gpanther.github.io/category/archived.html">Archived</a>
+                        </li>
+                        <li >
+                            <a href="https://gpanther.github.io/category/blog.html">Blog</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://gpanther.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://gpanther.github.io/2012/12/changes-to-stringsubstring-in-java-7.html"
+                       rel="bookmark"
+                       title="Permalink to Changes to String.substring in Java 7">
+                        Changes to String.substring in Java&nbsp;7
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2012-12-12T10:37:00+02:00"> Mi 12 decembrie 2012</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://gpanther.github.io/tag/java7.html">java7</a>
+        /
+	<a href="https://gpanther.github.io/tag/string.html">string</a>
+        /
+	<a href="https://gpanther.github.io/tag/java-advent.html">java advent</a>
+        /
+	<a href="https://gpanther.github.io/tag/java.html">java</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p><em>This post was originally published as part of the <a href="http://www.javaadvent.com/2012/12/changes-to-stringsubstring-in-java-7.html">Java Advent
+series</a>.
+If you like it, please spread the word by sharing, tweeting, <span class="caps">FB</span>, G+ and
+so on! Want to write for the Java Advent blog? We are looking for
+contributors to fill all 24 slot and would love to have your
+contribution! <a href="mailto:dify.ltd@gmail.com">Contact Attila Balazs</a> to&nbsp;contribute!</em></p>
+<p>It is common knowledge that Java optimizes the substring operation for
+the case where you generate a lot of substrings of the same source
+string. It does this by using the <code>(value, offset, count)</code> way of
+storing the information. See an example&nbsp;below:</p>
+<div class="separator" style="text-align: center">
+
+![](http://4.bp.blogspot.com/-gnaLPXGMeUQ/UMIaKhQ5wsI/AAAAAAAAFn8/wNPgGPtE2qY/s320/Untitled%2Bdrawing.png)
+
+</div>
+
+<p>In the above diagram you see the strings &#8220;Hello&#8221; and &#8220;World!&#8221; derived
+from &#8220;Hello World!&#8221; and the way they are represented in the heap: there
+is one character array containing &#8220;Hello World!&#8221; and two references to
+it. This method of storage is advantageous in some cases, for example
+for a compiler which tokenizes source files. In other instances it may
+lead you to an OutOfMemorError (if you are routinely reading long
+strings and only keeping a small part of it - but the above mechanism
+prevents the <span class="caps">GC</span> from collecting the original String buffer). Some even
+<a href="http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=4513622">call it a
+bug</a>. I
+wouldn&#8217;t go so far, but it&#8217;s certainly a leaky abstraction because you
+were forced to do the following to ensure that a copy was made:
+<code>new String(str.substring(5, 6))</code>.</p>
+<div class="separator" style="text-align: center">
+
+![](http://3.bp.blogspot.com/-NGSJS_psCIc/UMW40g0NLXI/AAAAAAAAFoQ/7kfOVA8JdC0/s320/Untitled%2Bdrawing.png)
+
+</div>
+
+<p>This all changed in <a href="http://mail.openjdk.java.net/pipermail/core-libs-dev/2012-May/010257.html">May of
+2012</a>
+or Java 7u6. The pendulum is swung back and now full copies are made by
+default. What does this mean for&nbsp;you?</p>
+<ul>
+<li>For most probably it is just a nice piece of Java&nbsp;trivia</li>
+<li>If you are writing parsers and such, you can not rely any more on
+    the implicit caching provided by String. You will need to implement
+    a similar mechanism based on buffering and a custom implementation
+    of&nbsp;CharSequence</li>
+<li>If you were doing <code>new String(str.substring)</code> to force a copy of the
+    character buffer, you can stop as soon as you update to the latest
+    Java 7 (and you need to do that quite soon since <a href="https://blogs.oracle.com/java/entry/end_of_public_updates_for">Java 6 is being
+    EOLd as we
+    speak</a>).</li>
+</ul>
+<p>Thankfully the development of Java is an open process and such
+information is at the fingertips of&nbsp;everyone!</p>
+<p>A couple of more references (since we don&#8217;t say pointers in Java :-))
+related to&nbsp;Strings:</p>
+<ul>
+<li>If you are storing the same string over and over again (maybe you&#8217;re
+    parsing messages from a socket for example), you should <a href="http://hype-free.blogspot.ro/2010/03/stringintern-there-are-better-ways.html">read up on
+    alternatives to
+    String.intern()</a>
+    (and also consider reading chapter 50 from the second edition of
+    Effective Java: Avoid strings where other types are more&nbsp;appropriate)</li>
+<li>Look into (and do benchmarks before using them!) options like
+    UseCompressedStrings (which <a href="http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=7129417">seems to have been
+    removed</a>),
+    UseStringCache and&nbsp;StringCache</li>
+</ul>
+<p>Hope I didn&#8217;t strung you along too much and you found this useful! Until
+next time<br />
+- Attila&nbsp;Balazs</p>
+<p><em>Meta: this post is part of the <a href="http://javaadvent.com/">Java Advent<br />
+Calendar</a> and is licensed under the <a href="https://creativecommons.org/licenses/by/3.0/">Creative
+Commons 3.0 Attribution</a>
+license. If you like it, please spread the word by sharing, tweeting,
+<span class="caps">FB</span>, G+ and so on! Want to write for the blog? We are looking for
+contributors to fill all 24 slot and would love to have your
+contribution! <a href="mailto:dify.ltd@gmail.com">Contact Attila Balazs</a> to&nbsp;contribute!</em></p>
+            </div>
+            <!-- /.entry-content -->
+<section class="well" id="related-posts">
+    <h4>Related Posts:</h4>
+    <ul>
+        <li><a href="https://gpanther.github.io/2012/12/restart-me-up.html">(Re)Start me&nbsp;up!</a></li>
+        <li><a href="https://gpanther.github.io/2012/12/ensuring-order-of-execution-for-tasks.html">Ensuring the order of execution for&nbsp;tasks</a></li>
+        <li><a href="https://gpanther.github.io/2012/12/java-runtime-options.html">Java Runtime&nbsp;options</a></li>
+        <li><a href="https://gpanther.github.io/2011/02/is-hand-writing-assembly-still.html">Is hand-writing assembly still necessary these&nbsp;days?</a></li>
+        <li><a href="https://gpanther.github.io/2011/03/setting-maximum-number-of-opened-files.html">Setting the maximum number of opened files under Ubuntu (for&nbsp;JProfiler)</a></li>
+    </ul>
+</section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<div id="aboutme">
+        <p>
+            <img width="60%" class="img" src="/images/profile.png"/>
+        </p>
+    <p>
+        <strong>About Grey Panther</strong><br/>
+        <a href="/">father, husband, software craftsman</a>
+    </p>
+</div>
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="https://ro.linkedin.com/in/gpanther"><i class="fa fa-linkedin-square fa-lg"></i> linkedin</a></li>
+                <li class="list-group-item"><a href="http://stackoverflow.com/users/1265/grey-panther"><i class="fa fa-stack-overflow fa-lg"></i> stackoverflow</a></li>
+                <li class="list-group-item"><a href="https://github.com/gpanther/"><i class="fa fa-github-square fa-lg"></i> github</a></li>
+              </ul>
+            </li>
+
+
+
+
+
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container-fluid">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2016 Grey Panther
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by/4.0/80x15.png" /></a>
+    Content
+  licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>, except where indicated otherwise.
+</small></p>
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://gpanther.github.io/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://gpanther.github.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://gpanther.github.io/theme/js/respond.min.js"></script>
+
+
+</body>
+</html>
