@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Every end is a new beginning - Grey Panther's Place</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://gpanther.github.io/2012/10/every-end-is-new-beginning.html">
+
+        <meta name="author" content="Attila-Mihaly Balazs" />
+        <meta name="description" content="TL;DR: I’m shutting down the twitfeeder project (it was on lifesupport for a long time) so I mirrored a technical article from the blog in the hope that it might be useful for somebody someday. Proxying URL fetch requests from the Google App Engine Hosting on the Google ..." />
+
+        <meta property="og:site_name" content="Grey Panther's Place" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Every end is a new beginning"/>
+        <meta property="og:url" content="https://gpanther.github.io/2012/10/every-end-is-new-beginning.html"/>
+        <meta property="og:description" content="TL;DR: I’m shutting down the twitfeeder project (it was on lifesupport for a long time) so I mirrored a technical article from the blog in the hope that it might be useful for somebody someday. Proxying URL fetch requests from the Google App Engine Hosting on the Google ..."/>
+        <meta property="article:published_time" content="2012-10-27" />
+            <meta property="article:section" content="archived" />
+            <meta property="article:author" content="Attila-Mihaly Balazs" />
+
+    <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@cdman83">
+        <meta name="twitter:creator" content="@cdman83">
+    <meta name="twitter:domain" content="https://gpanther.github.io">
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://gpanther.github.io/theme/css/bootstrap.superhero.min.css" type="text/css"/>
+    <link href="https://gpanther.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://gpanther.github.io/theme/css/pygments/solarizeddark.css" rel="stylesheet">
+        <link href="https://gpanther.github.io/theme/css/typogrify.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://gpanther.github.io/theme/css/style.css" type="text/css"/>
+
+        <link href="https://gpanther.github.io/feeds/posts/default" type="application/atom+xml" rel="alternate"
+              title="Grey Panther's Place ATOM Feed"/>
+
+        <link href="https://gpanther.github.io/feeds/rss" type="application/rss+xml" rel="alternate"
+              title="Grey Panther's Place RSS Feed"/>
+
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://gpanther.github.io/" class="navbar-brand">
+Grey Panther's Place            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="https://gpanther.github.io/">
+                             About
+                          </a></li>
+                         <li><a href="https://gpanther.github.io/pages/resume-curriculum-vitae.html">
+                             Resume / Curriculum&nbsp;Vitae
+                          </a></li>
+                        <li class="active">
+                            <a href="https://gpanther.github.io/category/archived.html">Archived</a>
+                        </li>
+                        <li >
+                            <a href="https://gpanther.github.io/category/blog.html">Blog</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://gpanther.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://gpanther.github.io/2012/10/every-end-is-new-beginning.html"
+                       rel="bookmark"
+                       title="Permalink to Every end is a new beginning">
+                        Every end is a new&nbsp;beginning
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2012-10-27T23:03:00+03:00"> Sb 27 octombrie 2012</time>
+    </span>
+
+
+
+
+
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p><em><span class="caps">TL</span>;<span class="caps">DR</span>: I&#8217;m shutting down the twitfeeder project (it was on lifesupport
+for a long time) so I mirrored a technical article from the blog in the
+hope that it might be useful for somebody&nbsp;someday.</em></p>
+<h3>Proxying <span class="caps">URL</span> fetch requests from the Google App&nbsp;Engine</h3>
+<p>Hosting on the Google App Engine means giving up a lot controls: your<br />
+application will run on some machines in one of Google&#8217;s datacenters,<br />
+use some other machines to store data and use yet an other set of<br />
+machines to talk to the outside world (send/receive emails, fetch
+URLs,<br />
+etc). You don&#8217;t know the exact identity of these machines (which for<br />
+this article means their external <span class="caps">IP</span> address), and even though you can<br />
+find out some of the details (for example by fetching the <a href="http://www.ipchicken.com/">ipchicken
+page</a><br />
+and parsing the result or by sending an e-mail and looking at the<br />
+headers), there is no guarantee made that the results are repeatable<br />
+(ie. if you do it again and again you will get the same result) in the<br />
+short or long run. While one might not care about such details most of<br />
+the time, there are some corner cases where it would be nice to have a<br />
+predictable and unique source&nbsp;address:</p>
+<ul>
+<li>You might<br />
+    worry that some of the exit points get blocked because other<br />
+    applications on the Google App Engine have an abusive&nbsp;behavior</li>
+<li>You might want a single exit point so that you can &#8220;debug&#8221; your
+    traffic at a low (network / tcpdump)&nbsp;level</li>
+<li>And finally, the main reason for which the Twit Feeder uses it: some
+    third-party services (like <a href="http://twitter.com/">Twitter</a> or
+    <a href="http://delicious.com/">Delicious</a>) use the source <span class="caps">IP</span> to whitelist
+    requests to their <span class="caps">API</span></li>
+</ul>
+<p>To<br />
+be fair to the <span class="caps">GAE</span> Architects: the above considerations don&#8217;t affect<br />
+the main usecase and are more of a cornercase if we look at the
+average<br />
+application running on the <span class="caps">GAE</span>. Also, having so few commitments (ie.<br />
+they don&#8217;t stipulate things like &#8220;all the <span class="caps">URL</span> fetches will come from
+the<br />
+10.0.0.1/24 netblock&#8221;) means that they are free to move things around<br />
+(even between datacenters) to optimize uptime and performance which in<br />
+turn benefits the application owners and&nbsp;users.</p>
+<p>Back to<br />
+our scenario: the solution is to introduce an intermediary which has a<br />
+static and well known <span class="caps">IP</span> and let it do all the fetching. Ideally I
+would<br />
+have installed <a href="http://www.squid-cache.org/">Squid</a> and and<br />
+be done with it, but the <span class="caps">URL</span> fetch service doesn&#8217;t have support for<br />
+proxies currently. So the solution I came up with looks like&nbsp;this:</p>
+<ul>
+<li>Get<br />
+    a <span class="caps">VPS</span> server. I would recommend one which gives you more bandwidth<br />
+    rather than more <span class="caps">CPU</span> / memory / disk. It is also a good idea to get
+    one<br />
+    in the <span class="caps">USA</span> to minimize latency from/to the Google datacenters. I&#8217;m<br />
+    currently using <a href="http://vpslink.com/?ref=PPPMNM">VPSLink</a> and I
+    didn&#8217;t had any problems (full disclosure: that is a referral link
+    and you should get 10% off for lifetime if you use&nbsp;it).</li>
+<li>Install Apache + <span class="caps">PHP</span> on&nbsp;it</li>
+<li>Use a simple <span class="caps">PHP</span> script to fetch the page encoded in a query
+    parameter using the
+    <a href="http://www.php.net/manual/en/book.curl.php">php_curl</a>&nbsp;extension.</li>
+</ul>
+<p>To spice up this blogpost ;-), here is a diagram of the&nbsp;process:</p>
+<p>
+<center>
+
+![](https://lh4.ggpht.com/_hrvCBhtWhJ4/S1IPu9C6clI/<span class="caps">AAAAAAAACHI</span>/YyuBoNYpXOQ/s800/google_app_engine_proxy.png)
+
+</center>
+</p>
+
+<p>A couple of&nbsp;points:</p>
+<ul>
+<li>Taking<br />
+    care of a <span class="caps">VPS</span> can be challenging, especially if you aren&#8217;t a Linux<br />
+    user. However failing to do so can result in it being taken over
+    by<br />
+    malicious individuals. Consider getting a managed <span class="caps">VPS</span>. Also, three
+    quick<br />
+    security tips: use strong passwords. move the <span class="caps">SSH</span> server to a<br />
+    non-standard port and configure your firewall to be as restrictive
+    as<br />
+    possible (deny everything, and open ports to only a limited number
+    of <span class="caps">IP</span><br />&nbsp;addresses).</li>
+<li>Yes, this introduces a single point of failure<br />
+    into your application, so plan accordingly (while your application
+    is<br />
+    small, this shouldn&#8217;t be a problem - as it grows you can get two
+    <span class="caps">VPS</span>&#8217;s<br />
+    at two different data centers for example for added&nbsp;reliability).</li>
+<li>The<br />
+    traffic between Google and your <span class="caps">VPS</span> can be encrypted using <span class="caps">TLS</span>
+    (<span class="caps">HTTPS</span>).<br />
+    The good news is that the <span class="caps">URL</span> fetcher service doesn&#8217;t check the<br />
+    certificates, so you can use self-signed ones. The bad news is that
+    the<br />
+    <span class="caps">URL</span> fetcher doesn&#8217;t check the certificates, so a determined
+    attacker can<br />
+    relatively easily man-in-the-middle you (but it protects the data
+    from<br />
+    the casual&nbsp;sniffer).</li>
+<li>Be aware that you need to budget for<br />
+    double of the amount of traffic you estimate using at the <span class="caps">VPS</span>
+    (because<br />
+    it needs to first download it and then upload it back to Google).
+    The<br />
+    <span class="caps">URL</span> fetcher service does know how to use gzip compression, so if
+    you are<br />
+    downloading mainly text, you shouldn&#8217;t have a bandwidth&nbsp;problem.</li>
+<li><span class="caps">PHP</span><br />
+    might seem like an unusual choice of language, given how most <span class="caps">GAE</span>
+    users<br />
+    have experience in either Python or Java, but there are a lot of<br />
+    tutorials out there on how to install it (and on modern Linux<br />
+    distribution it can be done in under 10 minutes with the help of
+    the<br />
+    package manager) and it was the one I was most comfortable with as
+    an<br />
+    Apache&nbsp;module.</li>
+</ul>
+<p>Without further ado, here are the relevant sourcecode snippets (which I
+hereby release into the public&nbsp;domain):</p>
+<p>The <span class="caps">PHP</span>&nbsp;script:</p>
+<div class="highlight"><pre> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+   <span class="nx">curl_setopt</span><span class="p">(</span><span class="nx">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_POST</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+   <span class="nx">$postfields</span> <span class="o">=</span> <span class="nx">array</span><span class="p">();</span>
+   <span class="nx">foreach</span> <span class="p">(</span><span class="nx">$_POST</span> <span class="nx">as</span> <span class="nx">$key</span> <span class="o">=&gt;</span> <span class="nx">$val</span><span class="p">)</span> <span class="p">{</span>
+       <span class="nx">$postfields</span><span class="cp">[]</span> <span class="o">=</span> <span class="nx">urlencode</span><span class="p">(</span><span class="nx">$key</span><span class="p">)</span> <span class="p">.</span> <span class="s1">&#39;=&#39;</span> <span class="p">.</span> <span class="nx">urlencode</span><span class="p">(</span><span class="nx">$val</span><span class="p">);</span>
+   <span class="p">}</span>
+   <span class="nx">curl_setopt</span><span class="p">(</span><span class="nx">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_POSTFIELDS</span><span class="p">,</span> <span class="nx">implode</span><span class="p">(</span><span class="s1">&#39;&amp;&#39;</span><span class="p">,</span> <span class="nx">$postfields</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="nx">$headers</span> <span class="o">=</span> <span class="nx">array</span><span class="p">();</span>
+<span class="kd">function</span> <span class="nx">header_callback</span><span class="p">(</span><span class="nx">$ch</span><span class="p">,</span> <span class="nx">$header</span><span class="p">)</span> <span class="p">{</span>
+   <span class="nx">global</span> <span class="nx">$headers</span><span class="p">;</span>
+   <span class="c1">// we add our own content encoding</span>
+   <span class="c1">// also, the content length might vary because of this</span>
+   <span class="k">if</span> <span class="p">(</span><span class="kc">false</span> <span class="o">===</span> <span class="nx">stripos</span><span class="p">(</span><span class="nx">$header</span><span class="p">,</span> <span class="s1">&#39;Content-Encoding: &#39;</span><span class="p">)</span>
+       <span class="o">&amp;&amp;</span> <span class="kc">false</span> <span class="o">===</span> <span class="nx">stripos</span><span class="p">(</span><span class="nx">$header</span><span class="p">,</span> <span class="s1">&#39;Content-Length: &#39;</span><span class="p">)</span>
+       <span class="o">&amp;&amp;</span> <span class="kc">false</span> <span class="o">===</span> <span class="nx">stripos</span><span class="p">(</span><span class="nx">$header</span><span class="p">,</span> <span class="s1">&#39;Transfer-Encoding: &#39;</span><span class="p">))</span> <span class="p">{</span>
+       <span class="nx">$headers</span><span class="cp">[]</span> <span class="o">=</span> <span class="nx">$header</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="k">return</span> <span class="nx">strlen</span><span class="p">(</span><span class="nx">$header</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">curl_setopt</span><span class="p">(</span><span class="nx">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_HEADERFUNCTION</span><span class="p">,</span> <span class="s1">&#39;header_callback&#39;</span><span class="p">);</span>
+
+<span class="nx">$output</span> <span class="o">=</span> <span class="nx">curl_exec</span><span class="p">(</span><span class="nx">$ch</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">FALSE</span> <span class="o">===</span> <span class="nx">$output</span><span class="p">)</span> <span class="p">{</span>
+   <span class="nx">header</span><span class="p">(</span><span class="s2">&quot;HTTP/1.0 500 Server Error&quot;</span><span class="p">);</span>
+   <span class="nx">print</span> <span class="nx">curl_error</span><span class="p">(</span><span class="nx">$ch</span><span class="p">);</span>
+   <span class="nx">exit</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nx">curl_close</span><span class="p">(</span><span class="nx">$ch</span><span class="p">);</span>
+
+<span class="nx">foreach</span> <span class="p">(</span><span class="nx">$headers</span> <span class="nx">as</span> <span class="nx">$header</span><span class="p">)</span> <span class="p">{</span>
+   <span class="nx">header</span><span class="p">(</span><span class="nx">$header</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">print</span> <span class="nx">$output</span><span class="p">;</span>
+</pre></div>
+
+
+<p>The &#8220;privatedata.php&#8221; file looks like&nbsp;this:</p>
+<p>Two<br />
+separate files are being used to avoid submitting the password to the<br />
+source repository, while still keeping all the sourcecode&nbsp;open.</p>
+<p>Now with the code in place, you can test it using&nbsp;curl:</p>
+<div class="highlight"><pre>curl --compressed -v -H &#39;X-Shared-Secret: 23tqhwfgj2qbherhjerj&#39; &#39;http://127.0.0.1:1483/fetch_url.php?q=http%3A//identi.ca/api/help/test.json
+</pre></div>
+
+
+<p>As<br />
+you can see, a custom header is used for authentication. An other<br />
+security measure is to use a non-standard port. Limiting the requests
+to<br />
+the IPs of the Google datacenter from the firewall would be the ideal<br />
+solution, but given that this was the problem we are trying to solve
+in<br />
+the first place (the Google datacenters not having an officially<br />
+announced set of <span class="caps">IP</span> addresses), this doesn&#8217;t seem&nbsp;possible.</p>
+<p>Finally, here is the Python code to use the script from withing an
+application hosted on the <span class="caps">GAE</span>:</p>
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">urllib</span> <span class="kn">import</span> <span class="n">quote</span>
+<span class="kn">from</span> <span class="nn">google.appengine.api</span> <span class="kn">import</span> <span class="n">urlfetch</span>
+
+<span class="c"># ...</span>
+
+<span class="n">fetch_headers</span><span class="p">[</span><span class="s">&#39;X-Shared-Secret&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;23tqhwfgj2qbherhjerj&#39;</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">urlfetch</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s">&#39;http://127.0.0.1:1483/fetch_url.php?q=</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">quote</span><span class="p">(</span><span class="n">url</span><span class="p">),</span> <span class="n">payload</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
+ <span class="n">method</span><span class="o">=</span><span class="n">urlfetch</span><span class="o">.</span><span class="n">POST</span> <span class="k">if</span> <span class="n">data</span> <span class="k">else</span> <span class="n">urlfetch</span><span class="o">.</span><span class="n">GET</span><span class="p">,</span>
+ <span class="n">headers</span><span class="o">=</span><span class="n">fetch_headers</span><span class="p">,</span> <span class="n">deadline</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span> <span class="n">follow_redirects</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</pre></div>
+
+
+<p>A little more discussion about the&nbsp;code:</p>
+<ul>
+<li>The<br />
+    method of using a custom header for authorization was chosen, since
+    the<br />
+    forwarding of authentication data (ie. the &#8220;Authorization&#8221; header)
+    was<br />
+    needed (specifically this is what the Twitter <span class="caps">API</span> uses for
+    verifying<br />&nbsp;identity)</li>
+<li>Speaking of things the script forwards: it does<br />
+    forward the user agent and any <span class="caps">POST</span> data if present. The forwarding
+    of<br />
+    other headers could be quite easily be&nbsp;added.</li>
+<li>Passing<br />
+    variables in a <span class="caps">GET</span> request is also supported (they would be<br />
+    double-encoded, but that shouldn&#8217;t be a concern in but the most
+    extreme<br />&nbsp;cases)</li>
+<li>If we are talking about sensitive data, cURL (and the cURL extension
+    for <span class="caps">PHP</span>) has the ability to fetch <span class="caps">HTTPS</span> content <em>and to verify the
+    certificates</em>.</li>
+</ul>
+<p>While<br />
+this method might look cumbersome, in practice I found it to work
+quite<br />
+well. Hopefully this information will help others facing the same<br />
+problem. A final note: if you have questions about the code or about<br />
+other aspects, post them in the comments. I will try to answer them as<br />
+fast as possible. I&#8217;m also considering launching a &#8220;proxy service&#8221; for<br />
+<span class="caps">GAE</span> apps to make this process much more simpler (abstracting away the<br />
+setup and administration of the <span class="caps">VPS</span>), so if you would be interested in<br />
+paying a couple of bucks for such a service, please contact me either<br />
+directly or trough the&nbsp;comments.</p>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<div id="aboutme">
+        <p>
+            <img width="60%" class="img" src="/images/profile.png"/>
+        </p>
+    <p>
+        <strong>About Grey Panther</strong><br/>
+        <a href="/">father, husband, software craftsman</a>
+    </p>
+</div>
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="https://ro.linkedin.com/in/gpanther"><i class="fa fa-linkedin-square fa-lg"></i> linkedin</a></li>
+                <li class="list-group-item"><a href="http://stackoverflow.com/users/1265/grey-panther"><i class="fa fa-stack-overflow fa-lg"></i> stackoverflow</a></li>
+                <li class="list-group-item"><a href="https://github.com/gpanther/"><i class="fa fa-github-square fa-lg"></i> github</a></li>
+              </ul>
+            </li>
+
+
+
+
+
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container-fluid">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2016 Grey Panther
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by/4.0/80x15.png" /></a>
+    Content
+  licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>, except where indicated otherwise.
+</small></p>
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://gpanther.github.io/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://gpanther.github.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://gpanther.github.io/theme/js/respond.min.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Microbenchmarking and you - Grey Panther's Place</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://gpanther.github.io/2011/03/microbenchmarking-and-you.html">
+
+        <meta name="author" content="Attila-Mihaly Balazs" />
+        <meta name="keywords" content="benchmark,java" />
+        <meta name="description" content="Crossposted from the Transylvania JUG website. Microbenchmarking is the practice of measuring the performance characteristics (like CPU, memory or I/O) of a small piece of code to determine which would be better suited for a particular scenario. If I could offer but one advice on this, it would be ..." />
+
+        <meta property="og:site_name" content="Grey Panther's Place" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Microbenchmarking and you"/>
+        <meta property="og:url" content="https://gpanther.github.io/2011/03/microbenchmarking-and-you.html"/>
+        <meta property="og:description" content="Crossposted from the Transylvania JUG website. Microbenchmarking is the practice of measuring the performance characteristics (like CPU, memory or I/O) of a small piece of code to determine which would be better suited for a particular scenario. If I could offer but one advice on this, it would be ..."/>
+        <meta property="article:published_time" content="2011-03-07" />
+            <meta property="article:section" content="archived" />
+            <meta property="article:tag" content="benchmark" />
+            <meta property="article:tag" content="java" />
+            <meta property="article:author" content="Attila-Mihaly Balazs" />
+
+    <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@cdman83">
+        <meta name="twitter:creator" content="@cdman83">
+    <meta name="twitter:domain" content="https://gpanther.github.io">
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://gpanther.github.io/theme/css/bootstrap.superhero.min.css" type="text/css"/>
+    <link href="https://gpanther.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://gpanther.github.io/theme/css/pygments/solarizeddark.css" rel="stylesheet">
+        <link href="https://gpanther.github.io/theme/css/typogrify.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://gpanther.github.io/theme/css/style.css" type="text/css"/>
+
+        <link href="https://gpanther.github.io/feeds/posts/default" type="application/atom+xml" rel="alternate"
+              title="Grey Panther's Place ATOM Feed"/>
+
+        <link href="https://gpanther.github.io/feeds/rss" type="application/rss+xml" rel="alternate"
+              title="Grey Panther's Place RSS Feed"/>
+
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://gpanther.github.io/" class="navbar-brand">
+Grey Panther's Place            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="https://gpanther.github.io/">
+                             About
+                          </a></li>
+                         <li><a href="https://gpanther.github.io/pages/resume-curriculum-vitae.html">
+                             Resume / Curriculum&nbsp;Vitae
+                          </a></li>
+                        <li class="active">
+                            <a href="https://gpanther.github.io/category/archived.html">Archived</a>
+                        </li>
+                        <li >
+                            <a href="https://gpanther.github.io/category/blog.html">Blog</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://gpanther.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://gpanther.github.io/2011/03/microbenchmarking-and-you.html"
+                       rel="bookmark"
+                       title="Permalink to Microbenchmarking and you">
+                        Microbenchmarking and&nbsp;you
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2011-03-07T15:13:00+02:00"> Lu 07 martie 2011</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://gpanther.github.io/tag/benchmark.html">benchmark</a>
+        /
+	<a href="https://gpanther.github.io/tag/java.html">java</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p><em>Crossposted from the <a href="http://www.transylvania-jug.org/archives/174">Transylvania <span class="caps">JUG</span>
+website</a>.</em></p>
+<p>Microbenchmarking is the practice of measuring the performance
+characteristics (like <span class="caps">CPU</span>, memory or I/O) of a small piece of code to
+determine which would be better suited for a particular scenario. If I
+could offer but one advice on this, it would be this: don&#8217;t. It is too
+easy to get it wrong and bad advice resulting from bad measurement is
+like&nbsp;cancer.</p>
+<p>If you don&#8217;t want to take my first advice, here is my second advice: if
+you really want to do microbenchmarking watch this talk by Joshua Bloch:
+<a href="http://parleys.com/#sl=3&amp;st=5&amp;id=2103">Performance Anxiety</a> and use a
+framework like <a href="http://code.google.com/p/caliper/">caliper</a>, which I
+present&nbsp;below.</p>
+<p><a href="http://code.google.com/p/caliper/">caliper</a> is a Java framework written
+at Google for doing Java microbenchmarks as correctly as possible. To
+use, first you have to build it (there are no prebuild jars yet, nor is
+it present in the central Maven repository,&nbsp;sorry):</p>
+<div class="highlight"><pre>svn checkout http://caliper.googlecode.com/svn/trunk/ caliper
+cd caliper
+ant
+</pre></div>
+
+
+<p>Now you can start writing your benchmark. Benchmarks are written in a
+style similar to the JUnit3&nbsp;tests:</p>
+<ul>
+<li>you have to extend the <code>com.google.caliper.SimpleBenchmark</code> class</li>
+<li>your methods must conform to the <code>public void timeZZZZ(int reps)</code>
+    signature</li>
+<li>you can override the setUp and tearDown methods to implement
+    initialization /&nbsp;finalization</li>
+</ul>
+<p>Below is a simple example (taken from the caliper&nbsp;homepage):</p>
+<div class="highlight"><pre>public class MyBenchmark extends SimpleBenchmark {
+  public void timeMyOperation(int reps) {
+    for (int i = 0; i &lt; reps; i++) {
+      MyClass.myOperation();
+    }
+  }
+}
+</pre></div>
+
+
+<p>To run this you have multiple&nbsp;possibilities:</p>
+<ul>
+<li>
+<p>Use the <code>caliper</code> script included in the code distribution (this is
+    a <span class="caps">SH</span> script, so it won&#8217;t work under&nbsp;Windows):</p>
+<div class="highlight"><pre>~/projects-personal/caliper/build/caliper-0.0/caliper --trials 10 org.transylvania.jug.espresso.shots.d20110306.MyBenchmark
+</pre></div>
+
+
+<p><p>
+you can also execute the script without parameters to get a list and
+description of command line&nbsp;parameters.</p>
+</li>
+<li>
+<p>Run it from your favorite <span class="caps">IDE</span>. You need to add the following
+    libraries: allocation.jar, caliper-0.0.jar. The main class is
+    com.google.caliper.Runner and the parameters are the same you would
+    pass to the caliper&nbsp;runner</p>
+</li>
+<li>Add a main method to your test class which would contain the
+    following:<div class="highlight"><pre>public static void main(String... args) throws Exception {
+  Runner.main(MyBenchmark.class, args);
+}
+</pre></div>
+
+
+</li>
+</ul>
+<p>By default caliper outputs an easy to understand text output. You have
+also the option to publish the benchmark as a nice <span class="caps">HTML</span> page (see <a href="http://microbenchmarks.appspot.com/run/jessewilson@google.com/examples.ArraySortBenchmark">this
+page</a>
+for example). The publication is done trough a Google AppEngine app and
+is publicly available to anyone (a caveat to remember). For more
+information see the <a href="http://stackoverflow.com/questions/tagged/caliper">caliper questions on
+StackOveflow</a>. You
+might also be interested in the <a href="http://www.javaperformancetuning.com/">java performance tunning
+website</a> if you need to perform
+such&nbsp;tasks.</p>
+            </div>
+            <!-- /.entry-content -->
+<section class="well" id="related-posts">
+    <h4>Related Posts:</h4>
+    <ul>
+        <li><a href="https://gpanther.github.io/2011/02/is-hand-writing-assembly-still.html">Is hand-writing assembly still necessary these&nbsp;days?</a></li>
+        <li><a href="https://gpanther.github.io/2011/03/setting-maximum-number-of-opened-files.html">Setting the maximum number of opened files under Ubuntu (for&nbsp;JProfiler)</a></li>
+        <li><a href="https://gpanther.github.io/2011/01/remote-debugging-with-java.html">Remote debugging with&nbsp;Java</a></li>
+        <li><a href="https://gpanther.github.io/2012/10/helper-for-testing-multi-threaded.html">Helper for testing multi-threaded programs in&nbsp;Java</a></li>
+        <li><a href="https://gpanther.github.io/2012/12/restart-me-up.html">(Re)Start me&nbsp;up!</a></li>
+    </ul>
+</section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<div id="aboutme">
+        <p>
+            <img width="60%" class="img" src="/images/profile.png"/>
+        </p>
+    <p>
+        <strong>About Grey Panther</strong><br/>
+        <a href="/">father, husband, software craftsman</a>
+    </p>
+</div>
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="https://ro.linkedin.com/in/gpanther"><i class="fa fa-linkedin-square fa-lg"></i> linkedin</a></li>
+                <li class="list-group-item"><a href="http://stackoverflow.com/users/1265/grey-panther"><i class="fa fa-stack-overflow fa-lg"></i> stackoverflow</a></li>
+                <li class="list-group-item"><a href="https://github.com/gpanther/"><i class="fa fa-github-square fa-lg"></i> github</a></li>
+              </ul>
+            </li>
+
+
+
+
+
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container-fluid">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2016 Grey Panther
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by/4.0/80x15.png" /></a>
+    Content
+  licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>, except where indicated otherwise.
+</small></p>
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://gpanther.github.io/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://gpanther.github.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://gpanther.github.io/theme/js/respond.min.js"></script>
+
+
+</body>
+</html>

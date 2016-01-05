@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Processing clipboard data in Perl - Grey Panther's Place</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://gpanther.github.io/2011/01/processing-clipboard-data-in-perl.html">
+
+        <meta name="author" content="Attila-Mihaly Balazs" />
+        <meta name="keywords" content="ubuntu,perl" />
+        <meta name="description" content="The problem: lets say you have a program which generates data to the clipboard (or it is easier to get the data into the clipboard than into a file) and you want to process the data (create a summary for example). Perl to the rescue! Get the Clipboard module (if ..." />
+
+        <meta property="og:site_name" content="Grey Panther's Place" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Processing clipboard data in Perl"/>
+        <meta property="og:url" content="https://gpanther.github.io/2011/01/processing-clipboard-data-in-perl.html"/>
+        <meta property="og:description" content="The problem: lets say you have a program which generates data to the clipboard (or it is easier to get the data into the clipboard than into a file) and you want to process the data (create a summary for example). Perl to the rescue! Get the Clipboard module (if ..."/>
+        <meta property="article:published_time" content="2011-01-03" />
+            <meta property="article:section" content="archived" />
+            <meta property="article:tag" content="ubuntu" />
+            <meta property="article:tag" content="perl" />
+            <meta property="article:author" content="Attila-Mihaly Balazs" />
+
+    <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@cdman83">
+        <meta name="twitter:creator" content="@cdman83">
+    <meta name="twitter:domain" content="https://gpanther.github.io">
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://gpanther.github.io/theme/css/bootstrap.superhero.min.css" type="text/css"/>
+    <link href="https://gpanther.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://gpanther.github.io/theme/css/pygments/solarizeddark.css" rel="stylesheet">
+        <link href="https://gpanther.github.io/theme/css/typogrify.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://gpanther.github.io/theme/css/style.css" type="text/css"/>
+
+        <link href="https://gpanther.github.io/feeds/posts/default" type="application/atom+xml" rel="alternate"
+              title="Grey Panther's Place ATOM Feed"/>
+
+        <link href="https://gpanther.github.io/feeds/rss" type="application/rss+xml" rel="alternate"
+              title="Grey Panther's Place RSS Feed"/>
+
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://gpanther.github.io/" class="navbar-brand">
+Grey Panther's Place            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="https://gpanther.github.io/">
+                             About
+                          </a></li>
+                         <li><a href="https://gpanther.github.io/pages/resume-curriculum-vitae.html">
+                             Resume / Curriculum&nbsp;Vitae
+                          </a></li>
+                        <li class="active">
+                            <a href="https://gpanther.github.io/category/archived.html">Archived</a>
+                        </li>
+                        <li >
+                            <a href="https://gpanther.github.io/category/blog.html">Blog</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://gpanther.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://gpanther.github.io/2011/01/processing-clipboard-data-in-perl.html"
+                       rel="bookmark"
+                       title="Permalink to Processing clipboard data in Perl">
+                        Processing clipboard data in&nbsp;Perl
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2011-01-03T17:03:00+02:00"> Lu 03 ianuarie 2011</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://gpanther.github.io/tag/ubuntu.html">ubuntu</a>
+        /
+	<a href="https://gpanther.github.io/tag/perl.html">perl</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>The problem: lets say you have a program which generates data to the
+clipboard (or it is easier to get the data into the clipboard than into
+a file) and you want to process the data (create a summary for&nbsp;example).</p>
+<p>Perl to the&nbsp;rescue!</p>
+<p>Get the
+<a href="http://search.cpan.org/~king/Clipboard-0.13/lib/Clipboard.pm">Clipboard</a>
+module (if you use Linux, it is as easy as
+<code>sudo cpan -i Clipboard; sudo apt-get install xclip</code> but the package is
+also available as an ActivePerl package for&nbsp;example).</p>
+<p>Write a script like the&nbsp;following:</p>
+<div class="highlight"><pre><span class="k">use</span> <span class="n">strict</span><span class="p">;</span>
+<span class="k">use</span> <span class="n">warnings</span><span class="p">;</span>
+<span class="k">use</span> <span class="n">Clipboard</span><span class="p">;</span>
+
+<span class="k">my</span> <span class="nv">$clippy</span> <span class="o">=</span> <span class="n">Clipboard</span><span class="o">-&gt;</span><span class="n">paste</span><span class="p">();</span>
+<span class="k">my</span> <span class="p">(</span><span class="nv">$sum</span><span class="p">,</span> <span class="nv">$cnt</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="k">while</span> <span class="p">(</span><span class="nv">$clippy</span> <span class="o">=~</span><span class="sr"> /Processed in: (\d+)/g</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$sum</span> <span class="o">+=</span> <span class="nv">$1</span><span class="p">;</span>
+        <span class="nv">$cnt</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">print</span> <span class="nv">$sum</span><span class="o">/</span><span class="nv">$cnt</span><span class="p">,</span> <span class="s">&quot;\n&quot;</span><span class="p">;</span>
+</pre></div>
+
+
+<p></code></p>
+<p>Profit!!!&nbsp;:-)</p>
+<p><em>Update</em>: you can combine this with <a href="http://advent.rjbs.manxome.org/2010/2010-12-13.html">syntax
+highlight</a> for
+example to obtain nicely formatted source&nbsp;code.</p>
+<p><em>Update</em>: copying stuff to the clipboard doesn&#8217;t seem to work under
+Linux (tested under Ubuntu 10.10) because it invokes xclip with the
+&#8220;primary&#8221; clipboard but it only seems to work with the &#8220;clipboard&#8221;
+clipboard. Unfortunately I didn&#8217;t find any good material about the
+distinction between these different clipboard types, but the &#8220;monkey
+patch&#8221; below fixes the problem for me (of course I also <a href="https://rt.cpan.org/Public/Bug/Display.html?id=65399">filed a
+bug</a> with the
+package so this should be resolved in a future&nbsp;version).</p>
+<div class="highlight"><pre><span class="x">use strict;</span>
+<span class="x">use warnings;</span>
+<span class="x">use Clipboard;</span>
+
+<span class="x">if (&#39;Clipboard::Xclip&#39; eq </span><span class="p">$</span><span class="nv">Clipboard</span><span class="x">::driver) </span><span class="err">{</span><span class="x"></span>
+<span class="x">  no warnings &#39;redefine&#39;;</span>
+<span class="x">  *Clipboard::Xclip::all_selections = sub </span><span class="err">{</span><span class="x">  </span>
+<span class="x">    qw(clipboard primary buffer secondary)</span>
+<span class="x">  };</span>
+<span class="x">}</span>
+
+<span class="err">#</span><span class="x"> ... your code here ...</span>
+<span class="x">Clipboard-&gt;copy(&#39;foofooo1&#39;);</span>
+</pre></div>
+            </div>
+            <!-- /.entry-content -->
+<section class="well" id="related-posts">
+    <h4>Related Posts:</h4>
+    <ul>
+        <li><a href="https://gpanther.github.io/2009/11/calls-to-action.html">Calls to&nbsp;action</a></li>
+        <li><a href="https://gpanther.github.io/2011/09/using-less-with-syntax-highlight.html">Using less with syntax&nbsp;highlight</a></li>
+        <li><a href="https://gpanther.github.io/2010/03/parsing-pcap-files-with-perl.html">Parsing pcap files with&nbsp;Perl</a></li>
+        <li><a href="https://gpanther.github.io/2009/10/if-you-use-perl.html">If you use&nbsp;Perl…</a></li>
+        <li><a href="https://gpanther.github.io/2011/04/recovering-encrypted-home-directory.html">Recovering encrypted home directory under&nbsp;Ubuntu</a></li>
+    </ul>
+</section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<div id="aboutme">
+        <p>
+            <img width="60%" class="img" src="/images/profile.png"/>
+        </p>
+    <p>
+        <strong>About Grey Panther</strong><br/>
+        <a href="/">father, husband, software craftsman</a>
+    </p>
+</div>
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="https://ro.linkedin.com/in/gpanther"><i class="fa fa-linkedin-square fa-lg"></i> linkedin</a></li>
+                <li class="list-group-item"><a href="http://stackoverflow.com/users/1265/grey-panther"><i class="fa fa-stack-overflow fa-lg"></i> stackoverflow</a></li>
+                <li class="list-group-item"><a href="https://github.com/gpanther/"><i class="fa fa-github-square fa-lg"></i> github</a></li>
+              </ul>
+            </li>
+
+
+
+
+
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container-fluid">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2016 Grey Panther
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by/4.0/80x15.png" /></a>
+    Content
+  licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>, except where indicated otherwise.
+</small></p>
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://gpanther.github.io/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://gpanther.github.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://gpanther.github.io/theme/js/respond.min.js"></script>
+
+
+</body>
+</html>

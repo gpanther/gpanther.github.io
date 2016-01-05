@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>On benchmarks - Grey Panther's Place</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://gpanther.github.io/2014/03/on-benchmarks.html">
+
+        <meta name="author" content="Attila-Mihaly Balazs" />
+        <meta name="keywords" content="rant,performance" />
+        <meta name="description" content="Numbers every programmer should know and their impact on benchmarks Disclaimer: I don’t mean to be picking on the particular organizations / projects / people who I’ll mention below. They are just examples of a larger trend I observed. Sometimes (most of the times?) we forget just how powerful the ..." />
+
+        <meta property="og:site_name" content="Grey Panther's Place" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="On benchmarks"/>
+        <meta property="og:url" content="https://gpanther.github.io/2014/03/on-benchmarks.html"/>
+        <meta property="og:description" content="Numbers every programmer should know and their impact on benchmarks Disclaimer: I don’t mean to be picking on the particular organizations / projects / people who I’ll mention below. They are just examples of a larger trend I observed. Sometimes (most of the times?) we forget just how powerful the ..."/>
+        <meta property="article:published_time" content="2014-03-28" />
+            <meta property="article:section" content="archived" />
+            <meta property="article:tag" content="rant" />
+            <meta property="article:tag" content="performance" />
+            <meta property="article:author" content="Attila-Mihaly Balazs" />
+
+    <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@cdman83">
+        <meta name="twitter:creator" content="@cdman83">
+    <meta name="twitter:domain" content="https://gpanther.github.io">
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://gpanther.github.io/theme/css/bootstrap.superhero.min.css" type="text/css"/>
+    <link href="https://gpanther.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://gpanther.github.io/theme/css/pygments/solarizeddark.css" rel="stylesheet">
+        <link href="https://gpanther.github.io/theme/css/typogrify.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://gpanther.github.io/theme/css/style.css" type="text/css"/>
+
+        <link href="https://gpanther.github.io/feeds/posts/default" type="application/atom+xml" rel="alternate"
+              title="Grey Panther's Place ATOM Feed"/>
+
+        <link href="https://gpanther.github.io/feeds/rss" type="application/rss+xml" rel="alternate"
+              title="Grey Panther's Place RSS Feed"/>
+
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://gpanther.github.io/" class="navbar-brand">
+Grey Panther's Place            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="https://gpanther.github.io/">
+                             About
+                          </a></li>
+                         <li><a href="https://gpanther.github.io/pages/resume-curriculum-vitae.html">
+                             Resume / Curriculum&nbsp;Vitae
+                          </a></li>
+                        <li class="active">
+                            <a href="https://gpanther.github.io/category/archived.html">Archived</a>
+                        </li>
+                        <li >
+                            <a href="https://gpanther.github.io/category/blog.html">Blog</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://gpanther.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://gpanther.github.io/2014/03/on-benchmarks.html"
+                       rel="bookmark"
+                       title="Permalink to On benchmarks">
+                        On&nbsp;benchmarks
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2014-03-28T09:17:00+02:00"> Vi 28 martie 2014</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://gpanther.github.io/tag/rant.html">rant</a>
+        /
+	<a href="https://gpanther.github.io/tag/performance.html">performance</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <h2>Numbers every programmer should know and their impact on&nbsp;benchmarks</h2>
+<p>Disclaimer: I don&#8217;t mean to be picking on the particular organizations /
+projects / people who I&#8217;ll mention below. They are just examples of a
+larger trend I&nbsp;observed.</p>
+<p>Sometimes (most of the times?) we forget just how powerful the machines
+in our pockets / bags / desks are and accept the inefficiencies of the
+software running on them. When we start to celebrate those
+inefficiencies, a line has to be drawn though. Two&nbsp;examples:</p>
+<p>In 2013 Twitter claimed <a href="https://blog.twitter.com/2013/new-tweets-per-second-record-and-how">a record Tweets Per
+Second</a>
+(<span class="caps">TPS</span> - cute :-)) of \~143k. Lets round that up to 150k and do some
+back-of-the envelope&nbsp;calculations:</p>
+<ul>
+<li>Communication between the clients and Twitter: a tweet is 140 bytes
+    (240 if we allow for unicode). Lets multiple the 150k number by 10
+    (just to be generous - remember that 143k was already a big blip) -
+    we get a bandwidth requirement of 343 <span class="caps">MB</span>/sec. Because tweets are
+    going over <span class="caps">TCP</span> presumably and \~20% of a <span class="caps">TCP</span> connection is overhead,
+    you would need 428 <span class="caps">MB</span>/s of bandwidth, about 3.5 gigabit or less than
+    0.5 of a 10 gigabit&nbsp;connection.</li>
+<li>On the backend: lets assume we want triple redundancy (1 master + 2
+    replica) and that the average tweet goes out to 9 subscribers. This
+    means that internally we need to write each tweet 30 times (we
+    suppose a completely denormalized structure, we need to write the
+    tweet to the users timeline also and do all this thrice for
+    redundancy). This means 10 <span class="caps">GB</span>/sec of data (13 if we&#8217;re sending it
+    over the network using <span class="caps">TCP</span>).</li>
+<li>Thus \~100 servers would be able to easily handle the load. And
+    remember this is <em>10x</em> of the <em>peak</em> traffic they&nbsp;experienced.</li>
+</ul>
+<p>So why do the have <a href="http://www.quora.com/How-many-servers-does-Twitter-have">20 to 40 times that many
+servers</a>? This
+means that less than 10% (!) of their server capacity is actually used
+for business&nbsp;functions.</p>
+<p>Second example: Google with DataStax came out with <a href="http://googlecloudplatform.blogspot.ro/2014/03/cassandra-hits-one-million-writes-per-second-on-google-compute-engine.html">a
+blogpost</a>
+about benchmarking a 300 node Cassandra cluster on Google Compute
+Engine. They claim a peak of 1.2M messages per second. Again, lets do
+some&nbsp;calculations:</p>
+<ul>
+<li>The messages were 170 bytes in size. They were written to 2+1 nodes
+    which would mean \~600 <span class="caps">MB</span>/s of traffic (730 <span class="caps">MB</span>/s if over the network
+    using <span class="caps">TCP</span>).</li>
+<li>They used 300 servers but were also testing the resiliency by
+    removing 1/3 of the nodes, so lets be generous and say that the
+    volume was divided over 100&nbsp;servers.</li>
+</ul>
+<p>This means that per server we use 7.3 <span class="caps">MB</span>/s network traffic and 6 <span class="caps">MB</span>/s
+disk traffic or 6% or a Gigabit connection and about 50% of medium
+quality spinning rust <span class="caps">HDD</span>.</p>
+<p>My challenge to you is: next time you see such benchmarks do a quick
+back-of-the envelope calculation and if it uses less than 60% of the
+available throughput, call the people on&nbsp;it!</p>
+            </div>
+            <!-- /.entry-content -->
+<section class="well" id="related-posts">
+    <h4>Related Posts:</h4>
+    <ul>
+        <li><a href="https://gpanther.github.io/2009/12/game-of-chinese-whispers.html">A game of Chinese&nbsp;whispers</a></li>
+        <li><a href="https://gpanther.github.io/2010/06/copyright-is-not-theft.html">Copyright is not&nbsp;theft!</a></li>
+        <li><a href="https://gpanther.github.io/2010/06/dear-people-try-to-think-harder-even-if.html">Dear people: try to think harder, even if it makes your head&nbsp;hurt!</a></li>
+        <li><a href="https://gpanther.github.io/2011/02/is-hand-writing-assembly-still.html">Is hand-writing assembly still necessary these&nbsp;days?</a></li>
+        <li><a href="https://gpanther.github.io/2009/10/why-network-neutrality-is-big-deal.html">Why network neutrality is a big&nbsp;deal</a></li>
+    </ul>
+</section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<div id="aboutme">
+        <p>
+            <img width="60%" class="img" src="/images/profile.png"/>
+        </p>
+    <p>
+        <strong>About Grey Panther</strong><br/>
+        <a href="/">father, husband, software craftsman</a>
+    </p>
+</div>
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="https://ro.linkedin.com/in/gpanther"><i class="fa fa-linkedin-square fa-lg"></i> linkedin</a></li>
+                <li class="list-group-item"><a href="http://stackoverflow.com/users/1265/grey-panther"><i class="fa fa-stack-overflow fa-lg"></i> stackoverflow</a></li>
+                <li class="list-group-item"><a href="https://github.com/gpanther/"><i class="fa fa-github-square fa-lg"></i> github</a></li>
+              </ul>
+            </li>
+
+
+
+
+
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container-fluid">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2016 Grey Panther
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by/4.0/80x15.png" /></a>
+    Content
+  licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>, except where indicated otherwise.
+</small></p>
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://gpanther.github.io/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://gpanther.github.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://gpanther.github.io/theme/js/respond.min.js"></script>
+
+
+</body>
+</html>

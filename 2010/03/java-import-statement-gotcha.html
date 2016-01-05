@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Java import statement gotcha - Grey Panther's Place</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://gpanther.github.io/2010/03/java-import-statement-gotcha.html">
+
+        <meta name="author" content="Attila-Mihaly Balazs" />
+        <meta name="keywords" content="programming,java" />
+        <meta name="description" content="There is a lot of debate on the intertubes if one should or shouldn’t use wildcard imports. I’m mostly indifferent to the discussion (mainly because all the package references are resolved compile time – so there is no performance overhead – and because today’s IDE’s contain a lot ..." />
+
+        <meta property="og:site_name" content="Grey Panther's Place" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Java import statement gotcha"/>
+        <meta property="og:url" content="https://gpanther.github.io/2010/03/java-import-statement-gotcha.html"/>
+        <meta property="og:description" content="There is a lot of debate on the intertubes if one should or shouldn’t use wildcard imports. I’m mostly indifferent to the discussion (mainly because all the package references are resolved compile time – so there is no performance overhead – and because today’s IDE’s contain a lot ..."/>
+        <meta property="article:published_time" content="2010-03-10" />
+            <meta property="article:section" content="archived" />
+            <meta property="article:tag" content="programming" />
+            <meta property="article:tag" content="java" />
+            <meta property="article:author" content="Attila-Mihaly Balazs" />
+
+    <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@cdman83">
+        <meta name="twitter:creator" content="@cdman83">
+    <meta name="twitter:domain" content="https://gpanther.github.io">
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://gpanther.github.io/theme/css/bootstrap.superhero.min.css" type="text/css"/>
+    <link href="https://gpanther.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://gpanther.github.io/theme/css/pygments/solarizeddark.css" rel="stylesheet">
+        <link href="https://gpanther.github.io/theme/css/typogrify.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://gpanther.github.io/theme/css/style.css" type="text/css"/>
+
+        <link href="https://gpanther.github.io/feeds/posts/default" type="application/atom+xml" rel="alternate"
+              title="Grey Panther's Place ATOM Feed"/>
+
+        <link href="https://gpanther.github.io/feeds/rss" type="application/rss+xml" rel="alternate"
+              title="Grey Panther's Place RSS Feed"/>
+
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://gpanther.github.io/" class="navbar-brand">
+Grey Panther's Place            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="https://gpanther.github.io/">
+                             About
+                          </a></li>
+                         <li><a href="https://gpanther.github.io/pages/resume-curriculum-vitae.html">
+                             Resume / Curriculum&nbsp;Vitae
+                          </a></li>
+                        <li class="active">
+                            <a href="https://gpanther.github.io/category/archived.html">Archived</a>
+                        </li>
+                        <li >
+                            <a href="https://gpanther.github.io/category/blog.html">Blog</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://gpanther.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://gpanther.github.io/2010/03/java-import-statement-gotcha.html"
+                       rel="bookmark"
+                       title="Permalink to Java import statement gotcha">
+                        Java import statement&nbsp;gotcha
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2010-03-10T13:49:00+02:00"> Mi 10 martie 2010</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://gpanther.github.io/tag/programming.html">programming</a>
+        /
+	<a href="https://gpanther.github.io/tag/java.html">java</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p><img alt="190774444_2687512fb9_o" src="http://lh5.ggpht.com/_hrvCBhtWhJ4/S5eHUrNP70I/AAAAAAAACOE/aeCTbllzGiE/190774444_2687512fb9_o%5B2%5D.jpg?imgmax=800" title="190774444_2687512fb9_o" />
+There is a lot of debate on the intertubes if one should or shouldn’t
+use wildcard imports. I’m mostly indifferent to the discussion (mainly
+because all the package references are resolved compile time – so there
+is no performance overhead – and because today&#8217;s <span class="caps">IDE</span>’s contain a lot of
+smarts to help you figure out which is the actual class being
+referenced), but here is something interesting I discovered&nbsp;recently:</p>
+<p>Lets say that we have two classes with the same name in different&nbsp;packages:</p>
+<div class="highlight"><pre>package foo;
+
+public class Foo {
+    public static void print() {
+        System.out.println(&quot;Foo&quot;);
+    }
+}
+</pre></div>
+
+
+<p></code></p>
+<div class="highlight"><pre>package bar;
+
+public class Foo {
+    public static void print() {
+        System.out.println(&quot;Bar&quot;);
+    }
+}
+</pre></div>
+
+
+<p></code></p>
+<p>Now create a test class in the bar&nbsp;package:</p>
+<div class="highlight"><pre><span class="n">package</span> <span class="n">bar</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">foo.</span><span class="o">*</span><span class="p">;</span>
+
+<span class="n">public</span> <span class="k">class</span> <span class="nc">Test</span> <span class="p">{</span>
+    <span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Foo</span><span class="o">.</span><span class="k">print</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p></code></p>
+<p>Question: what will this class print out? The answer is – surprisingly
+for me - “Bar”. It seems that the Java compiler (tested with 1.6u18, but
+this is probably the same with other versions – although I’m not sure
+about alternative implementations like <span class="caps">GCJ</span>) uses the following order to
+determine the canonical class&nbsp;name:</p>
+<ol>
+<li>Classes which are explicitly&nbsp;imported</li>
+<li>Classes which are in the current&nbsp;package</li>
+<li>Classes imported with&nbsp;wildcards</li>
+</ol>
+<p>Just something to know&nbsp;about.</p>
+<p>Picture taken from <a href="http://www.flickr.com/photos/salimfadhley/">salimfadhley&#8217;s
+photostream</a> with&nbsp;permission.</p>
+<p><span class="caps">PS</span>. Amusing sidenote: when you <a href="http://www.flickr.com/search/?q=import&amp;l=commderiv&amp;ss=2&amp;ct=6&amp;mt=all&amp;w=all&amp;adv=1">search for import on
+Flickr</a>,
+a lot of “babe” photos come up, even with safe search on. Is “import” a
+codeword for something?&nbsp;:-)</p>
+            </div>
+            <!-- /.entry-content -->
+<section class="well" id="related-posts">
+    <h4>Related Posts:</h4>
+    <ul>
+        <li><a href="https://gpanther.github.io/2011/02/is-hand-writing-assembly-still.html">Is hand-writing assembly still necessary these&nbsp;days?</a></li>
+        <li><a href="https://gpanther.github.io/2010/01/don-yield-to-pressure.html">Don&#8217;t Yield to&nbsp;pressure?</a></li>
+        <li><a href="https://gpanther.github.io/2010/03/performance-optimization-techniques-for.html">Performance optimization techniques for Java&nbsp;code</a></li>
+        <li><a href="https://gpanther.github.io/2009/08/spot-error.html">Spot the&nbsp;error</a></li>
+        <li><a href="https://gpanther.github.io/2010/04/putting-eval-into-java.html">Putting the eval into&nbsp;Java</a></li>
+    </ul>
+</section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<div id="aboutme">
+        <p>
+            <img width="60%" class="img" src="/images/profile.png"/>
+        </p>
+    <p>
+        <strong>About Grey Panther</strong><br/>
+        <a href="/">father, husband, software craftsman</a>
+    </p>
+</div>
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="https://ro.linkedin.com/in/gpanther"><i class="fa fa-linkedin-square fa-lg"></i> linkedin</a></li>
+                <li class="list-group-item"><a href="http://stackoverflow.com/users/1265/grey-panther"><i class="fa fa-stack-overflow fa-lg"></i> stackoverflow</a></li>
+                <li class="list-group-item"><a href="https://github.com/gpanther/"><i class="fa fa-github-square fa-lg"></i> github</a></li>
+              </ul>
+            </li>
+
+
+
+
+
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container-fluid">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2016 Grey Panther
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by/4.0/80x15.png" /></a>
+    Content
+  licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>, except where indicated otherwise.
+</small></p>
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://gpanther.github.io/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://gpanther.github.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://gpanther.github.io/theme/js/respond.min.js"></script>
+
+
+</body>
+</html>

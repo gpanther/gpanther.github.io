@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Carving out files with Perl - Grey Panther's Place</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://gpanther.github.io/2010/01/carving-out-files-with-perl.html">
+
+        <meta name="author" content="Attila-Mihaly Balazs" />
+        <meta name="keywords" content="programming,perl,carving,file recovery" />
+        <meta name="description" content="I’ve had to use this trick a couple of times the last few years, so I decided that I might as well document it: If you have an image of a storage media (like an SD card or CD/DVD) which you can not mount (either because the filesystem ..." />
+
+        <meta property="og:site_name" content="Grey Panther's Place" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Carving out files with Perl"/>
+        <meta property="og:url" content="https://gpanther.github.io/2010/01/carving-out-files-with-perl.html"/>
+        <meta property="og:description" content="I’ve had to use this trick a couple of times the last few years, so I decided that I might as well document it: If you have an image of a storage media (like an SD card or CD/DVD) which you can not mount (either because the filesystem ..."/>
+        <meta property="article:published_time" content="2010-01-26" />
+            <meta property="article:section" content="archived" />
+            <meta property="article:tag" content="programming" />
+            <meta property="article:tag" content="perl" />
+            <meta property="article:tag" content="carving" />
+            <meta property="article:tag" content="file recovery" />
+            <meta property="article:author" content="Attila-Mihaly Balazs" />
+
+    <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@cdman83">
+        <meta name="twitter:creator" content="@cdman83">
+    <meta name="twitter:domain" content="https://gpanther.github.io">
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://gpanther.github.io/theme/css/bootstrap.superhero.min.css" type="text/css"/>
+    <link href="https://gpanther.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://gpanther.github.io/theme/css/pygments/solarizeddark.css" rel="stylesheet">
+        <link href="https://gpanther.github.io/theme/css/typogrify.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://gpanther.github.io/theme/css/style.css" type="text/css"/>
+
+        <link href="https://gpanther.github.io/feeds/posts/default" type="application/atom+xml" rel="alternate"
+              title="Grey Panther's Place ATOM Feed"/>
+
+        <link href="https://gpanther.github.io/feeds/rss" type="application/rss+xml" rel="alternate"
+              title="Grey Panther's Place RSS Feed"/>
+
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://gpanther.github.io/" class="navbar-brand">
+Grey Panther's Place            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="https://gpanther.github.io/">
+                             About
+                          </a></li>
+                         <li><a href="https://gpanther.github.io/pages/resume-curriculum-vitae.html">
+                             Resume / Curriculum&nbsp;Vitae
+                          </a></li>
+                        <li class="active">
+                            <a href="https://gpanther.github.io/category/archived.html">Archived</a>
+                        </li>
+                        <li >
+                            <a href="https://gpanther.github.io/category/blog.html">Blog</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://gpanther.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://gpanther.github.io/2010/01/carving-out-files-with-perl.html"
+                       rel="bookmark"
+                       title="Permalink to Carving out files with Perl">
+                        Carving out files with&nbsp;Perl
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2010-01-26T16:11:00+02:00"> Ma 26 ianuarie 2010</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://gpanther.github.io/tag/programming.html">programming</a>
+        /
+	<a href="https://gpanther.github.io/tag/perl.html">perl</a>
+        /
+	<a href="https://gpanther.github.io/tag/carving.html">carving</a>
+        /
+	<a href="https://gpanther.github.io/tag/file-recovery.html">file recovery</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>I&#8217;ve had to use this trick a couple of times the last few years, so I
+decided that I might as well document&nbsp;it:</p>
+<p>If you have an image of a storage media (like an <span class="caps">SD</span> card or <span class="caps">CD</span>/<span class="caps">DVD</span>)
+which you can not mount (either because the filesystem is hosed - that&#8217;s
+a technical term for damaged beyond repair :-) - or because it uses some
+proprietary extension - *cough* <span class="caps">MS</span> *cough) <em>and</em> you know the
+approximate size of each file (maybe they are JPEGs or AVIs), you could
+adapt <a href="http://code.google.com/p/hype-free/source/browse/trunk/carve.pl">this script of
+mine</a>.</p>
+<p>What it&nbsp;does:</p>
+<ol>
+<li>It reads <code>$search_buffer</code> bytes from <code>$input</code></li>
+<li>It looks for <code>$header</code> (as it is written it looks for <span class="caps">RIFF</span>, which
+    means <span class="caps">AVI</span> or <span class="caps">WAV</span> usually - for <span class="caps">JPEG</span> you would use&nbsp;&#8220;\xFF\xD8&#8221;)</li>
+<li>If it finds it, it dumps <code>$extracted_size</code> bytes from the given
+    position (this should be set to be larger than the biggest file you&nbsp;expect)</li>
+<li>It not, it seeks forward <code>$search_buffer - length($header)</code> (to
+    handle the cases when the header is split by the border of the&nbsp;buffer)</li>
+</ol>
+<p>The script is not perfect (for one it tries to load the entire file into
+memory before writing it out; it also doesn&#8217;t do any validation of the
+fileformat, thus possibly creating some garbage output), but it worked
+well for me in the past, so I thought I share&nbsp;it.</p>
+<p><span class="caps">PS</span>. If you need some more serious file recovery, you might want to look
+at <a href="http://www.cgsecurity.org/wiki/PhotoRec">PhotoRec</a> and
+<a href="http://www.cgsecurity.org/wiki/TestDisk">TestDisk</a>. They are both free
+(as in freedom - <span class="caps">GPL</span> license) and seem to be great programs (I never
+actually managed to get them to recover more than my little cobbled
+together script, but I might have some very particular&nbsp;usecases).</p>
+            </div>
+            <!-- /.entry-content -->
+<section class="well" id="related-posts">
+    <h4>Related Posts:</h4>
+    <ul>
+        <li><a href="https://gpanther.github.io/2010/03/parsing-pcap-files-with-perl.html">Parsing pcap files with&nbsp;Perl</a></li>
+        <li><a href="https://gpanther.github.io/2010/03/in-praise-of-regexpassemble.html">In praise of&nbsp;Regexp::Assemble</a></li>
+        <li><a href="https://gpanther.github.io/2010/04/sending-x-face-email-with-perlgmail.html">Sending an X-Face email with&nbsp;Perl+GMail</a></li>
+        <li><a href="https://gpanther.github.io/2009/08/perl-is-everywhere.html">Perl is&nbsp;everywhere!</a></li>
+        <li><a href="https://gpanther.github.io/2010/03/solving-mathematical-puzzles-with-brute.html">Solving mathematical puzzles with brute-force and&nbsp;Perl</a></li>
+    </ul>
+</section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<div id="aboutme">
+        <p>
+            <img width="60%" class="img" src="/images/profile.png"/>
+        </p>
+    <p>
+        <strong>About Grey Panther</strong><br/>
+        <a href="/">father, husband, software craftsman</a>
+    </p>
+</div>
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="https://ro.linkedin.com/in/gpanther"><i class="fa fa-linkedin-square fa-lg"></i> linkedin</a></li>
+                <li class="list-group-item"><a href="http://stackoverflow.com/users/1265/grey-panther"><i class="fa fa-stack-overflow fa-lg"></i> stackoverflow</a></li>
+                <li class="list-group-item"><a href="https://github.com/gpanther/"><i class="fa fa-github-square fa-lg"></i> github</a></li>
+              </ul>
+            </li>
+
+
+
+
+
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container-fluid">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2016 Grey Panther
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by/4.0/80x15.png" /></a>
+    Content
+  licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>, except where indicated otherwise.
+</small></p>
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://gpanther.github.io/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://gpanther.github.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://gpanther.github.io/theme/js/respond.min.js"></script>
+
+
+</body>
+</html>
