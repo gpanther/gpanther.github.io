@@ -20,6 +20,8 @@ ABOUT_ME = '<a href="/">father, husband, software craftsman</a>'
 AVATAR = '/images/profile.png'
 TWITTER_CARDS = True
 TWITTER_USERNAME = 'cdman83'
+FAVICON='favicon.ico'
+FAVICON_IE=FAVICON
 
 FEED_ALL_ATOM = 'feeds/posts/default'
 FEED_ALL_RSS = 'feeds/rss'
