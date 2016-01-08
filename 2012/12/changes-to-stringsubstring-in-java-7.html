@@ -9,7 +9,7 @@
 
 
 
-<link rel="canonical" href="https://gpanther.github.io/2012/12/changes-to-stringsubstring-in-java-7.html">
+<link rel="canonical" href="https://www.grey-panther.net/2012/12/changes-to-stringsubstring-in-java-7.html">
 
         <meta name="author" content="Attila-Mihaly Balazs" />
         <meta name="keywords" content="java7,string,java advent,java" />
@@ -18,7 +18,7 @@
         <meta property="og:site_name" content="Grey Panther's Place" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="Changes to String.substring in Java 7"/>
-        <meta property="og:url" content="https://gpanther.github.io/2012/12/changes-to-stringsubstring-in-java-7.html"/>
+        <meta property="og:url" content="https://www.grey-panther.net/2012/12/changes-to-stringsubstring-in-java-7.html"/>
         <meta property="og:description" content="This post was originally published as part of the Java Advent series. If you like it, please spread the word by sharing, tweeting, FB, G+ and so on! Want to write for the Java Advent blog? We are looking for contributors to fill all 24 slot and would love to ..."/>
         <meta property="article:published_time" content="2012-12-12" />
             <meta property="article:section" content="archived" />
@@ -31,20 +31,20 @@
     <meta name="twitter:card" content="summary">
         <meta name="twitter:site" content="@cdman83">
         <meta name="twitter:creator" content="@cdman83">
-    <meta name="twitter:domain" content="https://gpanther.github.io">
+    <meta name="twitter:domain" content="https://www.grey-panther.net">
 
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://gpanther.github.io/theme/css/bootstrap.superhero.min.css" type="text/css"/>
-    <link href="https://gpanther.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://www.grey-panther.net/theme/css/bootstrap.superhero.min.css" type="text/css"/>
+    <link href="https://www.grey-panther.net/theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="https://gpanther.github.io/theme/css/pygments/solarizeddark.css" rel="stylesheet">
-        <link href="https://gpanther.github.io/theme/css/typogrify.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://gpanther.github.io/theme/css/style.css" type="text/css"/>
+    <link href="https://www.grey-panther.net/theme/css/pygments/solarizeddark.css" rel="stylesheet">
+        <link href="https://www.grey-panther.net/theme/css/typogrify.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.grey-panther.net/theme/css/style.css" type="text/css"/>
 
-        <link href="https://gpanther.github.io/feeds/posts/default" type="application/atom+xml" rel="alternate"
+        <link href="https://www.grey-panther.net/feeds/posts/default" type="application/atom+xml" rel="alternate"
               title="Grey Panther's Place ATOM Feed"/>
 
-        <link href="https://gpanther.github.io/feeds/rss" type="application/rss+xml" rel="alternate"
+        <link href="https://www.grey-panther.net/feeds/rss" type="application/rss+xml" rel="alternate"
               title="Grey Panther's Place RSS Feed"/>
 
 
@@ -61,26 +61,18 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="https://gpanther.github.io/" class="navbar-brand">
+            <a href="https://www.grey-panther.net/" class="navbar-brand">
 Grey Panther's Place            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                         <li><a href="https://gpanther.github.io/">
-                             About
-                          </a></li>
-                         <li><a href="https://gpanther.github.io/pages/resume-curriculum-vitae.html">
-                             Resume / Curriculum&nbsp;Vitae
-                          </a></li>
-                        <li class="active">
-                            <a href="https://gpanther.github.io/category/archived.html">Archived</a>
-                        </li>
-                        <li >
-                            <a href="https://gpanther.github.io/category/blog.html">Blog</a>
-                        </li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/category/blog.html">Blog</a></li>
+                    <li><a href="/pages/resume-curriculum-vitae.html">Resume / Curriculum Vitae</a></li>
+                    <li><a href="/category/archived.html">Archived blog articles</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="https://gpanther.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+              <li><a href="https://www.grey-panther.net/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -95,7 +87,7 @@ Grey Panther's Place            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="https://gpanther.github.io/2012/12/changes-to-stringsubstring-in-java-7.html"
+                    <a href="https://www.grey-panther.net/2012/12/changes-to-stringsubstring-in-java-7.html"
                        rel="bookmark"
                        title="Permalink to Changes to String.substring in Java 7">
                         Changes to String.substring in Java&nbsp;7
@@ -116,13 +108,13 @@ Grey Panther's Place            </a>
 
 
 <span class="label label-default">Tags</span>
-	<a href="https://gpanther.github.io/tag/java7.html">java7</a>
+	<a href="https://www.grey-panther.net/tag/java7.html">java7</a>
         /
-	<a href="https://gpanther.github.io/tag/string.html">string</a>
+	<a href="https://www.grey-panther.net/tag/string.html">string</a>
         /
-	<a href="https://gpanther.github.io/tag/java-advent.html">java advent</a>
+	<a href="https://www.grey-panther.net/tag/java-advent.html">java advent</a>
         /
-	<a href="https://gpanther.github.io/tag/java.html">java</a>
+	<a href="https://www.grey-panther.net/tag/java.html">java</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
@@ -208,11 +200,11 @@ contribution! <a href="mailto:dify.ltd@gmail.com">Contact Attila Balazs</a> to&n
 <section class="well" id="related-posts">
     <h4>Related Posts:</h4>
     <ul>
-        <li><a href="https://gpanther.github.io/2012/12/restart-me-up.html">(Re)Start me&nbsp;up!</a></li>
-        <li><a href="https://gpanther.github.io/2012/12/ensuring-order-of-execution-for-tasks.html">Ensuring the order of execution for&nbsp;tasks</a></li>
-        <li><a href="https://gpanther.github.io/2012/12/java-runtime-options.html">Java Runtime&nbsp;options</a></li>
-        <li><a href="https://gpanther.github.io/2011/02/is-hand-writing-assembly-still.html">Is hand-writing assembly still necessary these&nbsp;days?</a></li>
-        <li><a href="https://gpanther.github.io/2011/03/setting-maximum-number-of-opened-files.html">Setting the maximum number of opened files under Ubuntu (for&nbsp;JProfiler)</a></li>
+        <li><a href="https://www.grey-panther.net/2012/12/restart-me-up.html">(Re)Start me&nbsp;up!</a></li>
+        <li><a href="https://www.grey-panther.net/2012/12/java-runtime-options.html">Java Runtime&nbsp;options</a></li>
+        <li><a href="https://www.grey-panther.net/2012/12/ensuring-order-of-execution-for-tasks.html">Ensuring the order of execution for&nbsp;tasks</a></li>
+        <li><a href="https://www.grey-panther.net/2011/06/adding-tab-completition-to-maven3-under.html">Adding tab completition to Maven3 under&nbsp;Ubuntu</a></li>
+        <li><a href="https://www.grey-panther.net/2011/01/remote-debugging-with-java.html">Remote debugging with&nbsp;Java</a></li>
     </ul>
 </section>
         </article>
@@ -266,13 +258,13 @@ contribution! <a href="mailto:dify.ltd@gmail.com">Contact Attila Balazs</a> to&n
       </div>
    </div>
 </footer>
-<script src="https://gpanther.github.io/theme/js/jquery.min.js"></script>
+<script src="https://www.grey-panther.net/theme/js/jquery.min.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://gpanther.github.io/theme/js/bootstrap.min.js"></script>
+<script src="https://www.grey-panther.net/theme/js/bootstrap.min.js"></script>
 
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="https://gpanther.github.io/theme/js/respond.min.js"></script>
+<script src="https://www.grey-panther.net/theme/js/respond.min.js"></script>
 
 
 </body>

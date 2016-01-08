@@ -9,7 +9,7 @@
 
 
 
-<link rel="canonical" href="https://gpanther.github.io/2010/03/performance-optimization-techniques-for.html">
+<link rel="canonical" href="https://www.grey-panther.net/2010/03/performance-optimization-techniques-for.html">
 
         <meta name="author" content="Attila-Mihaly Balazs" />
         <meta name="keywords" content="programming,java" />
@@ -18,7 +18,7 @@
         <meta property="og:site_name" content="Grey Panther's Place" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="Performance optimization techniques for Java code"/>
-        <meta property="og:url" content="https://gpanther.github.io/2010/03/performance-optimization-techniques-for.html"/>
+        <meta property="og:url" content="https://www.grey-panther.net/2010/03/performance-optimization-techniques-for.html"/>
         <meta property="og:description" content="Yesterday I gave a presentation at the Transylvania JUG about using profilers and different techniques which you can use to work around the discovered performance problems. Below you can find the embedded presentation. **http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=java-perf-201003-100326052203-phpapp02&amp;rel=0&amp;stripped\_title=performance-optimization-techniques-for-java-code** If you are ..."/>
         <meta property="article:published_time" content="2010-03-26" />
             <meta property="article:section" content="archived" />
@@ -29,20 +29,20 @@
     <meta name="twitter:card" content="summary">
         <meta name="twitter:site" content="@cdman83">
         <meta name="twitter:creator" content="@cdman83">
-    <meta name="twitter:domain" content="https://gpanther.github.io">
+    <meta name="twitter:domain" content="https://www.grey-panther.net">
 
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://gpanther.github.io/theme/css/bootstrap.superhero.min.css" type="text/css"/>
-    <link href="https://gpanther.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://www.grey-panther.net/theme/css/bootstrap.superhero.min.css" type="text/css"/>
+    <link href="https://www.grey-panther.net/theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="https://gpanther.github.io/theme/css/pygments/solarizeddark.css" rel="stylesheet">
-        <link href="https://gpanther.github.io/theme/css/typogrify.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://gpanther.github.io/theme/css/style.css" type="text/css"/>
+    <link href="https://www.grey-panther.net/theme/css/pygments/solarizeddark.css" rel="stylesheet">
+        <link href="https://www.grey-panther.net/theme/css/typogrify.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.grey-panther.net/theme/css/style.css" type="text/css"/>
 
-        <link href="https://gpanther.github.io/feeds/posts/default" type="application/atom+xml" rel="alternate"
+        <link href="https://www.grey-panther.net/feeds/posts/default" type="application/atom+xml" rel="alternate"
               title="Grey Panther's Place ATOM Feed"/>
 
-        <link href="https://gpanther.github.io/feeds/rss" type="application/rss+xml" rel="alternate"
+        <link href="https://www.grey-panther.net/feeds/rss" type="application/rss+xml" rel="alternate"
               title="Grey Panther's Place RSS Feed"/>
 
 
@@ -59,26 +59,18 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="https://gpanther.github.io/" class="navbar-brand">
+            <a href="https://www.grey-panther.net/" class="navbar-brand">
 Grey Panther's Place            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                         <li><a href="https://gpanther.github.io/">
-                             About
-                          </a></li>
-                         <li><a href="https://gpanther.github.io/pages/resume-curriculum-vitae.html">
-                             Resume / Curriculum&nbsp;Vitae
-                          </a></li>
-                        <li class="active">
-                            <a href="https://gpanther.github.io/category/archived.html">Archived</a>
-                        </li>
-                        <li >
-                            <a href="https://gpanther.github.io/category/blog.html">Blog</a>
-                        </li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/category/blog.html">Blog</a></li>
+                    <li><a href="/pages/resume-curriculum-vitae.html">Resume / Curriculum Vitae</a></li>
+                    <li><a href="/category/archived.html">Archived blog articles</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="https://gpanther.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+              <li><a href="https://www.grey-panther.net/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -93,7 +85,7 @@ Grey Panther's Place            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="https://gpanther.github.io/2010/03/performance-optimization-techniques-for.html"
+                    <a href="https://www.grey-panther.net/2010/03/performance-optimization-techniques-for.html"
                        rel="bookmark"
                        title="Permalink to Performance optimization techniques for Java code">
                         Performance optimization techniques for Java&nbsp;code
@@ -114,9 +106,9 @@ Grey Panther's Place            </a>
 
 
 <span class="label label-default">Tags</span>
-	<a href="https://gpanther.github.io/tag/programming.html">programming</a>
+	<a href="https://www.grey-panther.net/tag/programming.html">programming</a>
         /
-	<a href="https://gpanther.github.io/tag/java.html">java</a>
+	<a href="https://www.grey-panther.net/tag/java.html">java</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
@@ -146,11 +138,11 @@ something else in&nbsp;general.
 <section class="well" id="related-posts">
     <h4>Related Posts:</h4>
     <ul>
-        <li><a href="https://gpanther.github.io/2011/02/is-hand-writing-assembly-still.html">Is hand-writing assembly still necessary these&nbsp;days?</a></li>
-        <li><a href="https://gpanther.github.io/2010/01/don-yield-to-pressure.html">Don&#8217;t Yield to&nbsp;pressure?</a></li>
-        <li><a href="https://gpanther.github.io/2009/08/spot-error.html">Spot the&nbsp;error</a></li>
-        <li><a href="https://gpanther.github.io/2010/04/putting-eval-into-java.html">Putting the eval into&nbsp;Java</a></li>
-        <li><a href="https://gpanther.github.io/2010/01/splitting-hairshhhhh-strings-with-java.html">Splitting hairs^H^H^H^H^H strings with&nbsp;Java</a></li>
+        <li><a href="https://www.grey-panther.net/2010/03/java-import-statement-gotcha.html">Java import statement&nbsp;gotcha</a></li>
+        <li><a href="https://www.grey-panther.net/2010/01/choosing-java-profiler.html">Choosing a Java&nbsp;profiler</a></li>
+        <li><a href="https://www.grey-panther.net/2010/01/don-yield-to-pressure.html">Don&#8217;t Yield to&nbsp;pressure?</a></li>
+        <li><a href="https://www.grey-panther.net/2009/08/spot-error.html">Spot the&nbsp;error</a></li>
+        <li><a href="https://www.grey-panther.net/2010/01/splitting-hairshhhhh-strings-with-java.html">Splitting hairs^H^H^H^H^H strings with&nbsp;Java</a></li>
     </ul>
 </section>
         </article>
@@ -204,13 +196,13 @@ something else in&nbsp;general.
       </div>
    </div>
 </footer>
-<script src="https://gpanther.github.io/theme/js/jquery.min.js"></script>
+<script src="https://www.grey-panther.net/theme/js/jquery.min.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://gpanther.github.io/theme/js/bootstrap.min.js"></script>
+<script src="https://www.grey-panther.net/theme/js/bootstrap.min.js"></script>
 
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="https://gpanther.github.io/theme/js/respond.min.js"></script>
+<script src="https://www.grey-panther.net/theme/js/respond.min.js"></script>
 
 
 </body>

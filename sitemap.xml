@@ -4,3094 +4,3094 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>https://gpanther.github.io/</loc>
-<lastmod>2016-01-05T07:28:53-00:00</lastmod>
+<loc>https://www.grey-panther.net/</loc>
+<lastmod>2016-01-08T18:57:10-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/archives.html</loc>
-<lastmod>2016-01-05T07:28:53-00:00</lastmod>
+<loc>https://www.grey-panther.net/archives.html</loc>
+<lastmod>2016-01-08T18:57:10-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tags.html</loc>
-<lastmod>2016-01-05T07:28:53-00:00</lastmod>
+<loc>https://www.grey-panther.net/tags.html</loc>
+<lastmod>2016-01-08T18:57:10-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/categories.html</loc>
-<lastmod>2016-01-05T07:28:53-00:00</lastmod>
+<loc>https://www.grey-panther.net/categories.html</loc>
+<lastmod>2016-01-08T18:57:10-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/</loc>
-<lastmod>2016-01-05T07:28:53-00:00</lastmod>
+<loc>https://www.grey-panther.net/</loc>
+<lastmod>2016-01-08T18:57:10-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/pages/resume-curriculum-vitae.html</loc>
-<lastmod>2016-01-05T07:28:53-00:00</lastmod>
+<loc>https://www.grey-panther.net/pages/resume-curriculum-vitae.html</loc>
+<lastmod>2016-01-08T18:57:10-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2016/01/a-fresh-start-with-pelican.html</loc>
+<loc>https://www.grey-panther.net/2016/01/a-fresh-start-with-pelican.html</loc>
 <lastmod>2016-01-04T21:18:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2014/03/on-benchmarks.html</loc>
+<loc>https://www.grey-panther.net/2014/03/on-benchmarks.html</loc>
 <lastmod>2014-03-28T09:17:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2014/02/proxying-pypi-npm-etc-for-fun-and-profit.html</loc>
+<loc>https://www.grey-panther.net/2014/02/proxying-pypi-npm-etc-for-fun-and-profit.html</loc>
 <lastmod>2014-02-05T17:26:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2013/12/programming-advent-calendars-for-2013.html</loc>
+<loc>https://www.grey-panther.net/2013/12/programming-advent-calendars-for-2013.html</loc>
 <lastmod>2013-12-04T18:41:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2013/11/cleaning-up-google-appengine-mapreduce.html</loc>
+<loc>https://www.grey-panther.net/2013/11/cleaning-up-google-appengine-mapreduce.html</loc>
 <lastmod>2013-11-12T12:31:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2013/08/capturing-your-screen-on-ubuntu-with.html</loc>
+<loc>https://www.grey-panther.net/2013/08/capturing-your-screen-on-ubuntu-with.html</loc>
 <lastmod>2013-08-14T09:50:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2013/06/tips-for-running-sonarqube-on-large.html</loc>
+<loc>https://www.grey-panther.net/2013/06/tips-for-running-sonarqube-on-large.html</loc>
 <lastmod>2013-06-28T12:49:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2013/06/nested-fluent-builders.html</loc>
+<loc>https://www.grey-panther.net/2013/06/nested-fluent-builders.html</loc>
 <lastmod>2013-06-23T15:26:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2013/05/passing-utf-8-trough-http.html</loc>
+<loc>https://www.grey-panther.net/2013/05/passing-utf-8-trough-http.html</loc>
 <lastmod>2013-05-29T20:36:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2013/05/connecting-to-mtgox-market-data-feed.html</loc>
+<loc>https://www.grey-panther.net/2013/05/connecting-to-mtgox-market-data-feed.html</loc>
 <lastmod>2013-05-29T17:52:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2013/02/converting-datetime-to-utc-in-python.html</loc>
+<loc>https://www.grey-panther.net/2013/02/converting-datetime-to-utc-in-python.html</loc>
 <lastmod>2013-02-07T19:06:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2013/02/recovering-your-rotld-password-for.html</loc>
+<loc>https://www.grey-panther.net/2013/02/recovering-your-rotld-password-for.html</loc>
 <lastmod>2013-02-05T16:08:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2013/01/free-software-for-windows.html</loc>
+<loc>https://www.grey-panther.net/2013/01/free-software-for-windows.html</loc>
 <lastmod>2013-01-04T01:36:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2012/12/what-every-programmer-should-know-about.html</loc>
+<loc>https://www.grey-panther.net/2012/12/what-every-programmer-should-know-about.html</loc>
 <lastmod>2012-12-31T11:24:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2012/12/ensuring-order-of-execution-for-tasks.html</loc>
+<loc>https://www.grey-panther.net/2012/12/ensuring-order-of-execution-for-tasks.html</loc>
 <lastmod>2012-12-21T21:13:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2012/12/java-runtime-options.html</loc>
+<loc>https://www.grey-panther.net/2012/12/java-runtime-options.html</loc>
 <lastmod>2012-12-21T21:06:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2012/12/changes-to-stringsubstring-in-java-7.html</loc>
+<loc>https://www.grey-panther.net/2012/12/changes-to-stringsubstring-in-java-7.html</loc>
 <lastmod>2012-12-12T10:37:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2012/12/restart-me-up.html</loc>
+<loc>https://www.grey-panther.net/2012/12/restart-me-up.html</loc>
 <lastmod>2012-12-01T18:24:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2012/11/upgrading-from-mysql-to-mariadb-on.html</loc>
+<loc>https://www.grey-panther.net/2012/11/upgrading-from-mysql-to-mariadb-on.html</loc>
 <lastmod>2012-11-25T11:14:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2012/11/cluj-napoca-romania-wins-title-of.html</loc>
+<loc>https://www.grey-panther.net/2012/11/cluj-napoca-romania-wins-title-of.html</loc>
 <lastmod>2012-11-25T10:58:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2012/11/writing-beautiful-code-not-just-for.html</loc>
+<loc>https://www.grey-panther.net/2012/11/writing-beautiful-code-not-just-for.html</loc>
 <lastmod>2012-11-06T14:33:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2012/11/a-mostly-cross-platform-clickable-map.html</loc>
+<loc>https://www.grey-panther.net/2012/11/a-mostly-cross-platform-clickable-map.html</loc>
 <lastmod>2012-11-01T10:06:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2012/10/every-end-is-new-beginning.html</loc>
+<loc>https://www.grey-panther.net/2012/10/every-end-is-new-beginning.html</loc>
 <lastmod>2012-10-27T23:03:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2012/10/helper-for-testing-multi-threaded.html</loc>
+<loc>https://www.grey-panther.net/2012/10/helper-for-testing-multi-threaded.html</loc>
 <lastmod>2012-10-27T22:48:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2012/10/geekmeet-talk-about-google-app-engine.html</loc>
+<loc>https://www.grey-panther.net/2012/10/geekmeet-talk-about-google-app-engine.html</loc>
 <lastmod>2012-10-27T22:45:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2012/08/lightning-talk-at-clujpm.html</loc>
+<loc>https://www.grey-panther.net/2012/08/lightning-talk-at-clujpm.html</loc>
 <lastmod>2012-08-19T15:22:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2012/08/running-pep8-and-pylint-programatically.html</loc>
+<loc>https://www.grey-panther.net/2012/08/running-pep8-and-pylint-programatically.html</loc>
 <lastmod>2012-08-19T15:12:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2012/08/clearing-your-google-app-engine.html</loc>
+<loc>https://www.grey-panther.net/2012/08/clearing-your-google-app-engine.html</loc>
 <lastmod>2012-08-15T10:08:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/12/relaxed-json-parsing.html</loc>
+<loc>https://www.grey-panther.net/2011/12/relaxed-json-parsing.html</loc>
 <lastmod>2011-12-27T13:40:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/10/updating-root-certificates-for-java.html</loc>
+<loc>https://www.grey-panther.net/2011/10/updating-root-certificates-for-java.html</loc>
 <lastmod>2011-10-20T15:36:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/10/vagrant-and-virtualbox-on-windows.html</loc>
+<loc>https://www.grey-panther.net/2011/10/vagrant-and-virtualbox-on-windows.html</loc>
 <lastmod>2011-10-20T15:27:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/10/another-friend-blogging.html</loc>
+<loc>https://www.grey-panther.net/2011/10/another-friend-blogging.html</loc>
 <lastmod>2011-10-13T18:20:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/10/using-jython-from-maven.html</loc>
+<loc>https://www.grey-panther.net/2011/10/using-jython-from-maven.html</loc>
 <lastmod>2011-10-13T18:16:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/10/how-to-post-high-quality-videos-to.html</loc>
+<loc>https://www.grey-panther.net/2011/10/how-to-post-high-quality-videos-to.html</loc>
 <lastmod>2011-10-11T11:58:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/10/integrating-maven-with-ivy.html</loc>
+<loc>https://www.grey-panther.net/2011/10/integrating-maven-with-ivy.html</loc>
 <lastmod>2011-10-11T11:18:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/10/upgrading-options-globetrotter-gi515m.html</loc>
+<loc>https://www.grey-panther.net/2011/10/upgrading-options-globetrotter-gi515m.html</loc>
 <lastmod>2011-10-08T15:55:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/10/getting-most-out-of-your-audio.html</loc>
+<loc>https://www.grey-panther.net/2011/10/getting-most-out-of-your-audio.html</loc>
 <lastmod>2011-10-08T13:45:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/09/more-videos.html</loc>
+<loc>https://www.grey-panther.net/2011/09/more-videos.html</loc>
 <lastmod>2011-09-22T23:23:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/09/of-maps-and-men.html</loc>
+<loc>https://www.grey-panther.net/2011/09/of-maps-and-men.html</loc>
 <lastmod>2011-09-21T17:53:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/09/informative-videos-about-copyright-and.html</loc>
+<loc>https://www.grey-panther.net/2011/09/informative-videos-about-copyright-and.html</loc>
 <lastmod>2011-09-21T17:02:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/09/recording-test-performance-with-jenkins.html</loc>
+<loc>https://www.grey-panther.net/2011/09/recording-test-performance-with-jenkins.html</loc>
 <lastmod>2011-09-20T19:16:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/09/audio-quality-redux.html</loc>
+<loc>https://www.grey-panther.net/2011/09/audio-quality-redux.html</loc>
 <lastmod>2011-09-20T15:20:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/09/power-line-humm-removal-with-audacity.html</loc>
+<loc>https://www.grey-panther.net/2011/09/power-line-humm-removal-with-audacity.html</loc>
 <lastmod>2011-09-18T16:45:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/09/protein-shakes-site-review.html</loc>
+<loc>https://www.grey-panther.net/2011/09/protein-shakes-site-review.html</loc>
 <lastmod>2011-09-16T20:33:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/09/running-jruby-on-64-bit-windows.html</loc>
+<loc>https://www.grey-panther.net/2011/09/running-jruby-on-64-bit-windows.html</loc>
 <lastmod>2011-09-13T19:33:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/09/using-less-with-syntax-highlight.html</loc>
+<loc>https://www.grey-panther.net/2011/09/using-less-with-syntax-highlight.html</loc>
 <lastmod>2011-09-13T19:14:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/09/link-love.html</loc>
+<loc>https://www.grey-panther.net/2011/09/link-love.html</loc>
 <lastmod>2011-09-09T18:23:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/09/100-years-of-style.html</loc>
+<loc>https://www.grey-panther.net/2011/09/100-years-of-style.html</loc>
 <lastmod>2011-09-06T13:15:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/09/quickm.html</loc>
+<loc>https://www.grey-panther.net/2011/09/quickm.html</loc>
 <lastmod>2011-09-06T12:36:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/09/creating-non-mac-bound-centos-6-machine.html</loc>
+<loc>https://www.grey-panther.net/2011/09/creating-non-mac-bound-centos-6-machine.html</loc>
 <lastmod>2011-09-05T10:04:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/09/levant-digital-marketing-review.html</loc>
+<loc>https://www.grey-panther.net/2011/09/levant-digital-marketing-review.html</loc>
 <lastmod>2011-09-01T16:15:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/08/paving-site-review.html</loc>
+<loc>https://www.grey-panther.net/2011/08/paving-site-review.html</loc>
 <lastmod>2011-08-03T22:16:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/08/iva-site-review.html</loc>
+<loc>https://www.grey-panther.net/2011/08/iva-site-review.html</loc>
 <lastmod>2011-08-03T21:50:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/06/setting-up-git-daemon-under-ubuntu.html</loc>
+<loc>https://www.grey-panther.net/2011/06/setting-up-git-daemon-under-ubuntu.html</loc>
 <lastmod>2011-06-01T20:19:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/06/adding-tab-completition-to-maven3-under.html</loc>
+<loc>https://www.grey-panther.net/2011/06/adding-tab-completition-to-maven3-under.html</loc>
 <lastmod>2011-06-01T20:10:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/05/adulttoyscom-review.html</loc>
+<loc>https://www.grey-panther.net/2011/05/adulttoyscom-review.html</loc>
 <lastmod>2011-05-21T09:53:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/04/blackjackpracticeorg-review.html</loc>
+<loc>https://www.grey-panther.net/2011/04/blackjackpracticeorg-review.html</loc>
 <lastmod>2011-04-15T20:53:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/04/booting-linux-kernel-from-grub2.html</loc>
+<loc>https://www.grey-panther.net/2011/04/booting-linux-kernel-from-grub2.html</loc>
 <lastmod>2011-04-12T18:59:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/04/wrong-time-to-update-software.html</loc>
+<loc>https://www.grey-panther.net/2011/04/wrong-time-to-update-software.html</loc>
 <lastmod>2011-04-11T16:41:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/04/recovering-encrypted-home-directory.html</loc>
+<loc>https://www.grey-panther.net/2011/04/recovering-encrypted-home-directory.html</loc>
 <lastmod>2011-04-10T22:24:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/04/scentsy-review-take-two.html</loc>
+<loc>https://www.grey-panther.net/2011/04/scentsy-review-take-two.html</loc>
 <lastmod>2011-04-10T22:19:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/04/rubberecyclecom-review.html</loc>
+<loc>https://www.grey-panther.net/2011/04/rubberecyclecom-review.html</loc>
 <lastmod>2011-04-10T11:17:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/04/medicalhealthinsurancetodaycom-review.html</loc>
+<loc>https://www.grey-panther.net/2011/04/medicalhealthinsurancetodaycom-review.html</loc>
 <lastmod>2011-04-08T17:44:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/03/setting-maximum-number-of-opened-files.html</loc>
+<loc>https://www.grey-panther.net/2011/03/setting-maximum-number-of-opened-files.html</loc>
 <lastmod>2011-03-20T14:29:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/03/diskmap-disk-backed-map-in-java.html</loc>
+<loc>https://www.grey-panther.net/2011/03/diskmap-disk-backed-map-in-java.html</loc>
 <lastmod>2011-03-08T18:12:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/03/why-running-sushi-is-best-fast-food.html</loc>
+<loc>https://www.grey-panther.net/2011/03/why-running-sushi-is-best-fast-food.html</loc>
 <lastmod>2011-03-08T16:44:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/03/microbenchmarking-and-you.html</loc>
+<loc>https://www.grey-panther.net/2011/03/microbenchmarking-and-you.html</loc>
 <lastmod>2011-03-07T15:13:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/03/doing-some-estimations.html</loc>
+<loc>https://www.grey-panther.net/2011/03/doing-some-estimations.html</loc>
 <lastmod>2011-03-06T10:39:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/03/audio-quality.html</loc>
+<loc>https://www.grey-panther.net/2011/03/audio-quality.html</loc>
 <lastmod>2011-03-05T09:39:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/02/sorry-for-malware-warning.html</loc>
+<loc>https://www.grey-panther.net/2011/02/sorry-for-malware-warning.html</loc>
 <lastmod>2011-02-25T12:02:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/02/mytrendyphonecouk-review.html</loc>
+<loc>https://www.grey-panther.net/2011/02/mytrendyphonecouk-review.html</loc>
 <lastmod>2011-02-25T11:48:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/02/setting-up-imap-with-yahoo-mail.html</loc>
+<loc>https://www.grey-panther.net/2011/02/setting-up-imap-with-yahoo-mail.html</loc>
 <lastmod>2011-02-22T23:03:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/02/manually-enabling-ip-routing-in-windows.html</loc>
+<loc>https://www.grey-panther.net/2011/02/manually-enabling-ip-routing-in-windows.html</loc>
 <lastmod>2011-02-06T11:37:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/02/is-hand-writing-assembly-still.html</loc>
+<loc>https://www.grey-panther.net/2011/02/is-hand-writing-assembly-still.html</loc>
 <lastmod>2011-02-06T09:14:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/02/how-to-quickly-start-up-webserver-with.html</loc>
+<loc>https://www.grey-panther.net/2011/02/how-to-quickly-start-up-webserver-with.html</loc>
 <lastmod>2011-02-06T08:14:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/02/why-you-should-use-0000-in-your-hosts.html</loc>
+<loc>https://www.grey-panther.net/2011/02/why-you-should-use-0000-in-your-hosts.html</loc>
 <lastmod>2011-02-05T20:50:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/02/augmenting-log4j-stack-traces-with.html</loc>
+<loc>https://www.grey-panther.net/2011/02/augmenting-log4j-stack-traces-with.html</loc>
 <lastmod>2011-02-03T18:07:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/01/remote-debugging-with-java.html</loc>
+<loc>https://www.grey-panther.net/2011/01/remote-debugging-with-java.html</loc>
 <lastmod>2011-01-25T15:35:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/01/navigating-searching-collections.html</loc>
+<loc>https://www.grey-panther.net/2011/01/navigating-searching-collections.html</loc>
 <lastmod>2011-01-25T15:04:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/01/how-to-test-for-implementation-of.html</loc>
+<loc>https://www.grey-panther.net/2011/01/how-to-test-for-implementation-of.html</loc>
 <lastmod>2011-01-25T13:45:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/01/non-buffered-processor-in-perl.html</loc>
+<loc>https://www.grey-panther.net/2011/01/non-buffered-processor-in-perl.html</loc>
 <lastmod>2011-01-25T05:44:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/01/comparative-book-review.html</loc>
+<loc>https://www.grey-panther.net/2011/01/comparative-book-review.html</loc>
 <lastmod>2011-01-24T17:42:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/01/noevir-review.html</loc>
+<loc>https://www.grey-panther.net/2011/01/noevir-review.html</loc>
 <lastmod>2011-01-24T17:11:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/01/scentsy-review.html</loc>
+<loc>https://www.grey-panther.net/2011/01/scentsy-review.html</loc>
 <lastmod>2011-01-24T16:37:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/01/processing-clipboard-data-in-perl.html</loc>
+<loc>https://www.grey-panther.net/2011/01/processing-clipboard-data-in-perl.html</loc>
 <lastmod>2011-01-03T17:03:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/01/why-ubuntu-1010-is-better-than-windows.html</loc>
+<loc>https://www.grey-panther.net/2011/01/why-ubuntu-1010-is-better-than-windows.html</loc>
 <lastmod>2011-01-03T16:37:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/01/java-has-some-surprising-amount-of.html</loc>
+<loc>https://www.grey-panther.net/2011/01/java-has-some-surprising-amount-of.html</loc>
 <lastmod>2011-01-02T18:15:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2011/01/java-date-objects-can-mutate-even-when.html</loc>
+<loc>https://www.grey-panther.net/2011/01/java-date-objects-can-mutate-even-when.html</loc>
 <lastmod>2011-01-02T10:43:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/12/tigerchef-review.html</loc>
+<loc>https://www.grey-panther.net/2010/12/tigerchef-review.html</loc>
 <lastmod>2010-12-09T22:23:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/08/problems-and-semi-solution-for-tcpdump.html</loc>
+<loc>https://www.grey-panther.net/2010/08/problems-and-semi-solution-for-tcpdump.html</loc>
 <lastmod>2010-08-13T04:30:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/08/shuttledirect-review.html</loc>
+<loc>https://www.grey-panther.net/2010/08/shuttledirect-review.html</loc>
 <lastmod>2010-08-13T03:44:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/06/copyright-is-not-theft.html</loc>
+<loc>https://www.grey-panther.net/2010/06/copyright-is-not-theft.html</loc>
 <lastmod>2010-06-09T15:36:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/06/dear-people-try-to-think-harder-even-if.html</loc>
+<loc>https://www.grey-panther.net/2010/06/dear-people-try-to-think-harder-even-if.html</loc>
 <lastmod>2010-06-07T05:36:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/06/who-is-hype-free.html</loc>
+<loc>https://www.grey-panther.net/2010/06/who-is-hype-free.html</loc>
 <lastmod>2010-06-06T11:14:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/05/on-hopelessness-of-pulling-content-from.html</loc>
+<loc>https://www.grey-panther.net/2010/05/on-hopelessness-of-pulling-content-from.html</loc>
 <lastmod>2010-05-10T19:12:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/04/putting-eval-into-java.html</loc>
+<loc>https://www.grey-panther.net/2010/04/putting-eval-into-java.html</loc>
 <lastmod>2010-04-22T17:42:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/04/update-to-blogger-tag-cloud.html</loc>
+<loc>https://www.grey-panther.net/2010/04/update-to-blogger-tag-cloud.html</loc>
 <lastmod>2010-04-20T17:27:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/04/funny-things-i-found-while-browsing-web.html</loc>
+<loc>https://www.grey-panther.net/2010/04/funny-things-i-found-while-browsing-web.html</loc>
 <lastmod>2010-04-09T17:26:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/04/updated-yarpg.html</loc>
+<loc>https://www.grey-panther.net/2010/04/updated-yarpg.html</loc>
 <lastmod>2010-04-09T15:10:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/04/sending-x-face-email-with-perlgmail.html</loc>
+<loc>https://www.grey-panther.net/2010/04/sending-x-face-email-with-perlgmail.html</loc>
 <lastmod>2010-04-02T16:17:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/03/performance-optimization-techniques-for.html</loc>
+<loc>https://www.grey-panther.net/2010/03/performance-optimization-techniques-for.html</loc>
 <lastmod>2010-03-26T13:56:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/03/solving-mathematical-puzzles-with-brute.html</loc>
+<loc>https://www.grey-panther.net/2010/03/solving-mathematical-puzzles-with-brute.html</loc>
 <lastmod>2010-03-26T11:47:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/03/rhub-review.html</loc>
+<loc>https://www.grey-panther.net/2010/03/rhub-review.html</loc>
 <lastmod>2010-03-25T17:24:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/03/stringintern-there-are-better-ways.html</loc>
+<loc>https://www.grey-panther.net/2010/03/stringintern-there-are-better-ways.html</loc>
 <lastmod>2010-03-22T13:04:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/03/alreadyhostingcom-review.html</loc>
+<loc>https://www.grey-panther.net/2010/03/alreadyhostingcom-review.html</loc>
 <lastmod>2010-03-22T11:11:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/03/edirecthost-review.html</loc>
+<loc>https://www.grey-panther.net/2010/03/edirecthost-review.html</loc>
 <lastmod>2010-03-22T10:33:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/03/unshortifying-cisco-go-links.html</loc>
+<loc>https://www.grey-panther.net/2010/03/unshortifying-cisco-go-links.html</loc>
 <lastmod>2010-03-19T17:23:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/03/parsing-pcap-files-with-perl.html</loc>
+<loc>https://www.grey-panther.net/2010/03/parsing-pcap-files-with-perl.html</loc>
 <lastmod>2010-03-19T15:43:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/03/spammy-mike.html</loc>
+<loc>https://www.grey-panther.net/2010/03/spammy-mike.html</loc>
 <lastmod>2010-03-19T15:08:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/03/fixing-dead-asus-wl-500g.html</loc>
+<loc>https://www.grey-panther.net/2010/03/fixing-dead-asus-wl-500g.html</loc>
 <lastmod>2010-03-17T10:16:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/03/computing-last-digit-of-be-efficiently.html</loc>
+<loc>https://www.grey-panther.net/2010/03/computing-last-digit-of-be-efficiently.html</loc>
 <lastmod>2010-03-15T13:20:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/03/in-praise-of-regexpassemble.html</loc>
+<loc>https://www.grey-panther.net/2010/03/in-praise-of-regexpassemble.html</loc>
 <lastmod>2010-03-15T10:42:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/03/funny-pictures-post.html</loc>
+<loc>https://www.grey-panther.net/2010/03/funny-pictures-post.html</loc>
 <lastmod>2010-03-15T10:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/03/regex-which-matches-strings-not.html</loc>
+<loc>https://www.grey-panther.net/2010/03/regex-which-matches-strings-not.html</loc>
 <lastmod>2010-03-10T14:08:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/03/java-import-statement-gotcha.html</loc>
+<loc>https://www.grey-panther.net/2010/03/java-import-statement-gotcha.html</loc>
 <lastmod>2010-03-10T13:49:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/02/findersuk-review.html</loc>
+<loc>https://www.grey-panther.net/2010/02/findersuk-review.html</loc>
 <lastmod>2010-02-25T14:40:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/02/brickhouse-alert-review.html</loc>
+<loc>https://www.grey-panther.net/2010/02/brickhouse-alert-review.html</loc>
 <lastmod>2010-02-25T11:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/02/globe-runner-review.html</loc>
+<loc>https://www.grey-panther.net/2010/02/globe-runner-review.html</loc>
 <lastmod>2010-02-16T16:49:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/02/softline-local-review.html</loc>
+<loc>https://www.grey-panther.net/2010/02/softline-local-review.html</loc>
 <lastmod>2010-02-16T16:32:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/01/you-go-phd-comics.html</loc>
+<loc>https://www.grey-panther.net/2010/01/you-go-phd-comics.html</loc>
 <lastmod>2010-01-26T18:39:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/01/carving-out-files-with-perl.html</loc>
+<loc>https://www.grey-panther.net/2010/01/carving-out-files-with-perl.html</loc>
 <lastmod>2010-01-26T16:11:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/01/should-i-use-roboform.html</loc>
+<loc>https://www.grey-panther.net/2010/01/should-i-use-roboform.html</loc>
 <lastmod>2010-01-25T13:58:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/01/who-feeds-me-with-information.html</loc>
+<loc>https://www.grey-panther.net/2010/01/who-feeds-me-with-information.html</loc>
 <lastmod>2010-01-25T11:54:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/01/splitting-hairshhhhh-strings-with-java.html</loc>
+<loc>https://www.grey-panther.net/2010/01/splitting-hairshhhhh-strings-with-java.html</loc>
 <lastmod>2010-01-24T21:55:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/01/future-of-web-hosting.html</loc>
+<loc>https://www.grey-panther.net/2010/01/future-of-web-hosting.html</loc>
 <lastmod>2010-01-24T20:04:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/01/best-web-hosting.html</loc>
+<loc>https://www.grey-panther.net/2010/01/best-web-hosting.html</loc>
 <lastmod>2010-01-22T22:23:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/01/donating-to-haiti-earthquake-relief.html</loc>
+<loc>https://www.grey-panther.net/2010/01/donating-to-haiti-earthquake-relief.html</loc>
 <lastmod>2010-01-18T15:04:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/01/useful-ubuntu-online-resource.html</loc>
+<loc>https://www.grey-panther.net/2010/01/useful-ubuntu-online-resource.html</loc>
 <lastmod>2010-01-11T22:28:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/01/forensic-analysis-of-jpeg-images.html</loc>
+<loc>https://www.grey-panther.net/2010/01/forensic-analysis-of-jpeg-images.html</loc>
 <lastmod>2010-01-11T18:07:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/01/security-vendors-top-threat-list-proof.html</loc>
+<loc>https://www.grey-panther.net/2010/01/security-vendors-top-threat-list-proof.html</loc>
 <lastmod>2010-01-11T17:52:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/01/missed-opportunity.html</loc>
+<loc>https://www.grey-panther.net/2010/01/missed-opportunity.html</loc>
 <lastmod>2010-01-08T17:51:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/01/announcing-couple-of-contests.html</loc>
+<loc>https://www.grey-panther.net/2010/01/announcing-couple-of-contests.html</loc>
 <lastmod>2010-01-07T19:22:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/01/options-for-giving.html</loc>
+<loc>https://www.grey-panther.net/2010/01/options-for-giving.html</loc>
 <lastmod>2010-01-07T19:12:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/01/making-prodigy-my-bitch-up-in-ableton.html</loc>
+<loc>https://www.grey-panther.net/2010/01/making-prodigy-my-bitch-up-in-ableton.html</loc>
 <lastmod>2010-01-07T18:59:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/01/twitfeeder-is-not-for-twitter-only.html</loc>
+<loc>https://www.grey-panther.net/2010/01/twitfeeder-is-not-for-twitter-only.html</loc>
 <lastmod>2010-01-06T11:37:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/01/google-web-hosting-alternatives.html</loc>
+<loc>https://www.grey-panther.net/2010/01/google-web-hosting-alternatives.html</loc>
 <lastmod>2010-01-06T10:25:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/01/story.html</loc>
+<loc>https://www.grey-panther.net/2010/01/story.html</loc>
 <lastmod>2010-01-04T18:06:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/01/launching-twit-feeder.html</loc>
+<loc>https://www.grey-panther.net/2010/01/launching-twit-feeder.html</loc>
 <lastmod>2010-01-03T20:38:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/01/choosing-java-profiler.html</loc>
+<loc>https://www.grey-panther.net/2010/01/choosing-java-profiler.html</loc>
 <lastmod>2010-01-03T11:17:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/01/as-if-you-need-extra-reasons-for.html</loc>
+<loc>https://www.grey-panther.net/2010/01/as-if-you-need-extra-reasons-for.html</loc>
 <lastmod>2010-01-02T22:23:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2010/01/don-yield-to-pressure.html</loc>
+<loc>https://www.grey-panther.net/2010/01/don-yield-to-pressure.html</loc>
 <lastmod>2010-01-02T20:21:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/12/how-to-saverestore-iptables-rules-on.html</loc>
+<loc>https://www.grey-panther.net/2009/12/how-to-saverestore-iptables-rules-on.html</loc>
 <lastmod>2009-12-28T13:01:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/12/how-eco-friendly-is-bmw.html</loc>
+<loc>https://www.grey-panther.net/2009/12/how-eco-friendly-is-bmw.html</loc>
 <lastmod>2009-12-26T22:06:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/12/recouping-your-data-from-hung-program.html</loc>
+<loc>https://www.grey-panther.net/2009/12/recouping-your-data-from-hung-program.html</loc>
 <lastmod>2009-12-26T21:15:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/12/congratulation-to-av-comparatives.html</loc>
+<loc>https://www.grey-panther.net/2009/12/congratulation-to-av-comparatives.html</loc>
 <lastmod>2009-12-25T20:06:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/12/don-listen-alone.html</loc>
+<loc>https://www.grey-panther.net/2009/12/don-listen-alone.html</loc>
 <lastmod>2009-12-25T19:47:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/12/schneier-videos.html</loc>
+<loc>https://www.grey-panther.net/2009/12/schneier-videos.html</loc>
 <lastmod>2009-12-21T17:36:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/12/new-challenges.html</loc>
+<loc>https://www.grey-panther.net/2009/12/new-challenges.html</loc>
 <lastmod>2009-12-18T18:15:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/12/game-of-chinese-whispers.html</loc>
+<loc>https://www.grey-panther.net/2009/12/game-of-chinese-whispers.html</loc>
 <lastmod>2009-12-18T17:23:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/12/twitter-hacked.html</loc>
+<loc>https://www.grey-panther.net/2009/12/twitter-hacked.html</loc>
 <lastmod>2009-12-18T13:16:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/12/discount-codes-uk-review.html</loc>
+<loc>https://www.grey-panther.net/2009/12/discount-codes-uk-review.html</loc>
 <lastmod>2009-12-17T13:41:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/11/im-spam-killa.html</loc>
+<loc>https://www.grey-panther.net/2009/11/im-spam-killa.html</loc>
 <lastmod>2009-11-24T13:05:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/11/screenshot-forensics.html</loc>
+<loc>https://www.grey-panther.net/2009/11/screenshot-forensics.html</loc>
 <lastmod>2009-11-24T12:48:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/11/plugging-good-friend-of-mine-not-in.html</loc>
+<loc>https://www.grey-panther.net/2009/11/plugging-good-friend-of-mine-not-in.html</loc>
 <lastmod>2009-11-23T17:45:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/11/todays-fudbuster.html</loc>
+<loc>https://www.grey-panther.net/2009/11/todays-fudbuster.html</loc>
 <lastmod>2009-11-23T17:24:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/11/activtrack-review.html</loc>
+<loc>https://www.grey-panther.net/2009/11/activtrack-review.html</loc>
 <lastmod>2009-11-23T16:06:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/11/small-business-voip-review.html</loc>
+<loc>https://www.grey-panther.net/2009/11/small-business-voip-review.html</loc>
 <lastmod>2009-11-23T15:11:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/11/to-my-dear-wife.html</loc>
+<loc>https://www.grey-panther.net/2009/11/to-my-dear-wife.html</loc>
 <lastmod>2009-11-21T09:54:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/11/calls-to-action.html</loc>
+<loc>https://www.grey-panther.net/2009/11/calls-to-action.html</loc>
 <lastmod>2009-11-17T18:41:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/11/surprising-numbers.html</loc>
+<loc>https://www.grey-panther.net/2009/11/surprising-numbers.html</loc>
 <lastmod>2009-11-17T18:05:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/11/web-hosting-site-review-review-p.html</loc>
+<loc>https://www.grey-panther.net/2009/11/web-hosting-site-review-review-p.html</loc>
 <lastmod>2009-11-17T12:03:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/11/leaked-microsoft-cofee-product.html</loc>
+<loc>https://www.grey-panther.net/2009/11/leaked-microsoft-cofee-product.html</loc>
 <lastmod>2009-11-09T14:09:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/11/what-virustotal-is-not.html</loc>
+<loc>https://www.grey-panther.net/2009/11/what-virustotal-is-not.html</loc>
 <lastmod>2009-11-09T13:34:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/11/grooveshark-vip-member.html</loc>
+<loc>https://www.grey-panther.net/2009/11/grooveshark-vip-member.html</loc>
 <lastmod>2009-11-02T16:22:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/10/how-to-generate-stackdump-with-gdb.html</loc>
+<loc>https://www.grey-panther.net/2009/10/how-to-generate-stackdump-with-gdb.html</loc>
 <lastmod>2009-10-30T17:29:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/10/importance-of-false-positives.html</loc>
+<loc>https://www.grey-panther.net/2009/10/importance-of-false-positives.html</loc>
 <lastmod>2009-10-30T16:11:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/10/fun-videos.html</loc>
+<loc>https://www.grey-panther.net/2009/10/fun-videos.html</loc>
 <lastmod>2009-10-29T15:08:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/10/why-network-neutrality-is-big-deal.html</loc>
+<loc>https://www.grey-panther.net/2009/10/why-network-neutrality-is-big-deal.html</loc>
 <lastmod>2009-10-29T09:54:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/10/bohemian-bankruptcy.html</loc>
+<loc>https://www.grey-panther.net/2009/10/bohemian-bankruptcy.html</loc>
 <lastmod>2009-10-28T17:43:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/10/requestpolicy-firefox-plugin-ultimate.html</loc>
+<loc>https://www.grey-panther.net/2009/10/requestpolicy-firefox-plugin-ultimate.html</loc>
 <lastmod>2009-10-28T16:54:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/10/help-build-mozilla-developer-network.html</loc>
+<loc>https://www.grey-panther.net/2009/10/help-build-mozilla-developer-network.html</loc>
 <lastmod>2009-10-28T16:24:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/10/taking-apart-dell-inspiron-9400.html</loc>
+<loc>https://www.grey-panther.net/2009/10/taking-apart-dell-inspiron-9400.html</loc>
 <lastmod>2009-10-26T11:12:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/10/watch-out-for-those-reviews.html</loc>
+<loc>https://www.grey-panther.net/2009/10/watch-out-for-those-reviews.html</loc>
 <lastmod>2009-10-23T17:46:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/10/and-now-for-some-upbeat-news.html</loc>
+<loc>https://www.grey-panther.net/2009/10/and-now-for-some-upbeat-news.html</loc>
 <lastmod>2009-10-23T10:55:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/10/difference-between-additive-and.html</loc>
+<loc>https://www.grey-panther.net/2009/10/difference-between-additive-and.html</loc>
 <lastmod>2009-10-22T18:14:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/10/if-you-use-perl.html</loc>
+<loc>https://www.grey-panther.net/2009/10/if-you-use-perl.html</loc>
 <lastmod>2009-10-22T16:31:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/10/couple-of-new-challenges.html</loc>
+<loc>https://www.grey-panther.net/2009/10/couple-of-new-challenges.html</loc>
 <lastmod>2009-10-22T15:05:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/10/using-tarinputstream-from-java.html</loc>
+<loc>https://www.grey-panther.net/2009/10/using-tarinputstream-from-java.html</loc>
 <lastmod>2009-10-21T19:38:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/10/avalonix-wireless-camera-review.html</loc>
+<loc>https://www.grey-panther.net/2009/10/avalonix-wireless-camera-review.html</loc>
 <lastmod>2009-10-13T18:07:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/10/grooveshark.html</loc>
+<loc>https://www.grey-panther.net/2009/10/grooveshark.html</loc>
 <lastmod>2009-10-09T17:55:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/10/sony-ericsson-satio.html</loc>
+<loc>https://www.grey-panther.net/2009/10/sony-ericsson-satio.html</loc>
 <lastmod>2009-10-09T17:07:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/10/landairsea-systems-gps-tracking.html</loc>
+<loc>https://www.grey-panther.net/2009/10/landairsea-systems-gps-tracking.html</loc>
 <lastmod>2009-10-09T15:44:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/10/fixing-cvs-annotate.html</loc>
+<loc>https://www.grey-panther.net/2009/10/fixing-cvs-annotate.html</loc>
 <lastmod>2009-10-07T17:19:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/10/cbt-planet-pr-newswire.html</loc>
+<loc>https://www.grey-panther.net/2009/10/cbt-planet-pr-newswire.html</loc>
 <lastmod>2009-10-07T16:08:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/10/cbt-planet.html</loc>
+<loc>https://www.grey-panther.net/2009/10/cbt-planet.html</loc>
 <lastmod>2009-10-07T15:04:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/10/one-more-thing.html</loc>
+<loc>https://www.grey-panther.net/2009/10/one-more-thing.html</loc>
 <lastmod>2009-10-07T13:36:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/10/my-opinion-about-microsoft-software.html</loc>
+<loc>https://www.grey-panther.net/2009/10/my-opinion-about-microsoft-software.html</loc>
 <lastmod>2009-10-05T16:08:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/10/space-invaders-rulz.html</loc>
+<loc>https://www.grey-panther.net/2009/10/space-invaders-rulz.html</loc>
 <lastmod>2009-10-05T14:04:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/10/two-new-challenges.html</loc>
+<loc>https://www.grey-panther.net/2009/10/two-new-challenges.html</loc>
 <lastmod>2009-10-02T16:47:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/10/voipstreet-affiliate-program-review.html</loc>
+<loc>https://www.grey-panther.net/2009/10/voipstreet-affiliate-program-review.html</loc>
 <lastmod>2009-10-02T16:35:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/10/smog-button-removed.html</loc>
+<loc>https://www.grey-panther.net/2009/10/smog-button-removed.html</loc>
 <lastmod>2009-10-01T17:28:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/09/err-exponentially-expanding-rants.html</loc>
+<loc>https://www.grey-panther.net/2009/09/err-exponentially-expanding-rants.html</loc>
 <lastmod>2009-09-29T17:51:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/09/myths-of-innovation.html</loc>
+<loc>https://www.grey-panther.net/2009/09/myths-of-innovation.html</loc>
 <lastmod>2009-09-29T17:36:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/09/carcassonne-great-boardgame.html</loc>
+<loc>https://www.grey-panther.net/2009/09/carcassonne-great-boardgame.html</loc>
 <lastmod>2009-09-29T16:19:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/09/network-forensics-contest-submission.html</loc>
+<loc>https://www.grey-panther.net/2009/09/network-forensics-contest-submission.html</loc>
 <lastmod>2009-09-29T13:26:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/09/back-with-vengeance.html</loc>
+<loc>https://www.grey-panther.net/2009/09/back-with-vengeance.html</loc>
 <lastmod>2009-09-29T12:22:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/09/ethical-hacker-challenge-prison-break.html</loc>
+<loc>https://www.grey-panther.net/2009/09/ethical-hacker-challenge-prison-break.html</loc>
 <lastmod>2009-09-02T15:44:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/08/geek-pr0n-time-lapse-video-of-building.html</loc>
+<loc>https://www.grey-panther.net/2009/08/geek-pr0n-time-lapse-video-of-building.html</loc>
 <lastmod>2009-08-31T18:13:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/08/t2-challenge.html</loc>
+<loc>https://www.grey-panther.net/2009/08/t2-challenge.html</loc>
 <lastmod>2009-08-31T18:00:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/08/careful-with-that-axehhh-static-eugene.html</loc>
+<loc>https://www.grey-panther.net/2009/08/careful-with-that-axehhh-static-eugene.html</loc>
 <lastmod>2009-08-31T17:36:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/08/freakonomics-review.html</loc>
+<loc>https://www.grey-panther.net/2009/08/freakonomics-review.html</loc>
 <lastmod>2009-08-29T18:02:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/08/spot-error.html</loc>
+<loc>https://www.grey-panther.net/2009/08/spot-error.html</loc>
 <lastmod>2009-08-28T16:08:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/08/perl-is-everywhere.html</loc>
+<loc>https://www.grey-panther.net/2009/08/perl-is-everywhere.html</loc>
 <lastmod>2009-08-27T18:04:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/2009/08/Youtube-gadget-generator.html</loc>
+<loc>https://www.grey-panther.net/2009/08/Youtube-gadget-generator.html</loc>
 <lastmod>2009-08-27T17:43:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/category/archived.html</loc>
+<loc>https://www.grey-panther.net/category/archived.html</loc>
 <lastmod>2014-03-28T09:17:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/category/blog.html</loc>
+<loc>https://www.grey-panther.net/category/blog.html</loc>
 <lastmod>2016-01-04T21:18:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/deface.html</loc>
+<loc>https://www.grey-panther.net/tag/deface.html</loc>
 <lastmod>2009-12-18T13:16:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/philantrophy.html</loc>
+<loc>https://www.grey-panther.net/tag/philantrophy.html</loc>
 <lastmod>2010-01-18T15:04:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/food.html</loc>
+<loc>https://www.grey-panther.net/tag/food.html</loc>
 <lastmod>2011-03-08T16:44:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/tip.html</loc>
+<loc>https://www.grey-panther.net/tag/tip.html</loc>
 <lastmod>2013-11-12T12:31:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/datetime.html</loc>
+<loc>https://www.grey-panther.net/tag/datetime.html</loc>
 <lastmod>2013-02-07T19:06:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/java-advent.html</loc>
+<loc>https://www.grey-panther.net/tag/java-advent.html</loc>
 <lastmod>2013-12-04T18:41:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/mediawiki.html</loc>
+<loc>https://www.grey-panther.net/tag/mediawiki.html</loc>
 <lastmod>2011-09-06T12:36:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/gdb.html</loc>
+<loc>https://www.grey-panther.net/tag/gdb.html</loc>
 <lastmod>2009-10-30T17:29:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/programming-languages.html</loc>
+<loc>https://www.grey-panther.net/tag/programming-languages.html</loc>
 <lastmod>2009-08-27T18:04:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/asian.html</loc>
+<loc>https://www.grey-panther.net/tag/asian.html</loc>
 <lastmod>2011-03-08T16:44:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/unicode.html</loc>
+<loc>https://www.grey-panther.net/tag/unicode.html</loc>
 <lastmod>2013-05-29T20:36:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/mysql.html</loc>
+<loc>https://www.grey-panther.net/tag/mysql.html</loc>
 <lastmod>2012-11-25T11:14:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/hack.html</loc>
+<loc>https://www.grey-panther.net/tag/hack.html</loc>
 <lastmod>2009-12-18T13:16:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/japan.html</loc>
+<loc>https://www.grey-panther.net/tag/japan.html</loc>
 <lastmod>2011-03-08T16:44:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/web.html</loc>
+<loc>https://www.grey-panther.net/tag/web.html</loc>
 <lastmod>2010-05-10T19:12:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/reverse-engeneering.html</loc>
+<loc>https://www.grey-panther.net/tag/reverse-engeneering.html</loc>
 <lastmod>2009-10-02T16:47:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/cli.html</loc>
+<loc>https://www.grey-panther.net/tag/cli.html</loc>
 <lastmod>2011-09-13T19:14:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/copyright.html</loc>
+<loc>https://www.grey-panther.net/tag/copyright.html</loc>
 <lastmod>2011-09-21T17:02:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/personal.html</loc>
+<loc>https://www.grey-panther.net/tag/personal.html</loc>
 <lastmod>2011-10-13T18:20:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/sonarqube.html</loc>
+<loc>https://www.grey-panther.net/tag/sonarqube.html</loc>
 <lastmod>2013-06-28T12:49:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/flash.html</loc>
+<loc>https://www.grey-panther.net/tag/flash.html</loc>
 <lastmod>2010-04-20T17:27:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/floss.html</loc>
+<loc>https://www.grey-panther.net/tag/floss.html</loc>
 <lastmod>2009-12-25T19:47:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/blog.html</loc>
+<loc>https://www.grey-panther.net/tag/blog.html</loc>
 <lastmod>2011-10-13T18:20:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/grub2.html</loc>
+<loc>https://www.grey-panther.net/tag/grub2.html</loc>
 <lastmod>2011-04-12T18:59:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/packet-capture.html</loc>
+<loc>https://www.grey-panther.net/tag/packet-capture.html</loc>
 <lastmod>2010-08-13T04:30:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/photo.html</loc>
+<loc>https://www.grey-panther.net/tag/photo.html</loc>
 <lastmod>2009-11-23T17:45:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/orange.html</loc>
+<loc>https://www.grey-panther.net/tag/orange.html</loc>
 <lastmod>2011-10-08T15:55:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/lightningtalk.html</loc>
+<loc>https://www.grey-panther.net/tag/lightningtalk.html</loc>
 <lastmod>2012-08-19T15:22:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/multithreading.html</loc>
+<loc>https://www.grey-panther.net/tag/multithreading.html</loc>
 <lastmod>2012-12-21T21:13:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/local.html</loc>
+<loc>https://www.grey-panther.net/tag/local.html</loc>
 <lastmod>2012-11-25T10:58:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/junit.html</loc>
+<loc>https://www.grey-panther.net/tag/junit.html</loc>
 <lastmod>2011-01-25T13:45:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/jython.html</loc>
+<loc>https://www.grey-panther.net/tag/jython.html</loc>
 <lastmod>2011-10-13T18:16:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/string.html</loc>
+<loc>https://www.grey-panther.net/tag/string.html</loc>
 <lastmod>2012-12-12T10:37:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/perlmonks.html</loc>
+<loc>https://www.grey-panther.net/tag/perlmonks.html</loc>
 <lastmod>2012-08-19T15:22:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/photography.html</loc>
+<loc>https://www.grey-panther.net/tag/photography.html</loc>
 <lastmod>2009-11-23T17:45:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/pypi.html</loc>
+<loc>https://www.grey-panther.net/tag/pypi.html</loc>
 <lastmod>2014-02-05T17:26:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/dell.html</loc>
+<loc>https://www.grey-panther.net/tag/dell.html</loc>
 <lastmod>2009-10-26T11:12:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/geek.html</loc>
+<loc>https://www.grey-panther.net/tag/geek.html</loc>
 <lastmod>2010-01-07T19:12:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/ssl.html</loc>
+<loc>https://www.grey-panther.net/tag/ssl.html</loc>
 <lastmod>2011-10-20T15:36:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/game.html</loc>
+<loc>https://www.grey-panther.net/tag/game.html</loc>
 <lastmod>2009-09-29T16:19:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/ranum.html</loc>
+<loc>https://www.grey-panther.net/tag/ranum.html</loc>
 <lastmod>2009-12-21T17:36:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/jenkins.html</loc>
+<loc>https://www.grey-panther.net/tag/jenkins.html</loc>
 <lastmod>2011-09-20T19:16:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/linux.html</loc>
+<loc>https://www.grey-panther.net/tag/linux.html</loc>
 <lastmod>2011-09-13T19:14:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/daemon.html</loc>
+<loc>https://www.grey-panther.net/tag/daemon.html</loc>
 <lastmod>2012-12-01T18:24:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/open-source.html</loc>
+<loc>https://www.grey-panther.net/tag/open-source.html</loc>
 <lastmod>2009-10-05T16:08:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/unit-tests.html</loc>
+<loc>https://www.grey-panther.net/tag/unit-tests.html</loc>
 <lastmod>2011-01-25T15:04:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/web-comic.html</loc>
+<loc>https://www.grey-panther.net/tag/web-comic.html</loc>
 <lastmod>2010-03-15T10:00:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/advent.html</loc>
+<loc>https://www.grey-panther.net/tag/advent.html</loc>
 <lastmod>2013-12-04T18:41:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/mapreduce.html</loc>
+<loc>https://www.grey-panther.net/tag/mapreduce.html</loc>
 <lastmod>2013-11-12T12:31:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/email.html</loc>
+<loc>https://www.grey-panther.net/tag/email.html</loc>
 <lastmod>2011-02-22T23:03:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/privacy.html</loc>
+<loc>https://www.grey-panther.net/tag/privacy.html</loc>
 <lastmod>2009-11-24T12:48:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/version-control.html</loc>
+<loc>https://www.grey-panther.net/tag/version-control.html</loc>
 <lastmod>2009-10-07T17:19:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/sonar.html</loc>
+<loc>https://www.grey-panther.net/tag/sonar.html</loc>
 <lastmod>2013-06-28T12:49:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/security.html</loc>
+<loc>https://www.grey-panther.net/tag/security.html</loc>
 <lastmod>2011-02-25T12:02:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/jmeter.html</loc>
+<loc>https://www.grey-panther.net/tag/jmeter.html</loc>
 <lastmod>2011-09-20T19:16:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/google-reader.html</loc>
+<loc>https://www.grey-panther.net/tag/google-reader.html</loc>
 <lastmod>2010-01-25T11:54:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/wiki.html</loc>
+<loc>https://www.grey-panther.net/tag/wiki.html</loc>
 <lastmod>2011-09-06T12:36:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/npm.html</loc>
+<loc>https://www.grey-panther.net/tag/npm.html</loc>
 <lastmod>2014-02-05T17:26:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/google.html</loc>
+<loc>https://www.grey-panther.net/tag/google.html</loc>
 <lastmod>2011-10-11T11:58:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/cisco.html</loc>
+<loc>https://www.grey-panther.net/tag/cisco.html</loc>
 <lastmod>2010-03-19T17:23:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/reviewme.html</loc>
+<loc>https://www.grey-panther.net/tag/reviewme.html</loc>
 <lastmod>2011-09-16T20:33:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/centos.html</loc>
+<loc>https://www.grey-panther.net/tag/centos.html</loc>
 <lastmod>2011-09-05T10:04:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/twitter.html</loc>
+<loc>https://www.grey-panther.net/tag/twitter.html</loc>
 <lastmod>2010-01-06T11:37:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/static-analysers.html</loc>
+<loc>https://www.grey-panther.net/tag/static-analysers.html</loc>
 <lastmod>2012-08-19T15:12:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/cvs.html</loc>
+<loc>https://www.grey-panther.net/tag/cvs.html</loc>
 <lastmod>2009-10-07T17:19:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/forensics.html</loc>
+<loc>https://www.grey-panther.net/tag/forensics.html</loc>
 <lastmod>2010-01-11T18:07:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/video.html</loc>
+<loc>https://www.grey-panther.net/tag/video.html</loc>
 <lastmod>2011-10-11T11:58:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/virtualization.html</loc>
+<loc>https://www.grey-panther.net/tag/virtualization.html</loc>
 <lastmod>2011-10-20T15:27:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/mirror.html</loc>
+<loc>https://www.grey-panther.net/tag/mirror.html</loc>
 <lastmod>2014-02-05T17:26:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/images.html</loc>
+<loc>https://www.grey-panther.net/tag/images.html</loc>
 <lastmod>2010-03-15T10:00:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/freeware.html</loc>
+<loc>https://www.grey-panther.net/tag/freeware.html</loc>
 <lastmod>2009-10-09T17:55:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/positivity.html</loc>
+<loc>https://www.grey-panther.net/tag/positivity.html</loc>
 <lastmod>2009-10-23T10:55:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/espresso-shots.html</loc>
+<loc>https://www.grey-panther.net/tag/espresso-shots.html</loc>
 <lastmod>2011-01-25T15:04:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/command-line.html</loc>
+<loc>https://www.grey-panther.net/tag/command-line.html</loc>
 <lastmod>2012-12-21T21:06:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/giving.html</loc>
+<loc>https://www.grey-panther.net/tag/giving.html</loc>
 <lastmod>2010-01-07T19:12:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/pictures.html</loc>
+<loc>https://www.grey-panther.net/tag/pictures.html</loc>
 <lastmod>2010-03-15T10:00:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/review.html</loc>
+<loc>https://www.grey-panther.net/tag/review.html</loc>
 <lastmod>2011-09-16T20:33:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/hype.html</loc>
+<loc>https://www.grey-panther.net/tag/hype.html</loc>
 <lastmod>2009-12-18T17:23:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/comments.html</loc>
+<loc>https://www.grey-panther.net/tag/comments.html</loc>
 <lastmod>2011-02-25T12:02:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/audio-processing.html</loc>
+<loc>https://www.grey-panther.net/tag/audio-processing.html</loc>
 <lastmod>2011-10-08T13:45:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/internet.html</loc>
+<loc>https://www.grey-panther.net/tag/internet.html</loc>
 <lastmod>2011-09-21T17:02:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/christmas.html</loc>
+<loc>https://www.grey-panther.net/tag/christmas.html</loc>
 <lastmod>2013-12-04T18:41:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/law.html</loc>
+<loc>https://www.grey-panther.net/tag/law.html</loc>
 <lastmod>2010-06-09T15:36:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/assembly.html</loc>
+<loc>https://www.grey-panther.net/tag/assembly.html</loc>
 <lastmod>2011-02-06T09:14:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/marketing.html</loc>
+<loc>https://www.grey-panther.net/tag/marketing.html</loc>
 <lastmod>2011-03-06T10:39:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/javascript.html</loc>
+<loc>https://www.grey-panther.net/tag/javascript.html</loc>
 <lastmod>2014-02-05T17:26:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/continious-integration.html</loc>
+<loc>https://www.grey-panther.net/tag/continious-integration.html</loc>
 <lastmod>2014-02-05T17:26:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/solution.html</loc>
+<loc>https://www.grey-panther.net/tag/solution.html</loc>
 <lastmod>2009-09-29T13:26:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/maven.html</loc>
+<loc>https://www.grey-panther.net/tag/maven.html</loc>
 <lastmod>2011-10-13T18:16:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/perlmongers.html</loc>
+<loc>https://www.grey-panther.net/tag/perlmongers.html</loc>
 <lastmod>2012-08-19T15:22:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/git.html</loc>
+<loc>https://www.grey-panther.net/tag/git.html</loc>
 <lastmod>2011-06-01T20:19:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/html5.html</loc>
+<loc>https://www.grey-panther.net/tag/html5.html</loc>
 <lastmod>2011-09-21T17:53:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/ubuntu.html</loc>
+<loc>https://www.grey-panther.net/tag/ubuntu.html</loc>
 <lastmod>2013-08-14T09:50:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/apache.html</loc>
+<loc>https://www.grey-panther.net/tag/apache.html</loc>
 <lastmod>2014-02-05T17:26:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/networking.html</loc>
+<loc>https://www.grey-panther.net/tag/networking.html</loc>
 <lastmod>2011-10-08T15:55:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/pcap.html</loc>
+<loc>https://www.grey-panther.net/tag/pcap.html</loc>
 <lastmod>2010-08-13T04:30:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/bash.html</loc>
+<loc>https://www.grey-panther.net/tag/bash.html</loc>
 <lastmod>2011-09-06T12:36:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/tcpip.html</loc>
+<loc>https://www.grey-panther.net/tag/tcpip.html</loc>
 <lastmod>2010-08-13T04:30:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/c.html</loc>
+<loc>https://www.grey-panther.net/tag/c.html</loc>
 <lastmod>2011-02-06T09:14:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/license.html</loc>
+<loc>https://www.grey-panther.net/tag/license.html</loc>
 <lastmod>2009-10-05T16:08:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/launch.html</loc>
+<loc>https://www.grey-panther.net/tag/launch.html</loc>
 <lastmod>2012-12-01T18:24:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/freedom.html</loc>
+<loc>https://www.grey-panther.net/tag/freedom.html</loc>
 <lastmod>2011-09-21T17:02:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/ndb.html</loc>
+<loc>https://www.grey-panther.net/tag/ndb.html</loc>
 <lastmod>2013-02-07T19:06:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/programming.html</loc>
+<loc>https://www.grey-panther.net/tag/programming.html</loc>
 <lastmod>2013-12-04T18:41:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/carving.html</loc>
+<loc>https://www.grey-panther.net/tag/carving.html</loc>
 <lastmod>2010-01-26T16:11:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/jprofiler.html</loc>
+<loc>https://www.grey-panther.net/tag/jprofiler.html</loc>
 <lastmod>2011-03-20T14:29:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/audacity.html</loc>
+<loc>https://www.grey-panther.net/tag/audacity.html</loc>
 <lastmod>2011-10-08T13:45:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/survey.html</loc>
+<loc>https://www.grey-panther.net/tag/survey.html</loc>
 <lastmod>2009-10-28T16:24:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/color-theory.html</loc>
+<loc>https://www.grey-panther.net/tag/color-theory.html</loc>
 <lastmod>2009-10-22T18:14:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/router.html</loc>
+<loc>https://www.grey-panther.net/tag/router.html</loc>
 <lastmod>2010-03-17T10:16:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/ide.html</loc>
+<loc>https://www.grey-panther.net/tag/ide.html</loc>
 <lastmod>2009-11-17T18:41:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/documentary.html</loc>
+<loc>https://www.grey-panther.net/tag/documentary.html</loc>
 <lastmod>2009-12-25T19:47:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/software.html</loc>
+<loc>https://www.grey-panther.net/tag/software.html</loc>
 <lastmod>2009-10-05T16:08:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/firefox.html</loc>
+<loc>https://www.grey-panther.net/tag/firefox.html</loc>
 <lastmod>2009-10-28T16:54:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/film.html</loc>
+<loc>https://www.grey-panther.net/tag/film.html</loc>
 <lastmod>2009-12-25T19:47:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/stacktrace.html</loc>
+<loc>https://www.grey-panther.net/tag/stacktrace.html</loc>
 <lastmod>2011-02-03T18:07:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/color.html</loc>
+<loc>https://www.grey-panther.net/tag/color.html</loc>
 <lastmod>2009-10-22T18:14:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/blogger.html</loc>
+<loc>https://www.grey-panther.net/tag/blogger.html</loc>
 <lastmod>2011-02-25T12:02:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/misc.html</loc>
+<loc>https://www.grey-panther.net/tag/misc.html</loc>
 <lastmod>2011-09-22T23:23:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/community.html</loc>
+<loc>https://www.grey-panther.net/tag/community.html</loc>
 <lastmod>2009-11-24T13:05:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/jruby.html</loc>
+<loc>https://www.grey-panther.net/tag/jruby.html</loc>
 <lastmod>2011-09-13T19:33:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/rant.html</loc>
+<loc>https://www.grey-panther.net/tag/rant.html</loc>
 <lastmod>2014-03-28T09:17:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/ethical-hacker.html</loc>
+<loc>https://www.grey-panther.net/tag/ethical-hacker.html</loc>
 <lastmod>2009-12-18T18:15:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/troubleshooting.html</loc>
+<loc>https://www.grey-panther.net/tag/troubleshooting.html</loc>
 <lastmod>2011-04-12T18:59:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/news.html</loc>
+<loc>https://www.grey-panther.net/tag/news.html</loc>
 <lastmod>2012-11-25T10:58:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/art.html</loc>
+<loc>https://www.grey-panther.net/tag/art.html</loc>
 <lastmod>2009-11-23T17:45:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/poll.html</loc>
+<loc>https://www.grey-panther.net/tag/poll.html</loc>
 <lastmod>2009-10-22T16:31:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/virtualbox.html</loc>
+<loc>https://www.grey-panther.net/tag/virtualbox.html</loc>
 <lastmod>2011-10-20T15:27:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/disaster.html</loc>
+<loc>https://www.grey-panther.net/tag/disaster.html</loc>
 <lastmod>2010-01-18T15:04:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/regex.html</loc>
+<loc>https://www.grey-panther.net/tag/regex.html</loc>
 <lastmod>2010-03-15T10:42:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/php.html</loc>
+<loc>https://www.grey-panther.net/tag/php.html</loc>
 <lastmod>2013-05-29T20:36:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/java.html</loc>
+<loc>https://www.grey-panther.net/tag/java.html</loc>
 <lastmod>2013-06-28T12:49:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/grub.html</loc>
+<loc>https://www.grey-panther.net/tag/grub.html</loc>
 <lastmod>2011-04-12T18:59:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/google-app-engine.html</loc>
+<loc>https://www.grey-panther.net/tag/google-app-engine.html</loc>
 <lastmod>2012-10-27T22:45:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/probabilities.html</loc>
+<loc>https://www.grey-panther.net/tag/probabilities.html</loc>
 <lastmod>2009-11-17T18:05:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/encryption.html</loc>
+<loc>https://www.grey-panther.net/tag/encryption.html</loc>
 <lastmod>2011-04-10T22:24:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/bitcoin.html</loc>
+<loc>https://www.grey-panther.net/tag/bitcoin.html</loc>
 <lastmod>2013-05-29T17:52:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/perl.html</loc>
+<loc>https://www.grey-panther.net/tag/perl.html</loc>
 <lastmod>2013-05-29T17:52:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/mathematics.html</loc>
+<loc>https://www.grey-panther.net/tag/mathematics.html</loc>
 <lastmod>2011-03-06T10:39:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/json.html</loc>
+<loc>https://www.grey-panther.net/tag/json.html</loc>
 <lastmod>2011-12-27T13:40:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/music.html</loc>
+<loc>https://www.grey-panther.net/tag/music.html</loc>
 <lastmod>2011-09-21T17:02:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/upbeat.html</loc>
+<loc>https://www.grey-panther.net/tag/upbeat.html</loc>
 <lastmod>2009-10-23T10:55:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/tcpdump.html</loc>
+<loc>https://www.grey-panther.net/tag/tcpdump.html</loc>
 <lastmod>2010-08-13T04:30:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/fork.html</loc>
+<loc>https://www.grey-panther.net/tag/fork.html</loc>
 <lastmod>2012-12-01T18:24:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/jug.html</loc>
+<loc>https://www.grey-panther.net/tag/jug.html</loc>
 <lastmod>2012-10-27T22:48:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/python.html</loc>
+<loc>https://www.grey-panther.net/tag/python.html</loc>
 <lastmod>2014-02-05T17:26:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/geekmeet.html</loc>
+<loc>https://www.grey-panther.net/tag/geekmeet.html</loc>
 <lastmod>2012-10-27T22:45:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/lint.html</loc>
+<loc>https://www.grey-panther.net/tag/lint.html</loc>
 <lastmod>2012-08-19T15:12:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/pylint.html</loc>
+<loc>https://www.grey-panther.net/tag/pylint.html</loc>
 <lastmod>2012-08-19T15:12:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/yahoo.html</loc>
+<loc>https://www.grey-panther.net/tag/yahoo.html</loc>
 <lastmod>2011-02-22T23:03:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/spam.html</loc>
+<loc>https://www.grey-panther.net/tag/spam.html</loc>
 <lastmod>2010-03-19T15:08:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/java7.html</loc>
+<loc>https://www.grey-panther.net/tag/java7.html</loc>
 <lastmod>2012-12-12T10:37:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/concurrency.html</loc>
+<loc>https://www.grey-panther.net/tag/concurrency.html</loc>
 <lastmod>2011-01-24T17:42:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/smile.html</loc>
+<loc>https://www.grey-panther.net/tag/smile.html</loc>
 <lastmod>2009-10-23T10:55:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/gae.html</loc>
+<loc>https://www.grey-panther.net/tag/gae.html</loc>
 <lastmod>2013-11-12T12:31:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/podcast.html</loc>
+<loc>https://www.grey-panther.net/tag/podcast.html</loc>
 <lastmod>2011-10-08T13:45:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/ruby.html</loc>
+<loc>https://www.grey-panther.net/tag/ruby.html</loc>
 <lastmod>2011-09-13T19:33:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/imap.html</loc>
+<loc>https://www.grey-panther.net/tag/imap.html</loc>
 <lastmod>2011-02-22T23:03:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/rss.html</loc>
+<loc>https://www.grey-panther.net/tag/rss.html</loc>
 <lastmod>2010-01-25T11:54:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/jquery.html</loc>
+<loc>https://www.grey-panther.net/tag/jquery.html</loc>
 <lastmod>2013-11-12T12:31:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/schneier.html</loc>
+<loc>https://www.grey-panther.net/tag/schneier.html</loc>
 <lastmod>2009-12-21T17:36:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/presentation.html</loc>
+<loc>https://www.grey-panther.net/tag/presentation.html</loc>
 <lastmod>2012-10-27T22:45:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/challenge.html</loc>
+<loc>https://www.grey-panther.net/tag/challenge.html</loc>
 <lastmod>2010-01-07T19:22:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/git-daemon.html</loc>
+<loc>https://www.grey-panther.net/tag/git-daemon.html</loc>
 <lastmod>2011-06-01T20:19:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/typography.html</loc>
+<loc>https://www.grey-panther.net/tag/typography.html</loc>
 <lastmod>2009-10-22T18:14:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/advocacy.html</loc>
+<loc>https://www.grey-panther.net/tag/advocacy.html</loc>
 <lastmod>2012-11-25T10:58:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/profiler.html</loc>
+<loc>https://www.grey-panther.net/tag/profiler.html</loc>
 <lastmod>2010-01-03T11:17:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/fud.html</loc>
+<loc>https://www.grey-panther.net/tag/fud.html</loc>
 <lastmod>2009-11-23T17:24:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/optimization.html</loc>
+<loc>https://www.grey-panther.net/tag/optimization.html</loc>
 <lastmod>2011-02-06T09:14:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/praise.html</loc>
+<loc>https://www.grey-panther.net/tag/praise.html</loc>
 <lastmod>2009-10-30T16:11:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/deception.html</loc>
+<loc>https://www.grey-panther.net/tag/deception.html</loc>
 <lastmod>2009-10-23T17:46:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/fun.html</loc>
+<loc>https://www.grey-panther.net/tag/fun.html</loc>
 <lastmod>2011-09-06T13:15:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/firewalls.html</loc>
+<loc>https://www.grey-panther.net/tag/firewalls.html</loc>
 <lastmod>2009-12-28T13:01:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/server.html</loc>
+<loc>https://www.grey-panther.net/tag/server.html</loc>
 <lastmod>2009-10-07T13:36:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/html.html</loc>
+<loc>https://www.grey-panther.net/tag/html.html</loc>
 <lastmod>2010-03-19T17:23:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/screencapture.html</loc>
+<loc>https://www.grey-panther.net/tag/screencapture.html</loc>
 <lastmod>2013-08-14T09:50:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/dependency-management.html</loc>
+<loc>https://www.grey-panther.net/tag/dependency-management.html</loc>
 <lastmod>2011-10-11T11:18:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/mtgox.html</loc>
+<loc>https://www.grey-panther.net/tag/mtgox.html</loc>
 <lastmod>2013-05-29T17:52:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/economics.html</loc>
+<loc>https://www.grey-panther.net/tag/economics.html</loc>
 <lastmod>2009-08-29T18:02:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/links.html</loc>
+<loc>https://www.grey-panther.net/tag/links.html</loc>
 <lastmod>2010-04-09T17:26:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/process.html</loc>
+<loc>https://www.grey-panther.net/tag/process.html</loc>
 <lastmod>2012-12-01T18:24:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/twitfeeder.html</loc>
+<loc>https://www.grey-panther.net/tag/twitfeeder.html</loc>
 <lastmod>2010-01-06T11:37:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/hardware.html</loc>
+<loc>https://www.grey-panther.net/tag/hardware.html</loc>
 <lastmod>2011-10-08T15:55:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/av.html</loc>
+<loc>https://www.grey-panther.net/tag/av.html</loc>
 <lastmod>2010-01-11T17:52:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/technology.html</loc>
+<loc>https://www.grey-panther.net/tag/technology.html</loc>
 <lastmod>2009-10-29T15:08:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/ivy.html</loc>
+<loc>https://www.grey-panther.net/tag/ivy.html</loc>
 <lastmod>2011-10-11T11:18:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/websockets.html</loc>
+<loc>https://www.grey-panther.net/tag/websockets.html</loc>
 <lastmod>2013-05-29T17:52:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/net-neutrality.html</loc>
+<loc>https://www.grey-panther.net/tag/net-neutrality.html</loc>
 <lastmod>2009-10-29T09:54:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/funny.html</loc>
+<loc>https://www.grey-panther.net/tag/funny.html</loc>
 <lastmod>2010-04-09T17:26:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/malware.html</loc>
+<loc>https://www.grey-panther.net/tag/malware.html</loc>
 <lastmod>2011-02-25T12:02:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/contest.html</loc>
+<loc>https://www.grey-panther.net/tag/contest.html</loc>
 <lastmod>2010-01-07T19:22:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/piracy.html</loc>
+<loc>https://www.grey-panther.net/tag/piracy.html</loc>
 <lastmod>2009-10-05T16:08:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/media.html</loc>
+<loc>https://www.grey-panther.net/tag/media.html</loc>
 <lastmod>2010-01-26T18:39:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/file-recovery.html</loc>
+<loc>https://www.grey-panther.net/tag/file-recovery.html</loc>
 <lastmod>2010-01-26T16:11:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/vagrant.html</loc>
+<loc>https://www.grey-panther.net/tag/vagrant.html</loc>
 <lastmod>2011-10-20T15:27:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/debug.html</loc>
+<loc>https://www.grey-panther.net/tag/debug.html</loc>
 <lastmod>2011-01-25T15:35:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/archive.html</loc>
+<loc>https://www.grey-panther.net/tag/archive.html</loc>
 <lastmod>2009-10-21T19:38:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/maps.html</loc>
+<loc>https://www.grey-panther.net/tag/maps.html</loc>
 <lastmod>2011-09-21T17:53:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/book.html</loc>
+<loc>https://www.grey-panther.net/tag/book.html</loc>
 <lastmod>2011-01-24T17:42:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/build.html</loc>
+<loc>https://www.grey-panther.net/tag/build.html</loc>
 <lastmod>2014-02-05T17:26:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/performance.html</loc>
+<loc>https://www.grey-panther.net/tag/performance.html</loc>
 <lastmod>2014-03-28T09:17:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/log4j.html</loc>
+<loc>https://www.grey-panther.net/tag/log4j.html</loc>
 <lastmod>2011-02-03T18:07:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/disassembly.html</loc>
+<loc>https://www.grey-panther.net/tag/disassembly.html</loc>
 <lastmod>2009-10-26T11:12:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/node.html</loc>
+<loc>https://www.grey-panther.net/tag/node.html</loc>
 <lastmod>2014-02-05T17:26:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/passwords.html</loc>
+<loc>https://www.grey-panther.net/tag/passwords.html</loc>
 <lastmod>2010-04-09T15:10:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/http.html</loc>
+<loc>https://www.grey-panther.net/tag/http.html</loc>
 <lastmod>2010-03-19T17:23:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/activism.html</loc>
+<loc>https://www.grey-panther.net/tag/activism.html</loc>
 <lastmod>2009-10-29T09:54:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/benchmark.html</loc>
+<loc>https://www.grey-panther.net/tag/benchmark.html</loc>
 <lastmod>2011-03-07T15:13:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/philosophy.html</loc>
+<loc>https://www.grey-panther.net/tag/philosophy.html</loc>
 <lastmod>2011-09-21T17:53:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/boardgame.html</loc>
+<loc>https://www.grey-panther.net/tag/boardgame.html</loc>
 <lastmod>2009-09-29T16:19:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/donation.html</loc>
+<loc>https://www.grey-panther.net/tag/donation.html</loc>
 <lastmod>2010-01-18T15:04:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/screencasts.html</loc>
+<loc>https://www.grey-panther.net/tag/screencasts.html</loc>
 <lastmod>2013-08-14T09:50:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/noise-removal.html</loc>
+<loc>https://www.grey-panther.net/tag/noise-removal.html</loc>
 <lastmod>2011-10-08T13:45:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/statistics.html</loc>
+<loc>https://www.grey-panther.net/tag/statistics.html</loc>
 <lastmod>2011-03-06T10:39:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/mariadb.html</loc>
+<loc>https://www.grey-panther.net/tag/mariadb.html</loc>
 <lastmod>2012-11-25T11:14:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/friends.html</loc>
+<loc>https://www.grey-panther.net/tag/friends.html</loc>
 <lastmod>2011-09-09T18:23:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/modem.html</loc>
+<loc>https://www.grey-panther.net/tag/modem.html</loc>
 <lastmod>2011-10-08T15:55:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/database.html</loc>
+<loc>https://www.grey-panther.net/tag/database.html</loc>
 <lastmod>2012-11-25T11:14:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/windows.html</loc>
+<loc>https://www.grey-panther.net/tag/windows.html</loc>
 <lastmod>2011-10-20T15:27:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/physical-security.html</loc>
+<loc>https://www.grey-panther.net/tag/physical-security.html</loc>
 <lastmod>2010-01-04T18:06:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/advertisment.html</loc>
+<loc>https://www.grey-panther.net/tag/advertisment.html</loc>
 <lastmod>2011-02-05T20:50:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/microsoft.html</loc>
+<loc>https://www.grey-panther.net/tag/microsoft.html</loc>
 <lastmod>2009-11-09T14:09:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/pep8.html</loc>
+<loc>https://www.grey-panther.net/tag/pep8.html</loc>
 <lastmod>2012-08-19T15:12:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/charity.html</loc>
+<loc>https://www.grey-panther.net/tag/charity.html</loc>
 <lastmod>2010-01-18T15:04:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/asus.html</loc>
+<loc>https://www.grey-panther.net/tag/asus.html</loc>
 <lastmod>2010-03-17T10:16:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/audio.html</loc>
+<loc>https://www.grey-panther.net/tag/audio.html</loc>
 <lastmod>2011-10-08T13:45:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/64bit.html</loc>
+<loc>https://www.grey-panther.net/tag/64bit.html</loc>
 <lastmod>2011-09-13T19:33:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/talk.html</loc>
+<loc>https://www.grey-panther.net/tag/talk.html</loc>
 <lastmod>2012-08-19T15:22:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/tag/plugin.html</loc>
+<loc>https://www.grey-panther.net/tag/plugin.html</loc>
 <lastmod>2010-04-20T17:27:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://gpanther.github.io/author/attila-mihaly-balazs.html</loc>
+<loc>https://www.grey-panther.net/author/attila-mihaly-balazs.html</loc>
 <lastmod>2016-01-04T21:18:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
