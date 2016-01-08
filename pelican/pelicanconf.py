@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Grey Panther'
 SITENAME = u"Grey Panther's Place"
-SITEURL = 'https://gpanther.github.io'
+SITEURL = 'https://www.grey-panther.net'
 THEME = '../pelican-bootstrap3'
 BOOTSTRAP_THEME = 'superhero'
 PYGMENTS_STYLE = 'solarizeddark'
@@ -49,5 +49,13 @@ SOCIAL = (
 
 DEFAULT_PAGINATION = 10
 
-# Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+STATIC_PATHS = ['images', 'extra']
+EXTRA_PATH_METADATA = {
+	'extra/robots.txt': {'path': 'robots.txt'},
+	'extra/favicon.ico': {'path': 'favicon.ico'},
+	'extra/apple-touch-icon.png': {'path': 'apple-touch-icon.png'},
+	'extra/browserconfig.xml': {'path': 'browserconfig.xml'},
+	'extra/crossdomain.xml': {'path': 'crossdomain.xml'},
+	'extra/humans.txt': {'path': 'humans.txt'},
+}
+

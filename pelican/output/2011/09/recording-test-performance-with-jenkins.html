@@ -9,7 +9,7 @@
 
 
 
-<link rel="canonical" href="https://gpanther.github.io/2011/09/recording-test-performance-with-jenkins.html">
+<link rel="canonical" href="https://www.grey-panther.net/2011/09/recording-test-performance-with-jenkins.html">
 
         <meta name="author" content="Attila-Mihaly Balazs" />
         <meta name="keywords" content="jmeter,jenkins,maven,java,jug" />
@@ -18,7 +18,7 @@
         <meta property="og:site_name" content="Grey Panther's Place" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="Recording test performance with Jenkins"/>
-        <meta property="og:url" content="https://gpanther.github.io/2011/09/recording-test-performance-with-jenkins.html"/>
+        <meta property="og:url" content="https://www.grey-panther.net/2011/09/recording-test-performance-with-jenkins.html"/>
         <meta property="og:description" content="In many (most?) systems performance is an important non-functional requirement. And even if you attained the required performance, it is useful to keep an eye on it to detect if a codechange involuntarily deteriorates it. Enter the Performance plugin for Jenkins. Using it you can record the performance (as in ..."/>
         <meta property="article:published_time" content="2011-09-20" />
             <meta property="article:section" content="archived" />
@@ -32,20 +32,20 @@
     <meta name="twitter:card" content="summary">
         <meta name="twitter:site" content="@cdman83">
         <meta name="twitter:creator" content="@cdman83">
-    <meta name="twitter:domain" content="https://gpanther.github.io">
+    <meta name="twitter:domain" content="https://www.grey-panther.net">
 
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://gpanther.github.io/theme/css/bootstrap.superhero.min.css" type="text/css"/>
-    <link href="https://gpanther.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://www.grey-panther.net/theme/css/bootstrap.superhero.min.css" type="text/css"/>
+    <link href="https://www.grey-panther.net/theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="https://gpanther.github.io/theme/css/pygments/solarizeddark.css" rel="stylesheet">
-        <link href="https://gpanther.github.io/theme/css/typogrify.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://gpanther.github.io/theme/css/style.css" type="text/css"/>
+    <link href="https://www.grey-panther.net/theme/css/pygments/solarizeddark.css" rel="stylesheet">
+        <link href="https://www.grey-panther.net/theme/css/typogrify.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.grey-panther.net/theme/css/style.css" type="text/css"/>
 
-        <link href="https://gpanther.github.io/feeds/posts/default" type="application/atom+xml" rel="alternate"
+        <link href="https://www.grey-panther.net/feeds/posts/default" type="application/atom+xml" rel="alternate"
               title="Grey Panther's Place ATOM Feed"/>
 
-        <link href="https://gpanther.github.io/feeds/rss" type="application/rss+xml" rel="alternate"
+        <link href="https://www.grey-panther.net/feeds/rss" type="application/rss+xml" rel="alternate"
               title="Grey Panther's Place RSS Feed"/>
 
 
@@ -62,7 +62,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="https://gpanther.github.io/" class="navbar-brand">
+            <a href="https://www.grey-panther.net/" class="navbar-brand">
 Grey Panther's Place            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -73,7 +73,7 @@ Grey Panther's Place            </a>
                     <li><a href="/category/archived.html">Archived blog articles</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="https://gpanther.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+              <li><a href="https://www.grey-panther.net/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -88,7 +88,7 @@ Grey Panther's Place            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="https://gpanther.github.io/2011/09/recording-test-performance-with-jenkins.html"
+                    <a href="https://www.grey-panther.net/2011/09/recording-test-performance-with-jenkins.html"
                        rel="bookmark"
                        title="Permalink to Recording test performance with Jenkins">
                         Recording test performance with&nbsp;Jenkins
@@ -109,15 +109,15 @@ Grey Panther's Place            </a>
 
 
 <span class="label label-default">Tags</span>
-	<a href="https://gpanther.github.io/tag/jmeter.html">jmeter</a>
+	<a href="https://www.grey-panther.net/tag/jmeter.html">jmeter</a>
         /
-	<a href="https://gpanther.github.io/tag/jenkins.html">jenkins</a>
+	<a href="https://www.grey-panther.net/tag/jenkins.html">jenkins</a>
         /
-	<a href="https://gpanther.github.io/tag/maven.html">maven</a>
+	<a href="https://www.grey-panther.net/tag/maven.html">maven</a>
         /
-	<a href="https://gpanther.github.io/tag/java.html">java</a>
+	<a href="https://www.grey-panther.net/tag/java.html">java</a>
         /
-	<a href="https://gpanther.github.io/tag/jug.html">jug</a>
+	<a href="https://www.grey-panther.net/tag/jug.html">jug</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
@@ -180,11 +180,11 @@ blog</a>.</p>
 <section class="well" id="related-posts">
     <h4>Related Posts:</h4>
     <ul>
-        <li><a href="https://gpanther.github.io/2011/06/adding-tab-completition-to-maven3-under.html">Adding tab completition to Maven3 under&nbsp;Ubuntu</a></li>
-        <li><a href="https://gpanther.github.io/2011/10/using-jython-from-maven.html">Using Jython from&nbsp;Maven</a></li>
-        <li><a href="https://gpanther.github.io/2011/12/relaxed-json-parsing.html">Relaxed <span class="caps">JSON</span>&nbsp;parsing</a></li>
-        <li><a href="https://gpanther.github.io/2011/10/integrating-maven-with-ivy.html">Integrating Maven with&nbsp;Ivy</a></li>
-        <li><a href="https://gpanther.github.io/2012/10/helper-for-testing-multi-threaded.html">Helper for testing multi-threaded programs in&nbsp;Java</a></li>
+        <li><a href="https://www.grey-panther.net/2011/06/adding-tab-completition-to-maven3-under.html">Adding tab completition to Maven3 under&nbsp;Ubuntu</a></li>
+        <li><a href="https://www.grey-panther.net/2011/10/integrating-maven-with-ivy.html">Integrating Maven with&nbsp;Ivy</a></li>
+        <li><a href="https://www.grey-panther.net/2011/10/using-jython-from-maven.html">Using Jython from&nbsp;Maven</a></li>
+        <li><a href="https://www.grey-panther.net/2011/12/relaxed-json-parsing.html">Relaxed <span class="caps">JSON</span>&nbsp;parsing</a></li>
+        <li><a href="https://www.grey-panther.net/2012/10/helper-for-testing-multi-threaded.html">Helper for testing multi-threaded programs in&nbsp;Java</a></li>
     </ul>
 </section>
         </article>
@@ -238,13 +238,13 @@ blog</a>.</p>
       </div>
    </div>
 </footer>
-<script src="https://gpanther.github.io/theme/js/jquery.min.js"></script>
+<script src="https://www.grey-panther.net/theme/js/jquery.min.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://gpanther.github.io/theme/js/bootstrap.min.js"></script>
+<script src="https://www.grey-panther.net/theme/js/bootstrap.min.js"></script>
 
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="https://gpanther.github.io/theme/js/respond.min.js"></script>
+<script src="https://www.grey-panther.net/theme/js/respond.min.js"></script>
 
 
 </body>

@@ -9,7 +9,7 @@
 
 
 
-<link rel="canonical" href="https://gpanther.github.io/2011/04/booting-linux-kernel-from-grub2.html">
+<link rel="canonical" href="https://www.grey-panther.net/2011/04/booting-linux-kernel-from-grub2.html">
 
         <meta name="author" content="Attila-Mihaly Balazs" />
         <meta name="keywords" content="grub,linux,troubleshooting,grub2" />
@@ -18,7 +18,7 @@
         <meta property="og:site_name" content="Grey Panther's Place" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="Booting the Linux Kernel from Grub2"/>
-        <meta property="og:url" content="https://gpanther.github.io/2011/04/booting-linux-kernel-from-grub2.html"/>
+        <meta property="og:url" content="https://www.grey-panther.net/2011/04/booting-linux-kernel-from-grub2.html"/>
         <meta property="og:description" content="Recently a good friend of mine managed to uninstall all the kernels from his Ubuntu machine (what can I say - Monday morning and no coffee is a deadly combination). Luckily he had the install CD on hand so we did the following: Boot from the CD (we had Internet connection ..."/>
         <meta property="article:published_time" content="2011-04-12" />
             <meta property="article:section" content="archived" />
@@ -31,20 +31,20 @@
     <meta name="twitter:card" content="summary">
         <meta name="twitter:site" content="@cdman83">
         <meta name="twitter:creator" content="@cdman83">
-    <meta name="twitter:domain" content="https://gpanther.github.io">
+    <meta name="twitter:domain" content="https://www.grey-panther.net">
 
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://gpanther.github.io/theme/css/bootstrap.superhero.min.css" type="text/css"/>
-    <link href="https://gpanther.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://www.grey-panther.net/theme/css/bootstrap.superhero.min.css" type="text/css"/>
+    <link href="https://www.grey-panther.net/theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="https://gpanther.github.io/theme/css/pygments/solarizeddark.css" rel="stylesheet">
-        <link href="https://gpanther.github.io/theme/css/typogrify.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://gpanther.github.io/theme/css/style.css" type="text/css"/>
+    <link href="https://www.grey-panther.net/theme/css/pygments/solarizeddark.css" rel="stylesheet">
+        <link href="https://www.grey-panther.net/theme/css/typogrify.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.grey-panther.net/theme/css/style.css" type="text/css"/>
 
-        <link href="https://gpanther.github.io/feeds/posts/default" type="application/atom+xml" rel="alternate"
+        <link href="https://www.grey-panther.net/feeds/posts/default" type="application/atom+xml" rel="alternate"
               title="Grey Panther's Place ATOM Feed"/>
 
-        <link href="https://gpanther.github.io/feeds/rss" type="application/rss+xml" rel="alternate"
+        <link href="https://www.grey-panther.net/feeds/rss" type="application/rss+xml" rel="alternate"
               title="Grey Panther's Place RSS Feed"/>
 
 
@@ -61,7 +61,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="https://gpanther.github.io/" class="navbar-brand">
+            <a href="https://www.grey-panther.net/" class="navbar-brand">
 Grey Panther's Place            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -72,7 +72,7 @@ Grey Panther's Place            </a>
                     <li><a href="/category/archived.html">Archived blog articles</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="https://gpanther.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+              <li><a href="https://www.grey-panther.net/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -87,7 +87,7 @@ Grey Panther's Place            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="https://gpanther.github.io/2011/04/booting-linux-kernel-from-grub2.html"
+                    <a href="https://www.grey-panther.net/2011/04/booting-linux-kernel-from-grub2.html"
                        rel="bookmark"
                        title="Permalink to Booting the Linux Kernel from Grub2">
                         Booting the Linux Kernel from&nbsp;Grub2
@@ -108,13 +108,13 @@ Grey Panther's Place            </a>
 
 
 <span class="label label-default">Tags</span>
-	<a href="https://gpanther.github.io/tag/grub.html">grub</a>
+	<a href="https://www.grey-panther.net/tag/grub.html">grub</a>
         /
-	<a href="https://gpanther.github.io/tag/linux.html">linux</a>
+	<a href="https://www.grey-panther.net/tag/linux.html">linux</a>
         /
-	<a href="https://gpanther.github.io/tag/troubleshooting.html">troubleshooting</a>
+	<a href="https://www.grey-panther.net/tag/troubleshooting.html">troubleshooting</a>
         /
-	<a href="https://gpanther.github.io/tag/grub2.html">grub2</a>
+	<a href="https://www.grey-panther.net/tag/grub2.html">grub2</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
@@ -154,11 +154,11 @@ and it&nbsp;works.</p>
 <section class="well" id="related-posts">
     <h4>Related Posts:</h4>
     <ul>
-        <li><a href="https://gpanther.github.io/2011/04/recovering-encrypted-home-directory.html">Recovering encrypted home directory under&nbsp;Ubuntu</a></li>
-        <li><a href="https://gpanther.github.io/2010/01/useful-ubuntu-online-resource.html">An useful Ubuntu (online)&nbsp;resource</a></li>
-        <li><a href="https://gpanther.github.io/2010/08/problems-and-semi-solution-for-tcpdump.html">Problems (and a semi-solution) for tcpdump with <span class="caps">DAG</span>&nbsp;cards</a></li>
-        <li><a href="https://gpanther.github.io/2009/12/how-to-saverestore-iptables-rules-on.html">How to save/restore iptables rules on&nbsp;Ubuntu?</a></li>
-        <li><a href="https://gpanther.github.io/2011/09/creating-non-mac-bound-centos-6-machine.html">Creating a non-<span class="caps">MAC</span> bound CentOS 6&nbsp;machine</a></li>
+        <li><a href="https://www.grey-panther.net/2011/04/recovering-encrypted-home-directory.html">Recovering encrypted home directory under&nbsp;Ubuntu</a></li>
+        <li><a href="https://www.grey-panther.net/2011/09/quickm.html">Quick&#8217;n&#8217;dirty Mediawiki file&nbsp;crawler</a></li>
+        <li><a href="https://www.grey-panther.net/2009/10/how-to-generate-stackdump-with-gdb.html">How to generate a stackdump with <span class="caps">GDB</span></a></li>
+        <li><a href="https://www.grey-panther.net/2010/03/fixing-dead-asus-wl-500g.html">Fixing a dead Asus <span class="caps">WL</span>-500g</a></li>
+        <li><a href="https://www.grey-panther.net/2011/09/using-less-with-syntax-highlight.html">Using less with syntax&nbsp;highlight</a></li>
     </ul>
 </section>
         </article>
@@ -212,13 +212,13 @@ and it&nbsp;works.</p>
       </div>
    </div>
 </footer>
-<script src="https://gpanther.github.io/theme/js/jquery.min.js"></script>
+<script src="https://www.grey-panther.net/theme/js/jquery.min.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://gpanther.github.io/theme/js/bootstrap.min.js"></script>
+<script src="https://www.grey-panther.net/theme/js/bootstrap.min.js"></script>
 
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="https://gpanther.github.io/theme/js/respond.min.js"></script>
+<script src="https://www.grey-panther.net/theme/js/respond.min.js"></script>
 
 
 </body>
