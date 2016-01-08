@@ -35,6 +35,7 @@ DISPLAY_CATEGORIES_ON_MENU = False
 MENUITEMS = (
 	('About', '/'),
 	('Blog', '/category/blog.html'),
+	('Projects', '/pages/projects.html'),
 	('Resume / Curriculum Vitae', '/pages/resume-curriculum-vitae.html'),
 	('Archived blog articles', '/category/archived.html'),
 )
