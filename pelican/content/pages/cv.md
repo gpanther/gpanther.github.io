@@ -1,6 +1,7 @@
 Title: Resume / Curriculum Vitae
 
 I'm a senior software engineer who can provide a complete solution to problems including analysis, design and development with a focus on excellence.
+
 - Independent worker
 - End-to-end knowledge of computer systems
 - Ability to debug complex problems at different level of the stack (application code, network, OS)
@@ -12,6 +13,7 @@ I'm a senior software engineer who can provide a complete solution to problems i
 ### Qiagen, from 2014
 Romania/Cluj-Napoca
 Sr. Software developer
+
 - Maintained and enhanced a ~150k LOC Java codebase
 - Redesigned and optimized the system to be able to process 10x the data in 10x less time
 - Introduced best practices to the team such as code review and testing
@@ -20,6 +22,7 @@ Sr. Software developer
 ### Udacity, 2012 to 2014
 Romania/Cluj-Napoca
 Software developer
+
 - Implemented, maintained and enhanced open source components of the Udacity offerings
 - Implemented, maintained and enhanced the continuous delivery architecture
 - Implemented features and enhanced a ~200k LOC Google App Engine application in Python
@@ -28,6 +31,7 @@ Software developer
 
 ### Tora Trading Services, 2012 to 2014
 Romania/Cluj-Napoca
+
 - Trainer
 - Ran the internal training program for onboarding junior developers
 - Trained/onboarded over 30 junior developers
@@ -35,6 +39,7 @@ Romania/Cluj-Napoca
 ### Tora Trading Services, 2008 to 2012
 Romania/Cluj-Napoca, Japan/Tokyo
 Software developer
+
 - Maintained a medium size (~1 million LOC) Java system (fixing bugs and adding new features)
 - Designed, implemented and maintained a risk-management system
 - Supervised the CI system (Cruise Control and Jenkins)
@@ -47,6 +52,7 @@ Software developer
 ### BitDefender, 2006 to 2008
 Romania/Cluj-Napoca, Romania/Bucuresti
 Sr. Virus Researcher
+
 - Analyzed more than 5000 malware samples
 - Analyzed two exploit-based malware families
 - Co-created and maintained of a 30 GB+ database about files which are being processed by the system
@@ -57,6 +63,7 @@ Sr. Virus Researcher
 
 ### Freelancer, 2003 to 2006
 Romania/Cluj-Napoca, Romania/Tirgu-Mures
+
 - Written the statistics gathering part for POS system in VB.NET which included the loading of legacy data from binary data files 
 - Created a web scraper which gathered indexing statistics from Google 
 - Created a multi-threaded application in Java to index the contents of SMB shares and FTP sites on a LAN  
@@ -69,11 +76,13 @@ Romania/Cluj-Napoca, Romania/Tirgu-Mures
 
 ### M.Sc. Networks and Distributed Systems, 2009
 Technical University of Cluj-Napoca
+
 - Thesis: A comparative study of methods using machine learning classifiers for detecting computer network attacks
 - Advisor: Dr. Emil Cebuc
 
 ### B.Sc. Computer Science, 2007
 Technical University of Cluj-Napoca
+
 - Thesis: Virtual environment for the automated analysis of malicious code
 - Advisor: Dr. Emil Cebuc
 
