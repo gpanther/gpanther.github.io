@@ -2,6 +2,8 @@ Title: Resume / Curriculum Vitae
 
 I'm a senior software engineer who can provide a complete solution to problems including analysis, design and development with a focus on excellence.
 
+**I'm always interested in new opportunities. Don't hesitate to <script>document.write(atob('PGEgaHJlZj0ibWFpbHRvOmdwMzNAZ3JleS1wYW50aGVyLm5ldCI+Y29udGFjdCBtZTwvYT4='));</script> <noscript><strong>you need Javascript to view the email address</strong></noscript> to see how we can collaborate.**
+
 - Independent worker
 - End-to-end knowledge of computer systems
 - Ability to debug complex problems at different level of the stack (application code, network, OS)
