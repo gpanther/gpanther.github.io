@@ -38,8 +38,7 @@ MENUITEMS = (
 	('About', '/'),
 	('Blog', '/category/blog.html'),
 	('Projects', '/pages/projects.html'),
-	('Resume / Curriculum Vitae', '/pages/resume-curriculum-vitae.html'),
-	('Archived blog articles', '/category/archived.html'),
+	('More', '/pages/sitemap.html'),
 )
 
 LINKS = None
