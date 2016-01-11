@@ -38,7 +38,7 @@ MENUITEMS = (
 	('About', '/'),
 	('Blog', '/category/blog.html'),
 	('Projects', '/pages/projects.html'),
-	('More', '/pages/sitemap.html'),
+	('More', '/pages/site-map.html'),
 )
 
 LINKS = None
