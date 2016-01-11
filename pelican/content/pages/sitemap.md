@@ -6,5 +6,5 @@ Title: Site map
 * [Projects](/pages/projects.html)
 * Project ideas
 * [Archived blog articles](/category/archived.html)
-* Places to visit
+* [Places to visit](/pages/places-to-visit.html)
 
