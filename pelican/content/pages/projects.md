@@ -77,3 +77,8 @@ A module providing marshalling, de-marshalling and handling of thread safe off h
 ## [takari-cpsuite](https://github.com/takari/takari-cpsuite)
 
 Support for JUnit4 test classes and suites.
+
+## [webhoneypot](https://code.google.com/p/webhoneypot/)
+
+A "semi interactive" honeypot implemented in PHP
+
