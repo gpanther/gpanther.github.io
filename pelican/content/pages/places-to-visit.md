@@ -21,6 +21,7 @@ Title: Places to visit
 	var markers = [
 		[ 48.1853715, 16.3189717, "Vienna Zoo" ],
 		[ 37.4143233, -122.0773213, "Computer History Museum" ],
+		[ 47.406968, 19.015177, "Csodák Palotája - csopa.hu" ],
 	];
          
 	for (var i=0; i<markers.length; i++) {
