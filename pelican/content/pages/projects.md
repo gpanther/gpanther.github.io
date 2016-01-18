@@ -36,6 +36,10 @@ Small Java code playing around with the Lychrel properties of numbers
 
 A Google App Engine application to archive the posts from Hacker News
 
+## [podcast-munger](https://github.com/gpanther/podcast-munger)
+
+A small bash script to encode my podcasts the way I need them.
+
 
 # Projects I contribute to
 
