@@ -6,39 +6,55 @@ Title: Projects
 
 A small Java library containing a comparator to sort CharSequences in their "natural" (alphanum) order.
 
+Technologies used: Java, Maven
+
 
 ## [js-geolocation](http://www.grey-panther.net/js-geolocation/)
 
 A client-side IP geolocation service written in Go and leveraging Google's AppEngine infrastructure.
+
+Technologies used: Go(lang), Google App Engine, CORS
 
 
 ## [virtualjug-flyers](https://github.com/gpanther/virtualjug-flyers)
 
 A small Perl 5 script to create flyers popularizing episodes from [virtualjug.com](http://virtualjug.com/).
 
+Technologies used: Perl 5, pQuery
+
 
 ## [nose2-gae](https://github.com/udacity/nose2-gae)
 
 Plugin for the nose2 testrunner to run the tests in the Google App Engine environment 
+
+Technologies used: Python
 
 
 ## [gae-discourse-sso](https://github.com/udacity/gae-discourse-sso)
 
 An implementation of the Discourse SSO flow for Google App Engine / webapp2 in Python 
 
+Technologies used: Python, Webapp2, Google App Engine
+
 
 ## [lychrel-numbers](https://github.com/gpanther/lychrel-numbers)
 
 Small Java code playing around with the Lychrel properties of numbers
+
+Technologies used: Java, java.util.concurrent
 
 
 ## [hn-archive](https://github.com/gpanther/hn-archive)
 
 A Google App Engine application to archive the posts from Hacker News
 
+Technologies used: Python, Google App Engine
+
 ## [podcast-munger](https://github.com/gpanther/podcast-munger)
 
 A small bash script to encode my podcasts the way I need them.
+
+Technologies used: Bash
 
 
 # Projects I contribute to
@@ -47,42 +63,62 @@ A small bash script to encode my podcasts the way I need them.
 
 A ubiquitous mini-profiler for Python projects running on top of Google App Engine.
 
+Technologies used: Python, Google App Engine
+
 
 ## [nose2](https://github.com/nose-devs/nose2)
 
 The successor to nose, based on unittest2
+
+Technologies used: Python
 
 
 ## [osqa](https://github.com/dzone/osqa)
 
 OSQA is a free, entry-level Q&A system from the makers of AnswerHub, the market-leading professional Q&A platform.
 
+Technologies used: Python, Django
+
 
 ## [python-markdown2](https://github.com/trentm/python-markdown2)
 
 A fast and complete implementation of Markdown in Python
+
+Technologies used: Python
 
 
 ## [python-openid](https://github.com/openid/python-openid)
 
 OpenID library for Python
 
+Technologies used: Python
+
 
 ## [gae-sessions](https://github.com/dound/gae-sessions)
 
 Fast, lightweight Sessions middleware for Google App Engine
+
+Technologies used: Python, Google App Engine
 
 
 ## [OpenHFT/Java-Lang](https://github.com/OpenHFT/Java-Lang)
 
 A module providing marshalling, de-marshalling and handling of thread safe off heap memory through ByteBuffers
 
+Technologies used: Java, sun.misc.Unsafe
+
 
 ## [takari-cpsuite](https://github.com/takari/takari-cpsuite)
 
 Support for JUnit4 test classes and suites.
 
+Technologies used: Java
+
+
 ## [webhoneypot](https://code.google.com/p/webhoneypot/)
 
 A "semi interactive" honeypot implemented in PHP
+
+Technologies used: PHP
+
 
