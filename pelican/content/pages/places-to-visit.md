@@ -25,7 +25,7 @@ Title: Places to visit
 		[ 47.7131424, 24.4375912, "Vişeu de Sus - cffviseu.ro" ],
 		[ 33.1262476, -117.3115765, "Legoland California" ],
 		[ 48.427275, 10.296693, "Legoland Deutschland" ],
-		[ 51.462824, -0.647795, "Legoland UK" ],
+		[ 51.462824, -0.647795, "Legoland England" ],
 		[ 48.184865, 16.31224, "Schönbrunn" ],
 		[ 48.190384, 16.31926, "Vienna Technical Museum" ],
 		[ 44.805516, 20.469905, "Tesla Museum" ],
