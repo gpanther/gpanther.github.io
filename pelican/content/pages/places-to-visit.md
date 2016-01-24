@@ -22,6 +22,13 @@ Title: Places to visit
 		[ 48.1853715, 16.3189717, "Vienna Zoo" ],
 		[ 37.4143233, -122.0773213, "Computer History Museum" ],
 		[ 47.406968, 19.015177, "Csodák Palotája - csopa.hu" ],
+		[ 47.7131424, 24.4375912, "CFF Vişeu de Sus - cffviseu.ro" ],
+		[ 33.1262476, -117.3115765, "Legoland California" ],
+		[ 48.427275, 10.296693, "Legoland Deutschland" ],
+		[ 51.462824, -0.647795, "Legoland UK" ],
+		[ 48.184865, 16.31224, "Schönbrunn" ],
+		[ 48.190384, 16.31926, "Vienna Technical Museum" ],
+		[ 44.805516, 20.469905, "Tesla Museum" ],
 	];
          
 	for (var i=0; i<markers.length; i++) {
@@ -38,4 +45,5 @@ Title: Places to visit
 })();
 </script>
 
-[Geocoder](http://www.gpsvisualizer.com/geocode)
+[Geocoder](http://www.gpsvisualizer.com/geocode) and [alternative geocoder](http://www.findlatitudeandlongitude.com/batch-geocode/)
+
