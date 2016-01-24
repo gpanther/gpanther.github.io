@@ -22,7 +22,7 @@ Title: Places to visit
 		[ 48.1853715, 16.3189717, "Vienna Zoo" ],
 		[ 37.4143233, -122.0773213, "Computer History Museum" ],
 		[ 47.406968, 19.015177, "Csodák Palotája - csopa.hu" ],
-		[ 47.7131424, 24.4375912, "CFF Vişeu de Sus - cffviseu.ro" ],
+		[ 47.7131424, 24.4375912, "Vişeu de Sus - cffviseu.ro" ],
 		[ 33.1262476, -117.3115765, "Legoland California" ],
 		[ 48.427275, 10.296693, "Legoland Deutschland" ],
 		[ 51.462824, -0.647795, "Legoland UK" ],
