@@ -29,6 +29,7 @@ Title: Places to visit
 		[ 44.805516, 20.469905, "Tesla Museum" ],
 		[ 46.7712101, 23.6236353, "Parcul de agrement - Moara de Vant" ],
 		[ 4.1754959, 73.5093474, "Maldives" ],
+		[ 46.5490686, 24.5878846, "Somostető" ],
 	];
 
 	for (var i=0; i<markers.length; i++) {
