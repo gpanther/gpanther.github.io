@@ -8,8 +8,8 @@ Title: Places to visit
 (function () {
 	var map = new L.Map('map');                       
                 
-	L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-		attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		attribution: '&copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
 		maxZoom: 18
 	}).addTo(map);
 
