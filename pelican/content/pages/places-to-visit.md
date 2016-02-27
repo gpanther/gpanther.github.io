@@ -1,9 +1,7 @@
 Title: Places to visit
 
-<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
-<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
-<link rel="stylesheet" href="/extra/leaflet-control-geocoder/Control.Geocoder.css" />
-<script src="/extra/leaflet-control-geocoder/Control.Geocoder.js"></script>
+<link rel="stylesheet" href="/extra/leaflet/leaflet.css" />
+<script src="/extra/leaflet/leaflet.js"></script>
 <div id="map" style="height: 600px"></div>
 
 <script>
@@ -29,8 +27,10 @@ Title: Places to visit
 		[ 48.184865, 16.31224, "Schönbrunn" ],
 		[ 48.190384, 16.31926, "Vienna Technical Museum" ],
 		[ 44.805516, 20.469905, "Tesla Museum" ],
+		[ 46.7712101, 23.6236353, "Parcul de agrement - Moara de Vant" ],
+		[ 4.1754959, 73.5093474, "Maldives" ],
 	];
-         
+
 	for (var i=0; i<markers.length; i++) {
 		var lat = markers[i][0];
 		var lon = markers[i][1];
