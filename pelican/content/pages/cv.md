@@ -14,15 +14,18 @@ I'm a senior software engineer who can provide a complete solution to problems i
 
 ### Qiagen, from 2014
 Romania/Cluj-Napoca
-Sr. Software developer
+
+Team lead
 
 - Maintained and enhanced a ~150k LOC Java codebase
 - Redesigned and optimized the system to be able to process 10x the data in 10x less time
 - Introduced best practices to the team such as code review and testing
-- Migrated application from Java 6 to Java 8
+- Migrated application from Java 6 to Java Team lead
+- Interviewed and evaluated candidates for different developer roles
 
 ### Udacity, 2012 to 2014
 Romania/Cluj-Napoca
+
 Software developer
 
 - Implemented, maintained and enhanced open source components of the Udacity offerings
@@ -40,6 +43,7 @@ Romania/Cluj-Napoca
 
 ### Tora Trading Services, 2008 to 2012
 Romania/Cluj-Napoca, Japan/Tokyo
+
 Software developer
 
 - Maintained a medium size (~1 million LOC) Java system (fixing bugs and adding new features)
@@ -50,9 +54,11 @@ Software developer
 - Migrated intraweb applications to Google App Engine
 - Prototyped group chat functionality for IT help desk with GAE / XMPP
 - Integrated proprietary system monitoring software with the messaging system
+- Interviewed and evaluated candidates for different developer roles
 
 ### BitDefender, 2006 to 2008
 Romania/Cluj-Napoca, Romania/Bucuresti
+
 Sr. Virus Researcher
 
 - Analyzed more than 5000 malware samples
