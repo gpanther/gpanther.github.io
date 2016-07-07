@@ -107,7 +107,7 @@ Grey Panther's Place            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2014-02-05T17:26:00+02:00"> Wed 05 February 2014</time>
+        <i class="fa fa-calendar"></i><time datetime="2014-02-05T17:26:00+02:00"> Mi 05 februarie 2014</time>
     </span>
 
 
@@ -149,7 +149,7 @@ for&nbsp;free).</p>
 <p>Without further ado, here are the config bits for Apache&nbsp;2.4</p>
 <p><code>/etc/apache2/force_cache_proxy.conf</code> - the general configuration file
 for&nbsp;caching:</p>
-<div class="highlight"><pre># Security - we don&#39;t want to act as a proxy to arbitrary hosts
+<div class="highlight"><pre><span></span># Security - we don&#39;t want to act as a proxy to arbitrary hosts
 ProxyRequests Off
 SSLProxyEngine On
 
@@ -194,7 +194,7 @@ ProxyTimeout    5
 <p>Now with this prepared we can create the individual configurations for
 the services we wish to&nbsp;proxy:</p>
 <p>For <a href="https://pypi.python.org">pypi</a>:</p>
-<div class="highlight"><pre># pypi mirror
+<div class="highlight"><pre><span></span># pypi mirror
 Listen 127.1.1.1:8001
 
 
@@ -207,7 +207,7 @@ Listen 127.1.1.1:8001
 
 <p></code></p>
 <p>For <a href="https://npmjs.org/">npm</a>:</p>
-<div class="highlight"><pre># npm mirror
+<div class="highlight"><pre><span></span># npm mirror
 Listen 127.1.1.1:8000
 
 
@@ -227,7 +227,7 @@ needed modules (a2enmod - ssl, cache, disk_cache, proxy,&nbsp;proxy_http).</p>
 <p>For Python / pip you need to edit <code>~/.pip/pip.conf</code> (I recommend having
 download-cache as <a href="http://www.stavros.io/posts/faster-installs-with-pip/">per Stavros&#8217;s
 post</a>):</p>
-<div class="highlight"><pre><span class="k">[global]</span>
+<div class="highlight"><pre><span></span><span class="k">[global]</span>
 <span class="na">download-cache</span> <span class="o">=</span> <span class="s">~/.cache/pip/</span>
 <span class="na">index-url</span> <span class="o">=</span> <span class="s">http://127.1.1.1:8001/simple/</span>
 </pre></div>
@@ -236,7 +236,7 @@ post</a>):</p>
 <p></code></p>
 <p>If you use setuptools (why!? just stop and use pip :-)), your config is
 <code>~/.pydistutils.cfg</code>:</p>
-<div class="highlight"><pre><span class="k">[easy_install]</span>
+<div class="highlight"><pre><span></span><span class="k">[easy_install]</span>
 <span class="na">index_url</span> <span class="o">=</span> <span class="s">http://127.1.1.1:8001/simple/</span>
 </pre></div>
 
@@ -244,7 +244,7 @@ post</a>):</p>
 <p></code></p>
 <p>Also, if you use buildout, the needed config adjustment in
 <code>buildout.cfg</code> is:</p>
-<div class="highlight"><pre><span class="k">[buildout]</span>
+<div class="highlight"><pre><span></span><span class="k">[buildout]</span>
 <span class="na">index</span> <span class="o">=</span> <span class="s">http://127.1.1.1:8001/simple/</span>
 </pre></div>
 
@@ -264,11 +264,11 @@ implemented and which is familiar to most&nbsp;sysadmins.</p>
 <section class="well" id="related-posts">
     <h4>Related Posts:</h4>
     <ul>
-        <li><a href="https://www.grey-panther.net/2011/10/using-jython-from-maven.html">Using Jython from&nbsp;Maven</a></li>
-        <li><a href="https://www.grey-panther.net/2012/08/clearing-your-google-app-engine.html">Clearing your Google App Engine&nbsp;datastore</a></li>
-        <li><a href="https://www.grey-panther.net/2010/04/updated-yarpg.html">Updated <span class="caps">YARPG</span></a></li>
         <li><a href="https://www.grey-panther.net/2013/05/passing-utf-8-trough-http.html">Passing <span class="caps">UTF</span>-8 trough <span class="caps">HTTP</span></a></li>
-        <li><a href="https://www.grey-panther.net/2012/10/geekmeet-talk-about-google-app-engine.html">GeekMeet talk about Google App&nbsp;Engine</a></li>
+        <li><a href="https://www.grey-panther.net/2011/10/using-jython-from-maven.html">Using Jython from&nbsp;Maven</a></li>
+        <li><a href="https://www.grey-panther.net/2013/11/cleaning-up-google-appengine-mapreduce.html">Cleaning up Google AppEngine Mapreduce&nbsp;Jobs</a></li>
+        <li><a href="https://www.grey-panther.net/2012/08/running-pep8-and-pylint-programatically.html">Running pep8 and pylint&nbsp;programatically</a></li>
+        <li><a href="https://www.grey-panther.net/2011/02/is-hand-writing-assembly-still.html">Is hand-writing assembly still necessary these&nbsp;days?</a></li>
     </ul>
 </section>
         </article>

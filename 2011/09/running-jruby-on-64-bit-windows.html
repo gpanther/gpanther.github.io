@@ -103,7 +103,7 @@ Grey Panther's Place            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2011-09-13T19:33:00+03:00"> Tue 13 September 2011</time>
+        <i class="fa fa-calendar"></i><time datetime="2011-09-13T19:33:00+03:00"> Ma 13 septembrie 2011</time>
     </span>
 
 
@@ -127,7 +127,7 @@ Grey Panther's Place            </a>
 problems however if you have both the 32 bit and 64 bit JVMs installed
 (which is quite often) because it will try to use the 32 bit <span class="caps">JVM</span>. You
 can check which <span class="caps">JVM</span> is being used from the command&nbsp;line:</p>
-<div class="highlight"><pre>jruby --version
+<div class="highlight"><pre><span></span>jruby --version
 jruby 1.6.3 (ruby-1.8.7-p330) (2011-07-07 965162f) (Java HotSpot(TM) 64-Bit Server VM 1.7.0) [Windows 7-amd64-java] # 64 bit
 jruby 1.6.3 (ruby-1.8.7-p330) (2011-07-07 965162f) (Java HotSpot(TM) Client VM 1.6.0_26) [Windows 7-x86-java] # 32 bit
 </pre></div>
@@ -137,14 +137,14 @@ jruby 1.6.3 (ruby-1.8.7-p330) (2011-07-07 965162f) (Java HotSpot(TM) Client VM 1
 <p>To work around this issue, specify the <span class="caps">JVM</span> to use in your jruby.bat (or
 other batch files installed by gems like vagrant.bat) explicitly.
 Example&nbsp;jruby.bat:</p>
-<div class="highlight"><pre>@ECHO OFF
+<div class="highlight"><pre><span></span>@ECHO OFF
 java -Djruby.home=C:\jruby-1.6.3 -jar  -jar &quot;C:\jruby-1.6.3\lib\jruby.jar&quot; %1 %2 %3 %4 %5 %6 %7 %8 %9
 </pre></div>
 
 
 <p></code></p>
 <p>Example&nbsp;vagrant.bat</p>
-<div class="highlight"><pre>@ECHO OFF
+<div class="highlight"><pre><span></span>@ECHO OFF
 java -Djruby.home=C:\jruby-1.6.3 -jar &quot;C:\jruby-1.6.3\lib\jruby.jar&quot; &quot;C:/jruby-1.6.3/bin/vagrant&quot; %1 %2 %3 %4 %5 %6 %7 %8 %9
 </pre></div>
 
@@ -155,10 +155,10 @@ java -Djruby.home=C:\jruby-1.6.3 -jar &quot;C:\jruby-1.6.3\lib\jruby.jar&quot; &
 <section class="well" id="related-posts">
     <h4>Related Posts:</h4>
     <ul>
-        <li><a href="https://www.grey-panther.net/2009/08/spot-error.html">Spot the&nbsp;error</a></li>
-        <li><a href="https://www.grey-panther.net/2011/03/microbenchmarking-and-you.html">Microbenchmarking and&nbsp;you</a></li>
-        <li><a href="https://www.grey-panther.net/2011/10/updating-root-certificates-for-java.html">Updating the root certificates for&nbsp;Java</a></li>
-        <li><a href="https://www.grey-panther.net/2011/01/how-to-test-for-implementation-of.html">How to test for the implementation of&nbsp;toString()</a></li>
+        <li><a href="https://www.grey-panther.net/2011/03/diskmap-disk-backed-map-in-java.html">DiskMap - an disk backed Map in&nbsp;Java</a></li>
+        <li><a href="https://www.grey-panther.net/2011/02/manually-enabling-ip-routing-in-windows.html">Manually enabling <span class="caps">IP</span> routing in Windows <span class="caps">XP</span></a></li>
+        <li><a href="https://www.grey-panther.net/2012/12/java-runtime-options.html">Java Runtime&nbsp;options</a></li>
+        <li><a href="https://www.grey-panther.net/2011/10/upgrading-options-globetrotter-gi515m.html">Upgrading the Options (GlobeTrotter)&nbsp;GI515m</a></li>
         <li><a href="https://www.grey-panther.net/2012/12/ensuring-order-of-execution-for-tasks.html">Ensuring the order of execution for&nbsp;tasks</a></li>
     </ul>
 </section>

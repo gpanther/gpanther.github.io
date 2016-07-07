@@ -85,7 +85,7 @@ audio in so that you can narrate what is going&nbsp;on):</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span class="c">#!/bin/bash</span>
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="nv">Xaxis</span><span class="o">=</span><span class="k">$(</span>xrandr -q <span class="p">|</span> grep <span class="s1">&#39;*&#39;</span> <span class="p">|</span> uniq <span class="p">|</span> awk <span class="s1">&#39;{print $1}&#39;</span> <span class="p">|</span>  cut -d <span class="s1">&#39;x ...</span></pre></div></td></tr></table>
                     <a class="btn btn-default btn-xs" href="https://www.grey-panther.net/2013/08/capturing-your-screen-on-ubuntu-with.html">more ...</a>
                 </div>
@@ -107,7 +107,7 @@ Widenius, the original ...</p>
                 <div class="summary"><p>You can use vim as your pager and obtain two benefits: syntax highlight
 and access to all the advanced commands (like search). You can do this
 under ubuntu by adding the following line to your <code>~/.bashrc</code>:</p>
-<div class="highlight"><pre>alias less=&#39;/usr/share/vim/vimcurrent/macros/less.sh&#39;
+<div class="highlight"><pre><span></span>alias less=&#39;/usr/share/vim/vimcurrent/macros/less.sh&#39;
 </pre></div>
 
 

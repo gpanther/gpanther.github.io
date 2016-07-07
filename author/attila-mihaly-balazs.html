@@ -77,6 +77,24 @@ Grey Panther's Place            </a>
     <div class="row">
         <div class="col-sm-9">
             <article>
+                <h2><a href="https://www.grey-panther.net/2016/07/capturing-vs-non-capturing-lambdas-in-java.html">Capturing vs. Non-Capturing Lambdas in&nbsp;Java</a></h2>
+                <div class="summary"><p>I was watching Peter Lawrey&#8217;s talk about <a href="https://www.youtube.com/watch?v=vZngvuXk7PM">Low latency Lambdas in Java 8</a>
+where he posed the question: which of he following is a non-capturing&nbsp;lambda?</p>
+<div class="highlight"><pre><span></span>x -&gt; System.out.println(x)
+</pre></div>
+
+
+<p>or</p>
+<div class="highlight"><pre><span></span>System.out::println
+</pre></div>
+
+
+<p>Naively I would have said that they both are but that the second form ...</p>
+                    <a class="btn btn-default btn-xs" href="https://www.grey-panther.net/2016/07/capturing-vs-non-capturing-lambdas-in-java.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="https://www.grey-panther.net/2016/01/a-fresh-start-with-pelican.html">A fresh start with&nbsp;Pelican</a></h2>
                 <div class="summary"><p>Here we are in 2016, trying to start blogging again. Using <a href="http://blog.getpelican.com/">Pelican</a> is more complicate than it needs to be&nbsp;:-(.</p>
                     <a class="btn btn-default btn-xs" href="https://www.grey-panther.net/2016/01/a-fresh-start-with-pelican.html">more ...</a>
@@ -124,7 +142,7 @@ on AppEngine? And do you have a lot of completed tasks which clutter
 your dashboard? Use the <span class="caps">JS</span> below by pasting it into your developer
 console to clean them up! (use it at your own risk, no warranty is
 provided&nbsp;:-))</p>
-<div class="highlight"><pre><span class="nx">schedule</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nb">window ...</span></pre></div>
+<div class="highlight"><pre><span></span><span class="nt">schedule</span> <span class="o">=</span> <span class="nt">function</span><span class="o">()</span> <span class="p">{</span> <span class="n">window ...</span></pre></div>
                     <a class="btn btn-default btn-xs" href="https://www.grey-panther.net/2013/11/cleaning-up-google-appengine-mapreduce.html">more ...</a>
                 </div>
             </article>
@@ -137,7 +155,7 @@ audio in so that you can narrate what is going&nbsp;on):</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span class="c">#!/bin/bash</span>
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="nv">Xaxis</span><span class="o">=</span><span class="k">$(</span>xrandr -q <span class="p">|</span> grep <span class="s1">&#39;*&#39;</span> <span class="p">|</span> uniq <span class="p">|</span> awk <span class="s1">&#39;{print $1}&#39;</span> <span class="p">|</span>  cut -d <span class="s1">&#39;x ...</span></pre></div></td></tr></table>
                     <a class="btn btn-default btn-xs" href="https://www.grey-panther.net/2013/08/capturing-your-screen-on-ubuntu-with.html">more ...</a>
                 </div>
@@ -168,7 +186,7 @@ website</a>.</em></p>
 effect of transforming the following&nbsp;code:</p>
 <p><span class="dquo">&#8220;</span>` {lang=&#8221;java&#8221; escaped=&#8221;true&#8221;}
 new Foo(1, 5, &#8220;abc&#8221;,&nbsp;false);</p>
-<div class="highlight"><pre>&lt;/code&gt;
+<div class="highlight"><pre><span></span>&lt;/code&gt;
 
 Into something like
 
@@ -190,17 +208,6 @@ Names</a>
 for some headscratchers). I would like to do add my small contribution
 to this by showing how <span class="caps">UTF</span>-8 ...</p>
                     <a class="btn btn-default btn-xs" href="https://www.grey-panther.net/2013/05/passing-utf-8-trough-http.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="https://www.grey-panther.net/2013/05/connecting-to-mtgox-market-data-feed.html">Connecting to the MtGox market data feed using&nbsp;Perl</a></h2>
-                <div class="summary"><p>For a recent project I needed some realistic market data for an
-electronic exchange. Seeing how MtGox provides free and open access to
-theirs (thank you!) I chose them. However none of the examples floating
-around the internet seemed to work, so I whipped one up using
-<a href="http://search.cpan.org/~pevans/Net-Async-WebSocket-0.06/lib/Net/Async/WebSocket/Client.pm">Net::Async::WebSocket ...</a></p>
-                    <a class="btn btn-default btn-xs" href="https://www.grey-panther.net/2013/05/connecting-to-mtgox-market-data-feed.html">more ...</a>
                 </div>
             </article>
             <hr/>

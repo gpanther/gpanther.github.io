@@ -103,7 +103,7 @@ Grey Panther's Place            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2012-08-19T15:12:00+03:00"> Sun 19 August 2012</time>
+        <i class="fa fa-calendar"></i><time datetime="2012-08-19T15:12:00+03:00"> Du 19 august 2012</time>
     </span>
 
 
@@ -133,10 +133,10 @@ can do this from a python script and capture their output for later
 post-processing (maybe you want merge the output from both tools, or
 maybe you want to show only the lines which changed since the last
 commit,&nbsp;etc):</p>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">pep8</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pep8</span>
 <span class="k">try</span><span class="p">:</span>
   <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="o">=</span> <span class="n">StringIO</span><span class="p">()</span>
-  <span class="n">pep8_checker</span> <span class="o">=</span> <span class="n">pep8</span><span class="o">.</span><span class="n">StyleGuide</span><span class="p">(</span><span class="n">config_file</span><span class="o">=</span><span class="n">config</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s">&#39;pylint&#39;</span><span class="p">)</span>
+  <span class="n">pep8_checker</span> <span class="o">=</span> <span class="n">pep8</span><span class="o">.</span><span class="n">StyleGuide</span><span class="p">(</span><span class="n">config_file</span><span class="o">=</span><span class="n">config</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s1">&#39;pylint&#39;</span><span class="p">)</span>
   <span class="n">pep8_checker</span><span class="o">.</span><span class="n">check_files</span><span class="p">(</span><span class="n">paths</span><span class="o">=</span><span class="p">[</span> <span class="o">...</span><span class="n">path</span> <span class="n">to</span> <span class="n">files</span><span class="o">/</span><span class="n">dirs</span> <span class="n">to</span> <span class="n">check</span><span class="o">...</span> <span class="p">])</span>
   <span class="n">output</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
 <span class="k">finally</span><span class="p">:</span>
@@ -148,7 +148,7 @@ commit,&nbsp;etc):</p>
 <span class="n">reporter</span> <span class="o">=</span> <span class="n">ParseableTextReporter</span><span class="p">()</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">StringIO</span><span class="p">()</span>
 <span class="n">reporter</span><span class="o">.</span><span class="n">set_output</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-<span class="n">Run</span><span class="p">([</span><span class="s">&#39;--rcfile=pylint.config&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span> <span class="o">...</span><span class="n">files</span><span class="o">..</span><span class="p">,</span> <span class="p">],</span> <span class="n">reporter</span><span class="o">=</span><span class="n">reporter</span><span class="p">,</span> <span class="nb">exit</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="n">Run</span><span class="p">([</span><span class="s1">&#39;--rcfile=pylint.config&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span> <span class="o">...</span><span class="n">files</span><span class="o">..</span><span class="p">,</span> <span class="p">],</span> <span class="n">reporter</span><span class="o">=</span><span class="n">reporter</span><span class="p">,</span> <span class="nb">exit</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
 <span class="n">output</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
 </pre></div>
 
@@ -158,7 +158,7 @@ commit,&nbsp;etc):</p>
 pip/easy_install rather than the Linux distribution repositories, since
 they are known to contain outdated software. You can check for this via
 code like the&nbsp;following:</p>
-<div class="highlight"><pre>if pkg_resources.get_distribution(&#39;pep8&#39;).parsed_version &lt; parse_version(&#39;1.3.3&#39;):
+<div class="highlight"><pre><span></span>if pkg_resources.get_distribution(&#39;pep8&#39;).parsed_version &lt; parse_version(&#39;1.3.3&#39;):
     logging.error(&#39;pep8 too old. At least version 1.3.3 is required&#39;)
     sys.exit(1)
 if pkg_resources.get_distribution(&#39;pylint&#39;).parsed_version &lt; parse_version(&#39;0.25.1&#39;):
@@ -173,7 +173,7 @@ be modified to the following (however, this older version probably won&#8217;t
 be of much use and will most likely annoy you - you should really try to
 use an up-to-date version - for example you could isolate this version
 using&nbsp;virtualenv):</p>
-<div class="highlight"><pre><span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+<div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="kn">import</span> <span class="nn">pep8</span>
 <span class="n">pep8</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">msg</span><span class="p">:</span> <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
 <span class="n">pep8</span><span class="o">.</span><span class="n">process_options</span><span class="p">(</span><span class="n">own_code</span><span class="p">)</span>
@@ -188,11 +188,11 @@ using&nbsp;virtualenv):</p>
 <section class="well" id="related-posts">
     <h4>Related Posts:</h4>
     <ul>
-        <li><a href="https://www.grey-panther.net/2011/10/using-jython-from-maven.html">Using Jython from&nbsp;Maven</a></li>
-        <li><a href="https://www.grey-panther.net/2012/10/geekmeet-talk-about-google-app-engine.html">GeekMeet talk about Google App&nbsp;Engine</a></li>
         <li><a href="https://www.grey-panther.net/2013/05/passing-utf-8-trough-http.html">Passing <span class="caps">UTF</span>-8 trough <span class="caps">HTTP</span></a></li>
-        <li><a href="https://www.grey-panther.net/2013/02/converting-datetime-to-utc-in-python.html">Converting datetime to <span class="caps">UTC</span> in&nbsp;python</a></li>
         <li><a href="https://www.grey-panther.net/2014/02/proxying-pypi-npm-etc-for-fun-and-profit.html">Proxying pypi / npm / etc for fun and&nbsp;profit!</a></li>
+        <li><a href="https://www.grey-panther.net/2012/08/clearing-your-google-app-engine.html">Clearing your Google App Engine&nbsp;datastore</a></li>
+        <li><a href="https://www.grey-panther.net/2013/02/converting-datetime-to-utc-in-python.html">Converting datetime to <span class="caps">UTC</span> in&nbsp;python</a></li>
+        <li><a href="https://www.grey-panther.net/2012/10/geekmeet-talk-about-google-app-engine.html">GeekMeet talk about Google App&nbsp;Engine</a></li>
     </ul>
 </section>
         </article>

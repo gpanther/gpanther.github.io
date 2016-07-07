@@ -97,7 +97,7 @@ Grey Panther's Place            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2012-11-06T14:33:00+02:00"> Tue 06 November 2012</time>
+        <i class="fa fa-calendar"></i><time datetime="2012-11-06T14:33:00+02:00"> Ma 06 noiembrie 2012</time>
     </span>
 
 
@@ -134,7 +134,7 @@ language: there is more to using a language efficiently than just
 knowing the&nbsp;syntax.</p>
 <h2><span id="h.71vcwrw1xmys"></span></a>Example 1: Double&nbsp;Trouble</h2>
 <p>Lets start with a snippet of code: what does it print&nbsp;out?</p>
-<div class="highlight"><pre>Double d1 = (5.0d - 5.0d) *  1.0d;
+<div class="highlight"><pre><span></span>Double d1 = (5.0d - 5.0d) *  1.0d;
 Double d2 = (5.0d - 5.0d) * -1.0d;
 System.out.println(d1.equals(d2));
 </pre></div>
@@ -142,7 +142,7 @@ System.out.println(d1.equals(d2));
 
 <p></code></p>
 <p>What about the following&nbsp;one?</p>
-<div class="highlight"><pre>double d1 = (5.0d - 5.0d) *  1.0d;
+<div class="highlight"><pre><span></span>double d1 = (5.0d - 5.0d) *  1.0d;
 double d2 = (5.0d - 5.0d) * -1.0d;
 System.out.println(d1 == d2);
 </pre></div>
@@ -171,7 +171,7 @@ saves us from having to create special cases for the null&nbsp;value.</p>
 <p>Sidenote: we have a similar situation with the BigDecimal class^<span
 id="ftnt_ref2"><a href="#ftnt2">[2]</a></span>^ where values scaled differently
 don’t compare as equal. For example the following snippet also prints&nbsp;false:</p>
-<div class="highlight"><pre>BigDecimal d1 = new BigDecimal(&quot;1.2&quot;);
+<div class="highlight"><pre><span></span>BigDecimal d1 = new BigDecimal(&quot;1.2&quot;);
 BigDecimal d2 = new BigDecimal(&quot;1.20&quot;);
 System.out.println(d1.equals(d2));
 </pre></div>
@@ -185,7 +185,7 @@ be used to solve the conundrum in the Double/Float case if we are not
 worried about&nbsp;nulls).</p>
 <h2><span id="h.t3ulkiuv7mcw"></span></a>Example 2: Where is my null&nbsp;at?</h2>
 <p>What does the following snippet of code print&nbsp;out?</p>
-<div class="highlight"><pre>Double v = null;
+<div class="highlight"><pre><span></span>Double v = null;
 Double d = true ? v : 0.0d;
 System.out.println(d);
 </pre></div>
@@ -199,7 +199,7 @@ at the second line. This is because the right-hand type of the
 assignment is actually double (the primitive type) not Double (as we
 would expect) which is silently converted into Double (the boxed type).
 The generated code looks like&nbsp;this:</p>
-<div class="highlight"><pre>Double d = Double.valueOf(true ? v.doubleValue() : 0.0d);
+<div class="highlight"><pre><span></span>Double d = Double.valueOf(true ? v.doubleValue() : 0.0d);
 </pre></div>
 
 
@@ -220,7 +220,7 @@ appeared. (The neutral element would be 0.0d if we use the value later
 in summation or 1.0d if we use it in&nbsp;multiplication.)</p>
 <h2><span id="h.1mt6ca4376w9"></span></a>Example 3: We come up&nbsp;empty</h2>
 <p>What is the difference between the following two&nbsp;conditions?</p>
-<div class="highlight"><pre>Collection items;
+<div class="highlight"><pre><span></span>Collection items;
 if (items.size() == 0) { ... }
 if (items.isEmpty()) { ... }
 </pre></div>
@@ -241,7 +241,7 @@ the documentation for the first mentions this fact, it doesn’t for the&nbsp;se
 <p>This is yet another example how nicer code is also&nbsp;faster.</p>
 <h2><span id="h.orqngpa6ggt9"></span></a>Example 4: Careful with that static,&nbsp;Eugene!</h2>
 <p>What will the following snippet of code print&nbsp;out?</p>
-<div class="highlight"><pre>public final class Test {
+<div class="highlight"><pre><span></span>public final class Test {
         private static final class Foo {
                 static final Foo INSTANCE = new Foo(); // 2
                 static final String NAME = Foo.class.getName(); // 3
@@ -259,7 +259,7 @@ the documentation for the first mentions this fact, it doesn’t for the&nbsp;se
 
 <p></code></p>
 <p>It will&nbsp;be</p>
-<div class="highlight"><pre><span class="x">Your name is what?</span>
+<div class="highlight"><pre><span></span><span class="x">Your name is what?</span>
 <span class="x">Your name is who?</span>
 
 <span class="x">Hello, my name is null</span>
@@ -295,7 +295,7 @@ presented is caught by Findbugs^<span
 id="ftnt_ref6"><a href="#ftnt6">[6]</a></span>^ and tools incorporating&nbsp;Findbugs.</p>
 <h2><span id="h.26ynxgfuhslr"></span></a>Example 5: Remove old&nbsp;cruft</h2>
 <p>Name four things wrong with the following&nbsp;snippet:</p>
-<div class="highlight"><pre>// WRONG! DON’T DO THIS!
+<div class="highlight"><pre><span></span>// WRONG! DON’T DO THIS!
 Vector v1;
 ...
 if (!v1.contains(s)) { v1.add(s); }

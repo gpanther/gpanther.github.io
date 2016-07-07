@@ -102,7 +102,7 @@ Grey Panther's Place            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2011-01-25T13:45:00+02:00"> Tue 25 January 2011</time>
+        <i class="fa fa-calendar"></i><time datetime="2011-01-25T13:45:00+02:00"> Ma 25 ianuarie 2011</time>
     </span>
 
 
@@ -129,7 +129,7 @@ a unit test that these implementations&nbsp;exist.</p>
 <ol>
 <li>
 <p>Use reflection to detect the existence of the&nbsp;method:</p>
-<div class="highlight"><pre><span class="kr">boolean</span> <span class="nx">hasToStringViaReflection</span><span class="p">(</span><span class="nx">Class</span><span class="cp">&lt;?</span> <span class="cp">?&gt;</span> <span class="nx">clazz</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><span class="kr">boolean</span> <span class="nx">hasToStringViaReflection</span><span class="p">(</span><span class="nx">Class</span><span class="cp">&lt;?</span> <span class="cp">?&gt;</span> <span class="nx">clazz</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">Method</span> <span class="nx">toString</span><span class="p">;</span>
   <span class="k">try</span> <span class="p">{</span> <span class="nx">toString</span> <span class="o">=</span> <span class="nx">clazz</span><span class="p">.</span><span class="nx">getDeclaredMethod</span><span class="p">(</span><span class="s2">&quot;toString&quot;</span><span class="p">);</span> <span class="p">}</span>
   <span class="k">catch</span> <span class="p">(</span><span class="nx">NoSuchMethodException</span> <span class="nx">ex</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="kc">false</span><span class="p">;</span> <span class="p">}</span>
@@ -150,7 +150,7 @@ code coverage tools will report the lines as not&nbsp;covered.</p>
     returned by Object and expect them to be different. This uses
     <a href="http://commons.apache.org/lang/api-2.6/org/apache/commons/lang/ObjectUtils.html#identityToString%28java.lang.Object%29">ObjectUtils</a>
     from Apache Commons&nbsp;Lang:</p>
-<div class="highlight"><pre>boolean hasToStringViaInvocation(Object o) {
+<div class="highlight"><pre><span></span>boolean hasToStringViaInvocation(Object o) {
   return !ObjectUtils.identityToString(o).equals(o.toString());
 }
 </pre></div>
@@ -181,10 +181,10 @@ under Public Domain or the <span class="caps">BSD</span>&nbsp;license.</p>
     <h4>Related Posts:</h4>
     <ul>
         <li><a href="https://www.grey-panther.net/2011/01/navigating-searching-collections.html">Navigating (Searching)&nbsp;Collections</a></li>
-        <li><a href="https://www.grey-panther.net/2009/08/spot-error.html">Spot the&nbsp;error</a></li>
-        <li><a href="https://www.grey-panther.net/2011/03/microbenchmarking-and-you.html">Microbenchmarking and&nbsp;you</a></li>
+        <li><a href="https://www.grey-panther.net/2011/03/diskmap-disk-backed-map-in-java.html">DiskMap - an disk backed Map in&nbsp;Java</a></li>
         <li><a href="https://www.grey-panther.net/2011/10/updating-root-certificates-for-java.html">Updating the root certificates for&nbsp;Java</a></li>
-        <li><a href="https://www.grey-panther.net/2010/01/choosing-java-profiler.html">Choosing a Java&nbsp;profiler</a></li>
+        <li><a href="https://www.grey-panther.net/2012/12/java-runtime-options.html">Java Runtime&nbsp;options</a></li>
+        <li><a href="https://www.grey-panther.net/2012/12/ensuring-order-of-execution-for-tasks.html">Ensuring the order of execution for&nbsp;tasks</a></li>
     </ul>
 </section>
         </article>

@@ -101,7 +101,7 @@ Grey Panther's Place            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2013-08-14T09:50:00+03:00"> Wed 14 August 2013</time>
+        <i class="fa fa-calendar"></i><time datetime="2013-08-14T09:50:00+03:00"> Mi 14 august 2013</time>
     </span>
 
 
@@ -123,7 +123,7 @@ audio in so that you can narrate what is going&nbsp;on):</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span class="c">#!/bin/bash</span>
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="nv">Xaxis</span><span class="o">=</span><span class="k">$(</span>xrandr -q <span class="p">|</span> grep <span class="s1">&#39;*&#39;</span> <span class="p">|</span> uniq <span class="p">|</span> awk <span class="s1">&#39;{print $1}&#39;</span> <span class="p">|</span>  cut -d <span class="s1">&#39;x&#39;</span> -f1<span class="k">)</span>
 <span class="nv">Yaxis</span><span class="o">=</span><span class="k">$(</span>xrandr -q <span class="p">|</span> grep <span class="s1">&#39;*&#39;</span> <span class="p">|</span> uniq <span class="p">|</span> awk <span class="s1">&#39;{print $1}&#39;</span> <span class="p">|</span>  cut -d <span class="s1">&#39;x&#39;</span> -f2<span class="k">)</span>
 avconv -f alsa -i pulse -f x11grab -s <span class="k">$((</span><span class="nv">$Xaxis</span><span class="k">))</span>x<span class="k">$((</span><span class="nv">$Yaxis</span><span class="k">))</span> -i <span class="nv">$DISPLAY</span>.0 -r <span class="m">15</span> -c:v libx264 -crf <span class="m">0</span> -c:a libvo_aacenc -b:a 256k -threads <span class="m">8</span> ~/Videos/output.mp4
@@ -139,11 +139,11 @@ bulletpoints sliding in for a presentation or switching between&nbsp;desktops).<
 <section class="well" id="related-posts">
     <h4>Related Posts:</h4>
     <ul>
-        <li><a href="https://www.grey-panther.net/2011/01/processing-clipboard-data-in-perl.html">Processing clipboard data in&nbsp;Perl</a></li>
+        <li><a href="https://www.grey-panther.net/2011/03/setting-maximum-number-of-opened-files.html">Setting the maximum number of opened files under Ubuntu (for&nbsp;JProfiler)</a></li>
+        <li><a href="https://www.grey-panther.net/2011/06/setting-up-git-daemon-under-ubuntu.html">Setting up git-daemon under&nbsp;Ubuntu</a></li>
+        <li><a href="https://www.grey-panther.net/2009/12/how-to-saverestore-iptables-rules-on.html">How to save/restore iptables rules on&nbsp;Ubuntu?</a></li>
         <li><a href="https://www.grey-panther.net/2010/01/useful-ubuntu-online-resource.html">An useful Ubuntu (online)&nbsp;resource</a></li>
-        <li><a href="https://www.grey-panther.net/2011/09/using-less-with-syntax-highlight.html">Using less with syntax&nbsp;highlight</a></li>
-        <li><a href="https://www.grey-panther.net/2011/01/why-ubuntu-1010-is-better-than-windows.html">Why Ubuntu 10.10 is better than Windows <span class="caps">XP</span>?</a></li>
-        <li><a href="https://www.grey-panther.net/2012/11/upgrading-from-mysql-to-mariadb-on.html">Upgrading from MySQL to MariaDB on&nbsp;Ubuntu</a></li>
+        <li><a href="https://www.grey-panther.net/2011/01/processing-clipboard-data-in-perl.html">Processing clipboard data in&nbsp;Perl</a></li>
     </ul>
 </section>
         </article>

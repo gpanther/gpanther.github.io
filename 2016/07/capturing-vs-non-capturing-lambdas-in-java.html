@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Capturing vs. Non-Capturing Lambdas in Java - Grey Panther's Place</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="https://www.grey-panther.net/favicon.ico" rel="icon">
+    <!--[if IE]><link rel="shortcut icon" href="https://www.grey-panther.net/favicon.ico"><![endif]-->
+
+<link rel="canonical" href="https://www.grey-panther.net/2016/07/capturing-vs-non-capturing-lambdas-in-java.html">
+
+        <meta name="author" content="Attila-Mihaly Balazs" />
+        <meta name="keywords" content="java" />
+        <meta name="description" content="I was watching Peter Lawrey’s talk about Low latency Lambdas in Java 8 where he posed the question: which of he following is a non-capturing lambda? x -&gt; System.out.println(x) or System.out::println Naively I would have said that they both are but that the second form ..." />
+
+        <meta property="og:site_name" content="Grey Panther's Place" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Capturing vs. Non-Capturing Lambdas in Java"/>
+        <meta property="og:url" content="https://www.grey-panther.net/2016/07/capturing-vs-non-capturing-lambdas-in-java.html"/>
+        <meta property="og:description" content="I was watching Peter Lawrey’s talk about Low latency Lambdas in Java 8 where he posed the question: which of he following is a non-capturing lambda? x -&gt; System.out.println(x) or System.out::println Naively I would have said that they both are but that the second form ..."/>
+        <meta property="article:published_time" content="2016-07-06" />
+            <meta property="article:section" content="blog" />
+            <meta property="article:tag" content="java" />
+            <meta property="article:author" content="Attila-Mihaly Balazs" />
+
+    <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@cdman83">
+        <meta name="twitter:creator" content="@cdman83">
+    <meta name="twitter:domain" content="https://www.grey-panther.net">
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://www.grey-panther.net/theme/css/bootstrap.superhero.min.css" type="text/css"/>
+    <link href="https://www.grey-panther.net/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://www.grey-panther.net/theme/css/pygments/solarizeddark.css" rel="stylesheet">
+        <link href="https://www.grey-panther.net/theme/css/typogrify.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.grey-panther.net/theme/css/style.css" type="text/css"/>
+
+        <link href="https://www.grey-panther.net/feeds/posts/default" type="application/atom+xml" rel="alternate"
+              title="Grey Panther's Place ATOM Feed"/>
+
+        <link href="https://www.grey-panther.net/feeds/rss" type="application/rss+xml" rel="alternate"
+              title="Grey Panther's Place RSS Feed"/>
+
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://www.grey-panther.net/" class="navbar-brand">
+Grey Panther's Place            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="/">About</a></li>
+                    <li><a href="/category/blog.html">Blog</a></li>
+                    <li><a href="/pages/projects.html">Projects</a></li>
+                    <li><a href="/pages/site-map.html">More</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://www.grey-panther.net/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://www.grey-panther.net/2016/07/capturing-vs-non-capturing-lambdas-in-java.html"
+                       rel="bookmark"
+                       title="Permalink to Capturing vs. Non-Capturing Lambdas in Java">
+                        Capturing vs. Non-Capturing Lambdas in&nbsp;Java
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2016-07-06T19:22:00+03:00"> Mi 06 iulie 2016</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://www.grey-panther.net/tag/java.html">java</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>I was watching Peter Lawrey&#8217;s talk about <a href="https://www.youtube.com/watch?v=vZngvuXk7PM">Low latency Lambdas in Java 8</a>
+where he posed the question: which of he following is a non-capturing&nbsp;lambda?</p>
+<div class="highlight"><pre><span></span>x -&gt; System.out.println(x)
+</pre></div>
+
+
+<p>or</p>
+<div class="highlight"><pre><span></span>System.out::println
+</pre></div>
+
+
+<p>Naively I would have said that they both are but that the second form is preferred since it makes it harder to write
+a capturing lambda (seemingly you don&#8217;t have any variable references).&nbsp;However!</p>
+<p>It turns out only the first one is non-capturing since the second one needs to capture <code>System.out</code>, even though it
+is a <code>final static</code> field! (I guess it does this because finals in Java/<span class="caps">JVM</span> are not really final, so to achieve the
+correct semantics in every corner-case it needs to capture the current field value. Then again the behavior didn&#8217;t
+change once I activated the <a href="http://shipilev.net/blog/2015/faster-atomic-fu/">&#8220;finals are really final&#8221; experimental flag</a>
+ - <code>-XX:+UnlockExperimentalVMOptions -XX:+TrustFinalNonStaticFields</code> - but that might be precisely because this is
+is an experimental option and the optimizer is not fully aware of&nbsp;it).</p>
+<p>Finally, is there a way to programatically determine if a lambda is capturing or non capturing? <span class="caps">AFAIK</span> there is no
+<em>official</em> way but there are some&nbsp;hacks:</p>
+<p>If you have a lambda factory rather than a lambda instance, you can just call it twice and see if you get the same&nbsp;instance:</p>
+<div class="highlight"><pre><span></span><span class="kr">boolean</span> <span class="nx">isCapturingFromFactory</span><span class="p">(</span><span class="nx">Supplier</span><span class="cp">&lt;?</span><span class="o">&gt;</span> <span class="nx">factory</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">factory</span><span class="o">.</span><span class="nx">get</span><span class="p">()</span> <span class="o">!=</span> <span class="nx">factory</span><span class="o">.</span><span class="nx">get</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>If you only have the lambda instance, you can check using reflection if there are any private final fields on it
+(which are used to capture the required values during construction&nbsp;time):</p>
+<div class="highlight"><pre><span></span><span class="kr">private</span> <span class="kr">static</span> <span class="kr">boolean</span> <span class="nx">isCapturing</span><span class="p">(</span><span class="nb">Object</span> <span class="nx">o</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">Class</span><span class="cp">&lt;?</span><span class="o">&gt;</span> <span class="nx">clazz</span> <span class="o">=</span> <span class="nx">o</span><span class="o">.</span><span class="nx">getClass</span><span class="p">();</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">clazz</span><span class="o">.</span><span class="nx">toString</span><span class="p">()</span><span class="o">.</span><span class="nx">contains</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">$Lambda</span><span class="s2">$&quot;</span><span class="p">))</span> <span class="p">{</span>
+        <span class="k">throw</span> <span class="k">new</span> <span class="nx">IllegalArgumentException</span><span class="p">(</span><span class="s2">&quot;Not a lambda!&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="nx">Field</span> <span class="nx">field</span> <span class="o">:</span> <span class="nx">clazz</span><span class="o">.</span><span class="nx">getDeclaredFields</span><span class="p">())</span> <span class="p">{</span>
+        <span class="nx">int</span> <span class="nx">modifiers</span> <span class="o">=</span> <span class="nx">field</span><span class="o">.</span><span class="nx">getModifiers</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">Modifier</span><span class="o">.</span><span class="nx">isFinal</span><span class="p">(</span><span class="nx">modifiers</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nx">Modifier</span><span class="o">.</span><span class="nx">isPrivate</span><span class="p">(</span><span class="nx">modifiers</span><span class="p">))</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+            </div>
+            <!-- /.entry-content -->
+<section class="well" id="related-posts">
+    <h4>Related Posts:</h4>
+    <ul>
+        <li><a href="https://www.grey-panther.net/2011/03/diskmap-disk-backed-map-in-java.html">DiskMap - an disk backed Map in&nbsp;Java</a></li>
+        <li><a href="https://www.grey-panther.net/2011/10/updating-root-certificates-for-java.html">Updating the root certificates for&nbsp;Java</a></li>
+        <li><a href="https://www.grey-panther.net/2012/12/java-runtime-options.html">Java Runtime&nbsp;options</a></li>
+        <li><a href="https://www.grey-panther.net/2012/12/ensuring-order-of-execution-for-tasks.html">Ensuring the order of execution for&nbsp;tasks</a></li>
+        <li><a href="https://www.grey-panther.net/2009/08/spot-error.html">Spot the&nbsp;error</a></li>
+    </ul>
+</section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<div id="aboutme">
+        <p>
+            <img width="60%" class="img" src="/images/profile.png"/>
+        </p>
+    <p>
+        <strong>About Grey Panther</strong><br/>
+        <a href="/">father, husband, software craftsman</a>
+    </p>
+</div>
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="https://ro.linkedin.com/in/gpanther"><i class="fa fa-linkedin-square fa-lg"></i> linkedin</a></li>
+                <li class="list-group-item"><a href="http://stackoverflow.com/users/1265/grey-panther"><i class="fa fa-stack-overflow fa-lg"></i> stackoverflow</a></li>
+                <li class="list-group-item"><a href="https://github.com/gpanther/"><i class="fa fa-github-square fa-lg"></i> github</a></li>
+              </ul>
+            </li>
+
+
+
+
+
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container-fluid">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2016 Grey Panther
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by/4.0/80x15.png" /></a>
+    Content
+  licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>, except where indicated otherwise.
+</small></p>
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://www.grey-panther.net/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://www.grey-panther.net/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://www.grey-panther.net/theme/js/respond.min.js"></script>
+
+
+</body>
+</html>

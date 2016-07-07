@@ -97,7 +97,7 @@ Grey Panther's Place            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2012-10-27T23:03:00+03:00"> Sat 27 October 2012</time>
+        <i class="fa fa-calendar"></i><time datetime="2012-10-27T23:03:00+03:00"> Sb 27 octombrie 2012</time>
     </span>
 
 
@@ -229,42 +229,42 @@ proxies currently. So the solution I came up with looks like&nbsp;this:</p>
 <p>Without further ado, here are the relevant sourcecode snippets (which I
 hereby release into the public&nbsp;domain):</p>
 <p>The <span class="caps">PHP</span>&nbsp;script:</p>
-<div class="highlight"><pre> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-   <span class="nx">curl_setopt</span><span class="p">(</span><span class="nx">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_POST</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
-   <span class="nx">$postfields</span> <span class="o">=</span> <span class="nx">array</span><span class="p">();</span>
-   <span class="nx">foreach</span> <span class="p">(</span><span class="nx">$_POST</span> <span class="nx">as</span> <span class="nx">$key</span> <span class="o">=&gt;</span> <span class="nx">$val</span><span class="p">)</span> <span class="p">{</span>
-       <span class="nx">$postfields</span><span class="cp">[]</span> <span class="o">=</span> <span class="nx">urlencode</span><span class="p">(</span><span class="nx">$key</span><span class="p">)</span> <span class="p">.</span> <span class="s1">&#39;=&#39;</span> <span class="p">.</span> <span class="nx">urlencode</span><span class="p">(</span><span class="nx">$val</span><span class="p">);</span>
-   <span class="p">}</span>
-   <span class="nx">curl_setopt</span><span class="p">(</span><span class="nx">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_POSTFIELDS</span><span class="p">,</span> <span class="nx">implode</span><span class="p">(</span><span class="s1">&#39;&amp;&#39;</span><span class="p">,</span> <span class="nx">$postfields</span><span class="p">));</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><span class="x"> 0) </span><span class="err">{</span><span class="x"></span>
+<span class="x">   curl_setopt(</span><span class="p">$</span><span class="nv">ch</span><span class="x">, CURLOPT_POST, true);</span>
+<span class="x">   </span><span class="p">$</span><span class="nv">postfields</span><span class="x"> = array();</span>
+<span class="x">   foreach (</span><span class="p">$</span><span class="nv">_POST</span><span class="x"> as </span><span class="p">$</span><span class="nv">key</span><span class="x"> =&gt; </span><span class="p">$</span><span class="nv">val</span><span class="x">) </span><span class="err">{</span><span class="x"></span>
+<span class="x">       </span><span class="p">$</span><span class="nv">postfields</span><span class="x">[] = urlencode(</span><span class="p">$</span><span class="nv">key</span><span class="x">) . &#39;=&#39; . urlencode(</span><span class="p">$</span><span class="nv">val</span><span class="x">);</span>
+<span class="x">   }</span>
+<span class="x">   curl_setopt(</span><span class="p">$</span><span class="nv">ch</span><span class="x">, CURLOPT_POSTFIELDS, implode(&#39;&amp;&#39;, </span><span class="p">$</span><span class="nv">postfields</span><span class="x">));</span>
+<span class="x">}</span>
 
-<span class="nx">$headers</span> <span class="o">=</span> <span class="nx">array</span><span class="p">();</span>
-<span class="kd">function</span> <span class="nx">header_callback</span><span class="p">(</span><span class="nx">$ch</span><span class="p">,</span> <span class="nx">$header</span><span class="p">)</span> <span class="p">{</span>
-   <span class="nx">global</span> <span class="nx">$headers</span><span class="p">;</span>
-   <span class="c1">// we add our own content encoding</span>
-   <span class="c1">// also, the content length might vary because of this</span>
-   <span class="k">if</span> <span class="p">(</span><span class="kc">false</span> <span class="o">===</span> <span class="nx">stripos</span><span class="p">(</span><span class="nx">$header</span><span class="p">,</span> <span class="s1">&#39;Content-Encoding: &#39;</span><span class="p">)</span>
-       <span class="o">&amp;&amp;</span> <span class="kc">false</span> <span class="o">===</span> <span class="nx">stripos</span><span class="p">(</span><span class="nx">$header</span><span class="p">,</span> <span class="s1">&#39;Content-Length: &#39;</span><span class="p">)</span>
-       <span class="o">&amp;&amp;</span> <span class="kc">false</span> <span class="o">===</span> <span class="nx">stripos</span><span class="p">(</span><span class="nx">$header</span><span class="p">,</span> <span class="s1">&#39;Transfer-Encoding: &#39;</span><span class="p">))</span> <span class="p">{</span>
-       <span class="nx">$headers</span><span class="cp">[]</span> <span class="o">=</span> <span class="nx">$header</span><span class="p">;</span>
-   <span class="p">}</span>
-   <span class="k">return</span> <span class="nx">strlen</span><span class="p">(</span><span class="nx">$header</span><span class="p">);</span>
-<span class="p">}</span>
+<span class="p">$</span><span class="nv">headers</span><span class="x"> = array();</span>
+<span class="x">function header_callback(</span><span class="p">$</span><span class="nv">ch</span><span class="x">, </span><span class="p">$</span><span class="nv">header</span><span class="x">) </span><span class="err">{</span><span class="x"></span>
+<span class="x">   global </span><span class="p">$</span><span class="nv">headers</span><span class="x">;</span>
+<span class="x">   // we add our own content encoding</span>
+<span class="x">   // also, the content length might vary because of this</span>
+<span class="x">   if (false === stripos(</span><span class="p">$</span><span class="nv">header</span><span class="x">, &#39;Content-Encoding: &#39;)</span>
+<span class="x">       &amp;&amp; false === stripos(</span><span class="p">$</span><span class="nv">header</span><span class="x">, &#39;Content-Length: &#39;)</span>
+<span class="x">       &amp;&amp; false === stripos(</span><span class="p">$</span><span class="nv">header</span><span class="x">, &#39;Transfer-Encoding: &#39;)) </span><span class="err">{</span><span class="x"></span>
+<span class="x">       </span><span class="p">$</span><span class="nv">headers</span><span class="x">[] = </span><span class="p">$</span><span class="nv">header</span><span class="x">;</span>
+<span class="x">   }</span>
+<span class="x">   return strlen(</span><span class="p">$</span><span class="nv">header</span><span class="x">);</span>
+<span class="x">}</span>
 
-<span class="nx">curl_setopt</span><span class="p">(</span><span class="nx">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_HEADERFUNCTION</span><span class="p">,</span> <span class="s1">&#39;header_callback&#39;</span><span class="p">);</span>
+<span class="x">curl_setopt(</span><span class="p">$</span><span class="nv">ch</span><span class="x">, CURLOPT_HEADERFUNCTION, &#39;header_callback&#39;);</span>
 
-<span class="nx">$output</span> <span class="o">=</span> <span class="nx">curl_exec</span><span class="p">(</span><span class="nx">$ch</span><span class="p">);</span>
-<span class="k">if</span> <span class="p">(</span><span class="nx">FALSE</span> <span class="o">===</span> <span class="nx">$output</span><span class="p">)</span> <span class="p">{</span>
-   <span class="nx">header</span><span class="p">(</span><span class="s2">&quot;HTTP/1.0 500 Server Error&quot;</span><span class="p">);</span>
-   <span class="nx">print</span> <span class="nx">curl_error</span><span class="p">(</span><span class="nx">$ch</span><span class="p">);</span>
-   <span class="nx">exit</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nx">curl_close</span><span class="p">(</span><span class="nx">$ch</span><span class="p">);</span>
+<span class="p">$</span><span class="nv">output</span><span class="x"> = curl_exec(</span><span class="p">$</span><span class="nv">ch</span><span class="x">);</span>
+<span class="x">if (FALSE === </span><span class="p">$</span><span class="nv">output</span><span class="x">) </span><span class="err">{</span><span class="x"></span>
+<span class="x">   header(&quot;HTTP/1.0 500 Server Error&quot;);</span>
+<span class="x">   print curl_error(</span><span class="p">$</span><span class="nv">ch</span><span class="x">);</span>
+<span class="x">   exit;</span>
+<span class="x">}</span>
+<span class="x">curl_close(</span><span class="p">$</span><span class="nv">ch</span><span class="x">);</span>
 
-<span class="nx">foreach</span> <span class="p">(</span><span class="nx">$headers</span> <span class="nx">as</span> <span class="nx">$header</span><span class="p">)</span> <span class="p">{</span>
-   <span class="nx">header</span><span class="p">(</span><span class="nx">$header</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="nx">print</span> <span class="nx">$output</span><span class="p">;</span>
+<span class="x">foreach (</span><span class="p">$</span><span class="nv">headers</span><span class="x"> as </span><span class="p">$</span><span class="nv">header</span><span class="x">) </span><span class="err">{</span><span class="x"></span>
+<span class="x">   header(</span><span class="p">$</span><span class="nv">header</span><span class="x">);</span>
+<span class="x">}</span>
+<span class="x">print </span><span class="p">$</span><span class="nv">output</span><span class="x">;</span>
 </pre></div>
 
 
@@ -273,7 +273,7 @@ hereby release into the public&nbsp;domain):</p>
 separate files are being used to avoid submitting the password to the<br />
 source repository, while still keeping all the sourcecode&nbsp;open.</p>
 <p>Now with the code in place, you can test it using&nbsp;curl:</p>
-<div class="highlight"><pre>curl --compressed -v -H &#39;X-Shared-Secret: 23tqhwfgj2qbherhjerj&#39; &#39;http://127.0.0.1:1483/fetch_url.php?q=http%3A//identi.ca/api/help/test.json
+<div class="highlight"><pre><span></span>curl --compressed -v -H &#39;X-Shared-Secret: 23tqhwfgj2qbherhjerj&#39; &#39;http://127.0.0.1:1483/fetch_url.php?q=http%3A//identi.ca/api/help/test.json
 </pre></div>
 
 
@@ -288,13 +288,13 @@ the first place (the Google datacenters not having an officially<br />
 announced set of <span class="caps">IP</span> addresses), this doesn&#8217;t seem&nbsp;possible.</p>
 <p>Finally, here is the Python code to use the script from withing an
 application hosted on the <span class="caps">GAE</span>:</p>
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">urllib</span> <span class="kn">import</span> <span class="n">quote</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">urllib</span> <span class="kn">import</span> <span class="n">quote</span>
 <span class="kn">from</span> <span class="nn">google.appengine.api</span> <span class="kn">import</span> <span class="n">urlfetch</span>
 
-<span class="c"># ...</span>
+<span class="c1"># ...</span>
 
-<span class="n">fetch_headers</span><span class="p">[</span><span class="s">&#39;X-Shared-Secret&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;23tqhwfgj2qbherhjerj&#39;</span>
-<span class="n">result</span> <span class="o">=</span> <span class="n">urlfetch</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s">&#39;http://127.0.0.1:1483/fetch_url.php?q=</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">quote</span><span class="p">(</span><span class="n">url</span><span class="p">),</span> <span class="n">payload</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
+<span class="n">fetch_headers</span><span class="p">[</span><span class="s1">&#39;X-Shared-Secret&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;23tqhwfgj2qbherhjerj&#39;</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">urlfetch</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s1">&#39;http://127.0.0.1:1483/fetch_url.php?q=</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">quote</span><span class="p">(</span><span class="n">url</span><span class="p">),</span> <span class="n">payload</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
  <span class="n">method</span><span class="o">=</span><span class="n">urlfetch</span><span class="o">.</span><span class="n">POST</span> <span class="k">if</span> <span class="n">data</span> <span class="k">else</span> <span class="n">urlfetch</span><span class="o">.</span><span class="n">GET</span><span class="p">,</span>
  <span class="n">headers</span><span class="o">=</span><span class="n">fetch_headers</span><span class="p">,</span> <span class="n">deadline</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span> <span class="n">follow_redirects</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
 </pre></div>

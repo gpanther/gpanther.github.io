@@ -102,7 +102,7 @@ Grey Panther's Place            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2011-04-10T22:24:00+03:00"> Sun 10 April 2011</time>
+        <i class="fa fa-calendar"></i><time datetime="2011-04-10T22:24:00+03:00"> Du 10 aprilie 2011</time>
     </span>
 
 
@@ -138,7 +138,7 @@ carefully, especially if you don&#8217;t have much experience with the command&n
 <li>
 <p>Start a terminal (Alt+F2 -> gnome-terminal) and navigate to the
     partitions home directory. Usually this will look like the&nbsp;following:</p>
-<div class="highlight"><pre>cd /media/9e6325c9-1140-44b7-9d8e-614599b27e05/home/
+<div class="highlight"><pre><span></span>cd /media/9e6325c9-1140-44b7-9d8e-614599b27e05/home/
 </pre></div>
 
 
@@ -147,7 +147,7 @@ carefully, especially if you don&#8217;t have much experience with the command&n
 <p>Now navigate to the users ecryptfs directory (things to note: it is
     <strong>e</strong>cryptfs not encryptfs and your username does not coincide with
     your full name - the one you click on when you log&nbsp;in)</p>
-<div class="highlight"><pre>cd .ecryptfs/username
+<div class="highlight"><pre><span></span>cd .ecryptfs/username
 </pre></div>
 
 
@@ -159,7 +159,7 @@ carefully, especially if you don&#8217;t have much experience with the command&n
     trying to recover the data). Take note of the returned password (you
     can copy it by selecting it and pressing Shift+Ctrl+C if you are
     using the Gnome&nbsp;Terminal)</p>
-<div class="highlight"><pre>ecryptfs-unwrap-passphrase .ecryptfs/wrapped-passphrase
+<div class="highlight"><pre><span></span>ecryptfs-unwrap-passphrase .ecryptfs/wrapped-passphrase
 </pre></div>
 
 
@@ -167,7 +167,7 @@ carefully, especially if you don&#8217;t have much experience with the command&n
 <li>
 <p>Now create a directory where you would like to mount the decrypted
     home&nbsp;directory:</p>
-<div class="highlight"><pre>sudo mkdir /media/decrypted
+<div class="highlight"><pre><span></span>sudo mkdir /media/decrypted
 </pre></div>
 
 
@@ -175,13 +175,13 @@ carefully, especially if you don&#8217;t have much experience with the command&n
 <li>
 <p>Execute the following and type in (or better - copy-paste) the
     <em>mount password</em> you&#8217;ve recovered&nbsp;earlier</p>
-<div class="highlight"><pre>sudo ecryptfs-add-passphrase --fnek
+<div class="highlight"><pre><span></span>sudo ecryptfs-add-passphrase --fnek
 </pre></div>
 
 
 <p>It will return something like the following. Take note of the
 <em>second</em> key (auth&nbsp;tok):</p>
-<div class="highlight"><pre>Inserted auth tok with sig [9986ad986f986af7] into the user session keyring 
+<div class="highlight"><pre><span></span>Inserted auth tok with sig [9986ad986f986af7] into the user session keyring 
 Inserted auth tok with sig [76a9f69af69a86fa] into the user session keyring
 </pre></div>
 
@@ -189,7 +189,7 @@ Inserted auth tok with sig [76a9f69af69a86fa] into the user session keyring
 </li>
 <li>
 <p>Now you are ready to mount the&nbsp;directry:</p>
-<div class="highlight"><pre>sudo mount -t ecryptfs /media/9e6325c9-1140-44b7-9d8e-614599b27e05/home/.ecryptfs/username/.Private /media/decrypted
+<div class="highlight"><pre><span></span>sudo mount -t ecryptfs /media/9e6325c9-1140-44b7-9d8e-614599b27e05/home/.ecryptfs/username/.Private /media/decrypted
  Passphrase:  # mount passphrase
  Selection: aes
  Selection: 16
@@ -216,11 +216,11 @@ should use the home/.ecryptfs/username directory&nbsp;directly.</p>
 <section class="well" id="related-posts">
     <h4>Related Posts:</h4>
     <ul>
-        <li><a href="https://www.grey-panther.net/2011/04/booting-linux-kernel-from-grub2.html">Booting the Linux Kernel from&nbsp;Grub2</a></li>
-        <li><a href="https://www.grey-panther.net/2010/01/useful-ubuntu-online-resource.html">An useful Ubuntu (online)&nbsp;resource</a></li>
-        <li><a href="https://www.grey-panther.net/2011/09/using-less-with-syntax-highlight.html">Using less with syntax&nbsp;highlight</a></li>
         <li><a href="https://www.grey-panther.net/2011/03/setting-maximum-number-of-opened-files.html">Setting the maximum number of opened files under Ubuntu (for&nbsp;JProfiler)</a></li>
         <li><a href="https://www.grey-panther.net/2009/12/how-to-saverestore-iptables-rules-on.html">How to save/restore iptables rules on&nbsp;Ubuntu?</a></li>
+        <li><a href="https://www.grey-panther.net/2010/01/useful-ubuntu-online-resource.html">An useful Ubuntu (online)&nbsp;resource</a></li>
+        <li><a href="https://www.grey-panther.net/2011/04/booting-linux-kernel-from-grub2.html">Booting the Linux Kernel from&nbsp;Grub2</a></li>
+        <li><a href="https://www.grey-panther.net/2011/09/using-less-with-syntax-highlight.html">Using less with syntax&nbsp;highlight</a></li>
     </ul>
 </section>
         </article>

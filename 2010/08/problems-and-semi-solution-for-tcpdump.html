@@ -103,7 +103,7 @@ Grey Panther's Place            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2010-08-13T04:30:00+03:00"> Fri 13 August 2010</time>
+        <i class="fa fa-calendar"></i><time datetime="2010-08-13T04:30:00+03:00"> Vi 13 august 2010</time>
     </span>
 
 
@@ -131,7 +131,7 @@ when he needs to fix a&nbsp;problem.</p>
 <a href="http://www.endace.com/">Endace</a>) with a <span class="caps">DAG</span> card (some kind of custom
 packet capture network card from the same company), you could get the
 following error when trying to use tcpdump on the dag&nbsp;interface:</p>
-<div class="highlight"><pre><span class="n">tcpdump</span><span class="o">:</span> <span class="n">dag_attach_stream</span><span class="o">:</span> <span class="n">Permission</span> <span class="n">denied</span>
+<div class="highlight"><pre><span></span><span class="n">tcpdump</span><span class="o">:</span> <span class="n">dag_attach_stream</span><span class="o">:</span> <span class="n">Permission</span> <span class="n">denied</span>
 </pre></div>
 
 
@@ -142,7 +142,7 @@ other program is/was using the particular interface. You can quickly
 check this by doing a <code>lsof | grep dag0</code>. In my case it was softflowd.
 But even after killing the softflowd process, I was getting the same
 error message. I had to reset the card using the following&nbsp;commands:</p>
-<div class="highlight"><pre>/etc/init.d/dag_drivers_load stop
+<div class="highlight"><pre><span></span>/etc/init.d/dag_drivers_load stop
 /etc/init.d/dag_drivers_load start
 </pre></div>
 
@@ -159,10 +159,10 @@ troubleshoot because of lack of&nbsp;information.</p>
     <h4>Related Posts:</h4>
     <ul>
         <li><a href="https://www.grey-panther.net/2009/12/how-to-saverestore-iptables-rules-on.html">How to save/restore iptables rules on&nbsp;Ubuntu?</a></li>
-        <li><a href="https://www.grey-panther.net/2011/04/booting-linux-kernel-from-grub2.html">Booting the Linux Kernel from&nbsp;Grub2</a></li>
         <li><a href="https://www.grey-panther.net/2011/03/setting-maximum-number-of-opened-files.html">Setting the maximum number of opened files under Ubuntu (for&nbsp;JProfiler)</a></li>
-        <li><a href="https://www.grey-panther.net/2009/10/how-to-generate-stackdump-with-gdb.html">How to generate a stackdump with <span class="caps">GDB</span></a></li>
-        <li><a href="https://www.grey-panther.net/2011/09/quickm.html">Quick&#8217;n&#8217;dirty Mediawiki file&nbsp;crawler</a></li>
+        <li><a href="https://www.grey-panther.net/2011/09/using-less-with-syntax-highlight.html">Using less with syntax&nbsp;highlight</a></li>
+        <li><a href="https://www.grey-panther.net/2011/04/booting-linux-kernel-from-grub2.html">Booting the Linux Kernel from&nbsp;Grub2</a></li>
+        <li><a href="https://www.grey-panther.net/2010/01/useful-ubuntu-online-resource.html">An useful Ubuntu (online)&nbsp;resource</a></li>
     </ul>
 </section>
         </article>

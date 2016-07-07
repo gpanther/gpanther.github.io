@@ -102,7 +102,7 @@ Grey Panther's Place            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2009-10-07T17:19:00+03:00"> Wed 07 October 2009</time>
+        <i class="fa fa-calendar"></i><time datetime="2009-10-07T17:19:00+03:00"> Mi 07 octombrie 2009</time>
     </span>
 
 
@@ -136,7 +136,7 @@ like name.surname). Here is my solution to the problem: fetch the log
 for the file get the user associated whit each version (in the log <span class="caps">CVS</span>
 includes the full usernames). Then fetch the annotated version of the
 file and use the version to disambiguate the user. Here is some Perl&nbsp;code:</p>
-<div class="highlight"><pre><span class="k">sub </span><span class="nf">processAnnotations</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><span class="k">sub </span><span class="nf">processAnnotations</span> <span class="p">{</span>
   <span class="k">my</span> <span class="nv">$fileName</span> <span class="o">=</span> <span class="nb">shift</span><span class="p">;</span>
   <span class="k">my</span> <span class="p">(</span><span class="nv">$cmdLine</span><span class="p">,</span> <span class="nv">$pid</span><span class="p">,</span> <span class="nv">%revisions</span><span class="p">);</span>
 
@@ -170,7 +170,7 @@ file and use the version to disambiguate the user. Here is some Perl&nbsp;code:<
 <p></p>
 <span class="caps">PS</span>. I verified in the <span class="caps">CVS</span> source that the output width for the author
 field is&nbsp;hardcoded:</p>
-<div class="highlight"><pre>           sprintf (buf, &quot;%-12s (%-8.8s &quot;,
+<div class="highlight"><pre><span></span>           sprintf (buf, &quot;%-12s (%-8.8s &quot;,
                  prvers-&gt;version,
                  prvers-&gt;author);
 </pre></div>
@@ -183,11 +183,11 @@ photostream</a> with&nbsp;permission.</p>
 <section class="well" id="related-posts">
     <h4>Related Posts:</h4>
     <ul>
-        <li><a href="https://www.grey-panther.net/2010/03/parsing-pcap-files-with-perl.html">Parsing pcap files with&nbsp;Perl</a></li>
-        <li><a href="https://www.grey-panther.net/2009/08/perl-is-everywhere.html">Perl is&nbsp;everywhere!</a></li>
         <li><a href="https://www.grey-panther.net/2010/04/sending-x-face-email-with-perlgmail.html">Sending an X-Face email with&nbsp;Perl+GMail</a></li>
         <li><a href="https://www.grey-panther.net/2010/03/solving-mathematical-puzzles-with-brute.html">Solving mathematical puzzles with brute-force and&nbsp;Perl</a></li>
         <li><a href="https://www.grey-panther.net/2010/03/in-praise-of-regexpassemble.html">In praise of&nbsp;Regexp::Assemble</a></li>
+        <li><a href="https://www.grey-panther.net/2010/03/parsing-pcap-files-with-perl.html">Parsing pcap files with&nbsp;Perl</a></li>
+        <li><a href="https://www.grey-panther.net/2009/08/perl-is-everywhere.html">Perl is&nbsp;everywhere!</a></li>
     </ul>
 </section>
         </article>

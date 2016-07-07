@@ -101,7 +101,7 @@ Grey Panther's Place            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2012-08-15T10:08:00+03:00"> Wed 15 August 2012</time>
+        <i class="fa fa-calendar"></i><time datetime="2012-08-15T10:08:00+03:00"> Mi 15 august 2012</time>
     </span>
 
 
@@ -128,15 +128,15 @@ can become very tedious, so here is an alternative&nbsp;method:</p>
 <li>Start your <a href="https://developers.google.com/appengine/articles/remote_api">Remote <span class="caps">API</span>&nbsp;shell</a></li>
 <li>
 <p>Use the following code to delete all datastore&nbsp;entities:</p>
-<div class="highlight"><pre><span class="nt">while</span> <span class="nt">True</span><span class="o">:</span> <span class="nt">keys</span><span class="o">=</span><span class="nt">db</span><span class="nc">.Query</span><span class="o">(</span><span class="nt">keys_only</span><span class="o">=</span><span class="nt">True</span><span class="o">)</span><span class="nc">.fetch</span><span class="o">(</span><span class="nt">500</span><span class="o">);</span> <span class="nt">db</span><span class="nc">.delete</span><span class="o">(</span><span class="nt">keys</span><span class="o">);</span> <span class="nt">print</span> <span class="s2">&quot;Deleted 500 entries, the last of which was %s&quot;</span> <span class="o">%</span> <span class="nt">keys</span><span class="cp">[</span><span class="o">-</span><span class="mi">1</span><span class="cp">]</span><span class="nc">.to_path</span><span class="o">()</span>
+<div class="highlight"><pre><span></span><span class="nt">while</span> <span class="nt">True</span><span class="o">:</span> <span class="nt">keys</span><span class="o">=</span><span class="nt">db</span><span class="nc">.Query</span><span class="o">(</span><span class="nt">keys_only</span><span class="o">=</span><span class="nt">True</span><span class="o">)</span><span class="nc">.fetch</span><span class="o">(</span><span class="nt">500</span><span class="o">);</span> <span class="nt">db</span><span class="nc">.delete</span><span class="o">(</span><span class="nt">keys</span><span class="o">);</span> <span class="nt">print</span> <span class="s2">&quot;Deleted 500 entries, the last of which was %s&quot;</span> <span class="o">%</span> <span class="nt">keys</span><span class="cp">[</span><span class="o">-</span><span class="mi">1</span><span class="cp">]</span><span class="nc">.to_path</span><span class="o">()</span>
 </pre></div>
 
 
 </li>
 <li>
 <p>Use the following code to delete all blobstore&nbsp;entities:</p>
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">google.appengine.ext.blobstore</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="k">while</span> <span class="bp">True</span><span class="p">:</span> <span class="nb">list</span><span class="o">=</span><span class="n">BlobInfo</span><span class="o">.</span><span class="n">all</span><span class="p">()</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span> <span class="n">delete</span><span class="p">([</span><span class="n">b</span><span class="o">.</span><span class="n">key</span><span class="p">()</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">]);</span>  <span class="k">print</span> <span class="s">&quot;Deleted elements, the last of which was </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="nb">list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">filename</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.appengine.ext.blobstore</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span> <span class="nb">list</span><span class="o">=</span><span class="n">BlobInfo</span><span class="o">.</span><span class="n">all</span><span class="p">()</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span> <span class="n">delete</span><span class="p">([</span><span class="n">b</span><span class="o">.</span><span class="n">key</span><span class="p">()</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">]);</span>  <span class="k">print</span> <span class="s2">&quot;Deleted elements, the last of which was </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="nb">list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">filename</span>
 </pre></div>
 
 
@@ -160,11 +160,11 @@ deadline exceeded or over quota errors is&nbsp;removed.</p>
 <section class="well" id="related-posts">
     <h4>Related Posts:</h4>
     <ul>
-        <li><a href="https://www.grey-panther.net/2012/10/geekmeet-talk-about-google-app-engine.html">GeekMeet talk about Google App&nbsp;Engine</a></li>
         <li><a href="https://www.grey-panther.net/2013/02/converting-datetime-to-utc-in-python.html">Converting datetime to <span class="caps">UTC</span> in&nbsp;python</a></li>
-        <li><a href="https://www.grey-panther.net/2011/10/using-jython-from-maven.html">Using Jython from&nbsp;Maven</a></li>
+        <li><a href="https://www.grey-panther.net/2012/10/geekmeet-talk-about-google-app-engine.html">GeekMeet talk about Google App&nbsp;Engine</a></li>
         <li><a href="https://www.grey-panther.net/2013/05/passing-utf-8-trough-http.html">Passing <span class="caps">UTF</span>-8 trough <span class="caps">HTTP</span></a></li>
-        <li><a href="https://www.grey-panther.net/2012/08/running-pep8-and-pylint-programatically.html">Running pep8 and pylint&nbsp;programatically</a></li>
+        <li><a href="https://www.grey-panther.net/2014/02/proxying-pypi-npm-etc-for-fun-and-profit.html">Proxying pypi / npm / etc for fun and&nbsp;profit!</a></li>
+        <li><a href="https://www.grey-panther.net/2013/11/cleaning-up-google-appengine-mapreduce.html">Cleaning up Google AppEngine Mapreduce&nbsp;Jobs</a></li>
     </ul>
 </section>
         </article>
