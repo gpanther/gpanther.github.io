@@ -1,51 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Grey Panther's Place</title><link href="https://www.grey-panther.net/" rel="alternate"></link><link href="https://www.grey-panther.net/feeds/posts/default" rel="self"></link><id>https://www.grey-panther.net/</id><updated>2016-07-06T19:22:00+03:00</updated><entry><title>Capturing vs. Non-Capturing Lambdas in Java</title><link href="https://www.grey-panther.net/2016/07/capturing-vs-non-capturing-lambdas-in-java.html" rel="alternate"></link><published>2016-07-06T19:22:00+03:00</published><author><name>Attila-Mihaly Balazs</name></author><id>tag:www.grey-panther.net,2016-07-06:2016/07/capturing-vs-non-capturing-lambdas-in-java.html</id><summary type="html">&lt;p&gt;I was watching Peter Lawrey&amp;#8217;s talk about &lt;a href="https://www.youtube.com/watch?v=vZngvuXk7PM"&gt;Low latency Lambdas in Java 8&lt;/a&gt;
-where he posed the question: which of he following is a non-capturing&amp;nbsp;lambda?&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;x -&amp;gt; System.out.println(x)
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;or&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;System.out::println
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Naively I would have said that they both are but that the second form is preferred since it makes it harder to write
-a capturing lambda (seemingly you don&amp;#8217;t have any variable references).&amp;nbsp;However!&lt;/p&gt;
-&lt;p&gt;It turns out only the first one is non-capturing since the second one needs to capture &lt;code&gt;System.out&lt;/code&gt;, even though it
-is a &lt;code&gt;final static&lt;/code&gt; field! (I guess it does this because finals in Java/&lt;span class="caps"&gt;JVM&lt;/span&gt; are not really final, so to achieve the
-correct semantics in every corner-case it needs to capture the current field value. Then again the behavior didn&amp;#8217;t
-change once I activated the &lt;a href="http://shipilev.net/blog/2015/faster-atomic-fu/"&gt;&amp;#8220;finals are really final&amp;#8221; experimental flag&lt;/a&gt;
- - &lt;code&gt;-XX:+UnlockExperimentalVMOptions -XX:+TrustFinalNonStaticFields&lt;/code&gt; - but that might be precisely because this is
-is an experimental option and the optimizer is not fully aware of&amp;nbsp;it).&lt;/p&gt;
-&lt;p&gt;Finally, is there a way to programatically determine if a lambda is capturing or non capturing? &lt;span class="caps"&gt;AFAIK&lt;/span&gt; there is no
-&lt;em&gt;official&lt;/em&gt; way but there are some&amp;nbsp;hacks:&lt;/p&gt;
-&lt;p&gt;If you have a lambda factory rather than a lambda instance, you can just call it twice and see if you get the same&amp;nbsp;instance:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kr"&gt;boolean&lt;/span&gt; &lt;span class="nx"&gt;isCapturingFromFactory&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;Supplier&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;factory&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;factory&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;get&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="nx"&gt;factory&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;get&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;If you only have the lambda instance, you can check using reflection if there are any private final fields on it
-(which are used to capture the required values during construction&amp;nbsp;time):&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kr"&gt;private&lt;/span&gt; &lt;span class="kr"&gt;static&lt;/span&gt; &lt;span class="kr"&gt;boolean&lt;/span&gt; &lt;span class="nx"&gt;isCapturing&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;Object&lt;/span&gt; &lt;span class="nx"&gt;o&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nx"&gt;Class&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;clazz&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;o&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getClass&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-
-    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="nx"&gt;clazz&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;toString&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;contains&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;$Lambda&lt;/span&gt;&lt;span class="s2"&gt;$&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="k"&gt;throw&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;IllegalArgumentException&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Not a lambda!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-
-    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;Field&lt;/span&gt; &lt;span class="nx"&gt;field&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;clazz&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getDeclaredFields&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="nx"&gt;int&lt;/span&gt; &lt;span class="nx"&gt;modifiers&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;field&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getModifiers&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;Modifier&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;isFinal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;modifiers&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="nx"&gt;Modifier&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;isPrivate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;modifiers&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;true&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="p"&gt;}&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="java"></category></entry><entry><title>A fresh start with Pelican</title><link href="https://www.grey-panther.net/2016/01/a-fresh-start-with-pelican.html" rel="alternate"></link><published>2016-01-04T21:18:00+02:00</published><author><name>Attila-Mihaly Balazs</name></author><id>tag:www.grey-panther.net,2016-01-04:2016/01/a-fresh-start-with-pelican.html</id><summary type="html">&lt;p&gt;Here we are in 2016, trying to start blogging again. Using &lt;a href="http://blog.getpelican.com/"&gt;Pelican&lt;/a&gt; is more complicate than it needs to be&amp;nbsp;:-(.&lt;/p&gt;</summary></entry><entry><title>On benchmarks</title><link href="https://www.grey-panther.net/2014/03/on-benchmarks.html" rel="alternate"></link><published>2014-03-28T09:17:00+02:00</published><author><name>Attila-Mihaly Balazs</name></author><id>tag:www.grey-panther.net,2014-03-28:2014/03/on-benchmarks.html</id><summary type="html">&lt;h2&gt;Numbers every programmer should know and their impact on&amp;nbsp;benchmarks&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Grey Panther's Place</title><link href="https://www.grey-panther.net/" rel="alternate"></link><link href="https://www.grey-panther.net/feeds/posts/default" rel="self"></link><id>https://www.grey-panther.net/</id><updated>2016-08-05T16:49:00+03:00</updated><entry><title>Benchmarking the cost of primitive operations on the JVM</title><link href="https://www.grey-panther.net/2016/08/benchmarking-the-cost-of-primitive-operations-on-the-jvm.html" rel="alternate"></link><published>2016-08-05T16:49:00+03:00</published><author><name>Attila-Mihaly Balazs</name></author><id>tag:www.grey-panther.net,2016-08-05:2016/08/benchmarking-the-cost-of-primitive-operations-on-the-jvm.html</id><summary type="html">&lt;p&gt;(when are floating point operations faster than integer&amp;nbsp;ones?)&lt;/p&gt;
+&lt;p&gt;I was listening to the &lt;a href="http://cppcast.com/2015/10/andrei-alexandrescu/"&gt;interview&lt;/a&gt; with &lt;a href="http://erdani.com/"&gt;Andrei Alexandrescu&lt;/a&gt; - of C++ and &lt;a href="http://dlang.org/"&gt;D-lang&lt;/a&gt; fame (cheers homie! :-)) on CppCast when I heard something interesting: float divisions are supposed to be faster than integer ones on modern CPUs! So I had to dig into&amp;nbsp;that.&lt;/p&gt;
+&lt;h2&gt;The&amp;nbsp;setup&lt;/h2&gt;
+&lt;p&gt;I whipped up some &lt;a href="http://openjdk.java.net/projects/code-tools/jmh/"&gt;&lt;span class="caps"&gt;JMH&lt;/span&gt;&lt;/a&gt; benchmarks (the &lt;a href="https://github.com/gpanther/jvm-primitive-ops-benchmarks"&gt;sources&lt;/a&gt; are on GitHub) and ran them on three&amp;nbsp;machines:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;An older Xeon&amp;nbsp;E5-2665&lt;/li&gt;
+&lt;li&gt;An&amp;nbsp;i7-4600U&lt;/li&gt;
+&lt;li&gt;An i7-&lt;span class="caps"&gt;4750HQ&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(Other factors - like memory, &lt;span class="caps"&gt;CPU&lt;/span&gt; count, exact &lt;span class="caps"&gt;JVM&lt;/span&gt; version, etc - are not that relevant to this discussion since this is strictly a single-threaded &lt;span class="caps"&gt;ALU&lt;/span&gt;&amp;nbsp;benchmark)&lt;/p&gt;
+&lt;h2&gt;The&amp;nbsp;answers&lt;/h2&gt;
+&lt;p&gt;You can find the exact numbers in &lt;a href="https://github.com/gpanther/jvm-primitive-ops-benchmarks"&gt;the GitHub repository&lt;/a&gt; and I also created &lt;a href="https://docs.google.com/spreadsheets/d/10aayQ0hvYDI50t5Q4MB1E3Z4bgX2UIBBGG4y_I8Xhp8/edit?usp=sharing"&gt;a Google Docs spreadsheet&lt;/a&gt; to better visualize the&amp;nbsp;results.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;What is the order (from a speed point of view) of integer&amp;nbsp;operations?&lt;/li&gt;
+&lt;li&gt;They seem to fall into two categories div/mod and the rest, with the former being twice as slow as the&amp;nbsp;later.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;This seems to hold regardless of data type (byte / short / long / etc) or &lt;span class="caps"&gt;CPU&lt;/span&gt; (though the later CPUs are ~30%&amp;nbsp;faster)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Is computation on smaller integers (ie. byte / short / char) faster / slower / the same than on larger (int /&amp;nbsp;long)?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;In general in is the fastest, followed by long and the other types (byte / char /&amp;nbsp;short)&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For modulo (&lt;code&gt;%&lt;/code&gt;) long is particularly&amp;nbsp;slow&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The same question as above for floating point numbers: are calculations on float faster / slower / the same as on&amp;nbsp;double?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;For addition / subtraction they are the same speed (note that I only tested numbers which are of similar magnitude - so perhaps the results are different if rescaling is&amp;nbsp;involved)&lt;/li&gt;
+&lt;li&gt;For division float was 30% to 50% faster (depending on the &lt;span class="caps"&gt;CPU&lt;/span&gt; model) than double&amp;nbsp;(!)&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The order of operations (in decreasing order of ops/s) seems to&amp;nbsp;be:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;addition /&amp;nbsp;subtraction&lt;/li&gt;
+&lt;li&gt;multiplication (about the same&amp;nbsp;speed)&lt;/li&gt;
+&lt;li&gt;division (about 30% to 50%&amp;nbsp;slower)&lt;/li&gt;
+&lt;li&gt;modulo (30% to 50% slower than&amp;nbsp;division)&lt;/li&gt;
+&lt;li&gt;multiplication / division on &lt;a href="https://en.wikipedia.org/wiki/Denormal_number"&gt;denormal values&lt;/a&gt; - this is at least 50x (yes, times not percent!)&amp;nbsp;slower &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Back to the original question: can floating point division be faster than the integer&amp;nbsp;one?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Amazingly yes! The benchmark shows that float division is ~30% faster than integer division (which is approximately the same speed as double division and both are 2x faster than long&amp;nbsp;division)&lt;/li&gt;
+&lt;li&gt;This does not hold for related operations like multiplication (where they are approximately the same speed) and modulo (where int more than twice as fast as the&amp;nbsp;others)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;The answers - part &lt;span class="caps"&gt;II&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;So this is it, right? Use float division? Lets apply this optimization to some real-world&amp;nbsp;problems:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/gpanther/jvm-primitive-ops-benchmarks/tree/master/src/main/java/net/greypanther/opbench/vecmult"&gt;Vector&amp;nbsp;multiplication&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/gpanther/jvm-primitive-ops-benchmarks/tree/master/src/main/java/net/greypanther/opbench/search"&gt;Interpolation&amp;nbsp;search&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And the results&amp;nbsp;are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;For vector multiplication we indeed see a 2x to 5x performance gain when using float instead of&amp;nbsp;int&lt;/li&gt;
+&lt;li&gt;However for interpolation search we see the opposite: ints are ~30% &lt;em&gt;faster&lt;/em&gt; than&amp;nbsp;floats&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Why might that&amp;nbsp;be?&lt;/p&gt;
+&lt;p&gt;My working theory is that &lt;em&gt;individual&lt;/em&gt; floating point divisions are (slightly) &lt;em&gt;slower&lt;/em&gt; than integer divisions. However: there are probably more ALUs in the &lt;span class="caps"&gt;CPU&lt;/span&gt; which can do floating point operations and if the operations can be pipelined (ie. they can be executed in parallel / there is no data dependency between them) the overall throughput is&amp;nbsp;better.&lt;/p&gt;
+&lt;p&gt;In other cases - like with interpolation search - where we need the result of the individual division before we can progress, pipelineing doesn&amp;#8217;t&amp;nbsp;help.&lt;/p&gt;
+&lt;h2&gt;Some&amp;nbsp;conclusions&lt;/h2&gt;
+&lt;p&gt;Do your own benchmarks! Don&amp;#8217;t trust a page on the internet! Things can change considerably with new &lt;span class="caps"&gt;CPU&lt;/span&gt; architectures /&amp;nbsp;JVMs!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Consider investing in hardware. There can be considerable performance gain in running on the latest vs. 3-4 year old hardware and it&amp;#8217;s a simple&amp;nbsp;upgrade&lt;/li&gt;
+&lt;li&gt;Store your data in int / float if it fits. Anything smaller hurts your arithmetic performance (but can help considerably if you&amp;#8217;re bottlenecked on memory&amp;nbsp;bandwidth)&lt;/li&gt;
+&lt;li&gt;Use the correct kind of data (floating point for simulations and integers for everything else - including monetary values which should be stored as multiples of 1/1000th of a&amp;nbsp;cent)&lt;/li&gt;
+&lt;li&gt;Don&amp;#8217;t use denormalized floating point numbers for multiplication / division if you can help&amp;nbsp;it&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Of course there is a lot more to floating point algorithms like &lt;a href="https://en.wikipedia.org/wiki/Numerical_stability"&gt;numerical stability&lt;/a&gt; so thread lightly when mucking around with such&amp;nbsp;algorithms&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Using shifts / masking where appropriate (for example multiplying / dividing by powers of two) is still a very worthwhile optimization (the &lt;span class="caps"&gt;JVM&lt;/span&gt;/&lt;span class="caps"&gt;JIT&lt;/span&gt; does this automatically when it can &amp;#8220;see&amp;#8221; the constant part - ie. there is no need to write &lt;code&gt;v &amp;gt;&amp;gt; 2&lt;/code&gt; instead of &lt;code&gt;v / 4&lt;/code&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="java"></category><category term="performance"></category><category term="jvm"></category><category term="jmh"></category><category term="x86"></category></entry><entry><title>A fresh start with Pelican</title><link href="https://www.grey-panther.net/2016/01/a-fresh-start-with-pelican.html" rel="alternate"></link><published>2016-01-04T21:18:00+02:00</published><author><name>Attila-Mihaly Balazs</name></author><id>tag:www.grey-panther.net,2016-01-04:2016/01/a-fresh-start-with-pelican.html</id><summary type="html">&lt;p&gt;Here we are in 2016, trying to start blogging again. Using &lt;a href="http://blog.getpelican.com/"&gt;Pelican&lt;/a&gt; is more complicate than it needs to be&amp;nbsp;:-(.&lt;/p&gt;</summary></entry><entry><title>On benchmarks</title><link href="https://www.grey-panther.net/2014/03/on-benchmarks.html" rel="alternate"></link><published>2014-03-28T09:17:00+02:00</published><author><name>Attila-Mihaly Balazs</name></author><id>tag:www.grey-panther.net,2014-03-28:2014/03/on-benchmarks.html</id><summary type="html">&lt;h2&gt;Numbers every programmer should know and their impact on&amp;nbsp;benchmarks&lt;/h2&gt;
 &lt;p&gt;Disclaimer: I don&amp;#8217;t mean to be picking on the particular organizations /
 projects / people who I&amp;#8217;ll mention below. They are just examples of a
 larger trend I&amp;nbsp;observed.&lt;/p&gt;

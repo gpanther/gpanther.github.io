@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Benchmarking the cost of primitive operations on the JVM - Grey Panther's Place</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="https://www.grey-panther.net/favicon.ico" rel="icon">
+    <!--[if IE]><link rel="shortcut icon" href="https://www.grey-panther.net/favicon.ico"><![endif]-->
+
+<link rel="canonical" href="https://www.grey-panther.net/2016/08/benchmarking-the-cost-of-primitive-operations-on-the-jvm.html">
+
+        <meta name="author" content="Attila-Mihaly Balazs" />
+        <meta name="keywords" content="java,performance,jvm,jmh,x86" />
+        <meta name="description" content="(when are floating point operations faster than integer ones?) I was listening to the interview with Andrei Alexandrescu - of C++ and D-lang fame (cheers homie! :-)) on CppCast when I heard something interesting: float divisions are supposed to be faster than integer ones on modern CPUs! So I had to dig ..." />
+
+        <meta property="og:site_name" content="Grey Panther's Place" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Benchmarking the cost of primitive operations on the JVM"/>
+        <meta property="og:url" content="https://www.grey-panther.net/2016/08/benchmarking-the-cost-of-primitive-operations-on-the-jvm.html"/>
+        <meta property="og:description" content="(when are floating point operations faster than integer ones?) I was listening to the interview with Andrei Alexandrescu - of C++ and D-lang fame (cheers homie! :-)) on CppCast when I heard something interesting: float divisions are supposed to be faster than integer ones on modern CPUs! So I had to dig ..."/>
+        <meta property="article:published_time" content="2016-08-05" />
+            <meta property="article:section" content="blog" />
+            <meta property="article:tag" content="java" />
+            <meta property="article:tag" content="performance" />
+            <meta property="article:tag" content="jvm" />
+            <meta property="article:tag" content="jmh" />
+            <meta property="article:tag" content="x86" />
+            <meta property="article:author" content="Attila-Mihaly Balazs" />
+
+    <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@cdman83">
+        <meta name="twitter:creator" content="@cdman83">
+    <meta name="twitter:domain" content="https://www.grey-panther.net">
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://www.grey-panther.net/theme/css/bootstrap.superhero.min.css" type="text/css"/>
+    <link href="https://www.grey-panther.net/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://www.grey-panther.net/theme/css/pygments/solarizeddark.css" rel="stylesheet">
+        <link href="https://www.grey-panther.net/theme/css/typogrify.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.grey-panther.net/theme/css/style.css" type="text/css"/>
+
+        <link href="https://www.grey-panther.net/feeds/posts/default" type="application/atom+xml" rel="alternate"
+              title="Grey Panther's Place ATOM Feed"/>
+
+        <link href="https://www.grey-panther.net/feeds/rss" type="application/rss+xml" rel="alternate"
+              title="Grey Panther's Place RSS Feed"/>
+
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://www.grey-panther.net/" class="navbar-brand">
+Grey Panther's Place            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="/">About</a></li>
+                    <li><a href="/category/blog.html">Blog</a></li>
+                    <li><a href="/pages/projects.html">Projects</a></li>
+                    <li><a href="/pages/site-map.html">More</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://www.grey-panther.net/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://www.grey-panther.net/2016/08/benchmarking-the-cost-of-primitive-operations-on-the-jvm.html"
+                       rel="bookmark"
+                       title="Permalink to Benchmarking the cost of primitive operations on the JVM">
+                        Benchmarking the cost of primitive operations on the <span class="caps">JVM</span>
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2016-08-05T16:49:00+03:00"> Vi 05 august 2016</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://www.grey-panther.net/tag/java.html">java</a>
+        /
+	<a href="https://www.grey-panther.net/tag/performance.html">performance</a>
+        /
+	<a href="https://www.grey-panther.net/tag/jvm.html">jvm</a>
+        /
+	<a href="https://www.grey-panther.net/tag/jmh.html">jmh</a>
+        /
+	<a href="https://www.grey-panther.net/tag/x86.html">x86</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>(when are floating point operations faster than integer&nbsp;ones?)</p>
+<p>I was listening to the <a href="http://cppcast.com/2015/10/andrei-alexandrescu/">interview</a> with <a href="http://erdani.com/">Andrei Alexandrescu</a> - of C++ and <a href="http://dlang.org/">D-lang</a> fame (cheers homie! :-)) on CppCast when I heard something interesting: float divisions are supposed to be faster than integer ones on modern CPUs! So I had to dig into&nbsp;that.</p>
+<h2>The&nbsp;setup</h2>
+<p>I whipped up some <a href="http://openjdk.java.net/projects/code-tools/jmh/"><span class="caps">JMH</span></a> benchmarks (the <a href="https://github.com/gpanther/jvm-primitive-ops-benchmarks">sources</a> are on GitHub) and ran them on three&nbsp;machines:</p>
+<ul>
+<li>An older Xeon&nbsp;E5-2665</li>
+<li>An&nbsp;i7-4600U</li>
+<li>An i7-<span class="caps">4750HQ</span></li>
+</ul>
+<p>(Other factors - like memory, <span class="caps">CPU</span> count, exact <span class="caps">JVM</span> version, etc - are not that relevant to this discussion since this is strictly a single-threaded <span class="caps">ALU</span>&nbsp;benchmark)</p>
+<h2>The&nbsp;answers</h2>
+<p>You can find the exact numbers in <a href="https://github.com/gpanther/jvm-primitive-ops-benchmarks">the GitHub repository</a> and I also created <a href="https://docs.google.com/spreadsheets/d/10aayQ0hvYDI50t5Q4MB1E3Z4bgX2UIBBGG4y_I8Xhp8/edit?usp=sharing">a Google Docs spreadsheet</a> to better visualize the&nbsp;results.</p>
+<ul>
+<li>What is the order (from a speed point of view) of integer&nbsp;operations?</li>
+<li>They seem to fall into two categories div/mod and the rest, with the former being twice as slow as the&nbsp;later.</li>
+<li>
+<p>This seems to hold regardless of data type (byte / short / long / etc) or <span class="caps">CPU</span> (though the later CPUs are ~30%&nbsp;faster)</p>
+</li>
+<li>
+<p>Is computation on smaller integers (ie. byte / short / char) faster / slower / the same than on larger (int /&nbsp;long)?</p>
+</li>
+<li>In general in is the fastest, followed by long and the other types (byte / char /&nbsp;short)</li>
+<li>
+<p>For modulo (<code>%</code>) long is particularly&nbsp;slow</p>
+</li>
+<li>
+<p>The same question as above for floating point numbers: are calculations on float faster / slower / the same as on&nbsp;double?</p>
+</li>
+<li>For addition / subtraction they are the same speed (note that I only tested numbers which are of similar magnitude - so perhaps the results are different if rescaling is&nbsp;involved)</li>
+<li>For division float was 30% to 50% faster (depending on the <span class="caps">CPU</span> model) than double&nbsp;(!)</li>
+<li>
+<p>The order of operations (in decreasing order of ops/s) seems to&nbsp;be:</p>
+<ul>
+<li>addition /&nbsp;subtraction</li>
+<li>multiplication (about the same&nbsp;speed)</li>
+<li>division (about 30% to 50%&nbsp;slower)</li>
+<li>modulo (30% to 50% slower than&nbsp;division)</li>
+<li>multiplication / division on <a href="https://en.wikipedia.org/wiki/Denormal_number">denormal values</a> - this is at least 50x (yes, times not percent!)&nbsp;slower </li>
+</ul>
+</li>
+<li>
+<p>Back to the original question: can floating point division be faster than the integer&nbsp;one?</p>
+</li>
+<li>Amazingly yes! The benchmark shows that float division is ~30% faster than integer division (which is approximately the same speed as double division and both are 2x faster than long&nbsp;division)</li>
+<li>This does not hold for related operations like multiplication (where they are approximately the same speed) and modulo (where int more than twice as fast as the&nbsp;others)</li>
+</ul>
+<h2>The answers - part <span class="caps">II</span></h2>
+<p>So this is it, right? Use float division? Lets apply this optimization to some real-world&nbsp;problems:</p>
+<ul>
+<li><a href="https://github.com/gpanther/jvm-primitive-ops-benchmarks/tree/master/src/main/java/net/greypanther/opbench/vecmult">Vector&nbsp;multiplication</a></li>
+<li><a href="https://github.com/gpanther/jvm-primitive-ops-benchmarks/tree/master/src/main/java/net/greypanther/opbench/search">Interpolation&nbsp;search</a></li>
+</ul>
+<p>And the results&nbsp;are:</p>
+<ul>
+<li>For vector multiplication we indeed see a 2x to 5x performance gain when using float instead of&nbsp;int</li>
+<li>However for interpolation search we see the opposite: ints are ~30% <em>faster</em> than&nbsp;floats</li>
+</ul>
+<p>Why might that&nbsp;be?</p>
+<p>My working theory is that <em>individual</em> floating point divisions are (slightly) <em>slower</em> than integer divisions. However: there are probably more ALUs in the <span class="caps">CPU</span> which can do floating point operations and if the operations can be pipelined (ie. they can be executed in parallel / there is no data dependency between them) the overall throughput is&nbsp;better.</p>
+<p>In other cases - like with interpolation search - where we need the result of the individual division before we can progress, pipelineing doesn&#8217;t&nbsp;help.</p>
+<h2>Some&nbsp;conclusions</h2>
+<p>Do your own benchmarks! Don&#8217;t trust a page on the internet! Things can change considerably with new <span class="caps">CPU</span> architectures /&nbsp;JVMs!</p>
+<ul>
+<li>Consider investing in hardware. There can be considerable performance gain in running on the latest vs. 3-4 year old hardware and it&#8217;s a simple&nbsp;upgrade</li>
+<li>Store your data in int / float if it fits. Anything smaller hurts your arithmetic performance (but can help considerably if you&#8217;re bottlenecked on memory&nbsp;bandwidth)</li>
+<li>Use the correct kind of data (floating point for simulations and integers for everything else - including monetary values which should be stored as multiples of 1/1000th of a&nbsp;cent)</li>
+<li>Don&#8217;t use denormalized floating point numbers for multiplication / division if you can help&nbsp;it</li>
+<li>
+<p>Of course there is a lot more to floating point algorithms like <a href="https://en.wikipedia.org/wiki/Numerical_stability">numerical stability</a> so thread lightly when mucking around with such&nbsp;algorithms</p>
+</li>
+<li>
+<p>Using shifts / masking where appropriate (for example multiplying / dividing by powers of two) is still a very worthwhile optimization (the <span class="caps">JVM</span>/<span class="caps">JIT</span> does this automatically when it can &#8220;see&#8221; the constant part - ie. there is no need to write <code>v &gt;&gt; 2</code> instead of <code>v / 4</code>)</p>
+</li>
+</ul>
+            </div>
+            <!-- /.entry-content -->
+<section class="well" id="related-posts">
+    <h4>Related Posts:</h4>
+    <ul>
+        <li><a href="https://www.grey-panther.net/2011/02/is-hand-writing-assembly-still.html">Is hand-writing assembly still necessary these&nbsp;days?</a></li>
+        <li><a href="https://www.grey-panther.net/2011/09/running-jruby-on-64-bit-windows.html">Running JRuby on 64 bit&nbsp;Windows</a></li>
+        <li><a href="https://www.grey-panther.net/2011/03/microbenchmarking-and-you.html">Microbenchmarking and&nbsp;you</a></li>
+        <li><a href="https://www.grey-panther.net/2010/01/splitting-hairshhhhh-strings-with-java.html">Splitting hairs^H^H^H^H^H strings with&nbsp;Java</a></li>
+        <li><a href="https://www.grey-panther.net/2011/01/java-date-objects-can-mutate-even-when.html">Java Date objects can mutate, even when&nbsp;read</a></li>
+    </ul>
+</section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<div id="aboutme">
+        <p>
+            <img width="60%" class="img" src="/images/profile.png"/>
+        </p>
+    <p>
+        <strong>About Grey Panther</strong><br/>
+        <a href="/">father, husband, software craftsman</a>
+    </p>
+</div>
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="https://ro.linkedin.com/in/gpanther"><i class="fa fa-linkedin-square fa-lg"></i> linkedin</a></li>
+                <li class="list-group-item"><a href="http://stackoverflow.com/users/1265/grey-panther"><i class="fa fa-stack-overflow fa-lg"></i> stackoverflow</a></li>
+                <li class="list-group-item"><a href="https://github.com/gpanther/"><i class="fa fa-github-square fa-lg"></i> github</a></li>
+              </ul>
+            </li>
+
+
+
+
+
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container-fluid">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2016 Grey Panther
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by/4.0/80x15.png" /></a>
+    Content
+  licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>, except where indicated otherwise.
+</small></p>
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://www.grey-panther.net/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://www.grey-panther.net/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://www.grey-panther.net/theme/js/respond.min.js"></script>
+
+
+</body>
+</html>
