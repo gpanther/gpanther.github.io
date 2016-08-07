@@ -32,6 +32,9 @@ AUTHOR_FEED_RSS = None
 PLUGIN_PATHS = ['../pelican-plugins']
 PLUGINS = ['related_posts', 'sitemap']
 
+CACHE_CONTENT = True
+LOAD_CONTENT_CACHE = True
+
 DISPLAY_PAGES_ON_MENU = False
 DISPLAY_CATEGORIES_ON_MENU = False
 MENUITEMS = (
