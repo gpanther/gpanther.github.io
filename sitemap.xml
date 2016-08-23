@@ -5,77 +5,70 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://www.grey-panther.net/</loc>
-<lastmod>2016-08-08T18:45:57-00:00</lastmod>
+<lastmod>2016-08-23T10:58:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://www.grey-panther.net/archives.html</loc>
-<lastmod>2016-08-08T18:45:57-00:00</lastmod>
+<lastmod>2016-08-23T10:58:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://www.grey-panther.net/tags.html</loc>
-<lastmod>2016-08-08T18:45:57-00:00</lastmod>
+<lastmod>2016-08-23T10:58:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://www.grey-panther.net/categories.html</loc>
-<lastmod>2016-08-08T18:45:57-00:00</lastmod>
+<lastmod>2016-08-23T10:58:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://www.grey-panther.net/</loc>
-<lastmod>2016-08-08T18:45:57-00:00</lastmod>
+<lastmod>2016-08-23T10:58:11-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://www.grey-panther.net/pages/resume-curriculum-vitae.html</loc>
-<lastmod>2016-08-08T18:45:57-00:00</lastmod>
+<lastmod>2016-08-23T10:58:11-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://www.grey-panther.net/pages/places-to-visit.html</loc>
-<lastmod>2016-08-08T18:45:57-00:00</lastmod>
+<lastmod>2016-08-23T10:58:11-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://www.grey-panther.net/pages/presentations.html</loc>
-<lastmod>2016-08-08T18:45:57-00:00</lastmod>
+<lastmod>2016-08-23T10:58:11-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://www.grey-panther.net/pages/projects.html</loc>
-<lastmod>2016-08-08T18:45:57-00:00</lastmod>
+<lastmod>2016-08-23T10:58:11-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://www.grey-panther.net/pages/site-map.html</loc>
-<lastmod>2016-08-08T18:45:57-00:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://www.grey-panther.net/2016/08/how-slow-is-java-reflection.html</loc>
-<lastmod>2016-08-08T18:31:00+03:00</lastmod>
+<lastmod>2016-08-23T10:58:11-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1517,7 +1510,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://www.grey-panther.net/category/blog.html</loc>
-<lastmod>2016-08-08T18:31:00+01:44</lastmod>
+<lastmod>2016-01-04T21:18:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1649,13 +1642,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://www.grey-panther.net/tag/maps.html</loc>
-<lastmod>2011-09-21T17:53:00+01:44</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>https://www.grey-panther.net/tag/personal.html</loc>
 <lastmod>2011-10-13T18:20:00+01:44</lastmod>
 <changefreq>daily</changefreq>
@@ -1705,8 +1691,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://www.grey-panther.net/tag/networking.html</loc>
-<lastmod>2011-10-08T15:55:00+01:44</lastmod>
+<loc>https://www.grey-panther.net/tag/photo.html</loc>
+<lastmod>2009-11-23T17:45:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1749,13 +1735,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://www.grey-panther.net/tag/jython.html</loc>
 <lastmod>2011-10-13T18:16:00+01:44</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://www.grey-panther.net/tag/photo.html</loc>
-<lastmod>2009-11-23T17:45:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1826,6 +1805,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://www.grey-panther.net/tag/jenkins.html</loc>
 <lastmod>2011-09-20T19:16:00+01:44</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://www.grey-panther.net/tag/linux.html</loc>
+<lastmod>2011-09-13T19:14:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -2188,8 +2174,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://www.grey-panther.net/tag/news.html</loc>
-<lastmod>2012-11-25T10:58:00+01:44</lastmod>
+<loc>https://www.grey-panther.net/tag/networking.html</loc>
+<lastmod>2011-10-08T15:55:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -2398,8 +2384,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://www.grey-panther.net/tag/linux.html</loc>
-<lastmod>2011-09-13T19:14:00+01:44</lastmod>
+<loc>https://www.grey-panther.net/tag/news.html</loc>
+<lastmod>2012-11-25T10:58:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -2448,7 +2434,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://www.grey-panther.net/tag/java.html</loc>
-<lastmod>2016-08-08T18:31:00+01:44</lastmod>
+<lastmod>2013-06-28T12:49:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -2545,6 +2531,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://www.grey-panther.net/tag/python.html</loc>
+<lastmod>2014-02-05T17:26:00+01:44</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://www.grey-panther.net/tag/geekmeet.html</loc>
 <lastmod>2012-10-27T22:45:00+01:44</lastmod>
 <changefreq>daily</changefreq>
@@ -2580,8 +2573,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://www.grey-panther.net/tag/jmh.html</loc>
-<lastmod>2016-08-08T18:31:00+01:44</lastmod>
+<loc>https://www.grey-panther.net/tag/java7.html</loc>
+<lastmod>2012-12-12T10:37:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -2902,8 +2895,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://www.grey-panther.net/tag/python.html</loc>
-<lastmod>2014-02-05T17:26:00+01:44</lastmod>
+<loc>https://www.grey-panther.net/tag/maps.html</loc>
+<lastmod>2011-09-21T17:53:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -2973,7 +2966,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://www.grey-panther.net/tag/benchmark.html</loc>
-<lastmod>2016-08-08T18:31:00+01:44</lastmod>
+<lastmod>2011-03-07T15:13:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -3042,13 +3035,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://www.grey-panther.net/tag/reflection.html</loc>
-<lastmod>2016-08-08T18:31:00+01:44</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>https://www.grey-panther.net/tag/database.html</loc>
 <lastmod>2012-11-25T11:14:00+01:44</lastmod>
 <changefreq>daily</changefreq>
@@ -3065,13 +3051,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://www.grey-panther.net/tag/physical-security.html</loc>
 <lastmod>2010-01-04T18:06:00+01:44</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://www.grey-panther.net/tag/java7.html</loc>
-<lastmod>2012-12-12T10:37:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -3141,7 +3120,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://www.grey-panther.net/author/attila-mihaly-balazs.html</loc>
-<lastmod>2016-08-08T18:31:00+01:44</lastmod>
+<lastmod>2016-01-04T21:18:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
