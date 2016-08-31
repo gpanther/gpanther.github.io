@@ -29,6 +29,7 @@ Title: Places to visit
 		[ 44.805516, 20.469905, "Tesla Museum" ],
 		[ 4.1754959, 73.5093474, "Maldives" ],
 		[ 45.2025, 29.3132, "Pădurea Letea"],
+		[ 47.477824, 19.069902, "Pilots Repülőgépszimulátor-központ"],
 	];
 
 	for (var i=0; i<markers.length; i++) {
