@@ -5,70 +5,77 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://www.grey-panther.net/</loc>
-<lastmod>2016-09-07T16:08:26-00:00</lastmod>
+<lastmod>2016-09-08T10:45:45-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://www.grey-panther.net/archives.html</loc>
-<lastmod>2016-09-07T16:08:26-00:00</lastmod>
+<lastmod>2016-09-08T10:45:45-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://www.grey-panther.net/tags.html</loc>
-<lastmod>2016-09-07T16:08:26-00:00</lastmod>
+<lastmod>2016-09-08T10:45:45-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://www.grey-panther.net/categories.html</loc>
-<lastmod>2016-09-07T16:08:26-00:00</lastmod>
+<lastmod>2016-09-08T10:45:45-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://www.grey-panther.net/</loc>
-<lastmod>2016-09-07T16:08:26-00:00</lastmod>
+<lastmod>2016-09-08T10:45:45-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://www.grey-panther.net/pages/resume-curriculum-vitae.html</loc>
-<lastmod>2016-09-07T16:08:26-00:00</lastmod>
+<lastmod>2016-09-08T10:45:45-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://www.grey-panther.net/pages/places-to-visit.html</loc>
-<lastmod>2016-09-07T16:08:26-00:00</lastmod>
+<lastmod>2016-09-08T10:45:45-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://www.grey-panther.net/pages/presentations.html</loc>
-<lastmod>2016-09-07T16:08:26-00:00</lastmod>
+<lastmod>2016-09-08T10:45:45-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://www.grey-panther.net/pages/projects.html</loc>
-<lastmod>2016-09-07T16:08:26-00:00</lastmod>
+<lastmod>2016-09-08T10:45:45-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://www.grey-panther.net/pages/site-map.html</loc>
-<lastmod>2016-09-07T16:08:26-00:00</lastmod>
+<lastmod>2016-09-08T10:45:45-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://www.grey-panther.net/2016/09/the-limits-of-science.html</loc>
+<lastmod>2016-09-08T10:44:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1510,7 +1517,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://www.grey-panther.net/category/blog.html</loc>
-<lastmod>2016-01-04T21:18:00+01:44</lastmod>
+<lastmod>2016-09-08T10:44:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1719,8 +1726,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://www.grey-panther.net/tag/local.html</loc>
-<lastmod>2012-11-25T10:58:00+01:44</lastmod>
+<loc>https://www.grey-panther.net/tag/presentation.html</loc>
+<lastmod>2012-10-27T22:45:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1875,6 +1882,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://www.grey-panther.net/tag/version-control.html</loc>
 <lastmod>2009-10-07T17:19:00+01:44</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://www.grey-panther.net/tag/science.html</loc>
+<lastmod>2016-09-08T10:44:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -2643,8 +2657,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://www.grey-panther.net/tag/presentation.html</loc>
-<lastmod>2012-10-27T22:45:00+01:44</lastmod>
+<loc>https://www.grey-panther.net/tag/local.html</loc>
+<lastmod>2012-11-25T10:58:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -2973,7 +2987,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://www.grey-panther.net/tag/philosophy.html</loc>
-<lastmod>2011-09-21T17:53:00+01:44</lastmod>
+<lastmod>2016-09-08T10:44:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -3120,7 +3134,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://www.grey-panther.net/author/attila-mihaly-balazs.html</loc>
-<lastmod>2016-01-04T21:18:00+01:44</lastmod>
+<lastmod>2016-09-08T10:44:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
