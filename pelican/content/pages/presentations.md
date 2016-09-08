@@ -2,6 +2,23 @@ Title: Presentations
 
 - [Low level details for high level developers](https://docs.google.com/presentation/d/18joJulVdw4ymgM2j2KTDgr8LgxcrcbkpPw_q2M67-dQ/edit?usp=sharing) given at [YAPC::EU 2016](http://act.yapc.eu/ye2016/schedule?day=2016-08-25)
 - [Low level details for high level developers](https://docs.google.com/presentation/d/1azqLjBh2U0V5_-w_SXi6vDC8uiRq6VNW1s_-2B2Kho4/edit?usp=sharing) given in 2016 at the [55th Transylvania JUG meeting](http://www.transylvania-jug.org/future-meetings/jug-meeting-55-low-level-details-for-high-level-developers) (rated 4.5 out of 5)
+- [Automate all the things](https://docs.google.com/presentation/d/13L8a6qYwIgV7ELXWmlR3E2eW8aayk15lhaWLVhtfAp8/edit?usp=sharing) given in 2015 at [cluj.pm #5](http://blog.cluj.pm/post/meet-the-speakers-of-perl-meetup-5)
+- [A/V Editing basics](https://docs.google.com/presentation/d/1nlSNWpwPQWsFrEA_Su4sJiVKfCfYmgTDnJt6TAD5Jjk/edit?usp=sharing) given in 2014
+- [Cryptography: you're doing it wrong!](http://www.slideshare.net/ITCamp/it-camp-2014-cryptography-youre-doing-it-wrong-attila-balazs) given at ITCamp 2014 ([recording](https://vimeo.com/channels/itcamp2014/100485019) is also available)
+- AISEC IT School 2014:
+  - [Copyright for programmers](https://docs.google.com/presentation/d/19mpJfNGAXxOvKn_MwwjwqvvmmPwME3QFbJPaaeBKutw/edit?usp=sharing)
+  - [Securing (your) computer](https://docs.google.com/presentation/d/1uM_iTzsotuzAbKJmnrJ5zU7QgkZwmwgT4sQHy0-HST0/edit?usp=sharing)
+  - [Network and data security](https://docs.google.com/presentation/d/1hHgx9e_FnTWA1WV8mEopzS51dEKHfAOGk5euFpNe4pg/edit?usp=sharing)
+  - [Database manipulation](https://docs.google.com/presentation/d/10GgTHr8t-wg7I8mn3NWeJlUdynqdsluar-YIXCrv9tc/edit?usp=sharing)
+  - [MySQL introduction](https://docs.google.com/presentation/d/1GumlF6IHP3MLZXIeutJFu1cD0PS58c27Iokq9dirVsM/edit?usp=sharing)
+- [Advantages of using Free/Libre software](https://docs.google.com/presentation/d/1AGkiT-S2boblOUafktour9CM3zEVQkNvtTyZe_ZXlvs/edit?usp=sharing) given in 2014 at the [Today Software Magazine](http://www.todaysoftmag.com/) launch event - also available in as an [article](http://www.todaysoftmag.com/article/967/advantages-of-using-free-software)
+- [GDG CJ - Google App Engine Introduction](https://docs.google.com/presentation/d/16ybprGyzfQW53Af1Ad7EyAPLmy3lQPjf4bbm1tAQM7A/edit?usp=sharing) given at GDG Dev Fest 2013
+- [Automate all the things! - How continuous delivery can save your sanity](https://docs.google.com/presentation/d/1GKDREQboqVkPHVhovUjC3No92PTv32m4UUHegTHb03k/edit?usp=sharing) given at [Web Codecamp](http://vunvulearadu.blogspot.ro/2013/09/post-event-web-codecamp-event-in-cluj.html) in September 2013. ([recording](https://docs.google.com/file/d/0B2IAds6a-fs7OVFQQW5qbDM2R2M/edit?usp=sharing) and [article](http://www.todaysoftmag.com/article/643/automate-all-the-things) is also available)
+- [Open Source: what? how? why?](https://docs.google.com/presentation/d/1yKSW9TuXB8hMlxDhYr29C4qd83OdwyxXHSiTVSTNjvA/edit?usp=sharing)
+- [Steps after launching a website](https://docs.google.com/presentation/d/1srk-cw5zatk-sWMQnO1523Vnr1cvJfP4AAn1LDba8kg/edit?usp=sharing) given in 2013 at the [Today Software Magazine](http://www.todaysoftmag.com/) launch event - also available in as an [article](https://issuu.com/ovidiumatan4/docs/steps_after_launching_a_website)
+- [Alternative PHP Runtimes](https://docs.google.com/presentation/d/1IV_LJ-vf1GNGUKd-6w3bkFHu0SShzTUrcqp1vMQo7J0/edit?usp=sharing) given in 2013 at the [Today Software Magazine](http://www.todaysoftmag.com/) launch event - also available in as an [article](http://www.todaysoftmag.com/article/240/alternative-php-runtimes)
 - [Writing beautiful code - not just for aesthetic value](https://docs.google.com/presentation/d/1fC4qeDc4zkKGaLZBMrRdgmRMuoDw4KeYmmJAZvVVFLY/edit?usp=sharing) given in 2012 at the [Today Software Magazine](http://www.todaysoftmag.com/) launch event - also available in as an [article](http://www.todaysoftmag.com/article/195/writing-beautiful-code-not-just-for-the-aesthetic-value)
 - [Perl - A Layman Programmer's View](https://docs.google.com/presentation/d/15NM65jNUEGqApX-Ghi3pQd1qKZxE2QNE8Menmn0kreU/edit?usp=sharing) given in 2012 as a lightning talk at [Cluj.pm](http://www.cluj.pm/)
-
+- [Performance optimization techniques for Java code](http://www.slideshare.net/cdman83/performance-optimization-techniques-for-java-code) given in 2010 at [Transylvania JUG](http://jugevents.org/jugevents/event/25604)
+- [Congestion Control in Computer Networks - ATM and TCP](http://www.slideshare.net/cdman83/congestion-control-in-computer-networks-atm-and-tcp-presentation) given in 2009
+- [Lightning talk about StackOverflow](http://www.slideshare.net/cdman83/lightning-talk-about-stackoverflow) given in 2009
