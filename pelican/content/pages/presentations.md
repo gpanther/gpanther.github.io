@@ -1,5 +1,6 @@
 Title: Presentations
 
+- [The bare minimum programmers should know about modern CPU architecture](https://docs.google.com/presentation/d/1uPqiauy1Ta3f5u_nPHyxmh_kN-SjHqTbeNv0cNpie_w/edit?usp=sharing) - workshop given at [ITDays 2016](http://itdays.rohttp://itdays.ro/)
 - [Low level details for high level developers](https://docs.google.com/presentation/d/18joJulVdw4ymgM2j2KTDgr8LgxcrcbkpPw_q2M67-dQ/edit?usp=sharing) given at [YAPC::EU 2016](http://act.yapc.eu/ye2016/schedule?day=2016-08-25)
 - [Low level details for high level developers](https://docs.google.com/presentation/d/1azqLjBh2U0V5_-w_SXi6vDC8uiRq6VNW1s_-2B2Kho4/edit?usp=sharing) given in 2016 at the [55th Transylvania JUG meeting](http://www.transylvania-jug.org/future-meetings/jug-meeting-55-low-level-details-for-high-level-developers) (rated 4.5 out of 5)
 - [Automate all the things](https://docs.google.com/presentation/d/13L8a6qYwIgV7ELXWmlR3E2eW8aayk15lhaWLVhtfAp8/edit?usp=sharing) given in 2015 at [cluj.pm #5](http://blog.cluj.pm/post/meet-the-speakers-of-perl-meetup-5)
