@@ -1,5 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Grey Panther's Place</title><link href="https://www.grey-panther.net/" rel="alternate"></link><link href="https://www.grey-panther.net/feeds/posts/default" rel="self"></link><id>https://www.grey-panther.net/</id><updated>2016-09-08T10:44:00+03:00</updated><entry><title>The limits of science</title><link href="https://www.grey-panther.net/2016/09/the-limits-of-science.html" rel="alternate"></link><published>2016-09-08T10:44:00+03:00</published><updated>2016-09-08T10:44:00+03:00</updated><author><name>Attila-Mihaly Balazs</name></author><id>tag:www.grey-panther.net,2016-09-08:2016/09/the-limits-of-science.html</id><summary type="html">&lt;p&gt;In a lot of ways Science has become the religion of the day. We can&amp;#8217;t go more than a day to hear / see / read a &amp;#8220;news&amp;#8221; story about &amp;#8220;scientists&amp;#8221; saying something about something important. We can&amp;#8217;t help but feel dazzled, confused, perplexed, overwhelmed by these announcements.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Grey Panther's Place</title><link href="https://www.grey-panther.net/" rel="alternate"></link><link href="https://www.grey-panther.net/feeds/posts/default" rel="self"></link><id>https://www.grey-panther.net/</id><updated>2017-01-02T13:28:00+02:00</updated><entry><title>Finding the N-th word in a complete dictionary</title><link href="https://www.grey-panther.net/2017/01/finding-the-n-th-word-in-a-complete-dictionary.html" rel="alternate"></link><published>2017-01-02T13:28:00+02:00</published><updated>2017-01-02T13:28:00+02:00</updated><author><name>Attila-Mihaly Balazs</name></author><id>tag:www.grey-panther.net,2017-01-02:2017/01/finding-the-n-th-word-in-a-complete-dictionary.html</id><summary type="html">&lt;h2&gt;Problem&amp;nbsp;statement&lt;/h2&gt;
+&lt;p&gt;Find the &lt;code&gt;N&lt;/code&gt;-th word in a dictionary which contains all the words that can be generated from a given alphabet of length at most &lt;code&gt;M&lt;/code&gt; (and sorted by the conventional dictionary sorting rule / &lt;a href="https://en.wikipedia.org/wiki/Lexicographical_order"&gt;lexicographical order&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;As a short detour: why did I become interested in it? It was during my investigation of the upper limit for the number of strings formed from a given alphabet that can be encoded in a given number of bits. Even more concretely: what is the upper limit for the length of a &lt;span class="caps"&gt;DNA&lt;/span&gt;/&lt;span class="caps"&gt;RNA&lt;/span&gt; string formed from nucleotides (ie. a string with alphabet &lt;code&gt;[A,C,G,T]&lt;/code&gt;) that can be encoded on 64 bits. Note: the problem statement that we need a codec (ie. both enCOding and DECoding, so we&amp;#8217;ll solve a bit more generic problem than just the one-way one described in the&amp;nbsp;title).&lt;/p&gt;
+&lt;p&gt;The first solution which came to mind was to use some bits for the length and the remaining bits to encode the nucleotides (2 bit / nucleotide) however the question remained: how many bits for the length? And is the solution&amp;nbsp;optimal?&lt;/p&gt;
+&lt;p&gt;So finally I came up with the following formulation: consider that we have a dictionary of all the possible nucleotide strings for length at most &lt;code&gt;M&lt;/code&gt;. Now let the 64 bit value just be an index in this dictionary. This is guaranteed to be the optimal solution (if we assume that the probability of occurrence for every string is the same). Now we need three&amp;nbsp;things:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;what is the largest value of &lt;code&gt;M&lt;/code&gt; for which the index can be stored on 64&amp;nbsp;bits?&lt;/li&gt;
+&lt;li&gt;a time and space efficient way (ie. not generating the entire dictionary and keeping it in memory for lookup) to get the index of a given string (the enCOde&amp;nbsp;step)&lt;/li&gt;
+&lt;li&gt;the same to get the word at a given index (the DECode&amp;nbsp;step)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;There is also a somewhat related problem on Project Euler (&lt;a href="https://projecteuler.net/problem=24"&gt;24: Lexicographic permutations&lt;/a&gt;) - that wasn&amp;#8217;t the inspiration though, I found out about it&amp;nbsp;later.&lt;/p&gt;
+&lt;h2&gt;Some initial&amp;nbsp;observations&lt;/h2&gt;
+&lt;p&gt;Just by writing out the complete set of words of length at most &lt;code&gt;M&lt;/code&gt; formed from a given alphabet we can make some observations. For example consider the alphabet &lt;code&gt;[A,B]&lt;/code&gt; and write&amp;nbsp;out:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the words of length 0: &lt;code&gt;''&lt;/code&gt; (the empty&amp;nbsp;string)&lt;/li&gt;
+&lt;li&gt;the words of length 1: &lt;code&gt;A&lt;/code&gt; and &lt;code&gt;B&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;the words of length 2: &lt;code&gt;AA&lt;/code&gt;, &lt;code&gt;AB&lt;/code&gt;, &lt;code&gt;BA&lt;/code&gt; and &lt;code&gt;BB&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So pretty quickly we can see that for a given alphabet and a given length we have exactly &lt;code&gt;len(alphabet) ** length&lt;/code&gt; possible words (where &lt;code&gt;**&lt;/code&gt; is the exponentiation operator - ie. &lt;code&gt;a ** b&lt;/code&gt; is the b-th power of a), since: we have &lt;code&gt;length&lt;/code&gt; positions, at each position we can have one of the &lt;code&gt;len(alphabet)&lt;/code&gt; characters, thus the total possibilities are &lt;code&gt;len(alphabet) * len(alphabet) * ...&lt;/code&gt; &lt;code&gt;length&lt;/code&gt; times which is &lt;code&gt;len(alphabet)&lt;/code&gt; to power &lt;code&gt;length&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;After this we can ask &amp;#8220;how many strings of length less than or equal to &lt;code&gt;M&lt;/code&gt; are there&amp;#8221;? (question 1 from the initial problem statement).  This is simply &lt;code&gt;sum(len(alphabet) ** i for i in [0, M])&lt;/code&gt;, also known as the &lt;a href="https://en.wikipedia.org/wiki/Geometric_progression#Derivation"&gt;geometric progression&lt;/a&gt;: &lt;code&gt;(1 - La ** M) / 1 - La&lt;/code&gt; where &lt;code&gt;La = len(alphabet)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;So for example if we have the alphabet &lt;code&gt;[A, C, G, T]&lt;/code&gt; and 64 bits available we can encode &lt;a href="http://www.wolframalpha.com/input/?i=%28%281-4%5Em%29+%2F+%281-4%29%29+%3C+%282%5E64-1%29"&gt;at most 32 characters&lt;/a&gt; according to Wolfram&amp;nbsp;Alpha.&lt;/p&gt;
+&lt;h2&gt;Finding the index of a&amp;nbsp;string&lt;/h2&gt;
+&lt;p&gt;To find this we just need to count how many strings there are in the dictionary before our string (remember the dictionary is in lexicographical&amp;nbsp;order).&lt;/p&gt;
+&lt;p&gt;A concrete example: our dictionary contains all the words of length at most 3 (&lt;code&gt;M=3&lt;/code&gt;) formed from the alphabet &lt;code&gt;[A, B]&lt;/code&gt;. What is the index of the word &lt;code&gt;BA&lt;/code&gt;? (we consider that index 0 is &lt;code&gt;''&lt;/code&gt; - the empty string, index 1 is &lt;code&gt;A&lt;/code&gt;, index 2 is &lt;code&gt;AA&lt;/code&gt; and so&amp;nbsp;on).&lt;/p&gt;
+&lt;p&gt;What is the position of &lt;code&gt;BA&lt;/code&gt; in our&amp;nbsp;dictionary?&lt;/p&gt;
+&lt;p&gt;If we would only have words of length &lt;em&gt;exactly&lt;/em&gt; &lt;code&gt;K&lt;/code&gt; we could compute this by considering &lt;code&gt;BA&lt;/code&gt; a number in base 2 (binary) where &lt;code&gt;A=0&lt;/code&gt; and &lt;code&gt;B=1&lt;/code&gt;, transform it to base 10 and have our answer (ie &lt;code&gt;BA&lt;/code&gt; -&amp;gt; &lt;code&gt;10b&lt;/code&gt; -&amp;gt; &lt;code&gt;2&lt;/code&gt; -&amp;gt; &lt;code&gt;BA&lt;/code&gt; is at position 2 - or is the 3rd word - in the dictionary &lt;code&gt;AA, AB, BA, BB&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;However our dictionary contains all words of length &lt;em&gt;exactly&lt;/em&gt; 0, 1, 2 and 3. So just consider each in&amp;nbsp;turn!&lt;/p&gt;
+&lt;p&gt;In a dictionary containing the words from the alphabet &lt;code&gt;[A, B]&lt;/code&gt; of exactly&amp;nbsp;length:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;K=0&lt;/code&gt;: &lt;code&gt;BA&lt;/code&gt; would have index&amp;nbsp;1&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;K=1&lt;/code&gt;: &lt;code&gt;BA&lt;/code&gt; would have index 2 which is the same as &lt;code&gt;indexOf(B) + 1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;K=2&lt;/code&gt;: &lt;code&gt;BA&lt;/code&gt; would have index&amp;nbsp;2&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;K=3&lt;/code&gt;: &lt;code&gt;BA&lt;/code&gt; would have index 10, which is the same as &lt;code&gt;indexOf(BAA)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So, to find the index of a&amp;nbsp;string:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Go from 0 to &lt;code&gt;M&lt;/code&gt; (the maximum length allowed for words in our&amp;nbsp;dictionary)&lt;/li&gt;
+&lt;li&gt;Generate a word of length &lt;code&gt;K&lt;/code&gt; from our word by either (assuming our strings are zero&amp;nbsp;indexed):&lt;/li&gt;
+&lt;li&gt;Taking the characters &lt;code&gt;0&lt;/code&gt; to &lt;code&gt;K&lt;/code&gt; (exclusive) if &lt;code&gt;K &amp;lt; len(word)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Padding the word with the &lt;em&gt;first character of the alphabet&lt;/em&gt; up to length &lt;code&gt;K&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Finding the index of this (sub)word in a dictionary that contains words of length exactly &lt;code&gt;K&lt;/code&gt; by considering the (sub)word as a value written in base &lt;code&gt;La&lt;/code&gt; (&lt;code&gt;La == length(alphabet)&lt;/code&gt;). Add 1 if we&amp;#8217;re in the first case since the longer word would come after the shorter&amp;nbsp;ones.&lt;/li&gt;
+&lt;li&gt;Sum up all the&amp;nbsp;values&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Or in &lt;a href="https://github.com/cdman/nth-element-of-dictionary/blob/master/nth_element.py#L83"&gt;Python 3 code&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;indexOf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;word&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;word&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;__max_len&lt;/span&gt;
+    &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;__max_len&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;word&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+            &lt;span class="n"&gt;subword&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;word&lt;/span&gt;&lt;span class="p"&gt;[:&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+            &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;__valueInBaseN&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;subword&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+        &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;subword&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;word&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;word&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;__alphabet&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+            &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;__valueInBaseN&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;subword&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Finding the N-th&amp;nbsp;string&lt;/h2&gt;
+&lt;p&gt;Finally getting at the problem stated in the title. For this I noted how the dictionary can be constructed for length &lt;code&gt;M&lt;/code&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the dictionary for &lt;code&gt;M=0&lt;/code&gt; is just &lt;code&gt;''&lt;/code&gt; (the empty string) and for &lt;code&gt;M=1&lt;/code&gt; the empty string plus the alphabet&amp;nbsp;itself.&lt;/li&gt;
+&lt;li&gt;for &lt;code&gt;M&amp;gt;1&lt;/code&gt; take the dictionary for &lt;code&gt;M-1&lt;/code&gt; and prefix it with each of the characters from the alphabet. Finally add the empty string as the first&amp;nbsp;element.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So for example if we have &lt;code&gt;[A, B]&lt;/code&gt; as the alphabet&amp;nbsp;then:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the dictionary for &lt;code&gt;M=1&lt;/code&gt; is &lt;code&gt;0: '', 1: A, 2: B&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;to construct the dictionary for &lt;code&gt;M=2&lt;/code&gt; we replicate the above dictionary 2 times, first prefixing it with &lt;code&gt;A&lt;/code&gt;, then with &lt;code&gt;B&lt;/code&gt; and finally we add the empty string in&amp;nbsp;front:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;0: &amp;#39;&amp;#39;  1: A    4: B
+       2: AA   5: BA
+       3: AB   6: BB
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This suggests an algorithm for finding the&amp;nbsp;solution:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;take the value. Decide in &amp;#8220;column&amp;#8221; it would&amp;nbsp;be.&lt;/li&gt;
+&lt;li&gt;you know the number of words in each column: &lt;code&gt;len(dictionary) - 1 / len(alphabet)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;len(dictionary)&lt;/code&gt; is &lt;code&gt;sum(len(alphabet) ** i for i in [0, K])&lt;/code&gt; (see the initial&amp;nbsp;observations)&lt;/li&gt;
+&lt;li&gt;this can also be precomputed for&amp;nbsp;efficiency&lt;/li&gt;
+&lt;li&gt;the column index gives you letter index in the&amp;nbsp;alphabet&lt;/li&gt;
+&lt;li&gt;now subtract from the value the index of the first word in the given column. If you get 0,&amp;nbsp;stop.&lt;/li&gt;
+&lt;li&gt;Otherwise make &lt;code&gt;K&lt;/code&gt; one less and look up the new value in the dictionary of length at most &lt;code&gt;K&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A small worked&amp;nbsp;example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;lets say we have &lt;code&gt;[A, B]&lt;/code&gt; as the alphabet and &lt;code&gt;M=2&lt;/code&gt;. We want to find the word at 5 (which is &lt;code&gt;BA&lt;/code&gt; if you take a peak at the table above).&amp;nbsp;So:&lt;/li&gt;
+&lt;li&gt;in each column we have 3 words, so 5 is in the 2nd row (the row with index 1) which gives us &amp;#8220;B&amp;#8221; as the first&amp;nbsp;letter&lt;/li&gt;
+&lt;li&gt;now subtract 4 (the index of the first word in the 2nd column - &lt;code&gt;B&lt;/code&gt;) from 5 which leaves us with&amp;nbsp;1&lt;/li&gt;
+&lt;li&gt;now find the word with index 1 in a dictionary with &lt;code&gt;M=1&lt;/code&gt; which is&amp;nbsp;&amp;#8220;A&amp;#8221;&lt;/li&gt;
+&lt;li&gt;thus the final word is &amp;#8220;&lt;span class="caps"&gt;BA&lt;/span&gt;&amp;#8221;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Or in &lt;a href="https://github.com/cdman/nth-element-of-dictionary/blob/master/nth_element.py#L62"&gt;Python 3 code&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;wordAt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="n"&gt;index&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;__lastIndex&lt;/span&gt;
+    &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;current_len&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;__max_len&lt;/span&gt;
+    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;index&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;words_per_column&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;__wordsPerLetterForLen&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;current_len&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="n"&gt;column_idx&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="n"&gt;words_per_column&lt;/span&gt;
+        &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;__alphabet&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;column_idx&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="n"&gt;index_of_first_word_in_col&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;column_idx&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;words_per_column&lt;/span&gt;
+        &lt;span class="n"&gt;index&lt;/span&gt; &lt;span class="o"&gt;-=&lt;/span&gt; &lt;span class="n"&gt;index_of_first_word_in_col&lt;/span&gt;
+        &lt;span class="n"&gt;current_len&lt;/span&gt; &lt;span class="o"&gt;-=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Note: you can find a different algorithm to do the same on &lt;a href="http://math.stackexchange.com/questions/195736/how-to-get-the-n-th-word-in-a-sequence"&gt;math.stackexchange.com&lt;/a&gt;, however I found the above to be visually more&amp;nbsp;intuitive.&lt;/p&gt;
+&lt;h2&gt;Can we do it&amp;nbsp;simpler?&lt;/h2&gt;
+&lt;p&gt;So we solved the initial problem (both the one stated in the title and the one which motivated this journey) however it took over a thousand words to describe and justify it. Can we do simpler? Turns out yes! We just need abandon our attachment to the lexicographical order and say that as long as we have a bijective encoding and decoding function with the property &lt;code&gt;decode(encode(word)) == word&lt;/code&gt; we are&amp;nbsp;satisfied.&lt;/p&gt;
+&lt;p&gt;A simple and efficient function is the transformation of the word from base &lt;code&gt;La&lt;/code&gt; (length of alphabet) to base 10 and vice-versa. For example if we have &lt;code&gt;[A, C, G, T]&lt;/code&gt; as the alphabet and &lt;code&gt;GAT&lt;/code&gt; as the word we can&amp;nbsp;do:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;encode: &lt;code&gt;2*(4**2) + 0*(4**1) + 3*(4**0)&lt;/code&gt; which is&amp;nbsp;33&lt;/li&gt;
+&lt;li&gt;decode: 33 is written as powers of 4 as above and 2, 0, 3 corresponds to &lt;code&gt;GAT&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Again, the ordering will not be lexicographical (&lt;code&gt;A, AA, AB, ...&lt;/code&gt;) but rather a numerical-order kind-of (&lt;code&gt;A, B, AA, AB, ...&lt;/code&gt;) but the algorithm is much simpler and in the case that &lt;code&gt;La&lt;/code&gt; is a power of two, very efficient to implement on current CPUs since division / remainder can be done using bit-shifts /&amp;nbsp;masking.&lt;/p&gt;
+&lt;h2&gt;More&amp;nbsp;speculation&lt;/h2&gt;
+&lt;p&gt;I didn&amp;#8217;t actually want to encode &lt;span class="caps"&gt;DNA&lt;/span&gt;/&lt;span class="caps"&gt;RNA&lt;/span&gt; sequences, but rather mutations/variations which are pair of sequences (something like &lt;code&gt;G -&amp;gt; TC&lt;/code&gt; or &lt;code&gt;GT -&amp;gt; ''&lt;/code&gt;).  Now I could just divide the 64 bits into two 32 bit chunks but the same initial question would arise: is this the most optimal way for&amp;nbsp;encoding?&lt;/p&gt;
+&lt;p&gt;So we go the same solution: what if we would have a dictionary of all the variants (&lt;code&gt;'' -&amp;gt; A, '' -&amp;gt; AA, ...&lt;/code&gt;) and just index into it. How would we construct such a dictionary and how would we order&amp;nbsp;it?&lt;/p&gt;
+&lt;p&gt;Turns out there is an algorithm inspired by the proof that &lt;a href="https://en.wikipedia.org/wiki/Rational_number#Properties"&gt;there are the same number of natural numbers as there are rational ones&lt;/a&gt;. However that doesn&amp;#8217;t give us a way to find the N-th element in the sequence but a Calkin–Wilf sequence &lt;a href="https://en.wikipedia.org/wiki/Calkin%E2%80%93Wilf_tree#Breadth_first_traversal"&gt;does&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;So we can have the following&amp;nbsp;algorithm:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;represent the pair &lt;code&gt;to -&amp;gt; from&lt;/code&gt; as two numbers &lt;code&gt;A&lt;/code&gt; and &lt;code&gt;B&lt;/code&gt; (refer to the discussion until now how we can do&amp;nbsp;that)&lt;/li&gt;
+&lt;li&gt;use the Calkin-Wilf sequence (combined with the &lt;a href="https://en.wikipedia.org/wiki/Continued_fraction#Finite_continued_fractions"&gt;continued fraction formula&lt;/a&gt;) to find the index of &lt;code&gt;A/B&lt;/code&gt; &lt;/li&gt;
+&lt;li&gt;or conversely use the sequence to transform the index into the &lt;code&gt;A/B&lt;/code&gt; fraction and then transform the numerator and denominator into the original&amp;nbsp;sequences&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is just speculation but it should work in theory. Also, it is fairly complicated so perhaps there is a better way to do it by making some simplifying assumptions? (like us eliminating the lexicographic ordering&amp;nbsp;requirement).&lt;/p&gt;
+&lt;h2&gt;Source&amp;nbsp;code&lt;/h2&gt;
+&lt;p&gt;A complete implementation of the above algorithms (with tests!) in Python 3 can be found &lt;a href="https://github.com/cdman/nth-element-of-dictionary/"&gt;on GitHub&lt;/a&gt;.&lt;/p&gt;</summary><category term="algorithm"></category></entry><entry><title>The limits of science</title><link href="https://www.grey-panther.net/2016/09/the-limits-of-science.html" rel="alternate"></link><published>2016-09-08T10:44:00+03:00</published><updated>2016-09-08T10:44:00+03:00</updated><author><name>Attila-Mihaly Balazs</name></author><id>tag:www.grey-panther.net,2016-09-08:2016/09/the-limits-of-science.html</id><summary type="html">&lt;p&gt;In a lot of ways Science has become the religion of the day. We can&amp;#8217;t go more than a day to hear / see / read a &amp;#8220;news&amp;#8221; story about &amp;#8220;scientists&amp;#8221; saying something about something important. We can&amp;#8217;t help but feel dazzled, confused, perplexed, overwhelmed by these announcements.
 And we have discussions with others:
 - I heard that scientists say that X cures cancer.
 -  Didn&amp;#8217;t you hear? Scientist announced that X &lt;em&gt;causes&lt;/em&gt; cancer

@@ -77,6 +77,22 @@ Grey Panther's Place            </a>
     <div class="row">
         <div class="col-sm-9">
             <article>
+                <h2><a href="https://www.grey-panther.net/2011/09/quickm.html">Quick&#8217;n&#8217;dirty Mediawiki file&nbsp;crawler</a></h2>
+                <div class="summary"><div class="highlight"><pre><span></span><span class="nt">URL</span><span class="o">=</span><span class="s1">&#39;http://10.0.0.1&#39;</span> <span class="nt">MIME</span><span class="o">=</span><span class="s1">&#39;image/jpeg&#39;</span>   
+ <span class="nt">bash</span> <span class="nt">-c</span> <span class="err">&#39;</span><span class="nt">wget</span> <span class="nt">-q</span> <span class="nt">-O</span> <span class="nt">-</span> <span class="s2">&quot;$URL/wiki/index.php?title=Special:MIMESearch&amp;mime;=$MIME&amp;limit;=500&amp;offset;=0&quot;</span>   
+ <span class="o">|</span> <span class="nt">grep</span> <span class="nt">-Po</span> <span class="err">&quot;\</span><span class="o">/</span><span class="nt">wiki</span><span class="err">\</span><span class="o">/</span><span class="nt">images</span><span class="cp">[</span><span class="p">^</span><span class="o">\</span><span class="s2">&quot;]+&quot;</span>   
+ <span class="o">|</span> <span class="nx">xargs</span> <span class="na">-n1</span> <span class="na">-I</span> <span class="p">{}</span> <span class="nx">wget</span> <span class="s2">&quot;$URL{}&quot;</span><span class="s1">&#39;</span>
+</pre></div>
+
+
+<p></code></p>
+<p>What it does: it uses the &#8220;<span class="caps">MIME</span> search&#8221; functionality on the wiki to
+locate ...</p>
+                    <a class="btn btn-default btn-xs" href="https://www.grey-panther.net/2011/09/quickm.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="https://www.grey-panther.net/2011/09/creating-non-mac-bound-centos-6-machine.html">Creating a non-<span class="caps">MAC</span> bound CentOS 6&nbsp;machine</a></h2>
                 <div class="summary"><p>I was building VMs to be deployed with <a href="http://vagrantup.com/">Vagrant</a>
 / <a href="http://www.virtualbox.org/">Virtualbox</a> for our QAs and discovered
@@ -181,18 +197,6 @@ deadly combination). Luckily he had the install <span class="caps">CD</span> on 
                 </div>
             </article>
             <hr/>
-            <article>
-                <h2><a href="https://www.grey-panther.net/2011/04/wrong-time-to-update-software.html">The wrong time to update&nbsp;software&#8230;</a></h2>
-                <div class="summary"><p>is when the user is the busiest, for example when s/he just started your
-application. See for example the screenshot below with Adobe Air (click
-trough to see it in its full&nbsp;beauty).</p>
-<div class="separator" style="clear: both; text-align: center;">
-
-[![](http://3.bp.blogspot.com/-r_lf3uTwZgY/TaMCg6ba3pI/<span class="caps">AAAAAAAADWA</span>/d2bvVKLpVQE/s320/adobe-air-update.png)](http://3.bp.blogspot ...</div>
-                    <a class="btn btn-default btn-xs" href="https://www.grey-panther.net/2011/04/wrong-time-to-update-software.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
 
         <ul class="pagination">
                 <li class="prev"><a href="https://www.grey-panther.net/author/attila-mihaly-balazs5.html">&laquo;</a>
@@ -278,7 +282,7 @@ trough to see it in its full&nbsp;beauty).</p>
    <div class="container-fluid">
       <hr>
       <div class="row">
-         <div class="col-xs-10">&copy; 2016 Grey Panther
+         <div class="col-xs-10">&copy; 2017 Grey Panther
             &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
             <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by/4.0/80x15.png" /></a>

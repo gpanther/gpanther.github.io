@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Finding the N-th word in a complete dictionary - Grey Panther's Place</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="https://www.grey-panther.net/favicon.ico" rel="icon">
+    <!--[if IE]><link rel="shortcut icon" href="https://www.grey-panther.net/favicon.ico"><![endif]-->
+
+<link rel="canonical" href="https://www.grey-panther.net/2017/01/finding-the-n-th-word-in-a-complete-dictionary.html">
+
+        <meta name="author" content="Attila-Mihaly Balazs" />
+        <meta name="keywords" content="algorithm" />
+        <meta name="description" content="Problem statement Find the N-th word in a dictionary which contains all the words that can be generated from a given alphabet of length at most M (and sorted by the conventional dictionary sorting rule / lexicographical order). As a short detour: why did I become interested in it? It ..." />
+
+        <meta property="og:site_name" content="Grey Panther's Place" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Finding the N-th word in a complete dictionary"/>
+        <meta property="og:url" content="https://www.grey-panther.net/2017/01/finding-the-n-th-word-in-a-complete-dictionary.html"/>
+        <meta property="og:description" content="Problem statement Find the N-th word in a dictionary which contains all the words that can be generated from a given alphabet of length at most M (and sorted by the conventional dictionary sorting rule / lexicographical order). As a short detour: why did I become interested in it? It ..."/>
+        <meta property="article:published_time" content="2017-01-02" />
+            <meta property="article:section" content="blog" />
+            <meta property="article:tag" content="algorithm" />
+            <meta property="article:author" content="Attila-Mihaly Balazs" />
+
+    <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@cdman83">
+        <meta name="twitter:creator" content="@cdman83">
+    <meta name="twitter:domain" content="https://www.grey-panther.net">
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://www.grey-panther.net/theme/css/bootstrap.superhero.min.css" type="text/css"/>
+    <link href="https://www.grey-panther.net/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://www.grey-panther.net/theme/css/pygments/solarizeddark.css" rel="stylesheet">
+        <link href="https://www.grey-panther.net/theme/css/typogrify.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.grey-panther.net/theme/css/style.css" type="text/css"/>
+
+        <link href="https://www.grey-panther.net/feeds/posts/default" type="application/atom+xml" rel="alternate"
+              title="Grey Panther's Place ATOM Feed"/>
+
+        <link href="https://www.grey-panther.net/feeds/rss" type="application/rss+xml" rel="alternate"
+              title="Grey Panther's Place RSS Feed"/>
+
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://www.grey-panther.net/" class="navbar-brand">
+Grey Panther's Place            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="/">About</a></li>
+                    <li><a href="/category/blog.html">Blog</a></li>
+                    <li><a href="/pages/projects.html">Projects</a></li>
+                    <li><a href="/pages/site-map.html">More</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://www.grey-panther.net/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://www.grey-panther.net/2017/01/finding-the-n-th-word-in-a-complete-dictionary.html"
+                       rel="bookmark"
+                       title="Permalink to Finding the N-th word in a complete dictionary">
+                        Finding the N-th word in a complete&nbsp;dictionary
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2017-01-02T13:28:00+02:00"> Lu 02 ianuarie 2017</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://www.grey-panther.net/tag/algorithm.html">algorithm</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <h2>Problem&nbsp;statement</h2>
+<p>Find the <code>N</code>-th word in a dictionary which contains all the words that can be generated from a given alphabet of length at most <code>M</code> (and sorted by the conventional dictionary sorting rule / <a href="https://en.wikipedia.org/wiki/Lexicographical_order">lexicographical order</a>).</p>
+<p>As a short detour: why did I become interested in it? It was during my investigation of the upper limit for the number of strings formed from a given alphabet that can be encoded in a given number of bits. Even more concretely: what is the upper limit for the length of a <span class="caps">DNA</span>/<span class="caps">RNA</span> string formed from nucleotides (ie. a string with alphabet <code>[A,C,G,T]</code>) that can be encoded on 64 bits. Note: the problem statement that we need a codec (ie. both enCOding and DECoding, so we&#8217;ll solve a bit more generic problem than just the one-way one described in the&nbsp;title).</p>
+<p>The first solution which came to mind was to use some bits for the length and the remaining bits to encode the nucleotides (2 bit / nucleotide) however the question remained: how many bits for the length? And is the solution&nbsp;optimal?</p>
+<p>So finally I came up with the following formulation: consider that we have a dictionary of all the possible nucleotide strings for length at most <code>M</code>. Now let the 64 bit value just be an index in this dictionary. This is guaranteed to be the optimal solution (if we assume that the probability of occurrence for every string is the same). Now we need three&nbsp;things:</p>
+<ol>
+<li>what is the largest value of <code>M</code> for which the index can be stored on 64&nbsp;bits?</li>
+<li>a time and space efficient way (ie. not generating the entire dictionary and keeping it in memory for lookup) to get the index of a given string (the enCOde&nbsp;step)</li>
+<li>the same to get the word at a given index (the DECode&nbsp;step)</li>
+</ol>
+<p>There is also a somewhat related problem on Project Euler (<a href="https://projecteuler.net/problem=24">24: Lexicographic permutations</a>) - that wasn&#8217;t the inspiration though, I found out about it&nbsp;later.</p>
+<h2>Some initial&nbsp;observations</h2>
+<p>Just by writing out the complete set of words of length at most <code>M</code> formed from a given alphabet we can make some observations. For example consider the alphabet <code>[A,B]</code> and write&nbsp;out:</p>
+<ul>
+<li>the words of length 0: <code>''</code> (the empty&nbsp;string)</li>
+<li>the words of length 1: <code>A</code> and <code>B</code></li>
+<li>the words of length 2: <code>AA</code>, <code>AB</code>, <code>BA</code> and <code>BB</code></li>
+</ul>
+<p>So pretty quickly we can see that for a given alphabet and a given length we have exactly <code>len(alphabet) ** length</code> possible words (where <code>**</code> is the exponentiation operator - ie. <code>a ** b</code> is the b-th power of a), since: we have <code>length</code> positions, at each position we can have one of the <code>len(alphabet)</code> characters, thus the total possibilities are <code>len(alphabet) * len(alphabet) * ...</code> <code>length</code> times which is <code>len(alphabet)</code> to power <code>length</code>.</p>
+<p>After this we can ask &#8220;how many strings of length less than or equal to <code>M</code> are there&#8221;? (question 1 from the initial problem statement).  This is simply <code>sum(len(alphabet) ** i for i in [0, M])</code>, also known as the <a href="https://en.wikipedia.org/wiki/Geometric_progression#Derivation">geometric progression</a>: <code>(1 - La ** M) / 1 - La</code> where <code>La = len(alphabet)</code>.</p>
+<p>So for example if we have the alphabet <code>[A, C, G, T]</code> and 64 bits available we can encode <a href="http://www.wolframalpha.com/input/?i=%28%281-4%5Em%29+%2F+%281-4%29%29+%3C+%282%5E64-1%29">at most 32 characters</a> according to Wolfram&nbsp;Alpha.</p>
+<h2>Finding the index of a&nbsp;string</h2>
+<p>To find this we just need to count how many strings there are in the dictionary before our string (remember the dictionary is in lexicographical&nbsp;order).</p>
+<p>A concrete example: our dictionary contains all the words of length at most 3 (<code>M=3</code>) formed from the alphabet <code>[A, B]</code>. What is the index of the word <code>BA</code>? (we consider that index 0 is <code>''</code> - the empty string, index 1 is <code>A</code>, index 2 is <code>AA</code> and so&nbsp;on).</p>
+<p>What is the position of <code>BA</code> in our&nbsp;dictionary?</p>
+<p>If we would only have words of length <em>exactly</em> <code>K</code> we could compute this by considering <code>BA</code> a number in base 2 (binary) where <code>A=0</code> and <code>B=1</code>, transform it to base 10 and have our answer (ie <code>BA</code> -&gt; <code>10b</code> -&gt; <code>2</code> -&gt; <code>BA</code> is at position 2 - or is the 3rd word - in the dictionary <code>AA, AB, BA, BB</code>).</p>
+<p>However our dictionary contains all words of length <em>exactly</em> 0, 1, 2 and 3. So just consider each in&nbsp;turn!</p>
+<p>In a dictionary containing the words from the alphabet <code>[A, B]</code> of exactly&nbsp;length:</p>
+<ul>
+<li><code>K=0</code>: <code>BA</code> would have index&nbsp;1</li>
+<li><code>K=1</code>: <code>BA</code> would have index 2 which is the same as <code>indexOf(B) + 1</code></li>
+<li><code>K=2</code>: <code>BA</code> would have index&nbsp;2</li>
+<li><code>K=3</code>: <code>BA</code> would have index 10, which is the same as <code>indexOf(BAA)</code></li>
+</ul>
+<p>So, to find the index of a&nbsp;string:</p>
+<ul>
+<li>Go from 0 to <code>M</code> (the maximum length allowed for words in our&nbsp;dictionary)</li>
+<li>Generate a word of length <code>K</code> from our word by either (assuming our strings are zero&nbsp;indexed):</li>
+<li>Taking the characters <code>0</code> to <code>K</code> (exclusive) if <code>K &lt; len(word)</code></li>
+<li>Padding the word with the <em>first character of the alphabet</em> up to length <code>K</code></li>
+<li>Finding the index of this (sub)word in a dictionary that contains words of length exactly <code>K</code> by considering the (sub)word as a value written in base <code>La</code> (<code>La == length(alphabet)</code>). Add 1 if we&#8217;re in the first case since the longer word would come after the shorter&nbsp;ones.</li>
+<li>Sum up all the&nbsp;values</li>
+</ul>
+<p>Or in <a href="https://github.com/cdman/nth-element-of-dictionary/blob/master/nth_element.py#L83">Python 3 code</a>:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">indexOf</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">word</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__max_len</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__max_len</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+            <span class="n">subword</span> <span class="o">=</span> <span class="n">word</span><span class="p">[:</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">result</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__valueInBaseN</span><span class="p">(</span><span class="n">subword</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">subword</span> <span class="o">=</span> <span class="n">word</span> <span class="o">+</span> <span class="p">(</span><span class="n">i</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">))</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">__alphabet</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">result</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__valueInBaseN</span><span class="p">(</span><span class="n">subword</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+
+
+<h2>Finding the N-th&nbsp;string</h2>
+<p>Finally getting at the problem stated in the title. For this I noted how the dictionary can be constructed for length <code>M</code>:</p>
+<ul>
+<li>the dictionary for <code>M=0</code> is just <code>''</code> (the empty string) and for <code>M=1</code> the empty string plus the alphabet&nbsp;itself.</li>
+<li>for <code>M&gt;1</code> take the dictionary for <code>M-1</code> and prefix it with each of the characters from the alphabet. Finally add the empty string as the first&nbsp;element.</li>
+</ul>
+<p>So for example if we have <code>[A, B]</code> as the alphabet&nbsp;then:</p>
+<ul>
+<li>the dictionary for <code>M=1</code> is <code>0: '', 1: A, 2: B</code></li>
+<li>to construct the dictionary for <code>M=2</code> we replicate the above dictionary 2 times, first prefixing it with <code>A</code>, then with <code>B</code> and finally we add the empty string in&nbsp;front:</li>
+</ul>
+<div class="highlight"><pre><span></span>0: &#39;&#39;  1: A    4: B
+       2: AA   5: BA
+       3: AB   6: BB
+</pre></div>
+
+
+<p>This suggests an algorithm for finding the&nbsp;solution:</p>
+<ul>
+<li>take the value. Decide in &#8220;column&#8221; it would&nbsp;be.</li>
+<li>you know the number of words in each column: <code>len(dictionary) - 1 / len(alphabet)</code></li>
+<li><code>len(dictionary)</code> is <code>sum(len(alphabet) ** i for i in [0, K])</code> (see the initial&nbsp;observations)</li>
+<li>this can also be precomputed for&nbsp;efficiency</li>
+<li>the column index gives you letter index in the&nbsp;alphabet</li>
+<li>now subtract from the value the index of the first word in the given column. If you get 0,&nbsp;stop.</li>
+<li>Otherwise make <code>K</code> one less and look up the new value in the dictionary of length at most <code>K</code>.</li>
+</ul>
+<p>A small worked&nbsp;example:</p>
+<ul>
+<li>lets say we have <code>[A, B]</code> as the alphabet and <code>M=2</code>. We want to find the word at 5 (which is <code>BA</code> if you take a peak at the table above).&nbsp;So:</li>
+<li>in each column we have 3 words, so 5 is in the 2nd row (the row with index 1) which gives us &#8220;B&#8221; as the first&nbsp;letter</li>
+<li>now subtract 4 (the index of the first word in the 2nd column - <code>B</code>) from 5 which leaves us with&nbsp;1</li>
+<li>now find the word with index 1 in a dictionary with <code>M=1</code> which is&nbsp;&#8220;A&#8221;</li>
+<li>thus the final word is &#8220;<span class="caps">BA</span>&#8221;</li>
+</ul>
+<p>Or in <a href="https://github.com/cdman/nth-element-of-dictionary/blob/master/nth_element.py#L62">Python 3 code</a>:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">wordAt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">index</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__lastIndex</span>
+    <span class="n">result</span><span class="p">,</span> <span class="n">current_len</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__max_len</span>
+    <span class="k">while</span> <span class="n">index</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">words_per_column</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__wordsPerLetterForLen</span><span class="p">[</span><span class="n">current_len</span><span class="p">]</span>
+        <span class="n">column_idx</span> <span class="o">=</span> <span class="p">(</span><span class="n">index</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">//</span> <span class="n">words_per_column</span>
+        <span class="n">result</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__alphabet</span><span class="p">[</span><span class="n">column_idx</span><span class="p">]</span>
+        <span class="n">index_of_first_word_in_col</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">column_idx</span> <span class="o">*</span> <span class="n">words_per_column</span>
+        <span class="n">index</span> <span class="o">-=</span> <span class="n">index_of_first_word_in_col</span>
+        <span class="n">current_len</span> <span class="o">-=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+
+
+<p>Note: you can find a different algorithm to do the same on <a href="http://math.stackexchange.com/questions/195736/how-to-get-the-n-th-word-in-a-sequence">math.stackexchange.com</a>, however I found the above to be visually more&nbsp;intuitive.</p>
+<h2>Can we do it&nbsp;simpler?</h2>
+<p>So we solved the initial problem (both the one stated in the title and the one which motivated this journey) however it took over a thousand words to describe and justify it. Can we do simpler? Turns out yes! We just need abandon our attachment to the lexicographical order and say that as long as we have a bijective encoding and decoding function with the property <code>decode(encode(word)) == word</code> we are&nbsp;satisfied.</p>
+<p>A simple and efficient function is the transformation of the word from base <code>La</code> (length of alphabet) to base 10 and vice-versa. For example if we have <code>[A, C, G, T]</code> as the alphabet and <code>GAT</code> as the word we can&nbsp;do:</p>
+<ul>
+<li>encode: <code>2*(4**2) + 0*(4**1) + 3*(4**0)</code> which is&nbsp;33</li>
+<li>decode: 33 is written as powers of 4 as above and 2, 0, 3 corresponds to <code>GAT</code></li>
+</ul>
+<p>Again, the ordering will not be lexicographical (<code>A, AA, AB, ...</code>) but rather a numerical-order kind-of (<code>A, B, AA, AB, ...</code>) but the algorithm is much simpler and in the case that <code>La</code> is a power of two, very efficient to implement on current CPUs since division / remainder can be done using bit-shifts /&nbsp;masking.</p>
+<h2>More&nbsp;speculation</h2>
+<p>I didn&#8217;t actually want to encode <span class="caps">DNA</span>/<span class="caps">RNA</span> sequences, but rather mutations/variations which are pair of sequences (something like <code>G -&gt; TC</code> or <code>GT -&gt; ''</code>).  Now I could just divide the 64 bits into two 32 bit chunks but the same initial question would arise: is this the most optimal way for&nbsp;encoding?</p>
+<p>So we go the same solution: what if we would have a dictionary of all the variants (<code>'' -&gt; A, '' -&gt; AA, ...</code>) and just index into it. How would we construct such a dictionary and how would we order&nbsp;it?</p>
+<p>Turns out there is an algorithm inspired by the proof that <a href="https://en.wikipedia.org/wiki/Rational_number#Properties">there are the same number of natural numbers as there are rational ones</a>. However that doesn&#8217;t give us a way to find the N-th element in the sequence but a Calkin–Wilf sequence <a href="https://en.wikipedia.org/wiki/Calkin%E2%80%93Wilf_tree#Breadth_first_traversal">does</a>.</p>
+<p>So we can have the following&nbsp;algorithm:</p>
+<ul>
+<li>represent the pair <code>to -&gt; from</code> as two numbers <code>A</code> and <code>B</code> (refer to the discussion until now how we can do&nbsp;that)</li>
+<li>use the Calkin-Wilf sequence (combined with the <a href="https://en.wikipedia.org/wiki/Continued_fraction#Finite_continued_fractions">continued fraction formula</a>) to find the index of <code>A/B</code> </li>
+<li>or conversely use the sequence to transform the index into the <code>A/B</code> fraction and then transform the numerator and denominator into the original&nbsp;sequences</li>
+</ul>
+<p>This is just speculation but it should work in theory. Also, it is fairly complicated so perhaps there is a better way to do it by making some simplifying assumptions? (like us eliminating the lexicographic ordering&nbsp;requirement).</p>
+<h2>Source&nbsp;code</h2>
+<p>A complete implementation of the above algorithms (with tests!) in Python 3 can be found <a href="https://github.com/cdman/nth-element-of-dictionary/">on GitHub</a>.</p>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<div id="aboutme">
+        <p>
+            <img width="60%" class="img" src="/images/profile.png"/>
+        </p>
+    <p>
+        <strong>About Grey Panther</strong><br/>
+        <a href="/">father, husband, software craftsman</a>
+    </p>
+</div>
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="https://ro.linkedin.com/in/gpanther"><i class="fa fa-linkedin-square fa-lg"></i> linkedin</a></li>
+                <li class="list-group-item"><a href="http://stackoverflow.com/users/1265/grey-panther"><i class="fa fa-stack-overflow fa-lg"></i> stackoverflow</a></li>
+                <li class="list-group-item"><a href="https://github.com/gpanther/"><i class="fa fa-github-square fa-lg"></i> github</a></li>
+              </ul>
+            </li>
+
+
+
+
+
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container-fluid">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2017 Grey Panther
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by/4.0/80x15.png" /></a>
+    Content
+  licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>, except where indicated otherwise.
+</small></p>
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://www.grey-panther.net/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://www.grey-panther.net/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://www.grey-panther.net/theme/js/respond.min.js"></script>
+
+
+</body>
+</html>
