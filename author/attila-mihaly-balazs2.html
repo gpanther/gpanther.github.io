@@ -77,6 +77,27 @@ Grey Panther's Place            </a>
     <div class="row">
         <div class="col-sm-9">
             <article>
+                <h2><a href="https://www.grey-panther.net/2013/06/nested-fluent-builders.html">Nested fluent&nbsp;builders</a></h2>
+                <div class="summary"><p><em>Crossposted from <a href="http://www.transylvania-jug.org/archives/5692">the Transylvania <span class="caps">JUG</span>
+website</a>.</em></p>
+<p>Builders have become commonplace in current Java code. They have the
+effect of transforming the following&nbsp;code:</p>
+<p><span class="dquo">&#8220;</span>` {lang=&#8221;java&#8221; escaped=&#8221;true&#8221;}
+new Foo(1, 5, &#8220;abc&#8221;,&nbsp;false);</p>
+<div class="highlight"><pre><span></span>&lt;/code&gt;
+
+Into something like
+
+``` {lang=&quot;java&quot; escaped=&quot;true&quot; line=&quot;1&quot;}
+Foo.builder()
+  .count(1)
+  .priority(5)
+  .name ...</pre></div>
+                    <a class="btn btn-default btn-xs" href="https://www.grey-panther.net/2013/06/nested-fluent-builders.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="https://www.grey-panther.net/2013/05/passing-utf-8-trough-http.html">Passing <span class="caps">UTF</span>-8 trough <span class="caps">HTTP</span></a></h2>
                 <div class="summary"><p>These days we should write every code as if it will be used by
 international people with a wide variety of personal information (just
@@ -180,19 +201,6 @@ If you like it, please spread the word by sharing, tweeting, <span class="caps">
 so on! Want to write for the Java Advent blog? We are looking for
 contributors to fill all 24 slot and would love to ...</em></p>
                     <a class="btn btn-default btn-xs" href="https://www.grey-panther.net/2012/12/changes-to-stringsubstring-in-java-7.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="https://www.grey-panther.net/2012/12/restart-me-up.html">(Re)Start me&nbsp;up!</a></h2>
-                <div class="summary"><p><em>This post was originally published as part of the <a href="http://www.javaadvent.com/2012/12/restart-me-up.html">Java Advent
-series</a>.</em></p>
-<p>There are cases where you would like to start a Java process identical
-to the current one (or at least using the the same <span class="caps">JVM</span> with tweaked
-parameters). Some concrete cases where this would be&nbsp;useful:</p>
-<ul>
-<li>Auto-tuning the ...</li></ul>
-                    <a class="btn btn-default btn-xs" href="https://www.grey-panther.net/2012/12/restart-me-up.html">more ...</a>
                 </div>
             </article>
             <hr/>

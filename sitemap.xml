@@ -5,70 +5,77 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://www.grey-panther.net/</loc>
-<lastmod>2017-01-02T13:31:34-00:00</lastmod>
+<lastmod>2017-01-05T19:42:27-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://www.grey-panther.net/archives.html</loc>
-<lastmod>2017-01-02T13:31:34-00:00</lastmod>
+<lastmod>2017-01-05T19:42:27-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://www.grey-panther.net/tags.html</loc>
-<lastmod>2017-01-02T13:31:34-00:00</lastmod>
+<lastmod>2017-01-05T19:42:27-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://www.grey-panther.net/categories.html</loc>
-<lastmod>2017-01-02T13:31:34-00:00</lastmod>
+<lastmod>2017-01-05T19:42:27-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://www.grey-panther.net/</loc>
-<lastmod>2017-01-02T13:31:34-00:00</lastmod>
+<lastmod>2017-01-05T19:42:27-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://www.grey-panther.net/pages/resume-curriculum-vitae.html</loc>
-<lastmod>2017-01-02T13:31:34-00:00</lastmod>
+<lastmod>2017-01-05T19:42:27-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://www.grey-panther.net/pages/places-to-visit.html</loc>
-<lastmod>2017-01-02T13:31:34-00:00</lastmod>
+<lastmod>2017-01-05T19:42:27-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://www.grey-panther.net/pages/presentations.html</loc>
-<lastmod>2017-01-02T13:31:34-00:00</lastmod>
+<lastmod>2017-01-05T19:42:27-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://www.grey-panther.net/pages/projects.html</loc>
-<lastmod>2017-01-02T13:31:34-00:00</lastmod>
+<lastmod>2017-01-05T19:42:27-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://www.grey-panther.net/pages/site-map.html</loc>
-<lastmod>2017-01-02T13:31:34-00:00</lastmod>
+<lastmod>2017-01-05T19:42:27-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://www.grey-panther.net/2017/01/an-interesting-proof-for-pythagorass-theorem.html</loc>
+<lastmod>2017-01-05T19:12:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1524,7 +1531,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://www.grey-panther.net/category/blog.html</loc>
-<lastmod>2017-01-02T13:28:00+01:44</lastmod>
+<lastmod>2017-01-05T19:12:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -3148,7 +3155,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://www.grey-panther.net/author/attila-mihaly-balazs.html</loc>
-<lastmod>2017-01-02T13:28:00+01:44</lastmod>
+<lastmod>2017-01-05T19:12:00+01:44</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
