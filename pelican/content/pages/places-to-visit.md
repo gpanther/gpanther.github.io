@@ -32,6 +32,8 @@ Title: Places to visit
 		[ 47.477824, 19.069902, "Pilots Repülőgépszimulátor-központ" ],
 		[ 45.5889681, 25.4701133, "Dino Parc Râșnov" ],
 		[ 45.8600472, 25.7923821, "Muzeu al radiocomunicaţiilor" ],
+		[ 52.0881261, 5.1305894, "Spoorwegmuseum" ],
+		[ 52.51769, 13.442, "Computerspielemuseum"],
 	];
 
 	for (var i=0; i<markers.length; i++) {
